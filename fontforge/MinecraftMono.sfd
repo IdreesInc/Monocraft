@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1280473793
-ModificationTime: 1661470246
+ModificationTime: 1661529945
 PfmFamily: 17
 TTFWeight: 500
 TTFWidth: 5
@@ -83,7 +83,6 @@ EndShort
 LangName: 1033 "" "" "" "IdreesHassan:MinecraftMono"
 GaspTable: 1 65535 0 0
 Encoding: Custom
-Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
@@ -173,7 +172,7 @@ Grid
  0 12 l 1
  0 14 l 1
 EndSplineSet
-BeginChars: 199 198
+BeginChars: 203 203
 
 StartChar: .notdef
 Encoding: 193 -1 0
@@ -9927,7 +9926,7 @@ LayerCount: 2
 EndChar
 
 StartChar: doubleequal
-Encoding: 195 -1 194
+Encoding: 194 -1 194
 Width: 24
 VWidth: 16
 Flags: W
@@ -9966,7 +9965,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: tripleequal
-Encoding: 196 -1 195
+Encoding: 195 -1 195
 Width: 36
 VWidth: 16
 Flags: W
@@ -10018,7 +10017,7 @@ Ligature2: "liga-subtable" equal equal equal
 EndChar
 
 StartChar: notdoubleequal
-Encoding: 197 -1 196
+Encoding: 196 -1 196
 Width: 24
 VWidth: 16
 Flags: W
@@ -10082,10 +10081,10 @@ Ligature2: "liga-subtable" exclam equal
 EndChar
 
 StartChar: nottripleequal
-Encoding: 198 -1 197
+Encoding: 197 -1 197
 Width: 36
 VWidth: 16
-Flags: WO
+Flags: W
 LayerCount: 2
 Fore
 SplineSet
@@ -10153,6 +10152,233 @@ SplineSet
 EndSplineSet
 LCarets2: 2 0 0
 Ligature2: "liga-subtable" exclam equal equal
+EndChar
+
+StartChar: leftarrow
+Encoding: 198 -1 198
+Width: 24
+VWidth: 16
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+8 14 m 1,0,-1
+ 8 12 l 1,1,-1
+ 6 12 l 1,2,-1
+ 6 14 l 1,3,-1
+ 8 14 l 1,0,-1
+6 12 m 1,4,-1
+ 6 10 l 1,5,-1
+ 4 10 l 1,6,-1
+ 4 12 l 1,7,-1
+ 6 12 l 1,4,-1
+4 10 m 1,8,-1
+ 4 8 l 1,9,-1
+ 2 8 l 1,10,-1
+ 2 10 l 1,11,-1
+ 4 10 l 1,8,-1
+22 8 m 1,12,-1
+ 22 6 l 1,13,-1
+ 0 6 l 1,14,-1
+ 0 8 l 1,15,-1
+ 22 8 l 1,12,-1
+2 6 m 1,16,-1
+ 4 6 l 1,17,-1
+ 4 4 l 1,18,-1
+ 2 4 l 1,19,-1
+ 2 6 l 1,16,-1
+4 4 m 1,20,-1
+ 6 4 l 1,21,-1
+ 6 2 l 1,22,-1
+ 4 2 l 1,23,-1
+ 4 4 l 1,20,-1
+6 2 m 1,24,-1
+ 8 2 l 1,25,-1
+ 8 0 l 1,26,-1
+ 6 0 l 1,27,-1
+ 6 2 l 1,24,-1
+EndSplineSet
+Ligature2: "liga-subtable" less hyphen
+EndChar
+
+StartChar: rightarrow
+Encoding: 199 -1 199
+Width: 24
+VWidth: 16
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+14 0 m 1,0,-1
+ 14 2 l 1,1,-1
+ 16 2 l 1,2,-1
+ 16 0 l 1,3,-1
+ 14 0 l 1,0,-1
+16 2 m 1,4,-1
+ 16 4 l 1,5,-1
+ 18 4 l 1,6,-1
+ 18 2 l 1,7,-1
+ 16 2 l 1,4,-1
+18 4 m 1,8,-1
+ 18 6 l 1,9,-1
+ 20 6 l 1,10,-1
+ 20 4 l 1,11,-1
+ 18 4 l 1,8,-1
+0 6 m 1,12,-1
+ 0 8 l 1,13,-1
+ 22 8 l 1,14,-1
+ 22 6 l 1,15,-1
+ 0 6 l 1,12,-1
+20 8 m 1,16,-1
+ 18 8 l 1,17,-1
+ 18 10 l 1,18,-1
+ 20 10 l 1,19,-1
+ 20 8 l 1,16,-1
+18 10 m 1,20,-1
+ 16 10 l 1,21,-1
+ 16 12 l 1,22,-1
+ 18 12 l 1,23,-1
+ 18 10 l 1,20,-1
+16 12 m 1,24,-1
+ 14 12 l 1,25,-1
+ 14 14 l 1,26,-1
+ 16 14 l 1,27,-1
+ 16 12 l 1,24,-1
+EndSplineSet
+LCarets2: 1 0
+Ligature2: "liga-subtable" hyphen greater
+EndChar
+
+StartChar: rightthickarrow
+Encoding: 200 -1 200
+Width: 24
+VWidth: 16
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+16 14 m 5,0,-1
+ 16 12 l 5,1,-1
+ 14 12 l 5,2,-1
+ 14 14 l 5,3,-1
+ 16 14 l 5,0,-1
+16 12 m 5,4,-1
+ 18 12 l 5,5,-1
+ 18 10 l 5,6,-1
+ 16 10 l 5,7,-1
+ 16 12 l 5,4,-1
+0 10 m 5,8,-1
+ 20 10 l 5,9,-1
+ 20 8 l 5,10,-1
+ 0 8 l 5,11,-1
+ 0 10 l 5,8,-1
+20 8 m 5,12,-1
+ 22 8 l 5,13,-1
+ 22 6 l 5,14,-1
+ 20 6 l 5,15,-1
+ 20 8 l 5,12,-1
+20 6 m 5,16,-1
+ 20 4 l 5,17,-1
+ 0 4 l 5,18,-1
+ 0 6 l 5,19,-1
+ 20 6 l 5,16,-1
+18 4 m 5,20,-1
+ 18 2 l 5,21,-1
+ 16 2 l 5,22,-1
+ 16 4 l 5,23,-1
+ 18 4 l 5,20,-1
+16 2 m 5,24,-1
+ 16 0 l 5,25,-1
+ 14 0 l 5,26,-1
+ 14 2 l 5,27,-1
+ 16 2 l 5,24,-1
+EndSplineSet
+Ligature2: "liga-subtable" equal greater
+LCarets2: 1 0
+EndChar
+
+StartChar: lessthanequalto
+Encoding: 201 -1 201
+Width: 24
+VWidth: 16
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+5 0 m 25,0,-1
+ 17 0 l 25,1,-1
+ 17 -2 l 25,2,-1
+ 5 -2 l 25,3,-1
+ 5 0 l 25,0,-1
+17 2 m 1,4,-1
+ 13 2 l 1,5,-1
+ 13 4 l 1,6,-1
+ 17 4 l 1,7,-1
+ 17 2 l 1,4,-1
+13 4 m 1,8,-1
+ 9 4 l 1,9,-1
+ 9 6 l 1,10,-1
+ 13 6 l 1,11,-1
+ 13 4 l 1,8,-1
+9 6 m 1,12,-1
+ 5 6 l 1,13,-1
+ 5 8 l 1,14,-1
+ 9 8 l 1,15,-1
+ 9 6 l 1,12,-1
+9 8 m 1,16,-1
+ 9 10 l 1,17,-1
+ 13 10 l 1,18,-1
+ 13 8 l 1,19,-1
+ 9 8 l 1,16,-1
+13 10 m 1,20,-1
+ 13 12 l 1,21,-1
+ 17 12 l 1,22,-1
+ 17 10 l 1,23,-1
+ 13 10 l 1,20,-1
+EndSplineSet
+Ligature2: "liga-subtable" less equal
+EndChar
+
+StartChar: greaterthanequalto
+Encoding: 202 -1 202
+Width: 24
+VWidth: 16
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+17 0 m 25,0,-1
+ 5 0 l 25,1,-1
+ 5 -2 l 25,2,-1
+ 17 -2 l 25,3,-1
+ 17 0 l 25,0,-1
+5 2 m 1,4,-1
+ 9 2 l 1,5,-1
+ 9 4 l 1,6,-1
+ 5 4 l 1,7,-1
+ 5 2 l 1,4,-1
+9 4 m 1,8,-1
+ 13 4 l 1,9,-1
+ 13 6 l 1,10,-1
+ 9 6 l 1,11,-1
+ 9 4 l 1,8,-1
+13 6 m 1,12,-1
+ 17 6 l 1,13,-1
+ 17 8 l 1,14,-1
+ 13 8 l 1,15,-1
+ 13 6 l 1,12,-1
+13 8 m 1,16,-1
+ 13 10 l 1,17,-1
+ 9 10 l 1,18,-1
+ 9 8 l 1,19,-1
+ 13 8 l 1,16,-1
+9 10 m 1,20,-1
+ 9 12 l 1,21,-1
+ 5 12 l 1,22,-1
+ 5 10 l 1,23,-1
+ 9 10 l 1,20,-1
+EndSplineSet
+Ligature2: "liga-subtable" greater equal
 EndChar
 EndChars
 EndSplineFont
