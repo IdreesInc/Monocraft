@@ -17,7 +17,7 @@ The font for people who like Minecraft a bit _too_ much.
 
 ![](images/javascript-example.png)
 
-![](../Minecraft-Font/images/ligatures.png)
+![](images/ligatures.png)
 
 ## How to install
 
