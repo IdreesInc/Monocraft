@@ -17,17 +17,15 @@ The font for people who like Minecraft a bit _too_ much.
 
 ![](images/javascript-example.png)
 
-![](images/ligatures.png)
-
 ## How to install
 
 ### Windows
 
-Download the most recent `MinecraftMono.otf` file from the [Releases](https://github.com/IdreesInc/Minecraft-Font/releases) page. Right click on the downloaded font and select **Install**. You might need administrative access to install fonts, depending on your machine.
+Download the most recent `MinecraftMono.otf` file from the [Releases](https://github.com/IdreesInc/Minecraft-Mono/releases) page. Right click on the downloaded font and select **Install**. You might need administrative access to install fonts, depending on your machine.
 
 ### Mac
 
-Download the most recent `MinecraftMono.otf` file from the [Releases](https://github.com/IdreesInc/Minecraft-Font/releases) page. Double click on the downloaded font file and select **Install Font** in the window that appears. More help available [here](https://support.apple.com/en-us/HT201749).
+Download the most recent `MinecraftMono.otf` file from the [Releases](https://github.com/IdreesInc/Minecraft-Mono/releases) page. Double click on the downloaded font file and select **Install Font** in the window that appears. More help available [here](https://support.apple.com/en-us/HT201749).
 
 ## How to use
 
@@ -35,10 +33,18 @@ After following the installation instructions up above, simply select the "Minec
 
 ## FAQ
 
+### What ligatures are available?
+
+So far, the following ligatures have been added to the font:
+
+<img src="images/ligatures.png" width="300">
+
+If there is another character combination that you feel could be a ligature, feel free to create an issue. Note that I am trying to avoid adding 
+
 ### How were these characters generated?
 
 Using [FontForge](https://fontforge.org/en-US/), a fantastic and open source font designer.
 
-### What if I just want to use the original Minecraft Font?
+### Do you have a version with the original Minecraft font (not monospaced)?
 
 I've got you covered, check out my rendition of the Minecraft typeface [here](https://github.com/IdreesInc/Minecraft-Font).
