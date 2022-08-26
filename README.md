@@ -1,11 +1,11 @@
 # Minecraft Mono
 
-The font for people who like Minecraft a bit _too_ much.
+The font for developers who like Minecraft a bit _too_ much.
 
 ## Features
 
 - Minecraft!
-  - The characters in this font were based around the typeface used in the Minecraft UI, with a select few glyphs updated for better readability and spacing
+  - The characters in this font were based around the [typeface](https://github.com/IdreesInc/Minecraft-Font) used in the Minecraft UI, with a select few glyphs updated for better readability and spacing
 - Monospaced!
   - Each character has been carefully redesigned to work in a monospaced font
   - Thin characters like "i" and "l" have been reworked with tasteful tails and serifs to look better in a monospaced environment
