@@ -50,3 +50,7 @@ Using [FontForge](https://fontforge.org/en-US/), a fantastic and open source fon
 ### Do you have a version with the original Minecraft font (not monospaced)?
 
 I've got you covered, check out my rendition of the Minecraft typeface [here](https://github.com/IdreesInc/Minecraft-Font).
+
+### What if I want to use a font that's actually good?
+
+Understandable, check out [Fira Code](https://github.com/tonsky/FiraCode) for a font with amazing attention to detail, or [Scientifica](https://github.com/nerdypepper/scientifica) for a bitmap font similar to this.
