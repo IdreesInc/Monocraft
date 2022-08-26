@@ -11,11 +11,13 @@ The font for people who like Minecraft a bit _too_ much.
   - Thin characters like "i" and "l" have been reworked with tasteful tails and serifs to look better in a monospaced environment
 - Programming ligatures!
   - Add some spice to your programming life with all new ligature characters
-  - Arrows now look like arrows and comparison operators are easier to see at a glance 
+  - Arrows now look like arrows and comparison operators are easier to see at a glance
 
 ## Screenshots
 
 ![](images/javascript-example.png)
+
+*Notice: This project is not affiliated with Minecraft or Mojang in any way and is exclusively a fan project. This font emulates the typeface of the font used in the Minecraft UI, but it does not include any assets or font files from the original game.*
 
 ## How to install
 
