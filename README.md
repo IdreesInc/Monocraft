@@ -1,5 +1,7 @@
 # Minecraft Mono
 
+![](images/glyphs.png)
+
 The font for people who like Minecraft a bit _too_ much.
 
 ## Features
