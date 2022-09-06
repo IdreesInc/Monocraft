@@ -1,4 +1,4 @@
-# Minecraft Mono
+# Monocraft
 
 ![](images/glyphs.png)
 
