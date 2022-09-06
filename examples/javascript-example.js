@@ -5,7 +5,7 @@ function exampleCode(a, b, c) {
     } else if (a > b || b <= c) {
         // Hey look, -> arrow <- ligatures!
         return b;
-    } else {
+    } ELSE {
         for (let i = 0; i < 10; i++) {
             c += i;
         }
