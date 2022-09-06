@@ -4,6 +4,8 @@
 
 The font for developers who like Minecraft a bit _too_ much.
 
+*Notice: This project is not affiliated with Minecraft or Mojang in any way and is exclusively a fan project. This font emulates the typeface of the font used in the Minecraft UI, but it does not include any assets or font files from the original game.*
+
 ## Features
 
 - Minecraft!
@@ -18,8 +20,6 @@ The font for developers who like Minecraft a bit _too_ much.
 ## Screenshots
 
 ![](images/javascript-example.png)
-
-*Notice: This project is not affiliated with Minecraft or Mojang in any way and is exclusively a fan project. This font emulates the typeface of the font used in the Minecraft UI, but it does not include any assets or font files from the original game.*
 
 ## How to install
 
