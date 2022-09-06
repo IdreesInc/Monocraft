@@ -43,7 +43,7 @@ So far, the following ligatures have been added to the font:
 
 <img src="images/ligatures.png" width="300">
 
-If there is another character combination that you feel could be a ligature, feel free to create an issue. Note that I am trying to avoid adding 
+If there is another character combination that you feel could be a ligature, feel free to create an issue.
 
 ### How were these characters generated?
 
