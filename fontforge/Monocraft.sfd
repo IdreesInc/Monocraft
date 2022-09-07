@@ -12,9 +12,10 @@ Ascent: 16
 Descent: 2
 InvalidEm: 0
 sfntRevision: 0x00010000
-LayerCount: 2
+LayerCount: 3
 Layer: 0 1 "Back" 1
 Layer: 1 1 "Fore" 0
+Layer: 2 0 "Back 2" 1
 XUID: [1021 384 -154929595 16029303]
 StyleMap: 0x0040
 FSType: 8
@@ -22,7 +23,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1280473793
-ModificationTime: 1662502540
+ModificationTime: 1662563939
 PfmFamily: 17
 TTFWeight: 500
 TTFWidth: 5
@@ -88,7 +89,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 30 12
+WinInfo: 0 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -172,10 +173,10 @@ Grid
  0 12 l 1
  0 14 l 1
 EndSplineSet
-BeginChars: 203 203
+BeginChars: 209 209
 
 StartChar: .notdef
-Encoding: 193 -1 0
+Encoding: 0 -1 0
 Width: 12
 VWidth: 16
 GlyphClass: 1
@@ -228,7 +229,7 @@ PUSHB_3
 MIRP[min,rnd,black]
 SHP[rp2]
 EndTTInstrs
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 1.056640625 0 m 1,0,-1
@@ -242,24 +243,27 @@ SplineSet
  2.12890625 20.255859375 l 1,7,-1
  2.12890625 1.056640625 l 1,4,-1
 EndSplineSet
+Validated: 524289
 EndChar
 
 StartChar: space
-Encoding: 0 32 1
+Encoding: 1 32 1
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
+Fore
+Validated: 1
 EndChar
 
 StartChar: exclam
-Encoding: 1 33 2
+Encoding: 2 33 2
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -281,15 +285,16 @@ SplineSet
  6 4 l 1,15,-1
  4 4 l 1,4,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: quotedbl
-Encoding: 2 34 3
+Encoding: 3 34 3
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 10 m 1,0,-1
@@ -307,15 +312,16 @@ SplineSet
  4 10 l 1,11,-1
  2 10 l 1,6,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: numbersign
-Encoding: 3 35 4
+Encoding: 4 35 4
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 0 m 1,0,-1
@@ -361,15 +367,16 @@ SplineSet
  4 6 l 1,39,-1
  6 6 l 1,36,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: dollar
-Encoding: 4 36 5
+Encoding: 5 36 5
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -418,15 +425,16 @@ SplineSet
  6 12 l 1,39,-1
  8 12 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: percent
-Encoding: 5 37 6
+Encoding: 6 37 6
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -473,15 +481,16 @@ SplineSet
  10 12 l 1,35,-1
  8 12 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ampersand
-Encoding: 6 38 7
+Encoding: 7 38 7
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -538,15 +547,16 @@ SplineSet
  6 14 l 1,45,-1
  6 12 l 1,42,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: quotesingle
-Encoding: 7 39 8
+Encoding: 8 39 8
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 2 10 m 1,0,-1
@@ -557,15 +567,16 @@ SplineSet
  4 10 l 1,5,-1
  2 10 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: parenleft
-Encoding: 8 40 9
+Encoding: 9 40 9
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 0 m 1,0,-1
@@ -598,15 +609,16 @@ SplineSet
  8 12 l 1,23,-1
  6 12 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: parenright
-Encoding: 9 41 10
+Encoding: 10 41 10
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 2 0 m 1,0,-1
@@ -639,15 +651,16 @@ SplineSet
  4 14 l 1,23,-1
  4 12 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: asterisk
-Encoding: 10 42 11
+Encoding: 11 42 11
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 8 m 1,0,-1
@@ -676,15 +689,16 @@ SplineSet
  4 14 l 1,19,-1
  4 12 l 1,16,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: plus
-Encoding: 11 43 12
+Encoding: 12 43 12
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 2 m 1,0,-1
@@ -709,15 +723,16 @@ SplineSet
  6 2 l 1,19,-1
  4 2 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: comma
-Encoding: 12 44 13
+Encoding: 13 44 13
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 2 -2 m 1,0,-1
@@ -731,15 +746,16 @@ SplineSet
  6 0 l 1,7,-1
  4 0 l 1,4,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: hyphen
-Encoding: 13 45 14
+Encoding: 14 45 14
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 8 m 1,0,-1
@@ -756,15 +772,16 @@ SplineSet
  6 8 l 1,11,-1
  8 8 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: period
-Encoding: 14 46 15
+Encoding: 15 46 15
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -773,15 +790,16 @@ SplineSet
  6 0 l 1,3,-1
  4 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: slash
-Encoding: 15 47 16
+Encoding: 16 47 16
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 0 m 1,0,-1
@@ -814,15 +832,16 @@ SplineSet
  10 12 l 1,23,-1
  8 12 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: zero
-Encoding: 16 48 17
+Encoding: 17 48 17
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -877,15 +896,16 @@ SplineSet
  8 14 l 1,47,-1
  8 12 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: one
-Encoding: 17 49 18
+Encoding: 18 49 18
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -916,15 +936,16 @@ SplineSet
  6 2 l 1,25,-1
  8 2 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: two
-Encoding: 18 50 19
+Encoding: 19 50 19
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 10 m 1,0,-1
@@ -978,15 +999,16 @@ SplineSet
  8 14 l 1,43,-1
  8 12 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: three
-Encoding: 19 51 20
+Encoding: 20 51 20
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 10 m 1,0,-1
@@ -1039,15 +1061,16 @@ SplineSet
  8 14 l 1,41,-1
  8 12 l 1,34,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: four
-Encoding: 20 52 21
+Encoding: 21 52 21
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -1089,15 +1112,16 @@ SplineSet
  4 6 l 1,35,-1
  6 6 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: five
-Encoding: 21 53 22
+Encoding: 22 53 22
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -1147,15 +1171,16 @@ SplineSet
  8 10 l 1,41,-1
  8 8 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: six
-Encoding: 22 54 23
+Encoding: 23 54 23
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -1204,15 +1229,16 @@ SplineSet
  4 14 l 1,39,-1
  6 14 l 1,34,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: seven
-Encoding: 23 55 24
+Encoding: 24 55 24
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -1248,15 +1274,16 @@ SplineSet
  2 10 l 1,29,-1
  0 10 l 1,8,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: eight
-Encoding: 24 56 25
+Encoding: 25 56 25
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -1315,15 +1342,16 @@ SplineSet
  8 14 l 1,47,-1
  8 12 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: nine
-Encoding: 25 57 26
+Encoding: 26 57 26
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 2 m 1,0,-1
@@ -1372,15 +1400,16 @@ SplineSet
  8 14 l 1,39,-1
  8 12 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: colon
-Encoding: 26 58 27
+Encoding: 27 58 27
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -1394,15 +1423,16 @@ SplineSet
  6 8 l 1,7,-1
  4 8 l 1,4,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: semicolon
-Encoding: 27 59 28
+Encoding: 28 59 28
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 -2 m 1,0,-1
@@ -1421,15 +1451,16 @@ SplineSet
  4 0 l 1,11,-1
  2 0 l 1,8,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: less
-Encoding: 28 60 29
+Encoding: 29 60 29
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 0 m 1,0,-1
@@ -1468,15 +1499,16 @@ SplineSet
  8 12 l 1,27,-1
  6 12 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: equal
-Encoding: 29 61 30
+Encoding: 30 61 30
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 4 m 1,0,-1
@@ -1506,15 +1538,16 @@ SplineSet
  6 10 l 1,23,-1
  8 10 l 1,12,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: greater
-Encoding: 30 62 31
+Encoding: 31 62 31
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 2 0 m 1,0,-1
@@ -1553,15 +1586,16 @@ SplineSet
  4 14 l 1,27,-1
  4 12 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: question
-Encoding: 31 63 32
+Encoding: 32 63 32
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -1601,15 +1635,16 @@ SplineSet
  8 14 l 1,29,-1
  8 12 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: at
-Encoding: 32 64 33
+Encoding: 33 64 33
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -1665,15 +1700,16 @@ SplineSet
  8 12 l 1,47,-1
  8 10 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: A
-Encoding: 33 65 34
+Encoding: 34 65 34
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -1719,15 +1755,16 @@ SplineSet
  8 14 l 1,39,-1
  8 12 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: B
-Encoding: 34 66 35
+Encoding: 35 66 35
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -1779,15 +1816,16 @@ SplineSet
  8 0 l 1,45,-1
  6 0 l 1,12,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: C
-Encoding: 35 67 36
+Encoding: 36 67 36
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 10 m 1,0,-1
@@ -1832,15 +1870,16 @@ SplineSet
  8 14 l 1,35,-1
  8 12 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: D
-Encoding: 36 68 37
+Encoding: 37 68 37
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -1886,15 +1925,16 @@ SplineSet
  8 0 l 1,39,-1
  6 0 l 1,16,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: E
-Encoding: 37 69 38
+Encoding: 38 69 38
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -1935,15 +1975,16 @@ SplineSet
  6 2 l 1,35,-1
  8 2 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: F
-Encoding: 38 70 39
+Encoding: 39 70 39
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 0 m 1,0,-1
@@ -1976,15 +2017,16 @@ SplineSet
  2 0 l 1,27,-1
  0 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: G
-Encoding: 39 71 40
+Encoding: 40 71 40
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -2034,15 +2076,16 @@ SplineSet
  6 14 l 1,41,-1
  8 14 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: H
-Encoding: 40 72 41
+Encoding: 41 72 41
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -2083,15 +2126,16 @@ SplineSet
  10 0 l 1,35,-1
  8 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: I
-Encoding: 41 73 42
+Encoding: 42 73 42
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 0 m 1,0,-1
@@ -2120,15 +2164,16 @@ SplineSet
  8 0 l 1,23,-1
  6 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: J
-Encoding: 42 74 43
+Encoding: 43 74 43
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -2161,15 +2206,16 @@ SplineSet
  2 4 l 1,25,-1
  2 2 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: K
-Encoding: 43 75 44
+Encoding: 44 75 44
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -2217,15 +2263,16 @@ SplineSet
  10 12 l 1,39,-1
  8 12 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: L
-Encoding: 44 76 45
+Encoding: 45 76 45
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -2254,15 +2301,16 @@ SplineSet
  6 2 l 1,23,-1
  8 2 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: M
-Encoding: 45 77 46
+Encoding: 46 77 46
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -2308,15 +2356,16 @@ SplineSet
  2 0 l 1,39,-1
  0 0 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: N
-Encoding: 46 78 47
+Encoding: 47 78 47
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -2362,15 +2411,16 @@ SplineSet
  2 0 l 1,39,-1
  0 0 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: O
-Encoding: 47 79 48
+Encoding: 48 79 48
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -2418,15 +2468,16 @@ SplineSet
  8 14 l 1,39,-1
  8 12 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: P
-Encoding: 48 80 49
+Encoding: 49 80 49
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 0 m 1,0,-1
@@ -2463,15 +2514,16 @@ SplineSet
  2 0 l 1,31,-1
  0 0 l 1,0,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Q
-Encoding: 49 81 50
+Encoding: 50 81 50
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -2525,15 +2577,16 @@ SplineSet
  8 14 l 1,43,-1
  8 12 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: R
-Encoding: 50 82 51
+Encoding: 51 82 51
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -2581,15 +2634,16 @@ SplineSet
  2 0 l 1,41,-1
  0 0 l 1,10,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: S
-Encoding: 51 83 52
+Encoding: 52 83 52
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -2641,15 +2695,16 @@ SplineSet
  6 14 l 1,41,-1
  8 14 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: T
-Encoding: 52 84 53
+Encoding: 53 84 53
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -2678,15 +2733,16 @@ SplineSet
  6 0 l 1,23,-1
  4 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: U
-Encoding: 53 85 54
+Encoding: 54 85 54
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -2729,15 +2785,16 @@ SplineSet
  2 4 l 1,35,-1
  2 2 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: V
-Encoding: 54 86 55
+Encoding: 55 86 55
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -2782,15 +2839,16 @@ SplineSet
  2 8 l 1,35,-1
  2 6 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: W
-Encoding: 55 87 56
+Encoding: 56 87 56
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -2837,15 +2895,16 @@ SplineSet
  6 6 l 1,39,-1
  6 4 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: X
-Encoding: 56 88 57
+Encoding: 57 88 57
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -2902,15 +2961,16 @@ SplineSet
  2 14 l 1,43,-1
  2 12 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Y
-Encoding: 57 89 58
+Encoding: 58 89 58
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -2947,15 +3007,16 @@ SplineSet
  2 14 l 1,27,-1
  2 12 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Z
-Encoding: 58 90 59
+Encoding: 59 90 59
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -3004,15 +3065,16 @@ SplineSet
  10 10 l 1,39,-1
  8 10 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: bracketleft
-Encoding: 59 91 60
+Encoding: 60 91 60
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -3041,15 +3103,16 @@ SplineSet
  4 2 l 1,23,-1
  6 2 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: backslash
-Encoding: 60 92 61
+Encoding: 61 92 61
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -3082,15 +3145,16 @@ SplineSet
  2 14 l 1,23,-1
  2 12 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: bracketright
-Encoding: 61 93 62
+Encoding: 62 93 62
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 0 m 1,0,-1
@@ -3119,15 +3183,16 @@ SplineSet
  8 0 l 1,23,-1
  6 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: asciicircum
-Encoding: 62 94 63
+Encoding: 63 94 63
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 8 m 1,0,-1
@@ -3156,15 +3221,16 @@ SplineSet
  6 14 l 1,19,-1
  6 12 l 1,16,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: underscore
-Encoding: 63 95 64
+Encoding: 64 95 64
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -3181,15 +3247,16 @@ SplineSet
  6 0 l 1,11,-1
  8 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: grave
-Encoding: 64 96 65
+Encoding: 65 96 65
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 10 m 1,0,-1
@@ -3203,15 +3270,16 @@ SplineSet
  4 14 l 1,7,-1
  4 12 l 1,4,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: a
-Encoding: 65 97 66
+Encoding: 66 97 66
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -3252,15 +3320,16 @@ SplineSet
  8 10 l 1,33,-1
  8 8 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: b
-Encoding: 66 98 67
+Encoding: 67 98 67
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -3305,15 +3374,16 @@ SplineSet
  8 10 l 1,37,-1
  8 8 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: c
-Encoding: 67 99 68
+Encoding: 68 99 68
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 6 m 1,0,-1
@@ -3354,15 +3424,16 @@ SplineSet
  8 10 l 1,31,-1
  8 8 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: d
-Encoding: 68 100 69
+Encoding: 69 100 69
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -3407,15 +3478,16 @@ SplineSet
  6 10 l 1,37,-1
  6 8 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: e
-Encoding: 69 101 70
+Encoding: 70 101 70
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -3458,15 +3530,16 @@ SplineSet
  8 10 l 1,35,-1
  8 8 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: f
-Encoding: 70 102 71
+Encoding: 71 102 71
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -3498,15 +3571,16 @@ SplineSet
  6 14 l 1,25,-1
  8 14 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: g
-Encoding: 71 103 72
+Encoding: 72 103 72
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 0 m 1,0,-1
@@ -3553,15 +3627,16 @@ SplineSet
  4 4 l 1,39,-1
  6 4 l 1,30,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: h
-Encoding: 72 104 73
+Encoding: 73 104 73
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -3602,15 +3677,16 @@ SplineSet
  8 10 l 1,33,-1
  8 8 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: i
-Encoding: 73 105 74
+Encoding: 74 105 74
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -3639,15 +3715,16 @@ SplineSet
  6 4 l 1,21,-1
  6 2 l 1,10,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: j
-Encoding: 74 106 75
+Encoding: 75 106 75
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 12 m 1,0,-1
@@ -3685,15 +3762,16 @@ SplineSet
  2 2 l 1,29,-1
  2 0 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: k
-Encoding: 75 107 76
+Encoding: 76 107 76
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -3735,15 +3813,16 @@ SplineSet
  10 8 l 1,33,-1
  8 8 l 1,30,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: l
-Encoding: 76 108 77
+Encoding: 77 108 77
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -3771,15 +3850,16 @@ SplineSet
  6 4 l 1,21,-1
  6 2 l 1,6,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: m
-Encoding: 77 109 78
+Encoding: 78 109 78
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -3820,15 +3900,16 @@ SplineSet
  8 10 l 1,33,-1
  8 8 l 1,30,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: n
-Encoding: 78 110 79
+Encoding: 79 110 79
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -3862,15 +3943,16 @@ SplineSet
  2 0 l 1,27,-1
  0 0 l 1,10,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: o
-Encoding: 79 111 80
+Encoding: 80 111 80
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -3910,15 +3992,16 @@ SplineSet
  8 10 l 1,31,-1
  8 8 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: p
-Encoding: 80 112 81
+Encoding: 81 112 81
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 -2 m 1,0,-1
@@ -3959,15 +4042,16 @@ SplineSet
  8 10 l 1,33,-1
  8 8 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: q
-Encoding: 81 113 82
+Encoding: 82 113 82
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 -2 m 1,0,-1
@@ -4008,15 +4092,16 @@ SplineSet
  6 10 l 1,33,-1
  6 8 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: r
-Encoding: 82 114 83
+Encoding: 83 114 83
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 0 m 1,0,-1
@@ -4047,15 +4132,16 @@ SplineSet
  8 10 l 1,23,-1
  8 8 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: s
-Encoding: 83 115 84
+Encoding: 84 115 84
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -4100,15 +4186,16 @@ SplineSet
  6 10 l 1,35,-1
  8 10 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: t
-Encoding: 84 116 85
+Encoding: 85 116 85
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -4138,15 +4225,16 @@ SplineSet
  6 4 l 1,23,-1
  6 2 l 1,6,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: u
-Encoding: 85 117 86
+Encoding: 86 117 86
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -4180,15 +4268,16 @@ SplineSet
  2 4 l 1,27,-1
  2 2 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: v
-Encoding: 86 118 87
+Encoding: 87 118 87
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -4225,15 +4314,16 @@ SplineSet
  2 6 l 1,27,-1
  2 4 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: w
-Encoding: 87 119 88
+Encoding: 88 119 88
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -4271,15 +4361,16 @@ SplineSet
  2 4 l 1,31,-1
  2 2 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: x
-Encoding: 88 120 89
+Encoding: 89 120 89
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -4328,15 +4419,16 @@ SplineSet
  2 10 l 1,35,-1
  2 8 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: y
-Encoding: 89 121 90
+Encoding: 90 121 90
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 0 m 1,0,-1
@@ -4379,15 +4471,16 @@ SplineSet
  2 6 l 1,35,-1
  2 4 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: z
-Encoding: 90 122 91
+Encoding: 91 122 91
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -4426,15 +4519,16 @@ SplineSet
  8 6 l 1,31,-1
  6 6 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: braceleft
-Encoding: 91 123 92
+Encoding: 92 123 92
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 0 m 1,0,-1
@@ -4467,15 +4561,16 @@ SplineSet
  8 12 l 1,23,-1
  6 12 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: bar
-Encoding: 92 124 93
+Encoding: 93 124 93
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -4496,15 +4591,16 @@ SplineSet
  6 0 l 1,15,-1
  4 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: braceright
-Encoding: 93 125 94
+Encoding: 94 125 94
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 2 0 m 1,0,-1
@@ -4537,15 +4633,16 @@ SplineSet
  4 14 l 1,23,-1
  4 12 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: asciitilde
-Encoding: 94 126 95
+Encoding: 95 126 95
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 4 m 1,0,-1
@@ -4578,24 +4675,27 @@ SplineSet
  4 10 l 1,23,-1
  4 8 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: uni00A0
-Encoding: 95 160 96
+Encoding: 96 160 96
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
+Fore
+Validated: 1
 EndChar
 
 StartChar: exclamdown
-Encoding: 96 161 97
+Encoding: 97 161 97
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 -2 m 1,0,-1
@@ -4617,15 +4717,16 @@ SplineSet
  6 10 l 1,15,-1
  4 10 l 1,12,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: cent
-Encoding: 97 162 98
+Encoding: 98 162 98
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 -2 m 1,0,-1
@@ -4670,15 +4771,16 @@ SplineSet
  8 10 l 1,35,-1
  8 8 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: sterling
-Encoding: 98 163 99
+Encoding: 99 163 99
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 10 m 1,0,-1
@@ -4723,15 +4825,16 @@ SplineSet
  8 14 l 1,37,-1
  8 12 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: currency
-Encoding: 99 164 100
+Encoding: 100 164 100
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 10 0 m 1,0,-1
@@ -4787,15 +4890,16 @@ SplineSet
  2 10 l 1,43,-1
  2 8 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: yen
-Encoding: 100 165 101
+Encoding: 101 165 101
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -4848,15 +4952,16 @@ SplineSet
  2 14 l 1,43,-1
  2 12 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: brokenbar
-Encoding: 101 166 102
+Encoding: 102 166 102
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 2 0 m 1,0,-1
@@ -4878,15 +4983,16 @@ SplineSet
  4 8 l 1,15,-1
  2 8 l 1,8,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: section
-Encoding: 102 167 103
+Encoding: 103 167 103
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -4950,15 +5056,16 @@ SplineSet
  6 14 l 1,51,-1
  8 14 l 1,42,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: dieresis
-Encoding: 103 168 104
+Encoding: 104 168 104
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -4972,15 +5079,16 @@ SplineSet
  2 12 l 1,7,-1
  0 12 l 1,4,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: copyright
-Encoding: 104 169 105
+Encoding: 105 169 105
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -5045,15 +5153,16 @@ SplineSet
  10 14 l 1,55,-1
  10 12 l 1,46,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ordfeminine
-Encoding: 105 170 106
+Encoding: 106 170 106
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 4 m 1,0,-1
@@ -5090,15 +5199,16 @@ SplineSet
  6 14 l 1,29,-1
  6 12 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: guillemotleft
-Encoding: 106 171 107
+Encoding: 107 171 107
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 10 2 m 1,0,-1
@@ -5152,15 +5262,16 @@ SplineSet
  6 10 l 1,39,-1
  4 10 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: logicalnot
-Encoding: 107 172 108
+Encoding: 108 172 108
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -5181,15 +5292,16 @@ SplineSet
  10 2 l 1,15,-1
  8 2 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: registered
-Encoding: 108 174 109
+Encoding: 109 174 109
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 4 m 1,0,-1
@@ -5252,15 +5364,16 @@ SplineSet
  10 14 l 1,55,-1
  10 12 l 1,46,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: macron
-Encoding: 109 175 110
+Encoding: 110 175 110
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 14 m 1,0,-1
@@ -5277,15 +5390,16 @@ SplineSet
  6 14 l 1,11,-1
  8 14 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: degree
-Encoding: 110 176 111
+Encoding: 111 176 111
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 8 m 1,0,-1
@@ -5317,15 +5431,16 @@ SplineSet
  6 14 l 1,23,-1
  6 12 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: plusminus
-Encoding: 111 177 112
+Encoding: 112 177 112
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 4 m 1,0,-1
@@ -5363,15 +5478,16 @@ SplineSet
  6 2 l 1,31,-1
  8 2 l 1,20,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: uni00B2
-Encoding: 112 178 113
+Encoding: 113 178 113
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 10 m 1,0,-1
@@ -5410,15 +5526,16 @@ SplineSet
  6 14 l 1,29,-1
  6 12 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: uni00B3
-Encoding: 113 179 114
+Encoding: 114 179 114
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 10 m 1,0,-1
@@ -5461,15 +5578,16 @@ SplineSet
  6 14 l 1,31,-1
  6 12 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: acute
-Encoding: 114 180 115
+Encoding: 115 180 115
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 2 10 m 1,0,-1
@@ -5483,15 +5601,16 @@ SplineSet
  6 12 l 1,7,-1
  4 12 l 1,4,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: uni00B5
-Encoding: 115 181 116
+Encoding: 116 181 116
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 -2 m 1,0,-1
@@ -5527,15 +5646,16 @@ SplineSet
  10 2 l 1,29,-1
  8 2 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: paragraph
-Encoding: 116 182 117
+Encoding: 117 182 117
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -5578,15 +5698,16 @@ SplineSet
  10 0 l 1,37,-1
  8 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: periodcentered
-Encoding: 117 183 118
+Encoding: 118 183 118
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 6 m 1,0,-1
@@ -5595,15 +5716,16 @@ SplineSet
  6 6 l 1,3,-1
  4 6 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: cedilla
-Encoding: 118 184 119
+Encoding: 119 184 119
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 2 0 m 1,0,-1
@@ -5624,15 +5746,16 @@ SplineSet
  4 4 l 1,13,-1
  4 2 l 1,10,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: uni00B9
-Encoding: 119 185 120
+Encoding: 120 185 120
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 4 m 1,0,-1
@@ -5655,15 +5778,16 @@ SplineSet
  6 4 l 1,17,-1
  4 4 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: ordmasculine
-Encoding: 120 186 121
+Encoding: 121 186 121
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 4 m 1,0,-1
@@ -5706,15 +5830,16 @@ SplineSet
  6 14 l 1,33,-1
  6 12 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: guillemotright
-Encoding: 121 187 122
+Encoding: 122 187 122
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -5768,15 +5893,16 @@ SplineSet
  2 12 l 1,39,-1
  2 10 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: onequarter
-Encoding: 122 188 123
+Encoding: 123 188 123
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 10 0 m 1,0,-1
@@ -5842,15 +5968,16 @@ SplineSet
  10 12 l 1,53,-1
  8 12 l 1,50,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: onehalf
-Encoding: 123 189 124
+Encoding: 124 189 124
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 0 m 1,0,-1
@@ -5914,15 +6041,16 @@ SplineSet
  10 12 l 1,51,-1
  8 12 l 1,48,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: threequarters
-Encoding: 124 190 125
+Encoding: 125 190 125
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 10 0 m 1,0,-1
@@ -5994,15 +6122,16 @@ SplineSet
  4 14 l 1,59,-1
  4 12 l 1,50,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: questiondown
-Encoding: 125 191 126
+Encoding: 126 191 126
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 10 m 1,0,-1
@@ -6042,15 +6171,16 @@ SplineSet
  6 6 l 1,29,-1
  4 6 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Agrave
-Encoding: 126 192 127
+Encoding: 127 192 127
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -6106,15 +6236,16 @@ SplineSet
  4 20 l 1,47,-1
  4 18 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Aacute
-Encoding: 127 193 128
+Encoding: 128 193 128
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -6170,15 +6301,16 @@ SplineSet
  8 18 l 1,47,-1
  6 18 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Acircumflex
-Encoding: 128 194 129
+Encoding: 129 194 129
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -6239,15 +6371,16 @@ SplineSet
  6 20 l 1,51,-1
  6 18 l 1,48,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Atilde
-Encoding: 129 195 130
+Encoding: 130 195 130
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -6313,15 +6446,16 @@ SplineSet
  6 20 l 1,55,-1
  6 18 l 1,52,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Adieresis
-Encoding: 130 196 131
+Encoding: 131 196 131
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -6377,15 +6511,16 @@ SplineSet
  8 14 l 1,47,-1
  8 12 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Aring
-Encoding: 131 197 132
+Encoding: 132 197 132
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -6448,15 +6583,16 @@ SplineSet
  6 20 l 1,53,-1
  6 18 l 1,50,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: AE
-Encoding: 132 198 133
+Encoding: 133 198 133
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 0 m 1,0,-1
@@ -6504,15 +6640,16 @@ SplineSet
  2 10 l 1,41,-1
  4 10 l 1,38,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ccedilla
-Encoding: 133 199 134
+Encoding: 134 199 134
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 -4 m 1,0,-1
@@ -6564,15 +6701,16 @@ SplineSet
  8 14 l 1,41,-1
  8 12 l 1,34,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Egrave
-Encoding: 134 200 135
+Encoding: 135 200 135
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 16 m 1,0,-1
@@ -6623,15 +6761,16 @@ SplineSet
  4 20 l 1,43,-1
  4 18 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Eacute
-Encoding: 135 201 136
+Encoding: 136 201 136
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 16 m 1,0,-1
@@ -6682,15 +6821,16 @@ SplineSet
  8 18 l 1,43,-1
  6 18 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ecircumflex
-Encoding: 136 202 137
+Encoding: 137 202 137
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 16 m 1,0,-1
@@ -6746,15 +6886,16 @@ SplineSet
  6 20 l 1,47,-1
  6 18 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Edieresis
-Encoding: 137 203 138
+Encoding: 138 203 138
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 16 m 1,0,-1
@@ -6805,15 +6946,16 @@ SplineSet
  6 2 l 1,43,-1
  8 2 l 1,8,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: Igrave
-Encoding: 138 204 139
+Encoding: 139 204 139
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 16 m 1,0,-1
@@ -6852,15 +6994,16 @@ SplineSet
  4 20 l 1,31,-1
  4 18 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Iacute
-Encoding: 139 205 140
+Encoding: 140 205 140
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 16 m 1,0,-1
@@ -6899,15 +7042,16 @@ SplineSet
  8 18 l 1,31,-1
  6 18 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Icircumflex
-Encoding: 140 206 141
+Encoding: 141 206 141
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 16 m 1,0,-1
@@ -6951,15 +7095,16 @@ SplineSet
  6 20 l 1,35,-1
  6 18 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Idieresis
-Encoding: 141 207 142
+Encoding: 142 207 142
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 16 m 1,0,-1
@@ -6998,15 +7143,16 @@ SplineSet
  8 0 l 1,31,-1
  6 0 l 1,8,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: Eth
-Encoding: 142 208 143
+Encoding: 143 208 143
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -7056,15 +7202,16 @@ SplineSet
  10 0 l 1,43,-1
  8 0 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ntilde
-Encoding: 143 209 144
+Encoding: 144 209 144
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -7130,15 +7277,16 @@ SplineSet
  6 20 l 1,55,-1
  6 18 l 1,52,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ograve
-Encoding: 144 210 145
+Encoding: 145 210 145
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 16 m 1,0,-1
@@ -7196,15 +7344,16 @@ SplineSet
  4 20 l 1,47,-1
  4 18 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Oacute
-Encoding: 145 211 146
+Encoding: 146 211 146
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 16 m 1,0,-1
@@ -7262,15 +7411,16 @@ SplineSet
  8 18 l 1,47,-1
  6 18 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ocircumflex
-Encoding: 146 212 147
+Encoding: 147 212 147
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 16 m 1,0,-1
@@ -7333,15 +7483,16 @@ SplineSet
  6 20 l 1,51,-1
  6 18 l 1,48,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Otilde
-Encoding: 147 213 148
+Encoding: 148 213 148
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 16 m 1,0,-1
@@ -7409,15 +7560,16 @@ SplineSet
  6 20 l 1,55,-1
  6 18 l 1,52,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Odieresis
-Encoding: 148 214 149
+Encoding: 149 214 149
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 16 m 1,0,-1
@@ -7475,15 +7627,16 @@ SplineSet
  8 14 l 1,47,-1
  8 12 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: multiply
-Encoding: 149 215 150
+Encoding: 150 215 150
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 2 m 1,0,-1
@@ -7532,15 +7685,16 @@ SplineSet
  2 12 l 1,35,-1
  2 10 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Oslash
-Encoding: 150 216 151
+Encoding: 151 216 151
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -7590,15 +7744,16 @@ SplineSet
  10 2 l 1,43,-1
  8 2 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ugrave
-Encoding: 151 217 152
+Encoding: 152 217 152
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 16 m 1,0,-1
@@ -7651,15 +7806,16 @@ SplineSet
  4 20 l 1,43,-1
  4 18 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Uacute
-Encoding: 152 218 153
+Encoding: 153 218 153
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 16 m 1,0,-1
@@ -7712,15 +7868,16 @@ SplineSet
  8 18 l 1,43,-1
  6 18 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ucircumflex
-Encoding: 153 219 154
+Encoding: 154 219 154
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 16 m 1,0,-1
@@ -7778,15 +7935,16 @@ SplineSet
  6 20 l 1,47,-1
  6 18 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Udieresis
-Encoding: 154 220 155
+Encoding: 155 220 155
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 16 m 1,0,-1
@@ -7839,15 +7997,16 @@ SplineSet
  2 4 l 1,43,-1
  2 2 l 1,30,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Yacute
-Encoding: 155 221 156
+Encoding: 156 221 156
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -7894,15 +8053,16 @@ SplineSet
  8 18 l 1,35,-1
  6 18 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Thorn
-Encoding: 156 222 157
+Encoding: 157 222 157
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 0 m 1,0,-1
@@ -7939,15 +8099,16 @@ SplineSet
  2 0 l 1,31,-1
  0 0 l 1,0,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: germandbls
-Encoding: 157 223 158
+Encoding: 158 223 158
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 0 -2 m 1,0,-1
@@ -8005,15 +8166,16 @@ SplineSet
  8 14 l 1,47,-1
  8 12 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: agrave
-Encoding: 158 224 159
+Encoding: 159 224 159
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -8064,15 +8226,16 @@ SplineSet
  4 16 l 1,41,-1
  4 14 l 1,38,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: aacute
-Encoding: 159 225 160
+Encoding: 160 225 160
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -8123,15 +8286,16 @@ SplineSet
  8 14 l 1,41,-1
  6 14 l 1,38,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: acircumflex
-Encoding: 160 226 161
+Encoding: 161 226 161
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -8187,15 +8351,16 @@ SplineSet
  6 16 l 1,45,-1
  6 14 l 1,42,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: atilde
-Encoding: 161 227 162
+Encoding: 162 227 162
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -8256,15 +8421,16 @@ SplineSet
  6 16 l 1,49,-1
  6 14 l 1,46,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: adieresis
-Encoding: 162 228 163
+Encoding: 163 228 163
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -8315,15 +8481,16 @@ SplineSet
  8 10 l 1,41,-1
  8 8 l 1,34,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: aring
-Encoding: 163 229 164
+Encoding: 164 229 164
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -8384,15 +8551,16 @@ SplineSet
  6 18 l 1,49,-1
  6 16 l 1,46,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ae
-Encoding: 164 230 165
+Encoding: 165 230 165
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 10 2 m 1,0,-1
@@ -8442,15 +8610,16 @@ SplineSet
  6 10 l 1,41,-1
  6 8 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ccedilla
-Encoding: 165 231 166
+Encoding: 166 231 166
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 -4 m 1,0,-1
@@ -8498,15 +8667,16 @@ SplineSet
  8 10 l 1,37,-1
  8 8 l 1,30,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: egrave
-Encoding: 166 232 167
+Encoding: 167 232 167
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -8559,15 +8729,16 @@ SplineSet
  4 16 l 1,43,-1
  4 14 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: eacute
-Encoding: 167 233 168
+Encoding: 168 233 168
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -8620,15 +8791,16 @@ SplineSet
  8 14 l 1,43,-1
  6 14 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ecircumflex
-Encoding: 168 234 169
+Encoding: 169 234 169
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -8686,15 +8858,16 @@ SplineSet
  6 16 l 1,47,-1
  6 14 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: edieresis
-Encoding: 169 235 170
+Encoding: 170 235 170
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -8747,15 +8920,16 @@ SplineSet
  8 10 l 1,43,-1
  8 8 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: igrave
-Encoding: 170 236 171
+Encoding: 171 236 171
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -8789,15 +8963,16 @@ SplineSet
  4 16 l 1,25,-1
  4 14 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: iacute
-Encoding: 171 237 172
+Encoding: 172 237 172
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -8831,15 +9006,16 @@ SplineSet
  8 14 l 1,25,-1
  6 14 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: icircumflex
-Encoding: 172 238 173
+Encoding: 173 238 173
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -8878,15 +9054,16 @@ SplineSet
  6 16 l 1,29,-1
  6 14 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: idieresis
-Encoding: 173 239 174
+Encoding: 174 239 174
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -8920,15 +9097,16 @@ SplineSet
  6 4 l 1,25,-1
  6 2 l 1,14,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: eth
-Encoding: 174 240 175
+Encoding: 175 240 175
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 8 m 1,0,-1
@@ -8984,15 +9162,16 @@ SplineSet
  6 14 l 1,45,-1
  6 12 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ntilde
-Encoding: 175 241 176
+Encoding: 176 241 176
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -9046,15 +9225,16 @@ SplineSet
  6 16 l 1,43,-1
  6 14 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ograve
-Encoding: 176 242 177
+Encoding: 177 242 177
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -9104,15 +9284,16 @@ SplineSet
  4 16 l 1,39,-1
  4 14 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: oacute
-Encoding: 177 243 178
+Encoding: 178 243 178
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -9162,15 +9343,16 @@ SplineSet
  8 14 l 1,39,-1
  6 14 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ocircumflex
-Encoding: 178 244 179
+Encoding: 179 244 179
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -9225,15 +9407,16 @@ SplineSet
  6 16 l 1,43,-1
  6 14 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: otilde
-Encoding: 179 245 180
+Encoding: 180 245 180
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -9293,15 +9476,16 @@ SplineSet
  6 16 l 1,47,-1
  6 14 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: odieresis
-Encoding: 180 246 181
+Encoding: 181 246 181
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -9351,15 +9535,16 @@ SplineSet
  8 10 l 1,39,-1
  8 8 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: divide
-Encoding: 181 247 182
+Encoding: 182 247 182
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 2 m 1,0,-1
@@ -9386,15 +9571,16 @@ SplineSet
  6 8 l 1,19,-1
  8 8 l 1,8,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: oslash
-Encoding: 182 248 183
+Encoding: 183 248 183
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 2 m 1,0,-1
@@ -9436,15 +9622,16 @@ SplineSet
  10 2 l 1,35,-1
  8 2 l 1,16,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ugrave
-Encoding: 183 249 184
+Encoding: 184 249 184
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -9488,15 +9675,16 @@ SplineSet
  4 16 l 1,35,-1
  4 14 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: uacute
-Encoding: 184 250 185
+Encoding: 185 250 185
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -9540,15 +9728,16 @@ SplineSet
  8 14 l 1,35,-1
  6 14 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ucircumflex
-Encoding: 185 251 186
+Encoding: 186 251 186
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -9597,15 +9786,16 @@ SplineSet
  6 16 l 1,39,-1
  6 14 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: udieresis
-Encoding: 186 252 187
+Encoding: 187 252 187
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 12 m 1,0,-1
@@ -9649,15 +9839,16 @@ SplineSet
  2 4 l 1,35,-1
  2 2 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: yacute
-Encoding: 187 253 188
+Encoding: 188 253 188
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 12 m 1,0,-1
@@ -9710,15 +9901,16 @@ SplineSet
  8 14 l 1,43,-1
  6 14 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Euro
-Encoding: 188 8364 189
+Encoding: 189 8364 189
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 10 m 1,0,-1
@@ -9767,15 +9959,16 @@ SplineSet
  8 14 l 1,39,-1
  8 12 l 1,34,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: smileface
-Encoding: 189 9786 190
+Encoding: 190 9786 190
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 6 8 m 1,0,-1
@@ -9812,15 +10005,16 @@ SplineSet
  2 6 l 1,27,-1
  2 4 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: invsmileface
-Encoding: 190 9787 191
+Encoding: 191 9787 191
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 0 m 1,0,-1
@@ -9877,15 +10071,16 @@ SplineSet
  4 10 l 1,47,-1
  6 10 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: heart
-Encoding: 191 9829 192
+Encoding: 192 9829 192
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 4 0 m 1,0,-1
@@ -9914,15 +10109,18 @@ SplineSet
  6 0 l 1,23,-1
  4 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: uni3000
-Encoding: 192 12288 193
+Encoding: 193 12288 193
 Width: 12
 VWidth: 16
 GlyphClass: 2
 Flags: W
-LayerCount: 2
+LayerCount: 3
+Fore
+Validated: 1
 EndChar
 
 StartChar: doubleequal
@@ -9930,7 +10128,7 @@ Encoding: 194 -1 194
 Width: 24
 VWidth: 16
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 4 m 1,0,-1
@@ -9960,6 +10158,7 @@ SplineSet
  6 10 l 1,23,-1
  8 10 l 1,12,-1
 EndSplineSet
+Validated: 1
 Ligature2: "liga-subtable" equal equal
 LCarets2: 1 0
 EndChar
@@ -9969,7 +10168,7 @@ Encoding: 195 -1 195
 Width: 36
 VWidth: 16
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 8 m 1,0,-1
@@ -10012,6 +10211,7 @@ SplineSet
  6 12 l 1,35,-1
  8 12 l 1,24,-1
 EndSplineSet
+Validated: 1
 LCarets2: 2 0 0
 Ligature2: "liga-subtable" equal equal equal
 EndChar
@@ -10021,7 +10221,7 @@ Encoding: 196 -1 196
 Width: 24
 VWidth: 16
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 -2 m 25,0,-1
@@ -10076,6 +10276,7 @@ SplineSet
  6 10 l 1,51,-1
  8 10 l 1,32,-1
 EndSplineSet
+Validated: 5
 LCarets2: 2 0 0
 Ligature2: "liga-subtable" exclam equal
 EndChar
@@ -10085,7 +10286,7 @@ Encoding: 197 -1 197
 Width: 36
 VWidth: 16
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 18 16 m 25,0,-1
@@ -10150,6 +10351,7 @@ SplineSet
  6 12 l 1,61,-1
  14 12 l 1,42,-1
 EndSplineSet
+Validated: 5
 LCarets2: 2 0 0
 Ligature2: "liga-subtable" exclam equal equal
 EndChar
@@ -10159,7 +10361,7 @@ Encoding: 198 -1 198
 Width: 24
 VWidth: 16
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 8 14 m 1,0,-1
@@ -10198,6 +10400,7 @@ SplineSet
  6 0 l 1,27,-1
  6 2 l 1,24,-1
 EndSplineSet
+Validated: 5
 Ligature2: "liga-subtable" less hyphen
 EndChar
 
@@ -10206,7 +10409,7 @@ Encoding: 199 -1 199
 Width: 24
 VWidth: 16
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 14 0 m 1,0,-1
@@ -10245,6 +10448,7 @@ SplineSet
  16 14 l 1,27,-1
  16 12 l 1,24,-1
 EndSplineSet
+Validated: 5
 LCarets2: 1 0
 Ligature2: "liga-subtable" hyphen greater
 EndChar
@@ -10254,7 +10458,7 @@ Encoding: 200 -1 200
 Width: 24
 VWidth: 16
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 16 14 m 5,0,-1
@@ -10293,6 +10497,7 @@ SplineSet
  14 2 l 5,27,-1
  16 2 l 5,24,-1
 EndSplineSet
+Validated: 5
 Ligature2: "liga-subtable" equal greater
 LCarets2: 1 0
 EndChar
@@ -10302,7 +10507,7 @@ Encoding: 201 -1 201
 Width: 24
 VWidth: 16
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 5 0 m 25,0,-1
@@ -10336,6 +10541,7 @@ SplineSet
  17 10 l 1,23,-1
  13 10 l 1,20,-1
 EndSplineSet
+Validated: 5
 Ligature2: "liga-subtable" less equal
 EndChar
 
@@ -10344,7 +10550,7 @@ Encoding: 202 -1 202
 Width: 24
 VWidth: 16
 Flags: W
-LayerCount: 2
+LayerCount: 3
 Fore
 SplineSet
 17 0 m 25,0,-1
@@ -10378,7 +10584,352 @@ SplineSet
  5 10 l 1,23,-1
  9 10 l 1,20,-1
 EndSplineSet
+Validated: 5
+LCarets2: 1 0
 Ligature2: "liga-subtable" greater equal
+EndChar
+
+StartChar: dotlessi
+Encoding: 203 305 203
+Width: 12
+VWidth: 16
+GlyphClass: 2
+Flags: W
+LayerCount: 3
+Fore
+SplineSet
+4 -2 m 1,0,-1
+ 4 0 l 1,1,-1
+ 4 2 l 1,2,-1
+ 4 4 l 1,3,-1
+ 4 6 l 1,4,-1
+ 4 8 l 1,5,-1
+ 6 8 l 1,6,-1
+ 6 6 l 1,7,-1
+ 6 4 l 1,8,-1
+ 6 2 l 1,9,-1
+ 6 0 l 1,10,-1
+ 6 -2 l 1,11,-1
+ 4 -2 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: gbreve
+Encoding: 204 287 204
+Width: 12
+VWidth: 16
+Flags: W
+LayerCount: 3
+Fore
+SplineSet
+2 16 m 5
+ 4 16 l 1
+ 4 14 l 1
+ 2 14 l 1
+ 2 16 l 5
+8 16 m 1,0,-1
+ 10 16 l 1,1,-1
+ 10 14 l 1,2,-1
+ 8 14 l 1,3,-1
+ 8 16 l 1,0,-1
+4 14 m 1,4,-1
+ 8 14 l 1,5,-1
+ 8 12 l 1,6,-1
+ 4 12 l 1,7,-1
+ 4 14 l 1,4,-1
+6 0 m 1,8,-1
+ 8 0 l 1,9,-1
+ 8 -2 l 1,10,-1
+ 6 -2 l 1,11,-1
+ 4 -2 l 1,12,-1
+ 2 -2 l 1,13,-1
+ 0 -2 l 1,14,-1
+ 0 0 l 1,15,-1
+ 2 0 l 1,16,-1
+ 4 0 l 1,17,-1
+ 6 0 l 1,8,-1
+8 0 m 1,18,-1
+ 8 2 l 1,19,-1
+ 6 2 l 1,20,-1
+ 4 2 l 1,21,-1
+ 2 2 l 1,22,-1
+ 2 4 l 1,23,-1
+ 0 4 l 1,24,-1
+ 0 6 l 1,25,-1
+ 0 8 l 1,26,-1
+ 2 8 l 1,27,-1
+ 2 10 l 1,28,-1
+ 4 10 l 1,29,-1
+ 6 10 l 1,30,-1
+ 8 10 l 1,31,-1
+ 10 10 l 1,32,-1
+ 10 8 l 1,33,-1
+ 10 6 l 1,34,-1
+ 10 4 l 1,35,-1
+ 10 2 l 1,36,-1
+ 10 0 l 1,37,-1
+ 8 0 l 1,18,-1
+6 4 m 1,38,-1
+ 8 4 l 1,39,-1
+ 8 6 l 1,40,-1
+ 8 8 l 1,41,-1
+ 6 8 l 1,42,-1
+ 4 8 l 1,43,-1
+ 2 8 l 1,44,-1
+ 2 6 l 1,45,-1
+ 2 4 l 1,46,-1
+ 4 4 l 1,47,-1
+ 6 4 l 1,38,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: Gbreve
+Encoding: 205 286 205
+Width: 12
+VWidth: 16
+Flags: W
+LayerCount: 3
+Fore
+SplineSet
+2 20 m 5
+ 4 20 l 1
+ 4 18 l 1
+ 2 18 l 1
+ 2 20 l 5
+8 20 m 1,0,-1
+ 10 20 l 1,1,-1
+ 10 18 l 1,2,-1
+ 8 18 l 1,3,-1
+ 8 20 l 1,0,-1
+4 18 m 1,4,-1
+ 8 18 l 1,5,-1
+ 8 16 l 1,6,-1
+ 4 16 l 1,7,-1
+ 4 18 l 1,4,-1
+6 2 m 1,8,-1
+ 8 2 l 1,9,-1
+ 8 0 l 1,10,-1
+ 6 0 l 1,11,-1
+ 4 0 l 1,12,-1
+ 2 0 l 1,13,-1
+ 2 2 l 1,14,-1
+ 4 2 l 1,15,-1
+ 6 2 l 1,8,-1
+8 2 m 1,16,-1
+ 8 4 l 1,17,-1
+ 8 6 l 1,18,-1
+ 8 8 l 1,19,-1
+ 6 8 l 1,20,-1
+ 6 10 l 1,21,-1
+ 8 10 l 1,22,-1
+ 10 10 l 1,23,-1
+ 10 8 l 1,24,-1
+ 10 6 l 1,25,-1
+ 10 4 l 1,26,-1
+ 10 2 l 1,27,-1
+ 8 2 l 1,16,-1
+2 2 m 1,28,-1
+ 0 2 l 1,29,-1
+ 0 4 l 1,30,-1
+ 0 6 l 1,31,-1
+ 0 8 l 1,32,-1
+ 0 10 l 1,33,-1
+ 0 12 l 1,34,-1
+ 2 12 l 1,35,-1
+ 2 10 l 1,36,-1
+ 2 8 l 1,37,-1
+ 2 6 l 1,38,-1
+ 2 4 l 1,39,-1
+ 2 2 l 1,28,-1
+8 14 m 1,40,-1
+ 10 14 l 1,41,-1
+ 10 12 l 1,42,-1
+ 8 12 l 1,43,-1
+ 6 12 l 1,44,-1
+ 4 12 l 1,45,-1
+ 2 12 l 1,46,-1
+ 2 14 l 1,47,-1
+ 4 14 l 1,48,-1
+ 6 14 l 1,49,-1
+ 8 14 l 1,40,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: Idotaccent
+Encoding: 206 304 206
+Width: 12
+VWidth: 16
+Flags: W
+LayerCount: 3
+Fore
+SplineSet
+4 18 m 5
+ 6 18 l 1
+ 6 16 l 1
+ 4 16 l 1
+ 4 18 l 5
+6 0 m 1,0,-1
+ 4 0 l 1,1,-1
+ 2 0 l 1,2,-1
+ 2 2 l 1,3,-1
+ 4 2 l 1,4,-1
+ 4 4 l 1,5,-1
+ 4 6 l 1,6,-1
+ 4 8 l 1,7,-1
+ 4 10 l 1,8,-1
+ 4 12 l 1,9,-1
+ 2 12 l 1,10,-1
+ 2 14 l 1,11,-1
+ 4 14 l 1,12,-1
+ 6 14 l 1,13,-1
+ 8 14 l 1,14,-1
+ 8 12 l 1,15,-1
+ 6 12 l 1,16,-1
+ 6 10 l 1,17,-1
+ 6 8 l 1,18,-1
+ 6 6 l 1,19,-1
+ 6 4 l 1,20,-1
+ 6 2 l 1,21,-1
+ 8 2 l 1,22,-1
+ 8 0 l 1,23,-1
+ 6 0 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: scedilla
+Encoding: 207 351 207
+Width: 12
+VWidth: 16
+Flags: W
+LayerCount: 3
+Fore
+SplineSet
+6 -2 m 5
+ 6 -4 l 1
+ 4 -4 l 1
+ 4 -2 l 1
+ 6 -2 l 5
+8 0 m 1,0,-1
+ 8 -2 l 1,1,-1
+ 6 -2 l 1,2,-1
+ 6 0 l 1,3,-1
+ 8 0 l 1,0,-1
+6 2 m 1,4,-1
+ 8 2 l 1,5,-1
+ 8 0 l 1,6,-1
+ 6 0 l 1,7,-1
+ 4 0 l 1,8,-1
+ 2 0 l 1,9,-1
+ 0 0 l 1,10,-1
+ 0 2 l 1,11,-1
+ 2 2 l 1,12,-1
+ 4 2 l 1,13,-1
+ 6 2 l 1,4,-1
+8 2 m 1,14,-1
+ 8 4 l 1,15,-1
+ 10 4 l 1,16,-1
+ 10 2 l 1,17,-1
+ 8 2 l 1,14,-1
+8 4 m 1,18,-1
+ 6 4 l 1,19,-1
+ 4 4 l 1,20,-1
+ 2 4 l 1,21,-1
+ 2 6 l 1,22,-1
+ 4 6 l 1,23,-1
+ 6 6 l 1,24,-1
+ 8 6 l 1,25,-1
+ 8 4 l 1,18,-1
+2 6 m 1,26,-1
+ 0 6 l 1,27,-1
+ 0 8 l 1,28,-1
+ 2 8 l 1,29,-1
+ 2 6 l 1,26,-1
+8 10 m 1,30,-1
+ 10 10 l 1,31,-1
+ 10 8 l 1,32,-1
+ 8 8 l 1,33,-1
+ 6 8 l 1,34,-1
+ 4 8 l 1,35,-1
+ 2 8 l 1,36,-1
+ 2 10 l 1,37,-1
+ 4 10 l 1,38,-1
+ 6 10 l 1,39,-1
+ 8 10 l 1,30,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: Scedilla
+Encoding: 208 350 208
+Width: 12
+VWidth: 16
+Flags: WO
+LayerCount: 3
+Fore
+SplineSet
+6 -2 m 5
+ 6 -4 l 1
+ 4 -4 l 1
+ 4 -2 l 1
+ 6 -2 l 5
+8 0 m 1,0,-1
+ 8 -2 l 1,1,-1
+ 6 -2 l 1,2,-1
+ 6 0 l 1,3,-1
+ 8 0 l 1,0,-1
+6 2 m 1,4,-1
+ 8 2 l 1,5,-1
+ 8 0 l 1,6,-1
+ 6 0 l 1,7,-1
+ 4 0 l 1,8,-1
+ 2 0 l 1,9,-1
+ 2 2 l 1,10,-1
+ 4 2 l 1,11,-1
+ 6 2 l 1,4,-1
+8 2 m 1,12,-1
+ 8 4 l 1,13,-1
+ 8 6 l 1,14,-1
+ 8 8 l 1,15,-1
+ 10 8 l 1,16,-1
+ 10 6 l 1,17,-1
+ 10 4 l 1,18,-1
+ 10 2 l 1,19,-1
+ 8 2 l 1,12,-1
+2 2 m 1,20,-1
+ 0 2 l 1,21,-1
+ 0 4 l 1,22,-1
+ 2 4 l 1,23,-1
+ 2 2 l 1,20,-1
+8 8 m 1,24,-1
+ 6 8 l 1,25,-1
+ 4 8 l 1,26,-1
+ 2 8 l 1,27,-1
+ 2 10 l 1,28,-1
+ 4 10 l 1,29,-1
+ 6 10 l 1,30,-1
+ 8 10 l 1,31,-1
+ 8 8 l 1,24,-1
+2 10 m 1,32,-1
+ 0 10 l 1,33,-1
+ 0 12 l 1,34,-1
+ 2 12 l 1,35,-1
+ 2 10 l 1,32,-1
+8 14 m 1,36,-1
+ 10 14 l 1,37,-1
+ 10 12 l 1,38,-1
+ 8 12 l 1,39,-1
+ 6 12 l 1,40,-1
+ 4 12 l 1,41,-1
+ 2 12 l 1,42,-1
+ 2 14 l 1,43,-1
+ 4 14 l 1,44,-1
+ 6 14 l 1,45,-1
+ 8 14 l 1,36,-1
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
