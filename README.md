@@ -23,7 +23,7 @@ The font for developers who like Minecraft a bit _too_ much.
 
 ## How to install
 
-### Windows
+### Windows / Linux
 
 Download the most recent `Monocraft.otf` file from the [Releases](https://github.com/IdreesInc/Minecraft-Mono/releases) page. Right click on the downloaded font and select **Install**. You might need administrative access to install fonts, depending on your machine.
 
