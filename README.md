@@ -21,8 +21,6 @@ The font for developers who like Minecraft a bit _too_ much.
 
 ![](images/glyphs.png)
 
-![](images/javascript-example.png)
-
 ## How to install
 
 ### Windows

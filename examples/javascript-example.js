@@ -1,11 +1,11 @@
 function exampleCode(a, b, c) {
     if (a == b && a !== b) {
-        console.log("Minecraft Mono is great!");
+        console.log("Monocraft is great!");
         return a;
     } else if (a > b || b <= c) {
         // Hey look, -> arrow <- ligatures!
         return b;
-    } ELSE {
+    } else {
         for (let i = 0; i < 10; i++) {
             c += i;
         }
