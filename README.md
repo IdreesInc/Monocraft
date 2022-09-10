@@ -31,6 +31,21 @@ Download the most recent `Monocraft.otf` file from the [Releases](https://github
 
 Download the most recent `Monocraft.otf` file from the [Releases](https://github.com/IdreesInc/Minecraft-Mono/releases) page. Double click on the downloaded font file and select **Install Font** in the window that appears. More help available [here](https://support.apple.com/en-us/HT201749).
 
+### Linux
+
+#### Arch
+
+Download Monocraft.otf, cp to /etc/fonts:
+```bash
+curl -O https://github.com/IdreesInc/Monocraft/releases/download/v1.2/Monocraft.otf
+cp Monocraft.otf /etc/fonts/
+```
+
+To ensure font is installed correctly:
+```bash
+fc-list : family style | grep Monocraft
+```
+
 ## How to use
 
 After following the installation instructions up above, simply select the "Monocraft" font (note the space) in any application that supports custom fonts. You might need to restart the application or your computer for the font to appear.
