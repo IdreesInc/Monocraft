@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1280473793
-ModificationTime: 1662566324
+ModificationTime: 1662921210
 PfmFamily: 17
 TTFWeight: 500
 TTFWidth: 5
@@ -58,9 +58,667 @@ OS2UnicodeRanges: 80000003.00014002.00000000.00000000
 Lookup: 4 0 0 "liga" { "liga-subtable"  } ['liga' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
-ShortTable: cvt  2
+TtTable: prep
+PUSHW_1
+ 511
+SCANCTRL
+PUSHB_1
+ 1
+SCANTYPE
+SVTCA[y-axis]
+MPPEM
+PUSHB_1
+ 8
+LT
+IF
+PUSHB_2
+ 1
+ 1
+INSTCTRL
+EIF
+PUSHB_2
+ 70
+ 6
+CALL
+IF
+POP
+PUSHB_1
+ 16
+EIF
+MPPEM
+PUSHB_1
+ 20
+GT
+IF
+POP
+PUSHB_1
+ 128
+EIF
+SCVTCI
+PUSHB_1
+ 20
+CALL
+EndTTInstrs
+TtTable: fpgm
+PUSHB_1
+ 0
+FDEF
+PUSHB_1
+ 0
+SZP0
+MPPEM
+PUSHB_1
+ 42
+LT
+IF
+PUSHB_1
+ 74
+SROUND
+EIF
+PUSHB_1
+ 0
+SWAP
+MIAP[rnd]
+RTG
+PUSHB_1
+ 6
+CALL
+IF
+RTDG
+EIF
+MPPEM
+PUSHB_1
+ 42
+LT
+IF
+RDTG
+EIF
+DUP
+MDRP[rp0,rnd,grey]
+PUSHB_1
+ 1
+SZP0
+MDAP[no-rnd]
+RTG
+ENDF
+PUSHB_1
+ 1
+FDEF
+DUP
+MDRP[rp0,min,white]
+PUSHB_1
+ 12
+CALL
+ENDF
+PUSHB_1
+ 2
+FDEF
+MPPEM
+GT
+IF
+RCVT
+SWAP
+EIF
+POP
+ENDF
+PUSHB_1
+ 3
+FDEF
+ROUND[Black]
+RTG
+DUP
+PUSHB_1
+ 64
+LT
+IF
+POP
+PUSHB_1
+ 64
+EIF
+ENDF
+PUSHB_1
+ 4
+FDEF
+PUSHB_1
+ 6
+CALL
+IF
+POP
+SWAP
+POP
+ROFF
+IF
+MDRP[rp0,min,rnd,black]
+ELSE
+MDRP[min,rnd,black]
+EIF
+ELSE
+MPPEM
+GT
+IF
+IF
+MIRP[rp0,min,rnd,black]
+ELSE
+MIRP[min,rnd,black]
+EIF
+ELSE
+SWAP
+POP
+PUSHB_1
+ 5
+CALL
+IF
+PUSHB_1
+ 70
+SROUND
+EIF
+IF
+MDRP[rp0,min,rnd,black]
+ELSE
+MDRP[min,rnd,black]
+EIF
+EIF
+EIF
+RTG
+ENDF
+PUSHB_1
+ 5
+FDEF
+GFV
+NOT
+AND
+ENDF
+PUSHB_1
+ 6
+FDEF
+PUSHB_2
+ 34
+ 1
+GETINFO
+LT
+IF
+PUSHB_1
+ 32
+GETINFO
+NOT
+NOT
+ELSE
+PUSHB_1
+ 0
+EIF
+ENDF
+PUSHB_1
+ 7
+FDEF
+PUSHB_2
+ 36
+ 1
+GETINFO
+LT
+IF
+PUSHB_1
+ 64
+GETINFO
+NOT
+NOT
+ELSE
+PUSHB_1
+ 0
+EIF
+ENDF
+PUSHB_1
+ 8
+FDEF
+SRP2
+SRP1
+DUP
+IP
+MDAP[rnd]
+ENDF
+PUSHB_1
+ 9
+FDEF
+DUP
+RDTG
+PUSHB_1
+ 6
+CALL
+IF
+MDRP[rnd,grey]
+ELSE
+MDRP[min,rnd,black]
+EIF
+DUP
+PUSHB_1
+ 3
+CINDEX
+MD[grid]
+SWAP
+DUP
+PUSHB_1
+ 4
+MINDEX
+MD[orig]
+PUSHB_1
+ 0
+LT
+IF
+ROLL
+NEG
+ROLL
+SUB
+DUP
+PUSHB_1
+ 0
+LT
+IF
+SHPIX
+ELSE
+POP
+POP
+EIF
+ELSE
+ROLL
+ROLL
+SUB
+DUP
+PUSHB_1
+ 0
+GT
+IF
+SHPIX
+ELSE
+POP
+POP
+EIF
+EIF
+RTG
+ENDF
+PUSHB_1
+ 10
+FDEF
+PUSHB_1
+ 6
+CALL
+IF
+POP
+SRP0
+ELSE
+SRP0
+POP
+EIF
+ENDF
+PUSHB_1
+ 11
+FDEF
+DUP
+MDRP[rp0,white]
+PUSHB_1
+ 12
+CALL
+ENDF
+PUSHB_1
+ 12
+FDEF
+DUP
+MDAP[rnd]
+PUSHB_1
+ 7
+CALL
+NOT
+IF
+DUP
+DUP
+GC[orig]
+SWAP
+GC[cur]
+SUB
+ROUND[White]
+DUP
+IF
+DUP
+ABS
+DIV
+SHPIX
+ELSE
+POP
+POP
+EIF
+ELSE
+POP
+EIF
+ENDF
+PUSHB_1
+ 13
+FDEF
+SRP2
+SRP1
+DUP
+DUP
+IP
+MDAP[rnd]
+DUP
+ROLL
+DUP
+GC[orig]
+ROLL
+GC[cur]
+SUB
+SWAP
+ROLL
+DUP
+ROLL
+SWAP
+MD[orig]
+PUSHB_1
+ 0
+LT
+IF
+SWAP
+PUSHB_1
+ 0
+GT
+IF
+PUSHB_1
+ 64
+SHPIX
+ELSE
+POP
+EIF
+ELSE
+SWAP
+PUSHB_1
+ 0
+LT
+IF
+PUSHB_1
+ 64
+NEG
+SHPIX
+ELSE
+POP
+EIF
+EIF
+ENDF
+PUSHB_1
+ 14
+FDEF
+PUSHB_1
+ 6
+CALL
+IF
+RTDG
+MDRP[rp0,rnd,white]
+RTG
+POP
+POP
+ELSE
+DUP
+MDRP[rp0,rnd,white]
+ROLL
+MPPEM
+GT
+IF
+DUP
+ROLL
+SWAP
+MD[grid]
+DUP
+PUSHB_1
+ 0
+NEQ
+IF
+SHPIX
+ELSE
+POP
+POP
+EIF
+ELSE
+POP
+POP
+EIF
+EIF
+ENDF
+PUSHB_1
+ 15
+FDEF
+SWAP
+DUP
+MDRP[rp0,rnd,white]
+DUP
+MDAP[rnd]
+PUSHB_1
+ 7
+CALL
+NOT
+IF
+SWAP
+DUP
+IF
+MPPEM
+GTEQ
+ELSE
+POP
+PUSHB_1
+ 1
+EIF
+IF
+ROLL
+PUSHB_1
+ 4
+MINDEX
+MD[grid]
+SWAP
+ROLL
+SWAP
+DUP
+ROLL
+MD[grid]
+ROLL
+SWAP
+SUB
+SHPIX
+ELSE
+POP
+POP
+POP
+POP
+EIF
+ELSE
+POP
+POP
+POP
+POP
+POP
+EIF
+ENDF
+PUSHB_1
+ 16
+FDEF
+DUP
+MDRP[rp0,min,white]
+PUSHB_1
+ 18
+CALL
+ENDF
+PUSHB_1
+ 17
+FDEF
+DUP
+MDRP[rp0,white]
+PUSHB_1
+ 18
+CALL
+ENDF
+PUSHB_1
+ 18
+FDEF
+DUP
+MDAP[rnd]
+PUSHB_1
+ 7
+CALL
+NOT
+IF
+DUP
+DUP
+GC[orig]
+SWAP
+GC[cur]
+SUB
+ROUND[White]
+ROLL
+DUP
+GC[orig]
+SWAP
+GC[cur]
+SWAP
+SUB
+ROUND[White]
+ADD
+DUP
+IF
+DUP
+ABS
+DIV
+SHPIX
+ELSE
+POP
+POP
+EIF
+ELSE
+POP
+POP
+EIF
+ENDF
+PUSHB_1
+ 19
+FDEF
+DUP
+ROLL
+DUP
+ROLL
+SDPVTL[orthog]
+DUP
+PUSHB_1
+ 3
+CINDEX
+MD[orig]
+ABS
+SWAP
+ROLL
+SPVTL[orthog]
+PUSHB_1
+ 32
+LT
+IF
+ALIGNRP
+ELSE
+MDRP[grey]
+EIF
+ENDF
+PUSHB_1
+ 20
+FDEF
+PUSHB_4
+ 0
+ 64
+ 1
+ 64
+WS
+WS
+SVTCA[x-axis]
+MPPEM
+PUSHW_1
+ 4096
+MUL
+SVTCA[y-axis]
+MPPEM
+PUSHW_1
+ 4096
+MUL
+DUP
+ROLL
+DUP
+ROLL
+NEQ
+IF
+DUP
+ROLL
+DUP
+ROLL
+GT
+IF
+SWAP
+DIV
+DUP
+PUSHB_1
+ 0
+SWAP
+WS
+ELSE
+DIV
+DUP
+PUSHB_1
+ 1
+SWAP
+WS
+EIF
+DUP
+PUSHB_1
+ 64
+GT
+IF
+PUSHB_3
+ 0
+ 32
+ 0
+RS
+MUL
+WS
+PUSHB_3
+ 1
+ 32
+ 1
+RS
+MUL
+WS
+PUSHB_1
+ 32
+MUL
+PUSHB_1
+ 25
+NEG
+JMPR
+POP
+EIF
+ELSE
+POP
+POP
+EIF
+ENDF
+PUSHB_1
+ 21
+FDEF
+PUSHB_1
+ 1
+RS
+MUL
+SWAP
+PUSHB_1
+ 0
+RS
+MUL
+SWAP
+ENDF
+EndTTInstrs
+ShortTable: cvt  6
   34
   648
+  120
+  0
+  600
+  840
 EndShort
 ShortTable: maxp 16
   1
@@ -71,11 +729,11 @@ ShortTable: maxp 16
   0
   0
   2
-  0
   1
-  1
+  2
+  22
   0
-  64
+  256
   46
   0
   0
@@ -88,7 +746,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 30 12
+WinInfo: 0 38 13
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -172,7 +830,7 @@ Grid
  0 720 l 1
  0 840 l 1
 EndSplineSet
-BeginChars: 203 203
+BeginChars: 299 299
 
 StartChar: .notdef
 Encoding: 193 -1 0
@@ -242,6 +900,7 @@ SplineSet
  126 1218 l 1,7,-1
  126 66 l 1,4,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: space
@@ -251,6 +910,8 @@ VWidth: 960
 GlyphClass: 2
 Flags: W
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: exclam
@@ -281,6 +942,7 @@ SplineSet
  360 240 l 1,15,-1
  240 240 l 1,4,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: quotedbl
@@ -307,6 +969,7 @@ SplineSet
  240 600 l 1,11,-1
  120 600 l 1,6,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: numbersign
@@ -361,6 +1024,7 @@ SplineSet
  240 360 l 1,39,-1
  360 360 l 1,36,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: dollar
@@ -418,6 +1082,7 @@ SplineSet
  360 720 l 1,39,-1
  480 720 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: percent
@@ -473,6 +1138,7 @@ SplineSet
  600 720 l 1,35,-1
  480 720 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ampersand
@@ -538,6 +1204,7 @@ SplineSet
  360 840 l 1,45,-1
  360 720 l 1,42,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: quotesingle
@@ -557,6 +1224,7 @@ SplineSet
  240 600 l 1,5,-1
  120 600 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: parenleft
@@ -598,6 +1266,7 @@ SplineSet
  480 720 l 1,23,-1
  360 720 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: parenright
@@ -639,6 +1308,7 @@ SplineSet
  240 840 l 1,23,-1
  240 720 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: asterisk
@@ -676,6 +1346,7 @@ SplineSet
  240 840 l 1,19,-1
  240 720 l 1,16,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: plus
@@ -709,6 +1380,7 @@ SplineSet
  360 120 l 1,19,-1
  240 120 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: comma
@@ -731,6 +1403,7 @@ SplineSet
  360 0 l 1,7,-1
  240 0 l 1,4,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: hyphen
@@ -756,6 +1429,7 @@ SplineSet
  360 480 l 1,11,-1
  480 480 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: period
@@ -773,6 +1447,7 @@ SplineSet
  360 0 l 1,3,-1
  240 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: slash
@@ -814,6 +1489,7 @@ SplineSet
  600 720 l 1,23,-1
  480 720 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: zero
@@ -877,6 +1553,7 @@ SplineSet
  480 840 l 1,47,-1
  480 720 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: one
@@ -916,6 +1593,7 @@ SplineSet
  360 120 l 1,25,-1
  480 120 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: two
@@ -978,6 +1656,7 @@ SplineSet
  480 840 l 1,43,-1
  480 720 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: three
@@ -1039,6 +1718,7 @@ SplineSet
  480 840 l 1,41,-1
  480 720 l 1,34,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: four
@@ -1089,6 +1769,7 @@ SplineSet
  240 360 l 1,35,-1
  360 360 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: five
@@ -1147,6 +1828,7 @@ SplineSet
  480 600 l 1,41,-1
  480 480 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: six
@@ -1204,6 +1886,7 @@ SplineSet
  240 840 l 1,39,-1
  360 840 l 1,34,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: seven
@@ -1248,6 +1931,7 @@ SplineSet
  120 600 l 1,29,-1
  0 600 l 1,8,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: eight
@@ -1315,6 +1999,7 @@ SplineSet
  480 840 l 1,47,-1
  480 720 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: nine
@@ -1372,6 +2057,7 @@ SplineSet
  480 840 l 1,39,-1
  480 720 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: colon
@@ -1394,6 +2080,7 @@ SplineSet
  360 480 l 1,7,-1
  240 480 l 1,4,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: semicolon
@@ -1421,6 +2108,7 @@ SplineSet
  240 0 l 1,11,-1
  120 0 l 1,8,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: less
@@ -1468,6 +2156,7 @@ SplineSet
  480 720 l 1,27,-1
  360 720 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: equal
@@ -1506,6 +2195,7 @@ SplineSet
  360 600 l 1,23,-1
  480 600 l 1,12,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: greater
@@ -1553,6 +2243,7 @@ SplineSet
  240 840 l 1,27,-1
  240 720 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: question
@@ -1601,6 +2292,7 @@ SplineSet
  480 840 l 1,29,-1
  480 720 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: at
@@ -1665,6 +2357,7 @@ SplineSet
  480 720 l 1,47,-1
  480 600 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: A
@@ -1719,6 +2412,7 @@ SplineSet
  480 840 l 1,39,-1
  480 720 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: B
@@ -1779,6 +2473,7 @@ SplineSet
  480 0 l 1,45,-1
  360 0 l 1,12,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: C
@@ -1832,6 +2527,7 @@ SplineSet
  480 840 l 1,35,-1
  480 720 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: D
@@ -1886,6 +2582,7 @@ SplineSet
  480 0 l 1,39,-1
  360 0 l 1,16,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: E
@@ -1935,6 +2632,7 @@ SplineSet
  360 120 l 1,35,-1
  480 120 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: F
@@ -1976,6 +2674,7 @@ SplineSet
  120 0 l 1,27,-1
  0 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: G
@@ -2034,6 +2733,7 @@ SplineSet
  360 840 l 1,41,-1
  480 840 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: H
@@ -2083,6 +2783,7 @@ SplineSet
  600 0 l 1,35,-1
  480 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: I
@@ -2120,6 +2821,7 @@ SplineSet
  480 0 l 1,23,-1
  360 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: J
@@ -2161,6 +2863,7 @@ SplineSet
  120 240 l 1,25,-1
  120 120 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: K
@@ -2217,6 +2920,7 @@ SplineSet
  600 720 l 1,39,-1
  480 720 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: L
@@ -2254,6 +2958,7 @@ SplineSet
  360 120 l 1,23,-1
  480 120 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: M
@@ -2308,6 +3013,7 @@ SplineSet
  120 0 l 1,39,-1
  0 0 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: N
@@ -2362,6 +3068,7 @@ SplineSet
  120 0 l 1,39,-1
  0 0 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: O
@@ -2418,6 +3125,7 @@ SplineSet
  480 840 l 1,39,-1
  480 720 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: P
@@ -2463,6 +3171,7 @@ SplineSet
  120 0 l 1,31,-1
  0 0 l 1,0,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Q
@@ -2525,6 +3234,7 @@ SplineSet
  480 840 l 1,43,-1
  480 720 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: R
@@ -2581,6 +3291,7 @@ SplineSet
  120 0 l 1,41,-1
  0 0 l 1,10,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: S
@@ -2641,6 +3352,7 @@ SplineSet
  360 840 l 1,41,-1
  480 840 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: T
@@ -2678,6 +3390,7 @@ SplineSet
  360 0 l 1,23,-1
  240 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: U
@@ -2729,6 +3442,7 @@ SplineSet
  120 240 l 1,35,-1
  120 120 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: V
@@ -2782,6 +3496,7 @@ SplineSet
  120 480 l 1,35,-1
  120 360 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: W
@@ -2837,6 +3552,7 @@ SplineSet
  360 360 l 1,39,-1
  360 240 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: X
@@ -2902,6 +3618,7 @@ SplineSet
  120 840 l 1,43,-1
  120 720 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Y
@@ -2947,6 +3664,7 @@ SplineSet
  120 840 l 1,27,-1
  120 720 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Z
@@ -3004,6 +3722,7 @@ SplineSet
  600 600 l 1,39,-1
  480 600 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: bracketleft
@@ -3041,6 +3760,7 @@ SplineSet
  240 120 l 1,23,-1
  360 120 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: backslash
@@ -3082,6 +3802,7 @@ SplineSet
  120 840 l 1,23,-1
  120 720 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: bracketright
@@ -3119,6 +3840,7 @@ SplineSet
  480 0 l 1,23,-1
  360 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: asciicircum
@@ -3156,6 +3878,7 @@ SplineSet
  360 840 l 1,19,-1
  360 720 l 1,16,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: underscore
@@ -3181,6 +3904,7 @@ SplineSet
  360 0 l 1,11,-1
  480 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: grave
@@ -3203,6 +3927,7 @@ SplineSet
  240 840 l 1,7,-1
  240 720 l 1,4,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: a
@@ -3252,6 +3977,7 @@ SplineSet
  480 600 l 1,33,-1
  480 480 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: b
@@ -3305,6 +4031,7 @@ SplineSet
  480 600 l 1,37,-1
  480 480 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: c
@@ -3354,6 +4081,7 @@ SplineSet
  480 600 l 1,31,-1
  480 480 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: d
@@ -3407,6 +4135,7 @@ SplineSet
  360 600 l 1,37,-1
  360 480 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: e
@@ -3458,6 +4187,7 @@ SplineSet
  480 600 l 1,35,-1
  480 480 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: f
@@ -3498,6 +4228,7 @@ SplineSet
  360 840 l 1,25,-1
  480 840 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: g
@@ -3553,6 +4284,7 @@ SplineSet
  240 240 l 1,39,-1
  360 240 l 1,30,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: h
@@ -3602,6 +4334,7 @@ SplineSet
  480 600 l 1,33,-1
  480 480 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: i
@@ -3639,6 +4372,7 @@ SplineSet
  360 240 l 1,21,-1
  360 120 l 1,10,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: j
@@ -3685,6 +4419,7 @@ SplineSet
  120 120 l 1,29,-1
  120 0 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: k
@@ -3735,6 +4470,7 @@ SplineSet
  600 480 l 1,33,-1
  480 480 l 1,30,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: l
@@ -3771,6 +4507,7 @@ SplineSet
  360 240 l 1,21,-1
  360 120 l 1,6,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: m
@@ -3820,6 +4557,7 @@ SplineSet
  480 600 l 1,33,-1
  480 480 l 1,30,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: n
@@ -3862,6 +4600,7 @@ SplineSet
  120 0 l 1,27,-1
  0 0 l 1,10,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: o
@@ -3910,6 +4649,7 @@ SplineSet
  480 600 l 1,31,-1
  480 480 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: p
@@ -3959,6 +4699,7 @@ SplineSet
  480 600 l 1,33,-1
  480 480 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: q
@@ -4008,6 +4749,7 @@ SplineSet
  360 600 l 1,33,-1
  360 480 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: r
@@ -4047,6 +4789,7 @@ SplineSet
  480 600 l 1,23,-1
  480 480 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: s
@@ -4100,6 +4843,7 @@ SplineSet
  360 600 l 1,35,-1
  480 600 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: t
@@ -4138,6 +4882,7 @@ SplineSet
  360 240 l 1,23,-1
  360 120 l 1,6,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: u
@@ -4180,6 +4925,7 @@ SplineSet
  120 240 l 1,27,-1
  120 120 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: v
@@ -4225,6 +4971,7 @@ SplineSet
  120 360 l 1,27,-1
  120 240 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: w
@@ -4271,6 +5018,7 @@ SplineSet
  120 240 l 1,31,-1
  120 120 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: x
@@ -4328,6 +5076,7 @@ SplineSet
  120 600 l 1,35,-1
  120 480 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: y
@@ -4379,6 +5128,7 @@ SplineSet
  120 360 l 1,35,-1
  120 240 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: z
@@ -4426,6 +5176,7 @@ SplineSet
  480 360 l 1,31,-1
  360 360 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: braceleft
@@ -4467,6 +5218,7 @@ SplineSet
  480 720 l 1,23,-1
  360 720 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: bar
@@ -4496,6 +5248,7 @@ SplineSet
  360 0 l 1,15,-1
  240 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: braceright
@@ -4537,6 +5290,7 @@ SplineSet
  240 840 l 1,23,-1
  240 720 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: asciitilde
@@ -4578,6 +5332,7 @@ SplineSet
  240 600 l 1,23,-1
  240 480 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: uni00A0
@@ -4587,6 +5342,8 @@ VWidth: 960
 GlyphClass: 2
 Flags: W
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: exclamdown
@@ -4617,6 +5374,7 @@ SplineSet
  360 600 l 1,15,-1
  240 600 l 1,12,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: cent
@@ -4670,6 +5428,7 @@ SplineSet
  480 600 l 1,35,-1
  480 480 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: sterling
@@ -4723,6 +5482,7 @@ SplineSet
  480 840 l 1,37,-1
  480 720 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: currency
@@ -4787,6 +5547,7 @@ SplineSet
  120 600 l 1,43,-1
  120 480 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: yen
@@ -4848,6 +5609,7 @@ SplineSet
  120 840 l 1,43,-1
  120 720 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: brokenbar
@@ -4878,6 +5640,7 @@ SplineSet
  240 480 l 1,15,-1
  120 480 l 1,8,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: section
@@ -4950,6 +5713,7 @@ SplineSet
  360 840 l 1,51,-1
  480 840 l 1,42,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: dieresis
@@ -4972,6 +5736,7 @@ SplineSet
  120 720 l 1,7,-1
  0 720 l 1,4,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: copyright
@@ -5045,6 +5810,7 @@ SplineSet
  600 840 l 1,55,-1
  600 720 l 1,46,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ordfeminine
@@ -5090,6 +5856,7 @@ SplineSet
  360 840 l 1,29,-1
  360 720 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: guillemotleft
@@ -5152,6 +5919,7 @@ SplineSet
  360 600 l 1,39,-1
  240 600 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: logicalnot
@@ -5181,6 +5949,7 @@ SplineSet
  600 120 l 1,15,-1
  480 120 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: registered
@@ -5252,6 +6021,7 @@ SplineSet
  600 840 l 1,55,-1
  600 720 l 1,46,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: macron
@@ -5277,6 +6047,7 @@ SplineSet
  360 840 l 1,11,-1
  480 840 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: degree
@@ -5317,6 +6088,7 @@ SplineSet
  360 840 l 1,23,-1
  360 720 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: plusminus
@@ -5363,6 +6135,7 @@ SplineSet
  360 120 l 1,31,-1
  480 120 l 1,20,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: uni00B2
@@ -5410,6 +6183,7 @@ SplineSet
  360 840 l 1,29,-1
  360 720 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: uni00B3
@@ -5461,6 +6235,7 @@ SplineSet
  360 840 l 1,31,-1
  360 720 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: acute
@@ -5483,6 +6258,7 @@ SplineSet
  360 720 l 1,7,-1
  240 720 l 1,4,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: uni00B5
@@ -5527,6 +6303,7 @@ SplineSet
  600 120 l 1,29,-1
  480 120 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: paragraph
@@ -5578,6 +6355,7 @@ SplineSet
  600 0 l 1,37,-1
  480 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: periodcentered
@@ -5595,6 +6373,7 @@ SplineSet
  360 360 l 1,3,-1
  240 360 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: cedilla
@@ -5624,6 +6403,7 @@ SplineSet
  240 240 l 1,13,-1
  240 120 l 1,10,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: uni00B9
@@ -5655,6 +6435,7 @@ SplineSet
  360 240 l 1,17,-1
  240 240 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: ordmasculine
@@ -5706,6 +6487,7 @@ SplineSet
  360 840 l 1,33,-1
  360 720 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: guillemotright
@@ -5768,6 +6550,7 @@ SplineSet
  120 720 l 1,39,-1
  120 600 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: onequarter
@@ -5842,6 +6625,7 @@ SplineSet
  600 720 l 1,53,-1
  480 720 l 1,50,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: onehalf
@@ -5914,6 +6698,7 @@ SplineSet
  600 720 l 1,51,-1
  480 720 l 1,48,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: threequarters
@@ -5994,6 +6779,7 @@ SplineSet
  240 840 l 1,59,-1
  240 720 l 1,50,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: questiondown
@@ -6042,6 +6828,7 @@ SplineSet
  360 360 l 1,29,-1
  240 360 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Agrave
@@ -6106,6 +6893,7 @@ SplineSet
  240 1200 l 1,47,-1
  240 1080 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Aacute
@@ -6170,6 +6958,7 @@ SplineSet
  480 1080 l 1,47,-1
  360 1080 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Acircumflex
@@ -6239,6 +7028,7 @@ SplineSet
  360 1200 l 1,51,-1
  360 1080 l 1,48,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Atilde
@@ -6313,6 +7103,7 @@ SplineSet
  360 1200 l 1,55,-1
  360 1080 l 1,52,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Adieresis
@@ -6377,6 +7168,7 @@ SplineSet
  480 840 l 1,47,-1
  480 720 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Aring
@@ -6448,6 +7240,7 @@ SplineSet
  360 1200 l 1,53,-1
  360 1080 l 1,50,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: AE
@@ -6504,6 +7297,7 @@ SplineSet
  120 600 l 1,41,-1
  240 600 l 1,38,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ccedilla
@@ -6564,6 +7358,7 @@ SplineSet
  480 840 l 1,41,-1
  480 720 l 1,34,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Egrave
@@ -6623,6 +7418,7 @@ SplineSet
  240 1200 l 1,43,-1
  240 1080 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Eacute
@@ -6634,11 +7430,11 @@ Flags: W
 LayerCount: 2
 Fore
 SplineSet
-240 960 m 1,0,-1
- 240 1080 l 1,1,-1
- 360 1080 l 1,2,-1
- 360 960 l 1,3,-1
- 240 960 l 1,0,-1
+240 960 m 5,0,-1
+ 240 1080 l 5,1,-1
+ 360 1080 l 5,2,-1
+ 360 960 l 5,3,-1
+ 240 960 l 5,0,-1
 480 120 m 1,4,-1
  600 120 l 1,5,-1
  600 0 l 1,6,-1
@@ -6676,12 +7472,13 @@ SplineSet
  240 120 l 1,38,-1
  360 120 l 1,39,-1
  480 120 l 1,4,-1
-360 1080 m 1,40,-1
- 360 1200 l 1,41,-1
- 480 1200 l 1,42,-1
- 480 1080 l 1,43,-1
- 360 1080 l 1,40,-1
+360 1080 m 5,40,-1
+ 360 1200 l 5,41,-1
+ 480 1200 l 5,42,-1
+ 480 1080 l 5,43,-1
+ 360 1080 l 5,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ecircumflex
@@ -6746,6 +7543,7 @@ SplineSet
  360 1200 l 1,47,-1
  360 1080 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Edieresis
@@ -6805,6 +7603,7 @@ SplineSet
  360 120 l 1,43,-1
  480 120 l 1,8,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: Igrave
@@ -6852,6 +7651,7 @@ SplineSet
  240 1200 l 1,31,-1
  240 1080 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Iacute
@@ -6899,6 +7699,7 @@ SplineSet
  480 1080 l 1,31,-1
  360 1080 l 1,28,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Icircumflex
@@ -6951,6 +7752,7 @@ SplineSet
  360 1200 l 1,35,-1
  360 1080 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Idieresis
@@ -6998,6 +7800,7 @@ SplineSet
  480 0 l 1,31,-1
  360 0 l 1,8,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: Eth
@@ -7056,6 +7859,7 @@ SplineSet
  600 0 l 1,43,-1
  480 0 l 1,18,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ntilde
@@ -7130,6 +7934,7 @@ SplineSet
  360 1200 l 1,55,-1
  360 1080 l 1,52,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ograve
@@ -7196,6 +8001,7 @@ SplineSet
  240 1200 l 1,47,-1
  240 1080 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Oacute
@@ -7262,6 +8068,7 @@ SplineSet
  480 1080 l 1,47,-1
  360 1080 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ocircumflex
@@ -7333,6 +8140,7 @@ SplineSet
  360 1200 l 1,51,-1
  360 1080 l 1,48,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Otilde
@@ -7409,6 +8217,7 @@ SplineSet
  360 1200 l 1,55,-1
  360 1080 l 1,52,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Odieresis
@@ -7475,6 +8284,7 @@ SplineSet
  480 840 l 1,47,-1
  480 720 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: multiply
@@ -7532,6 +8342,7 @@ SplineSet
  120 720 l 1,35,-1
  120 600 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Oslash
@@ -7590,6 +8401,7 @@ SplineSet
  600 120 l 1,43,-1
  480 120 l 1,20,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ugrave
@@ -7651,6 +8463,7 @@ SplineSet
  240 1200 l 1,43,-1
  240 1080 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Uacute
@@ -7712,6 +8525,7 @@ SplineSet
  480 1080 l 1,43,-1
  360 1080 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Ucircumflex
@@ -7778,6 +8592,7 @@ SplineSet
  360 1200 l 1,47,-1
  360 1080 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Udieresis
@@ -7839,6 +8654,7 @@ SplineSet
  120 240 l 1,43,-1
  120 120 l 1,30,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Yacute
@@ -7894,6 +8710,7 @@ SplineSet
  480 1080 l 1,35,-1
  360 1080 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Thorn
@@ -7939,6 +8756,7 @@ SplineSet
  120 0 l 1,31,-1
  0 0 l 1,0,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: germandbls
@@ -8005,6 +8823,7 @@ SplineSet
  480 840 l 1,47,-1
  480 720 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: agrave
@@ -8016,11 +8835,11 @@ Flags: W
 LayerCount: 2
 Fore
 SplineSet
-240 720 m 1,0,-1
- 240 840 l 1,1,-1
- 360 840 l 1,2,-1
- 360 720 l 1,3,-1
- 240 720 l 1,0,-1
+240 720 m 5,0,-1
+ 240 840 l 5,1,-1
+ 360 840 l 5,2,-1
+ 360 720 l 5,3,-1
+ 240 720 l 5,0,-1
 480 0 m 1,4,-1
  360 0 l 1,5,-1
  240 0 l 1,6,-1
@@ -8058,12 +8877,13 @@ SplineSet
  360 600 l 1,36,-1
  480 600 l 1,37,-1
  480 480 l 1,30,-1
-240 840 m 1,38,-1
- 120 840 l 1,39,-1
- 120 960 l 1,40,-1
- 240 960 l 1,41,-1
- 240 840 l 1,38,-1
+240 840 m 5,38,-1
+ 120 840 l 5,39,-1
+ 120 960 l 5,40,-1
+ 240 960 l 5,41,-1
+ 240 840 l 5,38,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: aacute
@@ -8075,11 +8895,11 @@ Flags: W
 LayerCount: 2
 Fore
 SplineSet
-240 720 m 1,0,-1
- 240 840 l 1,1,-1
- 360 840 l 1,2,-1
- 360 720 l 1,3,-1
- 240 720 l 1,0,-1
+240 720 m 5,0,-1
+ 240 840 l 5,1,-1
+ 360 840 l 5,2,-1
+ 360 720 l 5,3,-1
+ 240 720 l 5,0,-1
 480 0 m 1,4,-1
  360 0 l 1,5,-1
  240 0 l 1,6,-1
@@ -8117,12 +8937,13 @@ SplineSet
  360 600 l 1,36,-1
  480 600 l 1,37,-1
  480 480 l 1,30,-1
-360 840 m 1,38,-1
- 360 960 l 1,39,-1
- 480 960 l 1,40,-1
- 480 840 l 1,41,-1
- 360 840 l 1,38,-1
+360 840 m 5,38,-1
+ 360 960 l 5,39,-1
+ 480 960 l 5,40,-1
+ 480 840 l 5,41,-1
+ 360 840 l 5,38,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: acircumflex
@@ -8187,6 +9008,7 @@ SplineSet
  360 960 l 1,45,-1
  360 840 l 1,42,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: atilde
@@ -8256,6 +9078,7 @@ SplineSet
  360 960 l 1,49,-1
  360 840 l 1,46,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: adieresis
@@ -8315,6 +9138,7 @@ SplineSet
  480 600 l 1,41,-1
  480 480 l 1,34,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: aring
@@ -8384,6 +9208,7 @@ SplineSet
  360 1080 l 1,49,-1
  360 960 l 1,46,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ae
@@ -8442,6 +9267,7 @@ SplineSet
  360 600 l 1,41,-1
  360 480 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ccedilla
@@ -8498,6 +9324,7 @@ SplineSet
  480 600 l 1,37,-1
  480 480 l 1,30,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: egrave
@@ -8559,6 +9386,7 @@ SplineSet
  240 960 l 1,43,-1
  240 840 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: eacute
@@ -8620,6 +9448,7 @@ SplineSet
  480 840 l 1,43,-1
  360 840 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ecircumflex
@@ -8686,6 +9515,7 @@ SplineSet
  360 960 l 1,47,-1
  360 840 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: edieresis
@@ -8747,6 +9577,7 @@ SplineSet
  480 600 l 1,43,-1
  480 480 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: igrave
@@ -8789,6 +9620,7 @@ SplineSet
  240 960 l 1,25,-1
  240 840 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: iacute
@@ -8831,6 +9663,7 @@ SplineSet
  480 840 l 1,25,-1
  360 840 l 1,22,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: icircumflex
@@ -8878,6 +9711,7 @@ SplineSet
  360 960 l 1,29,-1
  360 840 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: idieresis
@@ -8920,6 +9754,7 @@ SplineSet
  360 240 l 1,25,-1
  360 120 l 1,14,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: eth
@@ -8984,6 +9819,7 @@ SplineSet
  360 840 l 1,45,-1
  360 720 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ntilde
@@ -9046,6 +9882,7 @@ SplineSet
  360 960 l 1,43,-1
  360 840 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ograve
@@ -9104,6 +9941,7 @@ SplineSet
  240 960 l 1,39,-1
  240 840 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: oacute
@@ -9162,6 +10000,7 @@ SplineSet
  480 840 l 1,39,-1
  360 840 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ocircumflex
@@ -9225,6 +10064,7 @@ SplineSet
  360 960 l 1,43,-1
  360 840 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: otilde
@@ -9293,6 +10133,7 @@ SplineSet
  360 960 l 1,47,-1
  360 840 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: odieresis
@@ -9351,6 +10192,7 @@ SplineSet
  480 600 l 1,39,-1
  480 480 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: divide
@@ -9386,6 +10228,7 @@ SplineSet
  360 480 l 1,19,-1
  480 480 l 1,8,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: oslash
@@ -9436,6 +10279,7 @@ SplineSet
  600 120 l 1,35,-1
  480 120 l 1,16,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ugrave
@@ -9488,6 +10332,7 @@ SplineSet
  240 960 l 1,35,-1
  240 840 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: uacute
@@ -9540,6 +10385,7 @@ SplineSet
  480 840 l 1,35,-1
  360 840 l 1,32,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: ucircumflex
@@ -9597,6 +10443,7 @@ SplineSet
  360 960 l 1,39,-1
  360 840 l 1,36,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: udieresis
@@ -9649,6 +10496,7 @@ SplineSet
  120 240 l 1,35,-1
  120 120 l 1,26,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: yacute
@@ -9710,6 +10558,7 @@ SplineSet
  480 840 l 1,43,-1
  360 840 l 1,40,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: Euro
@@ -9767,6 +10616,7 @@ SplineSet
  480 840 l 1,39,-1
  480 720 l 1,34,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: smileface
@@ -9812,6 +10662,7 @@ SplineSet
  120 360 l 1,27,-1
  120 240 l 1,24,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: invsmileface
@@ -9877,6 +10728,7 @@ SplineSet
  240 600 l 1,47,-1
  360 600 l 1,44,-1
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: heart
@@ -9914,6 +10766,7 @@ SplineSet
  360 0 l 1,23,-1
  240 0 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: uni3000
@@ -9923,6 +10776,8 @@ VWidth: 960
 GlyphClass: 2
 Flags: W
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: doubleequal
@@ -9960,6 +10815,7 @@ SplineSet
  360 600 l 1,23,-1
  480 600 l 1,12,-1
 EndSplineSet
+Validated: 1
 Ligature2: "liga-subtable" equal equal
 LCarets2: 1 0
 EndChar
@@ -10012,6 +10868,7 @@ SplineSet
  360 720 l 1,35,-1
  480 720 l 1,24,-1
 EndSplineSet
+Validated: 1
 LCarets2: 2 0 0
 Ligature2: "liga-subtable" equal equal equal
 EndChar
@@ -10076,6 +10933,7 @@ SplineSet
  360 600 l 1,51,-1
  480 600 l 1,32,-1
 EndSplineSet
+Validated: 5
 LCarets2: 2 0 0
 Ligature2: "liga-subtable" exclam equal
 EndChar
@@ -10150,6 +11008,7 @@ SplineSet
  360 720 l 1,61,-1
  840 720 l 1,42,-1
 EndSplineSet
+Validated: 5
 LCarets2: 2 0 0
 Ligature2: "liga-subtable" exclam equal equal
 EndChar
@@ -10198,6 +11057,7 @@ SplineSet
  360 0 l 1,27,-1
  360 120 l 1,24,-1
 EndSplineSet
+Validated: 5
 Ligature2: "liga-subtable" less hyphen
 EndChar
 
@@ -10245,6 +11105,7 @@ SplineSet
  960 840 l 1,27,-1
  960 720 l 1,24,-1
 EndSplineSet
+Validated: 5
 LCarets2: 1 0
 Ligature2: "liga-subtable" hyphen greater
 EndChar
@@ -10293,6 +11154,7 @@ SplineSet
  840 120 l 5,27,-1
  960 120 l 5,24,-1
 EndSplineSet
+Validated: 5
 Ligature2: "liga-subtable" equal greater
 LCarets2: 1 0
 EndChar
@@ -10336,6 +11198,7 @@ SplineSet
  1020 600 l 1,23,-1
  780 600 l 1,20,-1
 EndSplineSet
+Validated: 5
 Ligature2: "liga-subtable" less equal
 EndChar
 
@@ -10378,7 +11241,4542 @@ SplineSet
  300 600 l 1,23,-1
  540 600 l 1,20,-1
 EndSplineSet
+Validated: 5
 Ligature2: "liga-subtable" greater equal
+EndChar
+
+StartChar: NameMe.203
+Encoding: 203 1024 203
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 960 m 5,0,-1
+ 240 1080 l 5,1,-1
+ 360 1080 l 5,2,-1
+ 360 960 l 5,3,-1
+ 240 960 l 5,0,-1
+480 120 m 1,4,-1
+ 600 120 l 1,5,-1
+ 600 0 l 1,6,-1
+ 480 0 l 1,7,-1
+ 360 0 l 1,8,-1
+ 240 0 l 1,9,-1
+ 120 0 l 1,10,-1
+ 0 0 l 1,11,-1
+ 0 120 l 1,12,-1
+ 0 240 l 1,13,-1
+ 0 360 l 1,14,-1
+ 0 480 l 1,15,-1
+ 0 600 l 1,16,-1
+ 0 720 l 1,17,-1
+ 0 840 l 1,18,-1
+ 120 840 l 1,19,-1
+ 240 840 l 1,20,-1
+ 360 840 l 1,21,-1
+ 480 840 l 1,22,-1
+ 600 840 l 1,23,-1
+ 600 720 l 1,24,-1
+ 480 720 l 1,25,-1
+ 360 720 l 1,26,-1
+ 240 720 l 1,27,-1
+ 120 720 l 1,28,-1
+ 120 600 l 1,29,-1
+ 240 600 l 1,30,-1
+ 360 600 l 1,31,-1
+ 360 480 l 1,32,-1
+ 240 480 l 1,33,-1
+ 120 480 l 1,34,-1
+ 120 360 l 1,35,-1
+ 120 240 l 1,36,-1
+ 120 120 l 1,37,-1
+ 240 120 l 1,38,-1
+ 360 120 l 1,39,-1
+ 480 120 l 1,4,-1
+240 1080 m 5,40,-1
+ 120 1080 l 5,41,-1
+ 120 1200 l 5,42,-1
+ 240 1200 l 5,43,-1
+ 240 1080 l 5,40,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.204
+Encoding: 204 1025 204
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 960 m 1,0,-1
+ 360 1080 l 1,1,-1
+ 480 1080 l 1,2,-1
+ 480 960 l 1,3,-1
+ 360 960 l 1,0,-1
+120 960 m 1,4,-1
+ 120 1080 l 1,5,-1
+ 240 1080 l 1,6,-1
+ 240 960 l 1,7,-1
+ 120 960 l 1,4,-1
+480 120 m 1,8,-1
+ 600 120 l 1,9,-1
+ 600 0 l 1,10,-1
+ 480 0 l 1,11,-1
+ 360 0 l 1,12,-1
+ 240 0 l 1,13,-1
+ 120 0 l 1,14,-1
+ 0 0 l 1,15,-1
+ 0 120 l 1,16,-1
+ 0 240 l 1,17,-1
+ 0 360 l 1,18,-1
+ 0 480 l 1,19,-1
+ 0 600 l 1,20,-1
+ 0 720 l 1,21,-1
+ 0 840 l 1,22,-1
+ 120 840 l 1,23,-1
+ 240 840 l 1,24,-1
+ 360 840 l 1,25,-1
+ 480 840 l 1,26,-1
+ 600 840 l 1,27,-1
+ 600 720 l 1,28,-1
+ 480 720 l 1,29,-1
+ 360 720 l 1,30,-1
+ 240 720 l 1,31,-1
+ 120 720 l 1,32,-1
+ 120 600 l 1,33,-1
+ 240 600 l 1,34,-1
+ 360 600 l 1,35,-1
+ 360 480 l 1,36,-1
+ 240 480 l 1,37,-1
+ 120 480 l 1,38,-1
+ 120 360 l 1,39,-1
+ 120 240 l 1,40,-1
+ 120 120 l 1,41,-1
+ 240 120 l 1,42,-1
+ 360 120 l 1,43,-1
+ 480 120 l 1,8,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.205
+Encoding: 205 1026 205
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 480 m 1,0,-1
+ 360 480 l 1,1,-1
+ 360 360 l 1,2,-1
+ 240 360 l 1,3,-1
+ 240 480 l 1,0,-1
+480 480 m 1,4,-1
+ 600 480 l 1,5,-1
+ 600 120 l 1,6,-1
+ 480 120 l 1,7,-1
+ 480 480 l 1,4,-1
+360 120 m 1,8,-1
+ 480 120 l 1,9,-1
+ 480 0 l 1,10,-1
+ 360 0 l 1,11,-1
+ 360 120 l 1,8,-1
+480 120 m 1025,12,-1
+360 600 m 1,13,-1
+ 480 600 l 1,14,-1
+ 480 480 l 1,15,-1
+ 360 480 l 1,16,-1
+ 360 600 l 1,13,-1
+120 720 m 25,17,-1
+ 0 720 l 1,18,-1
+ 0 840 l 1,19,-1
+ 480 840 l 1,20,-1
+ 480 720 l 1,21,-1
+ 240 720 l 1,22,-1
+ 240 0 l 1,23,-1
+ 120 0 l 1,24,-1
+ 120 720 l 25,17,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.206
+Encoding: 206 1027 206
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 960 m 5,0,-1
+ 240 1080 l 5,1,-1
+ 360 1080 l 5,2,-1
+ 360 960 l 5,3,-1
+ 240 960 l 5,0,-1
+120 480 m 1,26,-1
+ 120 360 l 1,5,-1
+ 120 240 l 1,6,-1
+ 120 -0 l 1,7,-1
+ 0 0 l 1,8,-1
+ 0 120 l 1,9,-1
+ 0 240 l 1,10,-1
+ 0 360 l 1,11,-1
+ 0 480 l 1,12,-1
+ 0 600 l 1,13,-1
+ 0 720 l 1,14,-1
+ 0 840 l 1,15,-1
+ 120 840 l 1,16,-1
+ 240 840 l 1,17,-1
+ 360 840 l 1,18,-1
+ 480 840 l 1,19,-1
+ 600 840 l 1,20,-1
+ 600 720 l 1,21,-1
+ 480 720 l 1,22,-1
+ 360 720 l 1,23,-1
+ 240 720 l 1,24,-1
+ 120 720 l 1,25,-1
+ 120 480 l 1,26,-1
+360 1080 m 5,27,-1
+ 360 1200 l 5,28,-1
+ 480 1200 l 5,29,-1
+ 480 1080 l 5,30,-1
+ 360 1080 l 5,27,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.207
+Encoding: 207 1028 207
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 720 m 5,0,-1
+ 600 720 l 1,1,-1
+ 600 600 l 1,2,-1
+ 480 600 l 1,3,-1
+ 480 720 l 5,0,-1
+480 240 m 1,0,-1
+ 600 240 l 1,1,-1
+ 600 120 l 1,2,-1
+ 480 120 l 1,3,-1
+ 480 240 l 1,0,-1
+480 0 m 17,4,-1
+ 360 0 l 1,5,-1
+ 240 0 l 1,6,-1
+ 120 0 l 1,7,-1
+ 120 120 l 1,8,-1
+ 0 120 l 1,9,-1
+ 0 240 l 1,10,-1
+ 0 360 l 1,11,-1
+ 0 480 l 1,12,-1
+ 0 600 l 1,13,-1
+ 0 720 l 1,14,-1
+ 120 720 l 1,15,-1
+ 120 840 l 1,16,-1
+ 240 840 l 1,17,-1
+ 360 840 l 1,18,-1
+ 480 840 l 1,19,-1
+ 480 720 l 1,20,-1
+ 360 720 l 1,21,-1
+ 240 720 l 1,22,-1
+ 120 720 l 1,23,-1
+ 120 480 l 1,24,-1
+ 360 480 l 1,25,-1
+ 360 360 l 1,26,-1
+ 240 360 l 1,27,-1
+ 120 360 l 1,28,-1
+ 120 240 l 1,29,-1
+ 120 120 l 1,30,-1
+ 240 120 l 1,31,-1
+ 360 120 l 1,32,-1
+ 480 120 l 1,33,-1
+ 480 0 l 17,4,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.208
+Encoding: 208 1029 208
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 120 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 0 l 1,2,-1
+ 360 0 l 1,3,-1
+ 240 0 l 1,4,-1
+ 120 0 l 1,5,-1
+ 120 120 l 1,6,-1
+ 240 120 l 1,7,-1
+ 360 120 l 1,0,-1
+480 120 m 1,8,-1
+ 480 240 l 1,9,-1
+ 480 360 l 1,10,-1
+ 480 480 l 1,11,-1
+ 600 480 l 1,12,-1
+ 600 360 l 1,13,-1
+ 600 240 l 1,14,-1
+ 600 120 l 1,15,-1
+ 480 120 l 1,8,-1
+120 120 m 1,16,-1
+ 0 120 l 1,17,-1
+ 0 240 l 1,18,-1
+ 120 240 l 1,19,-1
+ 120 120 l 1,16,-1
+480 480 m 1,20,-1
+ 360 480 l 1,21,-1
+ 240 480 l 1,22,-1
+ 120 480 l 1,23,-1
+ 120 600 l 1,24,-1
+ 240 600 l 1,25,-1
+ 360 600 l 1,26,-1
+ 480 600 l 1,27,-1
+ 480 480 l 1,20,-1
+120 600 m 1,28,-1
+ 0 600 l 1,29,-1
+ 0 720 l 1,30,-1
+ 120 720 l 1,31,-1
+ 120 600 l 1,28,-1
+480 840 m 1,32,-1
+ 600 840 l 1,33,-1
+ 600 720 l 1,34,-1
+ 480 720 l 1,35,-1
+ 360 720 l 1,36,-1
+ 240 720 l 1,37,-1
+ 120 720 l 1,38,-1
+ 120 840 l 1,39,-1
+ 240 840 l 1,40,-1
+ 360 840 l 1,41,-1
+ 480 840 l 1,32,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.209
+Encoding: 209 1030 209
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 0 m 1,0,-1
+ 240 0 l 1,1,-1
+ 120 0 l 1,2,-1
+ 120 120 l 1,3,-1
+ 240 120 l 1,4,-1
+ 240 240 l 1,5,-1
+ 240 360 l 1,6,-1
+ 240 480 l 1,7,-1
+ 240 600 l 1,8,-1
+ 240 720 l 1,9,-1
+ 120 720 l 1,10,-1
+ 120 840 l 1,11,-1
+ 240 840 l 1,12,-1
+ 360 840 l 1,13,-1
+ 480 840 l 1,14,-1
+ 480 720 l 1,15,-1
+ 360 720 l 1,16,-1
+ 360 600 l 1,17,-1
+ 360 480 l 1,18,-1
+ 360 360 l 1,19,-1
+ 360 240 l 1,20,-1
+ 360 120 l 1,21,-1
+ 480 120 l 1,22,-1
+ 480 0 l 1,23,-1
+ 360 0 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.210
+Encoding: 210 1031 210
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 960 m 1,0,-1
+ 360 1080 l 1,1,-1
+ 480 1080 l 1,2,-1
+ 480 960 l 1,3,-1
+ 360 960 l 1,0,-1
+120 960 m 1,4,-1
+ 120 1080 l 1,5,-1
+ 240 1080 l 1,6,-1
+ 240 960 l 1,7,-1
+ 120 960 l 1,4,-1
+360 0 m 1,8,-1
+ 240 0 l 1,9,-1
+ 120 0 l 1,10,-1
+ 120 120 l 1,11,-1
+ 240 120 l 1,12,-1
+ 240 240 l 1,13,-1
+ 240 360 l 1,14,-1
+ 240 480 l 1,15,-1
+ 240 600 l 1,16,-1
+ 240 720 l 1,17,-1
+ 120 720 l 1,18,-1
+ 120 840 l 1,19,-1
+ 240 840 l 1,20,-1
+ 360 840 l 1,21,-1
+ 480 840 l 1,22,-1
+ 480 720 l 1,23,-1
+ 360 720 l 1,24,-1
+ 360 600 l 1,25,-1
+ 360 480 l 1,26,-1
+ 360 360 l 1,27,-1
+ 360 240 l 1,28,-1
+ 360 120 l 1,29,-1
+ 480 120 l 1,30,-1
+ 480 0 l 1,31,-1
+ 360 0 l 1,8,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.211
+Encoding: 211 1032 211
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 120 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 0 l 1,2,-1
+ 360 0 l 1,3,-1
+ 240 0 l 1,4,-1
+ 120 0 l 1,5,-1
+ 120 120 l 1,6,-1
+ 240 120 l 1,7,-1
+ 360 120 l 1,0,-1
+480 120 m 1,8,-1
+ 480 240 l 1,9,-1
+ 480 360 l 1,10,-1
+ 480 480 l 1,11,-1
+ 480 600 l 1,12,-1
+ 480 720 l 1,13,-1
+ 480 840 l 1,14,-1
+ 600 840 l 1,15,-1
+ 600 720 l 1,16,-1
+ 600 600 l 1,17,-1
+ 600 480 l 1,18,-1
+ 600 360 l 1,19,-1
+ 600 240 l 1,20,-1
+ 600 120 l 1,21,-1
+ 480 120 l 1,8,-1
+120 120 m 1,22,-1
+ 0 120 l 1,23,-1
+ 0 240 l 1,24,-1
+ 120 240 l 1,25,-1
+ 120 120 l 1,22,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.212
+Encoding: 212 1033 212
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+600 480 m 5,0,-1
+ 720 480 l 1,1,-1
+ 720 120 l 1,2,-1
+ 600 120 l 1,3,-1
+ 600 480 l 5,0,-1
+480 600 m 1,0,-1
+ 600 600 l 1,1,-1
+ 600 480 l 1,2,-1
+ 480 480 l 1,3,-1
+ 480 600 l 1,0,-1
+480 120 m 1,4,-1
+ 600 120 l 1,5,-1
+ 600 0 l 1,6,-1
+ 480 0 l 1,7,-1
+ 480 120 l 1,4,-1
+0 120 m 1,8,-1
+ 120 120 l 1,9,-1
+ 120 0 l 1,10,-1
+ 0 0 l 1,11,-1
+ 0 120 l 1,8,-1
+240 720 m 17,12,-1
+ 240 480 l 1,13,-1
+ 240 360 l 1,14,-1
+ 240 240 l 1,15,-1
+ 240 120 l 1,16,-1
+ 120 120 l 1,17,-1
+ 120 240 l 1,18,-1
+ 120 360 l 1,19,-1
+ 120 480 l 1,20,-1
+ 120 600 l 1,21,-1
+ 120 720 l 1,22,-1
+ 120 840 l 1,23,-1
+ 360 840 l 1,24,-1
+ 480 840 l 1,25,-1
+ 480 0 l 1,26,-1
+ 360 0 l 1,27,-1
+ 360 720 l 1,28,-1
+ 240 720 l 17,12,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.213
+Encoding: 213 1034 213
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 600 m 5,0,-1
+ 240 600 l 1,1,-1
+ 240 480 l 1,2,-1
+ 120 480 l 1,3,-1
+ 120 600 l 5,0,-1
+480 480 m 1,0,-1
+ 600 480 l 1,1,-1
+ 600 120 l 1,2,-1
+ 480 120 l 1,3,-1
+ 480 480 l 1,0,-1
+360 600 m 1,4,-1
+ 480 600 l 1,5,-1
+ 480 480 l 1,6,-1
+ 360 480 l 1,7,-1
+ 360 600 l 1,4,-1
+360 120 m 1,8,-1
+ 480 120 l 1,9,-1
+ 480 0 l 1,10,-1
+ 360 0 l 1,11,-1
+ 360 120 l 1,8,-1
+0 0 m 1025,12,-1
+120 480 m 17,13,-1
+ 120 360 l 1,14,-1
+ 120 240 l 1,15,-1
+ 120 0 l 1,16,-1
+ 0 0 l 1,17,-1
+ 0 240 l 1,18,-1
+ 0 360 l 1,19,-1
+ 0 480 l 1,20,-1
+ 0 600 l 1,21,-1
+ 0 720 l 1,22,-1
+ 0 840 l 1,23,-1
+ 120 840 l 1,24,-1
+ 120 480 l 17,13,-1
+360 840 m 17,25,-1
+ 360 0 l 1,26,-1
+ 240 0 l 1,27,-1
+ 240 840 l 1,28,-1
+ 360 840 l 17,25,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.214
+Encoding: 214 1035 214
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 360 m 1,0,-1
+ 360 360 l 1,1,-1
+ 360 240 l 1,2,-1
+ 240 240 l 1,3,-1
+ 240 360 l 1,0,-1
+480 360 m 1,4,-1
+ 600 360 l 1,5,-1
+ 600 0 l 1,6,-1
+ 480 0 l 1,7,-1
+ 480 360 l 1,4,-1
+360 480 m 1,8,-1
+ 480 480 l 1,9,-1
+ 480 360 l 1,10,-1
+ 360 360 l 1,11,-1
+ 360 480 l 1,8,-1
+120 840 m 17,12,-1
+ 240 840 l 1,13,-1
+ 240 720 l 1,14,-1
+ 600 720 l 1,15,-1
+ 600 600 l 1,16,-1
+ 240 600 l 1,17,-1
+ 240 240 l 1,18,-1
+ 240 120 l 1,19,-1
+ 240 0 l 1,20,-1
+ 120 0 l 1,21,-1
+ 120 120 l 1,22,-1
+ 120 240 l 1,23,-1
+ 120 360 l 1,24,-1
+ 120 480 l 1,25,-1
+ 120 600 l 1,26,-1
+ 0 600 l 1,27,-1
+ 0 720 l 1,28,-1
+ 120 720 l 1,29,-1
+ 120 840 l 17,12,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.215
+Encoding: 215 1036 215
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 960 m 5,0,-1
+ 240 1080 l 5,1,-1
+ 360 1080 l 5,2,-1
+ 360 960 l 5,3,-1
+ 240 960 l 5,0,-1
+360 1080 m 5,4,-1
+ 360 1200 l 5,5,-1
+ 480 1200 l 5,6,-1
+ 480 1080 l 5,7,-1
+ 360 1080 l 5,4,-1
+480 0 m 1,8,-1
+ 480 120 l 1,9,-1
+ 480 240 l 1,10,-1
+ 480 360 l 1,11,-1
+ 600 360 l 1,12,-1
+ 600 240 l 1,13,-1
+ 600 120 l 1,14,-1
+ 600 0 l 1,15,-1
+ 480 0 l 1,8,-1
+0 0 m 1,16,-1
+ 0 120 l 1,17,-1
+ 0 240 l 1,18,-1
+ 0 360 l 1,19,-1
+ 0 480 l 1,20,-1
+ 0 600 l 1,21,-1
+ 0 720 l 1,22,-1
+ 0 840 l 1,23,-1
+ 120 840 l 1,24,-1
+ 120 720 l 1,25,-1
+ 120 600 l 1,26,-1
+ 240 600 l 1,27,-1
+ 360 600 l 1,28,-1
+ 360 480 l 1,29,-1
+ 480 480 l 1,30,-1
+ 480 360 l 1,31,-1
+ 360 360 l 1,32,-1
+ 360 480 l 1,33,-1
+ 240 480 l 1,34,-1
+ 120 480 l 1,35,-1
+ 120 360 l 1,36,-1
+ 120 240 l 1,37,-1
+ 120 120 l 1,38,-1
+ 120 0 l 1,39,-1
+ 0 0 l 1,16,-1
+360 600 m 1,40,-1
+ 360 720 l 1,41,-1
+ 480 720 l 1,42,-1
+ 480 600 l 1,43,-1
+ 360 600 l 1,40,-1
+480 720 m 1,44,-1
+ 480 840 l 1,45,-1
+ 600 840 l 1,46,-1
+ 600 720 l 1,47,-1
+ 480 720 l 1,44,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.216
+Encoding: 216 1037 216
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 960 m 5,0,-1
+ 240 1080 l 5,1,-1
+ 360 1080 l 5,2,-1
+ 360 960 l 5,3,-1
+ 240 960 l 5,0,-1
+240 1080 m 5,4,-1
+ 120 1080 l 5,5,-1
+ 120 1200 l 5,6,-1
+ 240 1200 l 5,7,-1
+ 240 1080 l 5,4,-1
+240 600 m 1,8,-1
+ 360 600 l 1,9,-1
+ 360 480 l 1,10,-1
+ 240 480 l 1,11,-1
+ 240 600 l 1,8,-1
+480 840 m 17,12,-1
+ 600 840 l 1,13,-1
+ 600 720 l 1,14,-1
+ 600 600 l 1,15,-1
+ 600 480 l 1,16,-1
+ 600 360 l 1,17,-1
+ 600 240 l 1,18,-1
+ 600 120 l 1,19,-1
+ 600 0 l 1,20,-1
+ 480 0 l 1,21,-1
+ 480 120 l 1,22,-1
+ 480 240 l 1,23,-1
+ 480 600 l 9,24,-1
+ 360 600 l 25,25,-1
+ 360 720 l 25,26,-1
+ 480 720 l 25,27,-1
+ 480 840 l 17,12,-1
+120 360 m 17,28,-1
+ 120 120 l 1,29,-1
+ 120 0 l 1,30,-1
+ 0 0 l 1,31,-1
+ 0 120 l 1,32,-1
+ 0 240 l 1,33,-1
+ 0 360 l 1,34,-1
+ 0 480 l 1,35,-1
+ 0 600 l 1,36,-1
+ 0 720 l 1,37,-1
+ 0 840 l 1,38,-1
+ 120 840 l 1,39,-1
+ 120 480 l 9,40,-1
+ 240 480 l 25,41,-1
+ 240 360 l 25,42,-1
+ 120 360 l 17,28,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.217
+Encoding: 217 1038 217
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 960 m 5,0,-1
+ 360 1080 l 5,1,-1
+ 480 1080 l 5,2,-1
+ 480 960 l 5,3,-1
+ 360 960 l 5,0,-1
+480 1080 m 5,4,-1
+ 480 1200 l 5,5,-1
+ 600 1200 l 5,6,-1
+ 600 1080 l 5,7,-1
+ 480 1080 l 5,4,-1
+240 960 m 5,8,-1
+ 240 1080 l 5,9,-1
+ 360 1080 l 5,10,-1
+ 360 960 l 5,11,-1
+ 240 960 l 5,8,-1
+240 1080 m 5,12,-1
+ 120 1080 l 5,13,-1
+ 120 1200 l 5,14,-1
+ 240 1200 l 5,15,-1
+ 240 1080 l 5,12,-1
+360 120 m 1,16,-1
+ 480 120 l 1,17,-1
+ 480 0 l 1,18,-1
+ 360 0 l 1,19,-1
+ 240 0 l 1,20,-1
+ 120 0 l 1,21,-1
+ 0 0 l 1,22,-1
+ 0 120 l 1,23,-1
+ 120 120 l 1,24,-1
+ 240 120 l 1,25,-1
+ 360 120 l 1,16,-1
+480 360 m 17,26,-1
+ 360 360 l 1,27,-1
+ 240 360 l 1,28,-1
+ 120 360 l 1,29,-1
+ 120 480 l 1,30,-1
+ 240 480 l 1,31,-1
+ 360 480 l 1,32,-1
+ 480 480 l 1,33,-1
+ 480 600 l 1,34,-1
+ 480 720 l 1,35,-1
+ 480 840 l 1,36,-1
+ 600 840 l 1,37,-1
+ 600 720 l 1,38,-1
+ 600 600 l 1,39,-1
+ 600 480 l 1,40,-1
+ 600 360 l 9,41,-1
+ 600 120 l 25,42,-1
+ 480 120 l 25,43,-1
+ 480 360 l 17,26,-1
+120 480 m 1,44,-1
+ 0 480 l 1,45,-1
+ 0 600 l 1,46,-1
+ 0 720 l 1,47,-1
+ 0 840 l 1,48,-1
+ 120 840 l 1,49,-1
+ 120 720 l 1,50,-1
+ 120 600 l 1,51,-1
+ 120 480 l 1,44,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.218
+Encoding: 218 1039 218
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 0 m 17,0,-1
+ 0 120 l 1,1,-1
+ 0 240 l 1,2,-1
+ 0 360 l 1,3,-1
+ 0 480 l 1,4,-1
+ 0 600 l 1,5,-1
+ 0 720 l 1,6,-1
+ 0 840 l 1,7,-1
+ 120 840 l 9,8,-1
+ 120 720 l 17,9,-1
+ 120 480 l 1,10,-1
+ 120 120 l 1,11,-1
+ 480 120 l 24,12,-1
+ 480 840 l 17,13,-1
+ 600 840 l 9,14,-1
+ 600 0 l 1,15,16
+ 600 0 600 0 480 0 c 24,17,-1
+ 360 0 l 1,18,-1
+ 360 -120 l 1,19,-1
+ 240 -120 l 29,20,-1
+ 240 0 l 1,21,-1
+ 0 0 l 17,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.219
+Encoding: 219 1040 219
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 240 l 1,2,-1
+ 480 360 l 1,3,-1
+ 480 480 l 1,4,-1
+ 360 480 l 1,5,-1
+ 240 480 l 1,6,-1
+ 120 480 l 1,7,-1
+ 120 360 l 1,8,-1
+ 120 240 l 1,9,-1
+ 120 120 l 1,10,-1
+ 120 0 l 1,11,-1
+ 0 0 l 1,12,-1
+ 0 120 l 1,13,-1
+ 0 240 l 1,14,-1
+ 0 360 l 1,15,-1
+ 0 480 l 1,16,-1
+ 0 600 l 1,17,-1
+ 0 720 l 1,18,-1
+ 120 720 l 1,19,-1
+ 120 600 l 1,20,-1
+ 240 600 l 1,21,-1
+ 360 600 l 1,22,-1
+ 480 600 l 1,23,-1
+ 480 720 l 1,24,-1
+ 600 720 l 1,25,-1
+ 600 600 l 1,26,-1
+ 600 480 l 1,27,-1
+ 600 360 l 1,28,-1
+ 600 240 l 1,29,-1
+ 600 120 l 1,30,-1
+ 600 0 l 1,31,-1
+ 480 0 l 1,0,-1
+480 720 m 1,32,-1
+ 360 720 l 1,33,-1
+ 240 720 l 1,34,-1
+ 120 720 l 1,35,-1
+ 120 840 l 1,36,-1
+ 240 840 l 1,37,-1
+ 360 840 l 1,38,-1
+ 480 840 l 1,39,-1
+ 480 720 l 1,32,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.220
+Encoding: 220 1041 220
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 720 m 1,0,-1
+ 120 600 l 1,1,-1
+ 240 600 l 1,2,-1
+ 360 600 l 1,3,-1
+ 480 600 l 1,4,-1
+ 480 480 l 1,5,-1
+ 600 480 l 1,6,-1
+ 600 360 l 1,7,-1
+ 600 240 l 1,8,-1
+ 600 120 l 1,9,-1
+ 480 120 l 1,10,-1
+ 480 0 l 1,11,-1
+ 360 0 l 1,12,-1
+ 240 0 l 1,13,-1
+ 120 0 l 1,14,-1
+ 0 0 l 1,15,-1
+ 0 120 l 1,16,-1
+ 0 240 l 1,17,-1
+ 0 360 l 1,18,-1
+ 0 480 l 1,19,-1
+ 0 600 l 1,20,-1
+ 0 720 l 1,21,-1
+ 0 840 l 1,22,-1
+ 120 840 l 1,23,-1
+ 240 840 l 1,24,-1
+ 360 840 l 1,25,-1
+ 480 840 l 1,26,-1
+ 600 840 l 1,27,-1
+ 600 720 l 1,28,-1
+ 120 720 l 1,0,-1
+360 120 m 1,29,-1
+ 480 120 l 1,30,-1
+ 480 240 l 1,31,-1
+ 480 360 l 1,32,-1
+ 480 480 l 1,33,-1
+ 360 480 l 1,34,-1
+ 240 480 l 1,35,-1
+ 120 480 l 1,36,-1
+ 120 360 l 1,37,-1
+ 120 240 l 1,38,-1
+ 120 120 l 1,39,-1
+ 240 120 l 1,40,-1
+ 360 120 l 1,29,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.221
+Encoding: 221 1042 221
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 120 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 240 l 1,2,-1
+ 480 360 l 1,3,-1
+ 480 480 l 1,4,-1
+ 360 480 l 1,5,-1
+ 240 480 l 1,6,-1
+ 120 480 l 1,7,-1
+ 120 360 l 1,8,-1
+ 120 240 l 1,9,-1
+ 120 120 l 1,10,-1
+ 240 120 l 1,11,-1
+ 360 120 l 1,0,-1
+360 0 m 1,12,-1
+ 240 0 l 1,13,-1
+ 120 0 l 1,14,-1
+ 0 0 l 1,15,-1
+ 0 120 l 1,16,-1
+ 0 240 l 1,17,-1
+ 0 360 l 1,18,-1
+ 0 480 l 1,19,-1
+ 0 600 l 1,20,-1
+ 0 720 l 1,21,-1
+ 0 840 l 1,22,-1
+ 120 840 l 1,23,-1
+ 240 840 l 1,24,-1
+ 360 840 l 1,25,-1
+ 480 840 l 1,26,-1
+ 480 720 l 1,27,-1
+ 600 720 l 1,28,-1
+ 600 600 l 1,29,-1
+ 480 600 l 1,30,-1
+ 480 720 l 1,31,-1
+ 360 720 l 1,32,-1
+ 240 720 l 1,33,-1
+ 120 720 l 1,34,-1
+ 120 600 l 1,35,-1
+ 240 600 l 1,36,-1
+ 360 600 l 1,37,-1
+ 480 600 l 1,38,-1
+ 480 480 l 1,39,-1
+ 600 480 l 1,40,-1
+ 600 360 l 1,41,-1
+ 600 240 l 1,42,-1
+ 600 120 l 1,43,-1
+ 480 120 l 1,44,-1
+ 480 0 l 1,45,-1
+ 360 0 l 1,12,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.222
+Encoding: 222 1043 222
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 480 m 1,0,-1
+ 120 360 l 1,1,-1
+ 120 240 l 1,2,-1
+ 120 -0 l 1,3,-1
+ 0 0 l 1,4,-1
+ 0 120 l 1,5,-1
+ 0 240 l 1,6,-1
+ 0 360 l 1,7,-1
+ 0 480 l 1,8,-1
+ 0 600 l 1,9,-1
+ 0 720 l 1,10,-1
+ 0 840 l 1,11,-1
+ 120 840 l 1,12,-1
+ 240 840 l 1,13,-1
+ 360 840 l 1,14,-1
+ 480 840 l 1,15,-1
+ 600 840 l 1,16,-1
+ 600 720 l 1,17,-1
+ 480 720 l 1,18,-1
+ 360 720 l 1,19,-1
+ 240 720 l 1,20,-1
+ 120 720 l 1,21,-1
+ 120 480 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.223
+Encoding: 223 1044 223
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 5,0,-1
+ 600 0 l 5,1,-1
+ 600 -120 l 5,2,-1
+ 480 -120 l 5,3,-1
+ 480 0 l 5,0,-1
+600 120 m 1025,4,-1
+120 -120 m 1025,5,-1
+0 0 m 1,6,-1
+ 0 -120 l 1,7,-1
+ 120 -120 l 1,8,-1
+ 120 0 l 1,9,-1
+ 0 0 l 1,6,-1
+480 120 m 25,10,-1
+ 480 720 l 1,11,-1
+ 360 720 l 1,12,-1
+ 360 480 l 1,13,-1
+ 240 480 l 1,14,-1
+ 240 360 l 1,15,-1
+ 240 240 l 1,16,-1
+ 240 120 l 1,17,-1
+ 480 120 l 25,10,-1
+120 240 m 17,18,-1
+ 120 360 l 1,19,-1
+ 120 480 l 1,20,-1
+ 240 480 l 1,21,-1
+ 240 840 l 1,22,-1
+ 360 840 l 1,23,-1
+ 480 840 l 1,24,-1
+ 600 840 l 1,25,-1
+ 600 0 l 5,26,-1
+ 0 0 l 1,27,-1
+ 0 120 l 1,28,-1
+ 120 120 l 1,29,-1
+ 120 240 l 17,18,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.224
+Encoding: 224 1045 224
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 120 m 1,0,-1
+ 600 120 l 1,1,-1
+ 600 0 l 1,2,-1
+ 480 0 l 1,3,-1
+ 360 0 l 1,4,-1
+ 240 0 l 1,5,-1
+ 120 0 l 1,6,-1
+ 0 0 l 1,7,-1
+ 0 120 l 1,8,-1
+ 0 240 l 1,9,-1
+ 0 360 l 1,10,-1
+ 0 480 l 1,11,-1
+ 0 600 l 1,12,-1
+ 0 720 l 1,13,-1
+ 0 840 l 1,14,-1
+ 120 840 l 1,15,-1
+ 240 840 l 1,16,-1
+ 360 840 l 1,17,-1
+ 480 840 l 1,18,-1
+ 600 840 l 1,19,-1
+ 600 720 l 1,20,-1
+ 480 720 l 1,21,-1
+ 360 720 l 1,22,-1
+ 240 720 l 1,23,-1
+ 120 720 l 1,24,-1
+ 120 600 l 1,25,-1
+ 240 600 l 1,26,-1
+ 360 600 l 1,27,-1
+ 360 480 l 1,28,-1
+ 240 480 l 1,29,-1
+ 120 480 l 1,30,-1
+ 120 360 l 1,31,-1
+ 120 240 l 1,32,-1
+ 120 120 l 1,33,-1
+ 240 120 l 1,34,-1
+ 360 120 l 1,35,-1
+ 480 120 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.225
+Encoding: 225 1046 225
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 480 m 5,0,-1
+ 600 480 l 1,1,-1
+ 600 0 l 1,2,-1
+ 480 0 l 1,3,-1
+ 480 480 l 5,0,-1
+480 840 m 1,0,-1
+ 600 840 l 1,1,-1
+ 600 600 l 1,2,-1
+ 480 600 l 1,3,-1
+ 480 840 l 1,0,-1
+480 480 m 1025,4,-1
+480 600 m 1025,5,-1
+480 480 m 1025,6,-1
+480 600 m 1025,7,-1
+0 480 m 1,8,-1
+ 120 480 l 1,9,-1
+ 120 0 l 1,10,-1
+ 0 0 l 1,11,-1
+ 0 480 l 1,8,-1
+0 840 m 1,12,-1
+ 120 840 l 1,13,-1
+ 120 600 l 1,14,-1
+ 0 600 l 1,15,-1
+ 0 840 l 1,12,-1
+480 480 m 25,16,-1
+ 360 480 l 1,17,-1
+ 360 0 l 1,18,-1
+ 240 0 l 1,19,-1
+ 240 480 l 1,20,-1
+ 120 480 l 1,21,-1
+ 120 600 l 1,22,-1
+ 240 600 l 1,23,-1
+ 240 840 l 1,24,-1
+ 360 840 l 1,25,-1
+ 360 600 l 1,26,-1
+ 480 600 l 1,27,-1
+ 480 480 l 25,16,-1
+480 480 m 1049,28,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.226
+Encoding: 226 1047 226
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 600 m 1,0,-1
+ 0 720 l 1,1,-1
+ 120 720 l 1,2,-1
+ 120 600 l 1,3,-1
+ 0 600 l 1,0,-1
+360 120 m 1,4,-1
+ 480 120 l 1,5,-1
+ 480 0 l 1,6,-1
+ 360 0 l 1,7,-1
+ 240 0 l 1,8,-1
+ 120 0 l 1,9,-1
+ 120 120 l 1,10,-1
+ 240 120 l 1,11,-1
+ 360 120 l 1,4,-1
+600 240 m 21,12,-1
+ 600 120 l 1,13,-1
+ 480 120 l 1,14,-1
+ 480 240 l 9,15,-1
+ 480 480 l 25,16,-1
+ 240 480 l 1,17,-1
+ 240 600 l 9,18,-1
+ 480 600 l 25,19,-1
+ 480 480 l 25,20,-1
+ 600 480 l 25,21,-1
+ 600 240 l 21,12,-1
+120 120 m 1,22,-1
+ 0 120 l 1,23,-1
+ 0 240 l 1,24,-1
+ 120 240 l 1,25,-1
+ 120 120 l 1,22,-1
+480 600 m 17,26,-1
+ 480 720 l 1,27,-1
+ 600 720 l 1,28,-1
+ 600 600 l 9,29,-1
+ 480 600 l 17,26,-1
+480 720 m 1,30,-1
+ 360 720 l 1,31,-1
+ 240 720 l 1,32,-1
+ 120 720 l 1,33,-1
+ 120 840 l 1,34,-1
+ 240 840 l 1,35,-1
+ 360 840 l 1,36,-1
+ 480 840 l 1,37,-1
+ 480 720 l 1,30,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.227
+Encoding: 227 1048 227
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 600 m 1,0,-1
+ 360 600 l 1,1,-1
+ 360 480 l 1,2,-1
+ 240 480 l 1,3,-1
+ 240 600 l 1,0,-1
+480 840 m 17,4,-1
+ 600 840 l 1,5,-1
+ 600 720 l 1,6,-1
+ 600 600 l 1,7,-1
+ 600 480 l 1,8,-1
+ 600 360 l 1,9,-1
+ 600 240 l 1,10,-1
+ 600 120 l 1,11,-1
+ 600 0 l 1,12,-1
+ 480 0 l 1,13,-1
+ 480 120 l 1,14,-1
+ 480 240 l 1,15,-1
+ 480 600 l 9,16,-1
+ 360 600 l 25,17,-1
+ 360 720 l 25,18,-1
+ 480 720 l 25,19,-1
+ 480 840 l 17,4,-1
+120 360 m 21,20,-1
+ 120 120 l 1,21,-1
+ 120 0 l 1,22,-1
+ 0 0 l 1,23,-1
+ 0 120 l 1,24,-1
+ 0 240 l 1,25,-1
+ 0 360 l 1,26,-1
+ 0 480 l 1,27,-1
+ 0 600 l 1,28,-1
+ 0 720 l 1,29,-1
+ 0 840 l 1,30,-1
+ 120 840 l 1,31,-1
+ 120 480 l 9,32,-1
+ 240 480 l 25,33,-1
+ 240 360 l 25,34,-1
+ 120 360 l 21,20,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.228
+Encoding: 228 1049 228
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 960 m 5,0,-1
+ 360 1080 l 5,1,-1
+ 480 1080 l 5,2,-1
+ 480 960 l 5,3,-1
+ 360 960 l 5,0,-1
+480 1080 m 5,4,-1
+ 480 1200 l 5,5,-1
+ 600 1200 l 5,6,-1
+ 600 1080 l 5,7,-1
+ 480 1080 l 5,4,-1
+240 960 m 5,8,-1
+ 240 1080 l 5,9,-1
+ 360 1080 l 5,10,-1
+ 360 960 l 5,11,-1
+ 240 960 l 5,8,-1
+240 1080 m 5,12,-1
+ 120 1080 l 5,13,-1
+ 120 1200 l 5,14,-1
+ 240 1200 l 5,15,-1
+ 240 1080 l 5,12,-1
+240 600 m 1,16,-1
+ 360 600 l 1,17,-1
+ 360 480 l 1,18,-1
+ 240 480 l 1,19,-1
+ 240 600 l 1,16,-1
+480 840 m 17,20,-1
+ 600 840 l 1,21,-1
+ 600 720 l 1,22,-1
+ 600 600 l 1,23,-1
+ 600 480 l 1,24,-1
+ 600 360 l 1,25,-1
+ 600 240 l 1,26,-1
+ 600 120 l 1,27,-1
+ 600 0 l 1,28,-1
+ 480 0 l 1,29,-1
+ 480 120 l 1,30,-1
+ 480 240 l 1,31,-1
+ 480 600 l 9,32,-1
+ 360 600 l 25,33,-1
+ 360 720 l 25,34,-1
+ 480 720 l 25,35,-1
+ 480 840 l 17,20,-1
+120 360 m 17,36,-1
+ 120 120 l 1,37,-1
+ 120 0 l 1,38,-1
+ 0 0 l 1,39,-1
+ 0 120 l 1,40,-1
+ 0 240 l 1,41,-1
+ 0 360 l 1,42,-1
+ 0 480 l 1,43,-1
+ 0 600 l 1,44,-1
+ 0 720 l 1,45,-1
+ 0 840 l 1,46,-1
+ 120 840 l 1,47,-1
+ 120 480 l 9,48,-1
+ 240 480 l 25,49,-1
+ 240 360 l 25,50,-1
+ 120 360 l 17,36,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.229
+Encoding: 229 1050 229
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 240 l 1,2,-1
+ 480 360 l 1,3,-1
+ 600 360 l 1,4,-1
+ 600 240 l 1,5,-1
+ 600 120 l 1,6,-1
+ 600 0 l 1,7,-1
+ 480 0 l 1,0,-1
+0 0 m 1,8,-1
+ 0 120 l 1,9,-1
+ 0 240 l 1,10,-1
+ 0 360 l 1,11,-1
+ 0 480 l 1,12,-1
+ 0 600 l 1,13,-1
+ 0 720 l 1,14,-1
+ 0 840 l 1,15,-1
+ 120 840 l 1,16,-1
+ 120 720 l 1,17,-1
+ 120 600 l 1,18,-1
+ 240 600 l 1,19,-1
+ 360 600 l 1,20,-1
+ 360 480 l 1,21,-1
+ 480 480 l 1,22,-1
+ 480 360 l 1,23,-1
+ 360 360 l 1,24,-1
+ 360 480 l 1,25,-1
+ 240 480 l 1,26,-1
+ 120 480 l 1,27,-1
+ 120 360 l 1,28,-1
+ 120 240 l 1,29,-1
+ 120 120 l 1,30,-1
+ 120 0 l 1,31,-1
+ 0 0 l 1,8,-1
+360 600 m 1,32,-1
+ 360 720 l 1,33,-1
+ 480 720 l 1,34,-1
+ 480 600 l 1,35,-1
+ 360 600 l 1,32,-1
+480 720 m 1,36,-1
+ 480 840 l 1,37,-1
+ 600 840 l 1,38,-1
+ 600 720 l 1,39,-1
+ 480 720 l 1,36,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.230
+Encoding: 230 1051 230
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 120 m 1,0,-1
+ 120 120 l 1,1,-1
+ 120 0 l 1,2,-1
+ 0 0 l 1,3,-1
+ 0 120 l 1,0,-1
+120 240 m 21,4,-1
+ 120 360 l 1,5,-1
+ 120 480 l 1,6,-1
+ 120 600 l 1,7,-1
+ 120 720 l 1,8,-1
+ 120 840 l 1,9,-1
+ 360 840 l 1,10,-1
+ 480 840 l 1,11,-1
+ 600 840 l 1,12,-1
+ 600 0 l 1,13,-1
+ 480 0 l 1,14,-1
+ 480 720 l 1,15,-1
+ 360 720 l 1,16,-1
+ 240 720 l 1,17,-1
+ 240 480 l 1,18,-1
+ 240 360 l 1,19,-1
+ 240 240 l 1,20,-1
+ 240 120 l 9,21,-1
+ 120 120 l 25,22,-1
+ 120 240 l 21,4,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.231
+Encoding: 231 1052 231
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 240 l 1,2,-1
+ 480 360 l 1,3,-1
+ 480 480 l 1,4,-1
+ 480 600 l 1,5,-1
+ 360 600 l 1,6,-1
+ 360 480 l 1,7,-1
+ 240 480 l 1,8,-1
+ 240 600 l 1,9,-1
+ 360 600 l 1,10,-1
+ 360 720 l 1,11,-1
+ 480 720 l 1,12,-1
+ 480 840 l 1,13,-1
+ 600 840 l 1,14,-1
+ 600 720 l 1,15,-1
+ 600 600 l 1,16,-1
+ 600 480 l 1,17,-1
+ 600 360 l 1,18,-1
+ 600 240 l 1,19,-1
+ 600 120 l 1,20,-1
+ 600 0 l 1,21,-1
+ 480 0 l 1,0,-1
+0 0 m 1,22,-1
+ 0 120 l 1,23,-1
+ 0 240 l 1,24,-1
+ 0 360 l 1,25,-1
+ 0 480 l 1,26,-1
+ 0 600 l 1,27,-1
+ 0 720 l 1,28,-1
+ 0 840 l 1,29,-1
+ 120 840 l 1,30,-1
+ 120 720 l 1,31,-1
+ 240 720 l 1,32,-1
+ 240 600 l 1,33,-1
+ 120 600 l 1,34,-1
+ 120 480 l 1,35,-1
+ 120 360 l 1,36,-1
+ 120 240 l 1,37,-1
+ 120 120 l 1,38,-1
+ 120 0 l 1,39,-1
+ 0 0 l 1,22,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.232
+Encoding: 232 1053 232
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 240 l 1,2,-1
+ 480 360 l 1,3,-1
+ 480 480 l 1,4,-1
+ 360 480 l 1,5,-1
+ 240 480 l 1,6,-1
+ 120 480 l 1,7,-1
+ 120 360 l 1,8,-1
+ 120 240 l 1,9,-1
+ 120 120 l 1,10,-1
+ 120 0 l 1,11,-1
+ 0 0 l 1,12,-1
+ 0 120 l 1,13,-1
+ 0 240 l 1,14,-1
+ 0 360 l 1,15,-1
+ 0 480 l 1,16,-1
+ 0 600 l 1,17,-1
+ 0 720 l 1,18,-1
+ 0 840 l 1,19,-1
+ 120 840 l 1,20,-1
+ 120 720 l 1,21,-1
+ 120 600 l 1,22,-1
+ 240 600 l 1,23,-1
+ 360 600 l 1,24,-1
+ 480 600 l 1,25,-1
+ 480 720 l 1,26,-1
+ 480 840 l 1,27,-1
+ 600 840 l 1,28,-1
+ 600 720 l 1,29,-1
+ 600 600 l 1,30,-1
+ 600 480 l 1,31,-1
+ 600 360 l 1,32,-1
+ 600 240 l 1,33,-1
+ 600 120 l 1,34,-1
+ 600 0 l 1,35,-1
+ 480 0 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.233
+Encoding: 233 1054 233
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 120 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 0 l 1,2,-1
+ 360 0 l 1,3,-1
+ 240 0 l 1,4,-1
+ 120 0 l 1,5,-1
+ 120 120 l 1,6,-1
+ 240 120 l 1,7,-1
+ 360 120 l 1,0,-1
+480 120 m 1,8,-1
+ 480 240 l 1,9,-1
+ 480 360 l 1,10,-1
+ 480 480 l 1,11,-1
+ 480 600 l 1,12,-1
+ 480 720 l 1,13,-1
+ 600 720 l 1,14,-1
+ 600 600 l 1,15,-1
+ 600 480 l 1,16,-1
+ 600 360 l 1,17,-1
+ 600 240 l 1,18,-1
+ 600 120 l 1,19,-1
+ 480 120 l 1,8,-1
+120 120 m 1,20,-1
+ 0 120 l 1,21,-1
+ 0 240 l 1,22,-1
+ 0 360 l 1,23,-1
+ 0 480 l 1,24,-1
+ 0 600 l 1,25,-1
+ 0 720 l 1,26,-1
+ 120 720 l 1,27,-1
+ 120 600 l 1,28,-1
+ 120 480 l 1,29,-1
+ 120 360 l 1,30,-1
+ 120 240 l 1,31,-1
+ 120 120 l 1,20,-1
+480 720 m 1,32,-1
+ 360 720 l 1,33,-1
+ 240 720 l 1,34,-1
+ 120 720 l 1,35,-1
+ 120 840 l 1,36,-1
+ 240 840 l 1,37,-1
+ 360 840 l 1,38,-1
+ 480 840 l 1,39,-1
+ 480 720 l 1,32,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.234
+Encoding: 234 1055 234
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 720 m 17,0,-1
+ 240 720 l 1,1,-1
+ 120 720 l 1,2,-1
+ 120 480 l 1,3,-1
+ 120 360 l 1,4,-1
+ 120 240 l 1,5,-1
+ 120 -0 l 1,6,-1
+ 0 0 l 1,7,-1
+ 0 120 l 1,8,-1
+ 0 240 l 1,9,-1
+ 0 360 l 1,10,-1
+ 0 480 l 1,11,-1
+ 0 600 l 1,12,-1
+ 0 720 l 1,13,-1
+ 0 840 l 1,14,-1
+ 120 840 l 1,15,-1
+ 240 840 l 1,16,-1
+ 360 840 l 1,17,-1
+ 480 840 l 1,18,-1
+ 600 840 l 9,19,-1
+ 600 0 l 1,20,21
+ 600 0 600 0 480 0 c 24,22,-1
+ 480 720 l 25,23,-1
+ 360 720 l 17,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.235
+Encoding: 235 1056 235
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 0 m 1,0,-1
+ 0 120 l 1,1,-1
+ 0 240 l 1,2,-1
+ 0 360 l 1,3,-1
+ 0 480 l 1,4,-1
+ 0 600 l 1,5,-1
+ 0 720 l 1,6,-1
+ 0 840 l 1,7,-1
+ 120 840 l 1,8,-1
+ 240 840 l 1,9,-1
+ 360 840 l 1,10,-1
+ 480 840 l 1,11,-1
+ 480 720 l 1,12,-1
+ 600 720 l 1,13,-1
+ 600 600 l 1,14,-1
+ 480 600 l 1,15,-1
+ 480 720 l 1,16,-1
+ 360 720 l 1,17,-1
+ 240 720 l 1,18,-1
+ 120 720 l 1,19,-1
+ 120 600 l 1,20,-1
+ 240 600 l 1,21,-1
+ 360 600 l 1,22,-1
+ 480 600 l 1,23,-1
+ 480 480 l 1,24,-1
+ 360 480 l 1,25,-1
+ 240 480 l 1,26,-1
+ 120 480 l 1,27,-1
+ 120 360 l 1,28,-1
+ 120 240 l 1,29,-1
+ 120 120 l 1,30,-1
+ 120 0 l 1,31,-1
+ 0 0 l 1,0,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.236
+Encoding: 236 1057 236
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 600 m 1,0,-1
+ 480 720 l 1,1,-1
+ 600 720 l 1,2,-1
+ 600 600 l 1,3,-1
+ 480 600 l 1,0,-1
+360 120 m 1,4,-1
+ 480 120 l 1,5,-1
+ 480 0 l 1,6,-1
+ 360 0 l 1,7,-1
+ 240 0 l 1,8,-1
+ 120 0 l 1,9,-1
+ 120 120 l 1,10,-1
+ 240 120 l 1,11,-1
+ 360 120 l 1,4,-1
+480 120 m 1,12,-1
+ 480 240 l 1,13,-1
+ 600 240 l 1,14,-1
+ 600 120 l 1,15,-1
+ 480 120 l 1,12,-1
+120 120 m 1,16,-1
+ 0 120 l 1,17,-1
+ 0 240 l 1,18,-1
+ 0 360 l 1,19,-1
+ 0 480 l 1,20,-1
+ 0 600 l 1,21,-1
+ 0 720 l 1,22,-1
+ 120 720 l 1,23,-1
+ 120 600 l 1,24,-1
+ 120 480 l 1,25,-1
+ 120 360 l 1,26,-1
+ 120 240 l 1,27,-1
+ 120 120 l 1,16,-1
+480 720 m 1,28,-1
+ 360 720 l 1,29,-1
+ 240 720 l 1,30,-1
+ 120 720 l 1,31,-1
+ 120 840 l 1,32,-1
+ 240 840 l 1,33,-1
+ 360 840 l 1,34,-1
+ 480 840 l 1,35,-1
+ 480 720 l 1,28,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.237
+Encoding: 237 1058 237
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 0 m 1,0,-1
+ 240 120 l 1,1,-1
+ 240 240 l 1,2,-1
+ 240 360 l 1,3,-1
+ 240 480 l 1,4,-1
+ 240 600 l 1,5,-1
+ 240 720 l 1,6,-1
+ 120 720 l 1,7,-1
+ 0 720 l 1,8,-1
+ 0 840 l 1,9,-1
+ 120 840 l 1,10,-1
+ 240 840 l 1,11,-1
+ 360 840 l 1,12,-1
+ 480 840 l 1,13,-1
+ 600 840 l 1,14,-1
+ 600 720 l 1,15,-1
+ 480 720 l 1,16,-1
+ 360 720 l 1,17,-1
+ 360 600 l 1,18,-1
+ 360 480 l 1,19,-1
+ 360 360 l 1,20,-1
+ 360 240 l 1,21,-1
+ 360 120 l 1,22,-1
+ 360 0 l 1,23,-1
+ 240 0 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.238
+Encoding: 238 1059 238
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 120 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 0 l 1,2,-1
+ 360 0 l 1,3,-1
+ 240 0 l 1,4,-1
+ 120 0 l 1,5,-1
+ 0 0 l 1,6,-1
+ 0 120 l 1,7,-1
+ 120 120 l 1,8,-1
+ 240 120 l 1,9,-1
+ 360 120 l 1,0,-1
+480 360 m 17,10,-1
+ 360 360 l 1,11,-1
+ 240 360 l 1,12,-1
+ 120 360 l 1,13,-1
+ 120 480 l 1,14,-1
+ 240 480 l 1,15,-1
+ 360 480 l 1,16,-1
+ 480 480 l 1,17,-1
+ 480 600 l 1,18,-1
+ 480 720 l 1,19,-1
+ 480 840 l 1,20,-1
+ 600 840 l 1,21,-1
+ 600 720 l 1,22,-1
+ 600 600 l 1,23,-1
+ 600 480 l 1,24,-1
+ 600 360 l 9,25,-1
+ 600 120 l 25,26,-1
+ 480 120 l 25,27,-1
+ 480 360 l 17,10,-1
+120 480 m 1,28,-1
+ 0 480 l 1,29,-1
+ 0 600 l 1,30,-1
+ 0 720 l 1,31,-1
+ 0 840 l 1,32,-1
+ 120 840 l 1,33,-1
+ 120 720 l 1,34,-1
+ 120 600 l 1,35,-1
+ 120 480 l 1,28,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.240
+Encoding: 240 1061 239
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 240 l 1,2,-1
+ 480 360 l 1,3,-1
+ 600 360 l 1,4,-1
+ 600 240 l 1,5,-1
+ 600 120 l 1,6,-1
+ 600 0 l 1,7,-1
+ 480 0 l 1,0,-1
+0 0 m 1,8,-1
+ 0 120 l 1,9,-1
+ 0 240 l 1,10,-1
+ 0 360 l 1,11,-1
+ 120 360 l 1,12,-1
+ 120 240 l 1,13,-1
+ 120 120 l 1,14,-1
+ 120 0 l 1,15,-1
+ 0 0 l 1,8,-1
+480 360 m 1,16,-1
+ 360 360 l 1,17,-1
+ 360 480 l 1,18,-1
+ 480 480 l 1,19,-1
+ 480 360 l 1,16,-1
+120 360 m 1,20,-1
+ 120 480 l 1,21,-1
+ 240 480 l 1,22,-1
+ 240 360 l 1,23,-1
+ 120 360 l 1,20,-1
+360 480 m 1,24,-1
+ 240 480 l 1,25,-1
+ 240 600 l 1,26,-1
+ 360 600 l 1,27,-1
+ 360 480 l 1,24,-1
+360 600 m 1,28,-1
+ 360 720 l 1,29,-1
+ 480 720 l 1,30,-1
+ 480 600 l 1,31,-1
+ 360 600 l 1,28,-1
+240 600 m 1,32,-1
+ 120 600 l 1,33,-1
+ 120 720 l 1,34,-1
+ 240 720 l 1,35,-1
+ 240 600 l 1,32,-1
+480 720 m 1,36,-1
+ 480 840 l 1,37,-1
+ 600 840 l 1,38,-1
+ 600 720 l 1,39,-1
+ 480 720 l 1,36,-1
+120 720 m 1,40,-1
+ 0 720 l 1,41,-1
+ 0 840 l 1,42,-1
+ 120 840 l 1,43,-1
+ 120 720 l 1,40,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.245
+Encoding: 245 1066 240
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 840 m 25,0,-1
+ 240 720 l 25,1,-1
+ 240 480 l 1,2,-1
+ 360 480 l 1,3,-1
+ 480 480 l 1,4,-1
+ 480 360 l 1,5,-1
+ 240 360 l 1,6,-1
+ 240 240 l 1,7,-1
+ 240 120 l 1,8,-1
+ 360 120 l 1,9,-1
+ 360 120 l 1,10,-1
+ 480 120 l 1,11,-1
+ 480 240 l 9,12,-1
+ 480 360 l 25,13,-1
+ 600 360 l 25,14,-1
+ 600 240 l 17,15,-1
+ 600 120 l 1,16,-1
+ 480 120 l 1,17,-1
+ 480 0 l 1,18,-1
+ 360 0 l 1,19,-1
+ 360 0 l 1,20,-1
+ 240 0 l 1,21,-1
+ 120 0 l 1,22,-1
+ 120 120 l 1,23,-1
+ 120 240 l 1,24,-1
+ 120 360 l 1,25,-1
+ 120 480 l 1,26,-1
+ 120 600 l 9,27,-1
+ 120 720 l 25,28,-1
+ 0 720 l 25,29,-1
+ 0 840 l 25,30,-1
+ 240 840 l 25,0,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.247
+Encoding: 247 1068 241
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+600 240 m 21,0,-1
+ 600 120 l 1,1,-1
+ 480 120 l 1,2,-1
+ 480 0 l 1,3,-1
+ 360 0 l 1,4,-1
+ 240 0 l 1,5,-1
+ 120 0 l 1,6,-1
+ 0 0 l 1,7,-1
+ 0 120 l 1,8,-1
+ 0 240 l 1,9,-1
+ 0 360 l 1,10,-1
+ 0 480 l 1,11,-1
+ 0 600 l 1,12,-1
+ 0 720 l 1,13,-1
+ 0 840 l 1,14,-1
+ 120 840 l 9,15,-1
+ 120 720 l 25,16,-1
+ 120 480 l 25,17,-1
+ 360 480 l 1,18,-1
+ 480 480 l 1,19,-1
+ 480 360 l 1,20,-1
+ 120 360 l 1,21,-1
+ 120 240 l 1,22,-1
+ 120 120 l 1,23,-1
+ 240 120 l 1,24,-1
+ 360 120 l 1,25,-1
+ 480 120 l 1,26,-1
+ 480 240 l 9,27,-1
+ 480 360 l 25,28,-1
+ 600 360 l 25,29,-1
+ 600 240 l 21,0,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.251
+Encoding: 251 1072 242
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 1,0,-1
+ 360 0 l 1,1,-1
+ 240 0 l 1,2,-1
+ 120 0 l 1,3,-1
+ 120 120 l 1,4,-1
+ 0 120 l 1,5,-1
+ 0 240 l 1,6,-1
+ 120 240 l 1,7,-1
+ 120 360 l 1,8,-1
+ 240 360 l 1,9,-1
+ 360 360 l 1,10,-1
+ 480 360 l 1,11,-1
+ 480 480 l 1,12,-1
+ 600 480 l 1,13,-1
+ 600 360 l 1,14,-1
+ 600 240 l 1,15,-1
+ 600 120 l 1,16,-1
+ 600 0 l 1,17,-1
+ 480 0 l 1,0,-1
+360 120 m 1,18,-1
+ 480 120 l 1,19,-1
+ 480 240 l 1,20,-1
+ 360 240 l 1,21,-1
+ 240 240 l 1,22,-1
+ 120 240 l 1,23,-1
+ 120 120 l 1,24,-1
+ 240 120 l 1,25,-1
+ 360 120 l 1,18,-1
+480 480 m 1,26,-1
+ 360 480 l 1,27,-1
+ 240 480 l 1,28,-1
+ 120 480 l 1,29,-1
+ 120 600 l 1,30,-1
+ 240 600 l 1,31,-1
+ 360 600 l 1,32,-1
+ 480 600 l 1,33,-1
+ 480 480 l 1,26,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.252
+Encoding: 252 1073 243
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 840 m 21,0,-1
+ 240 840 l 1,1,-1
+ 360 840 l 1,2,-1
+ 480 840 l 1,3,-1
+ 600 840 l 1,4,-1
+ 600 720 l 1,5,-1
+ 120 720 l 1,6,-1
+ 120 600 l 1,7,-1
+ 240 600 l 1,8,-1
+ 360 600 l 1,9,-1
+ 480 600 l 1,10,-1
+ 480 480 l 1,11,-1
+ 600 480 l 1,12,-1
+ 600 360 l 1,13,-1
+ 600 240 l 1,14,-1
+ 600 120 l 1,15,-1
+ 480 120 l 1,16,-1
+ 480 0 l 1,17,-1
+ 360 0 l 1,18,-1
+ 240 0 l 1,19,-1
+ 120 0 l 9,20,-1
+ 120 120 l 25,21,-1
+ 0 120 l 17,22,-1
+ 0 240 l 1,23,-1
+ 0 360 l 1,24,-1
+ 0 480 l 1,25,-1
+ 0 600 l 1,26,-1
+ 0 720 l 9,27,-1
+ 120 720 l 25,28,-1
+ 120 840 l 21,0,-1
+360 120 m 1,29,-1
+ 480 120 l 1,30,-1
+ 480 240 l 1,31,-1
+ 480 360 l 1,32,-1
+ 480 480 l 1,33,-1
+ 360 480 l 1,34,-1
+ 240 480 l 1,35,-1
+ 120 480 l 1,36,-1
+ 120 360 l 1,37,-1
+ 120 240 l 1,38,-1
+ 120 120 l 1,39,-1
+ 240 120 l 1,40,-1
+ 360 120 l 1,29,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.253
+Encoding: 253 1074 244
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 240 m 1,0,-1
+ 600 240 l 1,1,-1
+ 600 120 l 1,2,-1
+ 480 120 l 1,3,-1
+ 480 240 l 1,0,-1
+480 480 m 1,0,-1
+ 600 480 l 1,1,-1
+ 600 360 l 1,2,-1
+ 480 360 l 1,3,-1
+ 480 480 l 1,0,-1
+0 0 m 17,4,-1
+ 0 120 l 1,5,-1
+ 0 240 l 1,6,-1
+ 0 360 l 1,7,-1
+ 0 480 l 1,8,-1
+ 0 600 l 1,9,-1
+ 120 600 l 1,10,-1
+ 240 600 l 1,11,-1
+ 480 600 l 1,12,-1
+ 480 480 l 1,13,-1
+ 240 480 l 1,14,-1
+ 120 480 l 1,15,-1
+ 120 360 l 1,16,-1
+ 480 360 l 1,17,-1
+ 480 240 l 1,18,-1
+ 120 240 l 1,19,-1
+ 120 120 l 1,20,-1
+ 480 120 l 1,21,-1
+ 480 0 l 1,22,-1
+ 0 0 l 17,4,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.254
+Encoding: 254 1075 245
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+600 480 m 21,0,-1
+ 480 480 l 5,1,-1
+ 360 480 l 5,2,-1
+ 240 480 l 5,3,-1
+ 240 240 l 5,4,-1
+ 240 120 l 5,5,-1
+ 240 0 l 13,6,-1
+ 120 0 l 21,7,-1
+ 120 120 l 5,8,-1
+ 120 240 l 5,9,-1
+ 120 360 l 5,10,-1
+ 120 480 l 5,11,-1
+ 120 600 l 5,12,-1
+ 240 600 l 5,13,-1
+ 360 600 l 5,14,-1
+ 480 600 l 5,15,-1
+ 600 600 l 13,16,-1
+ 600 480 l 21,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.256
+Encoding: 256 1077 246
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 120 m 1,0,-1
+ 600 120 l 1,1,-1
+ 600 0 l 1,2,-1
+ 480 0 l 1,3,-1
+ 360 0 l 1,4,-1
+ 240 0 l 1,5,-1
+ 120 0 l 1,6,-1
+ 120 120 l 1,7,-1
+ 240 120 l 1,8,-1
+ 360 120 l 1,9,-1
+ 480 120 l 1,0,-1
+120 120 m 1,10,-1
+ 0 120 l 1,11,-1
+ 0 240 l 1,12,-1
+ 0 360 l 1,13,-1
+ 0 480 l 1,14,-1
+ 120 480 l 1,15,-1
+ 120 360 l 1,16,-1
+ 240 360 l 1,17,-1
+ 360 360 l 1,18,-1
+ 480 360 l 1,19,-1
+ 480 480 l 1,20,-1
+ 600 480 l 1,21,-1
+ 600 360 l 1,22,-1
+ 600 240 l 1,23,-1
+ 480 240 l 1,24,-1
+ 360 240 l 1,25,-1
+ 240 240 l 1,26,-1
+ 120 240 l 1,27,-1
+ 120 120 l 1,10,-1
+480 480 m 1,28,-1
+ 360 480 l 1,29,-1
+ 240 480 l 1,30,-1
+ 120 480 l 1,31,-1
+ 120 600 l 1,32,-1
+ 240 600 l 1,33,-1
+ 360 600 l 1,34,-1
+ 480 600 l 1,35,-1
+ 480 480 l 1,28,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.257
+Encoding: 257 1078 247
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 240 m 5,0,-1
+ 600 240 l 1,1,-1
+ 600 0 l 1,2,-1
+ 480 0 l 1,3,-1
+ 480 240 l 5,0,-1
+480 600 m 1,0,-1
+ 600 600 l 1,1,-1
+ 600 360 l 1,2,-1
+ 480 360 l 1,3,-1
+ 480 600 l 1,0,-1
+0 240 m 1,4,-1
+ 120 240 l 1,5,-1
+ 120 0 l 1,6,-1
+ 0 0 l 1,7,-1
+ 0 240 l 1,4,-1
+0 600 m 1,8,-1
+ 120 600 l 1,9,-1
+ 120 360 l 1,10,-1
+ 0 360 l 1,11,-1
+ 0 600 l 1,8,-1
+480 240 m 25,12,-1
+ 360 240 l 1,13,-1
+ 360 0 l 1,14,-1
+ 240 0 l 1,15,-1
+ 240 240 l 1,16,-1
+ 120 240 l 1,17,-1
+ 120 360 l 1,18,-1
+ 240 360 l 1,19,-1
+ 240 600 l 1,20,-1
+ 360 600 l 1,21,-1
+ 360 360 l 1,22,-1
+ 480 360 l 1,23,-1
+ 480 240 l 25,12,-1
+480 240 m 1049,24,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.258
+Encoding: 258 1079 248
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 600 m 1,0,-1
+ 480 600 l 1,1,-1
+ 480 480 l 1,2,-1
+ 120 480 l 1,3,-1
+ 120 600 l 1,0,-1
+0 480 m 1,0,-1
+ 120 480 l 1,1,-1
+ 120 360 l 1,2,-1
+ 0 360 l 1,3,-1
+ 0 480 l 1,0,-1
+240 360 m 1,4,-1
+ 480 360 l 1,5,-1
+ 480 240 l 1,6,-1
+ 240 240 l 1,7,-1
+ 240 360 l 1,4,-1
+480 240 m 1,8,-1
+ 600 240 l 1,9,-1
+ 600 120 l 1,10,-1
+ 480 120 l 1,11,-1
+ 480 240 l 1,8,-1
+480 480 m 1,12,-1
+ 600 480 l 1,13,-1
+ 600 360 l 1,14,-1
+ 480 360 l 1,15,-1
+ 480 480 l 1,12,-1
+120 240 m 17,16,-1
+ 120 120 l 1,17,-1
+ 480 120 l 1,18,-1
+ 480 0 l 1,19,-1
+ 120 0 l 1,20,-1
+ 120 120 l 1,21,-1
+ 0 120 l 1,22,-1
+ 0 240 l 1,23,-1
+ 120 240 l 17,16,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.262
+Encoding: 262 1083 249
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 120 m 5,0,-1
+ 120 120 l 5,1,-1
+ 120 0 l 5,2,-1
+ 0 0 l 5,3,-1
+ 0 120 l 5,0,-1
+120 120 m 21,4,-1
+ 120 240 l 5,5,-1
+ 120 360 l 5,6,-1
+ 120 480 l 5,7,-1
+ 120 600 l 5,8,-1
+ 360 600 l 5,9,-1
+ 480 600 l 5,10,-1
+ 600 600 l 5,11,-1
+ 600 0 l 5,12,-1
+ 480 0 l 5,13,-1
+ 480 480 l 5,14,-1
+ 360 480 l 5,15,-1
+ 240 480 l 5,16,-1
+ 240 240 l 5,17,-1
+ 240 120 l 5,18,-1
+ 120 120 l 21,4,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.259
+Encoding: 259 1080 250
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 360 m 1,0,-1
+ 360 360 l 1,1,-1
+ 360 240 l 1,2,-1
+ 240 240 l 1,3,-1
+ 240 360 l 1,0,-1
+480 0 m 17,4,-1
+ 480 360 l 9,5,-1
+ 360 360 l 25,6,-1
+ 360 480 l 25,7,-1
+ 480 480 l 25,8,-1
+ 480 600 l 17,9,-1
+ 600 600 l 1,10,-1
+ 600 480 l 1,11,-1
+ 600 360 l 1,12,-1
+ 600 240 l 1,13,-1
+ 600 120 l 1,14,-1
+ 600 0 l 9,15,-1
+ 480 0 l 17,4,-1
+0 0 m 17,16,-1
+ 0 120 l 1,17,-1
+ 0 240 l 1,18,-1
+ 0 360 l 1,19,-1
+ 0 480 l 1,20,-1
+ 0 600 l 1,21,-1
+ 120 600 l 1,22,-1
+ 120 240 l 9,23,-1
+ 240 240 l 25,24,-1
+ 240 120 l 25,25,-1
+ 120 120 l 25,26,-1
+ 120 0 l 25,27,-1
+ 0 0 l 17,16,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.260
+Encoding: 260 1081 251
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 720 m 5,0,-1
+ 360 840 l 5,1,-1
+ 480 840 l 5,2,-1
+ 480 720 l 5,3,-1
+ 360 720 l 5,0,-1
+480 840 m 5,4,-1
+ 480 960 l 5,5,-1
+ 600 960 l 5,6,-1
+ 600 840 l 5,7,-1
+ 480 840 l 5,4,-1
+240 720 m 5,8,-1
+ 240 840 l 5,9,-1
+ 360 840 l 5,10,-1
+ 360 720 l 5,11,-1
+ 240 720 l 5,8,-1
+240 840 m 5,12,-1
+ 120 840 l 5,13,-1
+ 120 960 l 5,14,-1
+ 240 960 l 5,15,-1
+ 240 840 l 5,12,-1
+240 360 m 1,16,-1
+ 360 360 l 1,17,-1
+ 360 240 l 1,18,-1
+ 240 240 l 1,19,-1
+ 240 360 l 1,16,-1
+480 0 m 17,20,-1
+ 480 360 l 9,21,-1
+ 360 360 l 25,22,-1
+ 360 480 l 25,23,-1
+ 480 480 l 25,24,-1
+ 480 600 l 17,25,-1
+ 600 600 l 1,26,-1
+ 600 480 l 1,27,-1
+ 600 360 l 1,28,-1
+ 600 240 l 1,29,-1
+ 600 120 l 1,30,-1
+ 600 0 l 9,31,-1
+ 480 0 l 17,20,-1
+0 0 m 17,32,-1
+ 0 120 l 1,33,-1
+ 0 240 l 1,34,-1
+ 0 360 l 1,35,-1
+ 0 480 l 1,36,-1
+ 0 600 l 1,37,-1
+ 120 600 l 1,38,-1
+ 120 240 l 9,39,-1
+ 240 240 l 25,40,-1
+ 240 120 l 25,41,-1
+ 120 120 l 25,42,-1
+ 120 0 l 25,43,-1
+ 0 0 l 17,32,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.261
+Encoding: 261 1082 252
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 5,0,-1
+ 480 120 l 5,1,-1
+ 600 120 l 5,2,-1
+ 600 0 l 5,3,-1
+ 480 0 l 5,0,-1
+120 600 m 21,4,-1
+ 120 480 l 5,5,-1
+ 120 360 l 5,6,-1
+ 360 360 l 5,7,-1
+ 360 240 l 5,8,-1
+ 480 240 l 5,9,-1
+ 480 120 l 5,10,-1
+ 360 120 l 5,11,-1
+ 360 240 l 5,12,-1
+ 120 240 l 5,13,-1
+ 120 120 l 5,14,-1
+ 120 0 l 5,15,-1
+ 0 0 l 5,16,-1
+ 0 120 l 5,17,-1
+ 0 240 l 5,18,-1
+ 0 360 l 5,19,-1
+ 0 480 l 5,20,-1
+ 0 600 l 13,21,-1
+ 120 600 l 21,4,-1
+360 360 m 5,22,-1
+ 360 480 l 5,23,-1
+ 480 480 l 5,24,-1
+ 480 360 l 5,25,-1
+ 360 360 l 5,22,-1
+480 480 m 5,26,-1
+ 480 600 l 5,27,-1
+ 600 600 l 5,28,-1
+ 600 480 l 5,29,-1
+ 480 480 l 5,26,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.263
+Encoding: 263 1084 253
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 17,0,-1
+ 480 120 l 1,1,-1
+ 480 240 l 1,2,-1
+ 480 360 l 1,3,-1
+ 360 360 l 1,4,-1
+ 360 240 l 1,5,-1
+ 240 240 l 1,6,-1
+ 240 360 l 1,7,-1
+ 360 360 l 1,8,-1
+ 360 480 l 1,9,-1
+ 480 480 l 1,10,-1
+ 480 600 l 1,11,-1
+ 600 600 l 1,12,-1
+ 600 480 l 1,13,-1
+ 600 360 l 1,14,-1
+ 600 240 l 1,15,-1
+ 600 120 l 1,16,-1
+ 600 0 l 9,17,-1
+ 480 0 l 17,0,-1
+0 0 m 17,18,-1
+ 0 120 l 1,19,-1
+ 0 240 l 1,20,-1
+ 0 360 l 1,21,-1
+ 0 480 l 1,22,-1
+ 0 600 l 1,23,-1
+ 120 600 l 1,24,-1
+ 120 480 l 1,25,-1
+ 240 480 l 1,26,-1
+ 240 360 l 1,27,-1
+ 120 360 l 1,28,-1
+ 120 240 l 1,29,-1
+ 120 120 l 1,30,-1
+ 120 0 l 9,31,-1
+ 0 0 l 17,18,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.264
+Encoding: 264 1085 254
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 0 m 17,0,-1
+ 0 120 l 1,1,-1
+ 0 240 l 1,2,-1
+ 0 360 l 1,3,-1
+ 0 480 l 1,4,-1
+ 0 600 l 1,5,-1
+ 120 600 l 1,6,-1
+ 120 480 l 1,7,-1
+ 120 360 l 1,8,-1
+ 240 360 l 1,9,-1
+ 360 360 l 1,10,-1
+ 480 360 l 1,11,-1
+ 480 480 l 1,12,-1
+ 480 600 l 1,13,-1
+ 600 600 l 1,14,-1
+ 600 480 l 1,15,-1
+ 600 360 l 1,16,-1
+ 600 240 l 1,17,-1
+ 600 120 l 1,18,-1
+ 600 0 l 1,19,-1
+ 480 0 l 1,20,-1
+ 480 120 l 1,21,-1
+ 480 240 l 1,22,-1
+ 360 240 l 1,23,-1
+ 240 240 l 1,24,-1
+ 120 240 l 1,25,-1
+ 120 120 l 1,26,-1
+ 120 0 l 9,27,-1
+ 0 0 l 17,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.265
+Encoding: 265 1086 255
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 120 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 0 l 1,2,-1
+ 360 0 l 1,3,-1
+ 240 0 l 1,4,-1
+ 120 0 l 1,5,-1
+ 120 120 l 1,6,-1
+ 240 120 l 1,7,-1
+ 360 120 l 1,0,-1
+480 120 m 1,8,-1
+ 480 240 l 1,9,-1
+ 480 360 l 1,10,-1
+ 480 480 l 1,11,-1
+ 600 480 l 1,12,-1
+ 600 360 l 1,13,-1
+ 600 240 l 1,14,-1
+ 600 120 l 1,15,-1
+ 480 120 l 1,8,-1
+120 120 m 1,16,-1
+ 0 120 l 1,17,-1
+ 0 240 l 1,18,-1
+ 0 360 l 1,19,-1
+ 0 480 l 1,20,-1
+ 120 480 l 1,21,-1
+ 120 360 l 1,22,-1
+ 120 240 l 1,23,-1
+ 120 120 l 1,16,-1
+480 480 m 1,24,-1
+ 360 480 l 1,25,-1
+ 240 480 l 1,26,-1
+ 120 480 l 1,27,-1
+ 120 600 l 1,28,-1
+ 240 600 l 1,29,-1
+ 360 600 l 1,30,-1
+ 480 600 l 1,31,-1
+ 480 480 l 1,24,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.266
+Encoding: 266 1087 256
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 0 m 17,0,-1
+ 0 120 l 1,1,-1
+ 0 240 l 1,2,-1
+ 0 360 l 1,3,-1
+ 0 480 l 1,4,-1
+ 0 600 l 1,5,-1
+ 120 600 l 1,6,-1
+ 240 600 l 1,7,-1
+ 360 600 l 1,8,-1
+ 480 600 l 1,9,-1
+ 600 600 l 9,10,-1
+ 600 0 l 25,11,-1
+ 480 0 l 25,12,-1
+ 480 480 l 25,13,-1
+ 360 480 l 17,14,-1
+ 240 480 l 1,15,-1
+ 120 480 l 1,16,-1
+ 120 240 l 1,17,-1
+ 120 120 l 1,18,-1
+ 120 0 l 9,19,-1
+ 0 0 l 17,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.267
+Encoding: 267 1088 257
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 -120 m 1,0,-1
+ 0 0 l 1,1,-1
+ 0 120 l 1,2,-1
+ 0 240 l 1,3,-1
+ 0 360 l 1,4,-1
+ 0 480 l 1,5,-1
+ 0 600 l 1,6,-1
+ 120 600 l 1,7,-1
+ 120 480 l 1,8,-1
+ 240 480 l 1,9,-1
+ 240 360 l 1,10,-1
+ 120 360 l 1,11,-1
+ 120 240 l 1,12,-1
+ 240 240 l 1,13,-1
+ 360 240 l 1,14,-1
+ 480 240 l 1,15,-1
+ 480 120 l 1,16,-1
+ 360 120 l 1,17,-1
+ 240 120 l 1,18,-1
+ 120 120 l 1,19,-1
+ 120 0 l 1,20,-1
+ 120 -120 l 1,21,-1
+ 0 -120 l 1,0,-1
+480 240 m 1,22,-1
+ 480 360 l 1,23,-1
+ 480 480 l 1,24,-1
+ 600 480 l 1,25,-1
+ 600 360 l 1,26,-1
+ 600 240 l 1,27,-1
+ 480 240 l 1,22,-1
+480 480 m 1,28,-1
+ 360 480 l 1,29,-1
+ 240 480 l 1,30,-1
+ 240 600 l 1,31,-1
+ 360 600 l 1,32,-1
+ 480 600 l 1,33,-1
+ 480 480 l 1,28,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.268
+Encoding: 268 1089 258
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 360 m 1,0,-1
+ 480 480 l 1,1,-1
+ 600 480 l 1,2,-1
+ 600 360 l 1,3,-1
+ 480 360 l 1,0,-1
+360 120 m 1,4,-1
+ 480 120 l 1,5,-1
+ 480 0 l 1,6,-1
+ 360 0 l 1,7,-1
+ 240 0 l 1,8,-1
+ 120 0 l 1,9,-1
+ 120 120 l 1,10,-1
+ 240 120 l 1,11,-1
+ 360 120 l 1,4,-1
+480 120 m 1,12,-1
+ 480 240 l 1,13,-1
+ 600 240 l 1,14,-1
+ 600 120 l 1,15,-1
+ 480 120 l 1,12,-1
+120 120 m 1,16,-1
+ 0 120 l 1,17,-1
+ 0 240 l 1,18,-1
+ 0 360 l 1,19,-1
+ 0 480 l 1,20,-1
+ 120 480 l 1,21,-1
+ 120 360 l 1,22,-1
+ 120 240 l 1,23,-1
+ 120 120 l 1,16,-1
+480 480 m 1,24,-1
+ 360 480 l 1,25,-1
+ 240 480 l 1,26,-1
+ 120 480 l 1,27,-1
+ 120 600 l 1,28,-1
+ 240 600 l 1,29,-1
+ 360 600 l 1,30,-1
+ 480 600 l 1,31,-1
+ 480 480 l 1,24,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.269
+Encoding: 269 1090 259
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 480 m 21,0,-1
+ 0 480 l 1,1,-1
+ 0 600 l 1,2,-1
+ 120 600 l 1,3,-1
+ 240 600 l 1,4,-1
+ 360 600 l 1,5,-1
+ 480 600 l 1,6,-1
+ 600 600 l 1,7,-1
+ 600 480 l 1,8,-1
+ 480 480 l 1,9,-1
+ 360 480 l 1,10,-1
+ 360 360 l 1,11,-1
+ 360 240 l 1,12,-1
+ 360 120 l 1,13,-1
+ 360 0 l 1,14,-1
+ 240 0 l 1,15,-1
+ 240 120 l 1,16,-1
+ 240 240 l 1,17,-1
+ 240 360 l 1,18,-1
+ 240 480 l 9,19,-1
+ 120 480 l 21,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.270
+Encoding: 270 1091 260
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 0 m 1,0,-1
+ 480 0 l 1,1,-1
+ 480 -120 l 1,2,-1
+ 360 -120 l 1,3,-1
+ 240 -120 l 1,4,-1
+ 120 -120 l 1,5,-1
+ 0 -120 l 1,6,-1
+ 0 0 l 1,7,-1
+ 120 0 l 1,8,-1
+ 240 0 l 1,9,-1
+ 360 0 l 1,0,-1
+480 0 m 1,10,-1
+ 480 120 l 1,11,-1
+ 360 120 l 1,12,-1
+ 240 120 l 1,13,-1
+ 120 120 l 1,14,-1
+ 120 240 l 1,15,-1
+ 240 240 l 1,16,-1
+ 360 240 l 1,17,-1
+ 480 240 l 1,18,-1
+ 480 360 l 1,19,-1
+ 480 480 l 1,20,-1
+ 480 600 l 1,21,-1
+ 600 600 l 1,22,-1
+ 600 480 l 1,23,-1
+ 600 360 l 1,24,-1
+ 600 240 l 1,25,-1
+ 600 120 l 1,26,-1
+ 600 0 l 1,27,-1
+ 480 0 l 1,10,-1
+120 240 m 1,28,-1
+ 0 240 l 1,29,-1
+ 0 360 l 1,30,-1
+ 0 480 l 1,31,-1
+ 0 600 l 1,32,-1
+ 120 600 l 1,33,-1
+ 120 480 l 1,34,-1
+ 120 360 l 1,35,-1
+ 120 240 l 1,28,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.272
+Encoding: 272 1093 261
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 1,0,-1
+ 480 120 l 1,1,-1
+ 600 120 l 1,2,-1
+ 600 0 l 1,3,-1
+ 480 0 l 1,0,-1
+0 0 m 1,4,-1
+ 0 120 l 1,5,-1
+ 120 120 l 1,6,-1
+ 120 0 l 1,7,-1
+ 0 0 l 1,4,-1
+480 120 m 1,8,-1
+ 360 120 l 1,9,-1
+ 360 240 l 1,10,-1
+ 480 240 l 1,11,-1
+ 480 120 l 1,8,-1
+120 120 m 1,12,-1
+ 120 240 l 1,13,-1
+ 240 240 l 1,14,-1
+ 240 120 l 1,15,-1
+ 120 120 l 1,12,-1
+360 240 m 1,16,-1
+ 240 240 l 1,17,-1
+ 240 360 l 1,18,-1
+ 360 360 l 1,19,-1
+ 360 240 l 1,16,-1
+360 360 m 1,20,-1
+ 360 480 l 1,21,-1
+ 480 480 l 1,22,-1
+ 480 360 l 1,23,-1
+ 360 360 l 1,20,-1
+240 360 m 1,24,-1
+ 120 360 l 1,25,-1
+ 120 480 l 1,26,-1
+ 240 480 l 1,27,-1
+ 240 360 l 1,24,-1
+480 480 m 1,28,-1
+ 480 600 l 1,29,-1
+ 600 600 l 1,30,-1
+ 600 480 l 1,31,-1
+ 480 480 l 1,28,-1
+120 480 m 1,32,-1
+ 0 480 l 1,33,-1
+ 0 600 l 1,34,-1
+ 120 600 l 1,35,-1
+ 120 480 l 1,32,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.239
+Encoding: 239 1060 262
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 840 m 5,0,-1
+ 360 840 l 1,1,-1
+ 360 720 l 1,2,-1
+ 240 720 l 1,3,-1
+ 240 840 l 5,0,-1
+480 600 m 1,0,-1
+ 600 600 l 1,1,-1
+ 600 120 l 1,2,-1
+ 480 120 l 1,3,-1
+ 480 600 l 1,0,-1
+0 600 m 1,4,-1
+ 120 600 l 1,5,-1
+ 120 120 l 1,6,-1
+ 0 120 l 1,7,-1
+ 0 600 l 1,4,-1
+120 720 m 1,8,-1
+ 480 720 l 1,9,-1
+ 480 600 l 1,10,-1
+ 120 600 l 1,11,-1
+ 120 720 l 1,8,-1
+240 0 m 1,12,-1
+ 360 0 l 1,13,-1
+ 360 -120 l 1,14,-1
+ 240 -120 l 1,15,-1
+ 240 0 l 1,12,-1
+120 120 m 1,16,-1
+ 480 120 l 1,17,-1
+ 480 0 l 1,18,-1
+ 120 0 l 1,19,-1
+ 120 120 l 1,16,-1
+240 600 m 1,20,-1
+ 360 600 l 1,21,-1
+ 360 120 l 1,22,-1
+ 240 120 l 1,23,-1
+ 240 600 l 1,20,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.241
+Encoding: 241 1062 263
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 720 m 25,0,-1
+ 360 840 l 17,1,-1
+ 480 840 l 9,2,-1
+ 480 120 l 25,3,-1
+ 600 120 l 25,4,-1
+ 600 -120 l 1,5,-1
+ 480 -120 l 25,6,-1
+ 480 0 l 1,7,-1
+ 0 0 l 1,8,-1
+ 0 120 l 1,9,-1
+ 0 240 l 1,10,-1
+ 0 360 l 1,11,-1
+ 0 480 l 1,12,-1
+ 0 600 l 1,13,-1
+ 0 720 l 1,14,-1
+ 0 840 l 1,15,-1
+ 120 840 l 9,16,-1
+ 120 720 l 17,17,-1
+ 120 480 l 1,18,-1
+ 120 360 l 1,19,-1
+ 120 240 l 9,20,-1
+ 120 120 l 1,21,-1
+ 360 120 l 25,22,-1
+ 360 720 l 25,0,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.242
+Encoding: 242 1063 264
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 840 m 1,0,-1
+ 120 840 l 1,1,-1
+ 120 480 l 1,2,-1
+ 0 480 l 1,3,-1
+ 0 840 l 1,0,-1
+480 480 m 21,4,-1
+ 480 600 l 1,5,-1
+ 480 720 l 1,6,-1
+ 480 840 l 1,7,-1
+ 600 840 l 1,8,-1
+ 600 720 l 1,9,-1
+ 600 600 l 1,10,-1
+ 600 480 l 1,11,-1
+ 600 360 l 1,12,-1
+ 600 240 l 1,13,-1
+ 600 120 l 1,14,-1
+ 600 0 l 1,15,-1
+ 480 0 l 1,16,-1
+ 480 120 l 9,17,-1
+ 480 360 l 25,18,-1
+ 240 360 l 1,19,-1
+ 120 360 l 1,20,-1
+ 120 480 l 17,21,-1
+ 240 480 l 1,22,-1
+ 360 480 l 9,23,-1
+ 480 480 l 21,4,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.243
+Encoding: 243 1064 265
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+600 0 m 21,0,-1
+ 0 0 l 1,1,-1
+ 0 120 l 1,2,-1
+ 0 240 l 1,3,-1
+ 0 360 l 1,4,-1
+ 0 480 l 1,5,-1
+ 0 600 l 1,6,-1
+ 0 720 l 1,7,-1
+ 0 840 l 1,8,-1
+ 120 840 l 9,9,-1
+ 120 720 l 17,10,-1
+ 120 480 l 1,11,-1
+ 120 360 l 1,12,-1
+ 120 240 l 9,13,-1
+ 120 120 l 25,14,-1
+ 240 120 l 25,15,-1
+ 240 840 l 25,16,-1
+ 360 840 l 25,17,-1
+ 360 120 l 25,18,-1
+ 480 120 l 25,19,-1
+ 480 720 l 25,20,-1
+ 480 840 l 17,21,-1
+ 600 840 l 9,22,-1
+ 600 120 l 25,23,-1
+ 600 0 l 21,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.244
+Encoding: 244 1065 266
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 720 m 29,0,-1
+ 480 840 l 17,1,-1
+ 600 840 l 9,2,-1
+ 600 120 l 25,3,-1
+ 720 120 l 25,4,-1
+ 720 -120 l 1,5,-1
+ 600 -120 l 25,6,-1
+ 600 0 l 1,7,-1
+ 0 0 l 1,8,-1
+ 0 120 l 1,9,-1
+ 0 240 l 1,10,-1
+ 0 360 l 1,11,-1
+ 0 480 l 1,12,-1
+ 0 600 l 1,13,-1
+ 0 720 l 1,14,-1
+ 0 840 l 1,15,-1
+ 120 840 l 9,16,-1
+ 120 720 l 17,17,-1
+ 120 480 l 1,18,-1
+ 120 360 l 1,19,-1
+ 120 240 l 9,20,-1
+ 120 120 l 25,21,-1
+ 240 120 l 25,22,-1
+ 240 840 l 25,23,-1
+ 360 840 l 25,24,-1
+ 360 120 l 25,25,-1
+ 480 120 l 25,26,-1
+ 480 720 l 29,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.246
+Encoding: 246 1067 267
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 360 m 1,0,-1
+ 360 360 l 1,1,-1
+ 360 120 l 1,2,-1
+ 240 120 l 1,3,-1
+ 240 360 l 1,0,-1
+480 840 m 1,4,-1
+ 600 840 l 1,5,-1
+ 600 0 l 1,6,-1
+ 480 0 l 1,7,-1
+ 480 840 l 1,4,-1
+240 480 m 17,8,-1
+ 120 480 l 1,9,-1
+ 120 720 l 1,10,-1
+ 120 840 l 1,11,-1
+ 0 840 l 1,12,-1
+ 0 720 l 1,13,-1
+ 0 600 l 1,14,-1
+ 0 480 l 1,15,-1
+ 0 360 l 1,16,-1
+ 0 240 l 1,17,-1
+ 0 120 l 1,18,-1
+ 0 0 l 1,19,-1
+ 120 0 l 1,20,-1
+ 240 0 l 1,21,-1
+ 240 0 l 1,22,-1
+ 240 120 l 1,23,-1
+ 240 120 l 1,24,-1
+ 120 120 l 1,25,-1
+ 120 240 l 1,26,-1
+ 120 360 l 1,27,-1
+ 240 360 l 1,28,-1
+ 240 480 l 17,8,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.248
+Encoding: 248 1069 268
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 600 m 1,0,-1
+ 0 720 l 1,1,-1
+ 120 720 l 1,2,-1
+ 120 600 l 1,3,-1
+ 0 600 l 1,0,-1
+360 120 m 1,4,-1
+ 480 120 l 1,5,-1
+ 480 0 l 1,6,-1
+ 360 0 l 1,7,-1
+ 240 0 l 1,8,-1
+ 120 0 l 1,9,-1
+ 120 120 l 1,10,-1
+ 240 120 l 1,11,-1
+ 360 120 l 1,4,-1
+120 120 m 1,12,-1
+ 0 120 l 1,13,-1
+ 0 240 l 1,14,-1
+ 120 240 l 1,15,-1
+ 120 120 l 1,12,-1
+480 720 m 21,16,-1
+ 600 720 l 1,17,-1
+ 600 240 l 17,18,-1
+ 600 120 l 1,19,-1
+ 480 120 l 1,20,-1
+ 480 240 l 1,21,-1
+ 480 360 l 1,22,-1
+ 240 360 l 1,23,-1
+ 240 480 l 1,24,-1
+ 480 480 l 9,25,-1
+ 480 720 l 21,16,-1
+480 720 m 1,26,-1
+ 360 720 l 1,27,-1
+ 240 720 l 1,28,-1
+ 120 720 l 1,29,-1
+ 120 840 l 1,30,-1
+ 240 840 l 1,31,-1
+ 360 840 l 1,32,-1
+ 480 840 l 1,33,-1
+ 480 720 l 1,26,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.249
+Encoding: 249 1070 269
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 480 m 1,0,-1
+ 240 480 l 1,1,-1
+ 240 360 l 1,2,-1
+ 120 360 l 1,3,-1
+ 120 480 l 1,0,-1
+0 840 m 1,4,-1
+ 120 840 l 1,5,-1
+ 120 0 l 1,6,-1
+ 0 0 l 1,7,-1
+ 0 840 l 1,4,-1
+480 720 m 1,8,-1
+ 600 720 l 1,9,-1
+ 600 120 l 1,10,-1
+ 480 120 l 1,11,-1
+ 480 720 l 1,8,-1
+360 840 m 1,12,-1
+ 480 840 l 1,13,-1
+ 480 720 l 1,14,-1
+ 360 720 l 1,15,-1
+ 360 840 l 1,12,-1
+360 120 m 1,16,-1
+ 480 120 l 1,17,-1
+ 480 0 l 1,18,-1
+ 360 0 l 1,19,-1
+ 360 120 l 1,16,-1
+240 720 m 1,20,-1
+ 360 720 l 1,21,-1
+ 360 120 l 1,22,-1
+ 240 120 l 1,23,-1
+ 240 720 l 1,20,-1
+240 480 m 1,24,-1
+ 240 360 l 1025,25,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.250
+Encoding: 250 1071 270
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 600 m 5,0,-1
+ 480 600 l 1,1,-1
+ 480 480 l 1,2,-1
+ 120 480 l 1,3,-1
+ 120 600 l 5,0,-1
+0 480 m 1,0,-1
+ 120 480 l 1,1,-1
+ 120 0 l 1,2,-1
+ 0 0 l 1,3,-1
+ 0 480 l 1,0,-1
+480 600 m 1,4,-1
+ 480 480 l 1025,5,-1
+0 720 m 1,6,-1
+ 120 720 l 1,7,-1
+ 120 600 l 1,8,-1
+ 0 600 l 1,9,-1
+ 0 720 l 1,6,-1
+240 840 m 17,10,-1
+ 360 840 l 1,11,-1
+ 480 840 l 1,12,-1
+ 600 840 l 1,13,-1
+ 600 0 l 1,14,-1
+ 480 0 l 1,15,-1
+ 480 720 l 1,16,-1
+ 360 720 l 1,17,-1
+ 240 720 l 1,18,-1
+ 120 720 l 1,19,-1
+ 120 840 l 1,20,-1
+ 240 840 l 17,10,-1
+EndSplineSet
+Validated: 11
+EndChar
+
+StartChar: NameMe.255
+Encoding: 255 1076 271
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 5,0,-1
+ 600 0 l 5,1,-1
+ 600 -120 l 5,2,-1
+ 480 -120 l 5,3,-1
+ 480 0 l 5,0,-1
+600 0 m 1029,4,-1
+600 0 m 1025,5,-1
+240 480 m 1,6,-1
+ 360 480 l 1,7,-1
+ 360 360 l 1,8,-1
+ 240 360 l 1,9,-1
+ 240 480 l 1,6,-1
+120 360 m 1,10,-1
+ 240 360 l 1,11,-1
+ 240 120 l 1,12,-1
+ 120 120 l 1,13,-1
+ 120 360 l 1,10,-1
+240 600 m 1,14,-1
+ 480 600 l 1,15,-1
+ 480 480 l 1,16,-1
+ 240 480 l 1,17,-1
+ 240 600 l 1,14,-1
+480 600 m 1,18,-1
+ 600 600 l 1,19,-1
+ 600 120 l 1,20,-1
+ 480 120 l 1,21,-1
+ 480 600 l 1,18,-1
+600 0 m 1025,22,-1
+0 0 m 1,23,-1
+ 120 0 l 1,24,-1
+ 120 -120 l 1,25,-1
+ 0 -120 l 1,26,-1
+ 0 0 l 1,23,-1
+0 120 m 1,27,-1
+ 600 120 l 1,28,-1
+ 600 0 l 1,29,-1
+ 0 0 l 1,30,-1
+ 0 120 l 1,27,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.271
+Encoding: 271 1092 272
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 480 m 1,0,-1
+ 600 480 l 1,1,-1
+ 600 120 l 1,2,-1
+ 480 120 l 1,3,-1
+ 480 480 l 1,0,-1
+0 480 m 1,4,-1
+ 120 480 l 1,5,-1
+ 120 120 l 1,6,-1
+ 0 120 l 1,7,-1
+ 0 480 l 1,4,-1
+120 600 m 1,8,-1
+ 480 600 l 1,9,-1
+ 480 480 l 1,10,-1
+ 120 480 l 1,11,-1
+ 120 600 l 1,8,-1
+240 0 m 1,12,-1
+ 360 0 l 1,13,-1
+ 360 -120 l 1,14,-1
+ 240 -120 l 1,15,-1
+ 240 0 l 1,12,-1
+120 120 m 1,16,-1
+ 480 120 l 1,17,-1
+ 480 0 l 1,18,-1
+ 120 0 l 1,19,-1
+ 120 120 l 1,16,-1
+240 480 m 5,20,-1
+ 360 480 l 5,21,-1
+ 360 120 l 1,22,-1
+ 240 120 l 1,23,-1
+ 240 480 l 5,20,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.273
+Encoding: 273 1094 273
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 480 m 21,0,-1
+ 120 360 l 1,1,-1
+ 120 240 l 9,2,-1
+ 120 120 l 25,3,-1
+ 360 120 l 25,4,-1
+ 360 600 l 17,5,-1
+ 480 600 l 9,6,-1
+ 480 120 l 25,7,-1
+ 600 120 l 25,8,-1
+ 600 -120 l 1,9,-1
+ 480 -120 l 25,10,-1
+ 480 0 l 1,11,-1
+ 0 0 l 1,12,-1
+ 0 120 l 1,13,-1
+ 0 240 l 1,14,-1
+ 0 360 l 1,15,-1
+ 0 480 l 1,16,-1
+ 0 600 l 1,17,-1
+ 120 600 l 9,18,-1
+ 120 480 l 21,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.274
+Encoding: 274 1095 274
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 600 m 1,0,-1
+ 120 600 l 1,1,-1
+ 120 360 l 1,2,-1
+ 0 360 l 1,3,-1
+ 0 600 l 1,0,-1
+600 480 m 21,4,-1
+ 600 360 l 1,5,-1
+ 600 240 l 1,6,-1
+ 600 120 l 1,7,-1
+ 600 0 l 1,8,-1
+ 480 0 l 1,9,-1
+ 480 120 l 9,10,-1
+ 480 240 l 25,11,-1
+ 240 240 l 1,12,-1
+ 120 240 l 1,13,-1
+ 120 360 l 17,14,-1
+ 240 360 l 1,15,-1
+ 360 360 l 9,16,-1
+ 480 360 l 17,17,-1
+ 480 480 l 1,18,-1
+ 480 600 l 1,19,-1
+ 600 600 l 9,20,-1
+ 600 480 l 21,4,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.275
+Encoding: 275 1096 275
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 600 m 21,0,-1
+ 600 600 l 9,1,-1
+ 600 120 l 25,2,-1
+ 600 0 l 17,3,-1
+ 0 0 l 1,4,-1
+ 0 120 l 1,5,-1
+ 0 240 l 1,6,-1
+ 0 360 l 1,7,-1
+ 0 480 l 1,8,-1
+ 0 600 l 1,9,-1
+ 120 600 l 9,10,-1
+ 120 480 l 17,11,-1
+ 120 360 l 1,12,-1
+ 120 240 l 9,13,-1
+ 120 120 l 25,14,-1
+ 240 120 l 25,15,-1
+ 240 600 l 25,16,-1
+ 360 600 l 25,17,-1
+ 360 120 l 25,18,-1
+ 480 120 l 25,19,-1
+ 480 600 l 21,0,-1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: NameMe.276
+Encoding: 276 1097 276
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+600 120 m 1,0,-1
+ 720 120 l 1,1,-1
+ 720 -120 l 5,2,-1
+ 600 -120 l 5,3,-1
+ 600 120 l 1,0,-1
+480 600 m 17,4,-1
+ 600 600 l 1,5,-1
+ 600 120 l 1,6,-1
+ 600 0 l 1,7,-1
+ 0 0 l 1,8,-1
+ 0 120 l 1,9,-1
+ 0 240 l 1,10,-1
+ 0 360 l 1,11,-1
+ 0 480 l 1,12,-1
+ 0 600 l 1,13,-1
+ 120 600 l 1,14,-1
+ 120 480 l 1,15,-1
+ 120 360 l 1,16,-1
+ 120 240 l 1,17,-1
+ 120 120 l 1,18,-1
+ 240 120 l 1,19,-1
+ 240 600 l 1,20,-1
+ 360 600 l 1,21,-1
+ 360 120 l 1,22,-1
+ 480 120 l 1,23,-1
+ 480 600 l 17,4,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.277
+Encoding: 277 1098 277
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 600 m 1,0,-1
+ 120 600 l 1,1,-1
+ 120 480 l 1,2,-1
+ 0 480 l 1,3,-1
+ 0 600 l 1,0,-1
+480 240 m 1,4,-1
+ 600 240 l 1,5,-1
+ 600 120 l 1,6,-1
+ 480 120 l 1,7,-1
+ 480 240 l 1,4,-1
+480 120 m 1025,8,-1
+360 0 m 1,9,-1
+ 240 0 l 1,10,-1
+ 120 0 l 1,11,-1
+ 120 120 l 1,12,-1
+ 120 240 l 1,13,-1
+ 120 360 l 1,14,-1
+ 120 480 l 1,15,-1
+ 120 600 l 1,16,-1
+ 240 600 l 1,17,-1
+ 240 360 l 1,18,-1
+ 480.5 359.5 l 1,19,-1
+ 480 240 l 1,20,-1
+ 240 240 l 1,21,-1
+ 240 120 l 1,22,-1
+ 360 120 l 1,23,-1
+ 480 120 l 1,24,-1
+ 480 0 l 1,25,-1
+ 360 0 l 1,9,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.278
+Encoding: 278 1099 278
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 240 m 1,0,-1
+ 360 240 l 1,1,-1
+ 360 120 l 1,2,-1
+ 240 120 l 1,3,-1
+ 240 240 l 1,0,-1
+240 120 m 1025,4,-1
+480 600 m 1,5,-1
+ 600 600 l 1,6,-1
+ 600 0 l 1,7,-1
+ 480 0 l 1,8,-1
+ 480 600 l 1,5,-1
+120 360 m 1,9,-1
+ 240 360 l 1,10,-1
+ 240 240 l 1,11,-1
+ 120 240 l 1,12,-1
+ 120 120 l 1,13,-1
+ 240 120 l 1,14,-1
+ 240 120 l 1,15,-1
+ 240 0 l 1,16,-1
+ 240 0 l 1,17,-1
+ 120 0 l 1,18,-1
+ 0 0 l 1,19,-1
+ 0 120 l 1,20,-1
+ 0 240 l 1,21,-1
+ 0 360 l 1,22,-1
+ 0 480 l 1,23,-1
+ 0 600 l 1,24,-1
+ 120 600 l 9,25,-1
+ 120 360 l 1,9,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.279
+Encoding: 279 1100 279
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 240 m 1,0,-1
+ 600 240 l 1,1,-1
+ 600 120 l 1,2,-1
+ 480 120 l 1,3,-1
+ 480 240 l 1,0,-1
+480 120 m 1025,4,-1
+120 600 m 21,5,-1
+ 120 360 l 1,6,-1
+ 480.5 359.5 l 1,7,-1
+ 480 240 l 1,8,-1
+ 120 240 l 1,9,-1
+ 120 120 l 1,10,-1
+ 240 120 l 1,11,-1
+ 480 120 l 1,12,-1
+ 480 0 l 1,13,-1
+ 240 0 l 17,14,-1
+ 120 0 l 1,15,-1
+ 0 0 l 1,16,-1
+ 0 120 l 1,17,-1
+ 0 240 l 1,18,-1
+ 0 360 l 9,19,-1
+ 0 600 l 25,20,-1
+ 120 600 l 21,5,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.280
+Encoding: 280 1101 280
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 360 m 5,0,-1
+ 600 360 l 1,1,-1
+ 600 240 l 1,2,-1
+ 480 240 l 1,3,-1
+ 480 360 l 5,0,-1
+120 600 m 1,0,-1
+ 480 600 l 1,1,-1
+ 480 480 l 1,2,-1
+ 120 480 l 1,3,-1
+ 120 600 l 1,0,-1
+0 480 m 1,4,-1
+ 120 480 l 1,5,-1
+ 120 360 l 1,6,-1
+ 0 360 l 1,7,-1
+ 0 480 l 1,4,-1
+240 360 m 1,8,-1
+ 480 360 l 1,9,-1
+ 480 240 l 1,10,-1
+ 240 240 l 1,11,-1
+ 240 360 l 1,8,-1
+480 240 m 1,12,-1
+ 600 240 l 1,13,-1
+ 600 120 l 1,14,-1
+ 480 120 l 1,15,-1
+ 480 240 l 1,12,-1
+480 480 m 1,16,-1
+ 600 480 l 1,17,-1
+ 600 360 l 1,18,-1
+ 480 360 l 1,19,-1
+ 480 480 l 1,16,-1
+120 240 m 17,20,-1
+ 120 120 l 1,21,-1
+ 480 120 l 1,22,-1
+ 480 0 l 1,23,-1
+ 120 0 l 1,24,-1
+ 120 120 l 1,25,-1
+ 0 120 l 1,26,-1
+ 0 240 l 1,27,-1
+ 120 240 l 17,20,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.281
+Encoding: 281 1102 281
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 120 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 0 l 1,2,-1
+ 360 0 l 1,3,-1
+ 360 120 l 1,0,-1
+120 360 m 1,4,-1
+ 240 360 l 1,5,-1
+ 240 240 l 1,6,-1
+ 120 240 l 1,7,-1
+ 120 360 l 1,4,-1
+240 480 m 1,8,-1
+ 360 480 l 1,9,-1
+ 360 120 l 1,10,-1
+ 240 120 l 1,11,-1
+ 240 480 l 1,8,-1
+0 600 m 1,12,-1
+ 120 600 l 1,13,-1
+ 120 0 l 1,14,-1
+ 0 0 l 1,15,-1
+ 0 600 l 1,12,-1
+480 480 m 1,16,-1
+ 600 480 l 1,17,-1
+ 600 120 l 1,18,-1
+ 480 120 l 1,19,-1
+ 480 480 l 1,16,-1
+360 600 m 1,20,-1
+ 480 600 l 1,21,-1
+ 480 480 l 1,22,-1
+ 360 480 l 1,23,-1
+ 360 600 l 1,20,-1
+480 120 m 1025,24,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.282
+Encoding: 282 1103 282
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 360 m 1,0,-1
+ 480 360 l 1,1,-1
+ 480 240 l 1,2,-1
+ 120 240 l 1,3,-1
+ 120 360 l 1,0,-1
+0 240 m 1,4,-1
+ 120 240 l 1,5,-1
+ 120 0 l 1,6,-1
+ 0 0 l 1,7,-1
+ 0 240 l 1,4,-1
+480 360 m 1,8,-1
+ 480 240 l 1025,9,-1
+0 480 m 1,10,-1
+ 120 480 l 1,11,-1
+ 120 360 l 1,12,-1
+ 0 360 l 1,13,-1
+ 0 480 l 1,10,-1
+240 600 m 17,14,-1
+ 360 600 l 1,15,-1
+ 480 600 l 1,16,-1
+ 600 600 l 1,17,-1
+ 600 0 l 1,18,-1
+ 480 0 l 1,19,-1
+ 480 480 l 1,20,-1
+ 360 480 l 1,21,-1
+ 240 480 l 1,22,-1
+ 120 480 l 1,23,-1
+ 120 600 l 1,24,-1
+ 240 600 l 17,14,-1
+EndSplineSet
+Validated: 11
+EndChar
+
+StartChar: NameMe.283
+Encoding: 283 1104 283
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 720 m 1,0,-1
+ 240 840 l 1,1,-1
+ 360 840 l 1,2,-1
+ 360 720 l 1,3,-1
+ 240 720 l 1,0,-1
+480 120 m 1,4,-1
+ 600 120 l 1,5,-1
+ 600 0 l 1,6,-1
+ 480 0 l 1,7,-1
+ 360 0 l 1,8,-1
+ 240 0 l 1,9,-1
+ 120 0 l 1,10,-1
+ 120 120 l 1,11,-1
+ 240 120 l 1,12,-1
+ 360 120 l 1,13,-1
+ 480 120 l 1,4,-1
+120 120 m 1,14,-1
+ 0 120 l 1,15,-1
+ 0 240 l 1,16,-1
+ 0 360 l 1,17,-1
+ 0 480 l 1,18,-1
+ 120 480 l 1,19,-1
+ 120 360 l 1,20,-1
+ 240 360 l 1,21,-1
+ 360 360 l 1,22,-1
+ 480 360 l 1,23,-1
+ 480 480 l 1,24,-1
+ 600 480 l 1,25,-1
+ 600 360 l 1,26,-1
+ 600 240 l 1,27,-1
+ 480 240 l 1,28,-1
+ 360 240 l 1,29,-1
+ 240 240 l 1,30,-1
+ 120 240 l 1,31,-1
+ 120 120 l 1,14,-1
+480 480 m 1,32,-1
+ 360 480 l 1,33,-1
+ 240 480 l 1,34,-1
+ 120 480 l 1,35,-1
+ 120 600 l 1,36,-1
+ 240 600 l 1,37,-1
+ 360 600 l 1,38,-1
+ 480 600 l 1,39,-1
+ 480 480 l 1,32,-1
+240 840 m 1,40,-1
+ 120 840 l 1,41,-1
+ 120 960 l 1,42,-1
+ 240 960 l 1,43,-1
+ 240 840 l 1,40,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.284
+Encoding: 284 1105 284
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 720 m 1,0,-1
+ 360 840 l 1,1,-1
+ 480 840 l 1,2,-1
+ 480 720 l 1,3,-1
+ 360 720 l 1,0,-1
+120 720 m 1,4,-1
+ 120 840 l 1,5,-1
+ 240 840 l 1,6,-1
+ 240 720 l 1,7,-1
+ 120 720 l 1,4,-1
+480 120 m 1,8,-1
+ 600 120 l 1,9,-1
+ 600 0 l 1,10,-1
+ 480 0 l 1,11,-1
+ 360 0 l 1,12,-1
+ 240 0 l 1,13,-1
+ 120 0 l 1,14,-1
+ 120 120 l 1,15,-1
+ 240 120 l 1,16,-1
+ 360 120 l 1,17,-1
+ 480 120 l 1,8,-1
+120 120 m 1,18,-1
+ 0 120 l 1,19,-1
+ 0 240 l 1,20,-1
+ 0 360 l 1,21,-1
+ 0 480 l 1,22,-1
+ 120 480 l 1,23,-1
+ 120 360 l 1,24,-1
+ 240 360 l 1,25,-1
+ 360 360 l 1,26,-1
+ 480 360 l 1,27,-1
+ 480 480 l 1,28,-1
+ 600 480 l 1,29,-1
+ 600 360 l 1,30,-1
+ 600 240 l 1,31,-1
+ 480 240 l 1,32,-1
+ 360 240 l 1,33,-1
+ 240 240 l 1,34,-1
+ 120 240 l 1,35,-1
+ 120 120 l 1,18,-1
+480 480 m 1,36,-1
+ 360 480 l 1,37,-1
+ 240 480 l 1,38,-1
+ 120 480 l 1,39,-1
+ 120 600 l 1,40,-1
+ 240 600 l 1,41,-1
+ 360 600 l 1,42,-1
+ 480 600 l 1,43,-1
+ 480 480 l 1,36,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.285
+Encoding: 285 1106 285
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 0 m 1,0,-1
+ 480 0 l 1,1,-1
+ 480 -120 l 1,2,-1
+ 360 -120 l 1,3,-1
+ 360 0 l 1,0,-1
+480 360 m 1,4,-1
+ 600 360 l 1,5,-1
+ 600 0 l 1,6,-1
+ 480 0 l 1,7,-1
+ 480 360 l 1,4,-1
+360 480 m 1,8,-1
+ 480 480 l 1,9,-1
+ 480 360 l 1,10,-1
+ 360 360 l 1,11,-1
+ 360 480 l 1,8,-1
+240 360 m 1,12,-1
+ 360 360 l 1,13,-1
+ 360 240 l 1,14,-1
+ 240 240 l 1,15,-1
+ 240 360 l 1,12,-1
+240 480 m 17,16,-1
+ 240 360 l 1,17,-1
+ 240 240 l 1,18,-1
+ 240 120 l 1,19,-1
+ 240 0 l 1,20,-1
+ 120 0 l 1,21,-1
+ 120 120 l 1,22,-1
+ 120 240 l 1,23,-1
+ 120 360 l 1,24,-1
+ 120 480 l 1,25,-1
+ 120 600 l 9,26,-1
+ 0 600 l 25,27,-1
+ 0 720 l 25,28,-1
+ 120 720 l 25,29,-1
+ 120 840 l 1,30,-1
+ 240 840 l 9,31,-1
+ 240 720 l 25,32,-1
+ 480 720 l 1,33,-1
+ 480 600 l 9,34,-1
+ 240 600 l 25,35,-1
+ 240 480 l 17,16,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.286
+Encoding: 286 1107 286
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 720 m 1,0,-1
+ 240 840 l 1,1,-1
+ 360 840 l 1,2,-1
+ 360 720 l 1,3,-1
+ 240 720 l 1,0,-1
+360 840 m 1,4,-1
+ 360 960 l 1,5,-1
+ 480 960 l 1,6,-1
+ 480 840 l 1,7,-1
+ 360 840 l 1,4,-1
+600 480 m 21,8,-1
+ 480 480 l 5,9,-1
+ 360 480 l 5,10,-1
+ 240 480 l 5,11,-1
+ 240 240 l 5,12,-1
+ 240 120 l 5,13,-1
+ 240 0 l 13,14,-1
+ 120 0 l 21,15,-1
+ 120 120 l 5,16,-1
+ 120 240 l 5,17,-1
+ 120 360 l 5,18,-1
+ 120 480 l 5,19,-1
+ 120 600 l 5,20,-1
+ 240 600 l 5,21,-1
+ 360 600 l 5,22,-1
+ 480 600 l 5,23,-1
+ 600 600 l 13,24,-1
+ 600 480 l 21,8,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.287
+Encoding: 287 1108 287
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 480 m 1,0,-1
+ 600 480 l 1,1,-1
+ 600 360 l 1,2,-1
+ 480 360 l 1,3,-1
+ 480 480 l 1,0,-1
+480 240 m 1,4,-1
+ 600 240 l 1,5,-1
+ 600 120 l 1,6,-1
+ 480 120 l 1,7,-1
+ 480 240 l 1,4,-1
+480 0 m 17,8,-1
+ 360 0 l 1,9,-1
+ 240 0 l 1,10,-1
+ 120 0 l 1,11,-1
+ 120 120 l 1,12,-1
+ 0 120 l 1,13,-1
+ 0 240 l 1,14,-1
+ 0 240 l 1,15,-1
+ 0 360 l 1,16,-1
+ 0 360 l 1,17,-1
+ 0 480 l 1,18,-1
+ 120 480 l 1,19,-1
+ 120 600 l 1,20,-1
+ 240 600 l 1,21,-1
+ 360 600 l 1,22,-1
+ 480 600 l 1,23,-1
+ 480 480 l 1,24,-1
+ 360 480 l 1,25,-1
+ 240 480 l 1,26,-1
+ 120 480 l 1,27,-1
+ 120 360 l 1,28,-1
+ 360 360 l 1,29,-1
+ 360 240 l 1,30,-1
+ 240 240 l 1,31,-1
+ 120 240 l 1,32,-1
+ 120 240 l 1,33,-1
+ 120 120 l 1,34,-1
+ 240 120 l 1,35,-1
+ 360 120 l 1,36,-1
+ 480 120 l 1,37,-1
+ 480 0 l 17,8,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.288
+Encoding: 288 1109 288
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 120 m 1,0,-1
+ 480 120 l 1,1,-1
+ 480 0 l 1,2,-1
+ 360 0 l 1,3,-1
+ 240 0 l 1,4,-1
+ 120 0 l 1,5,-1
+ 0 0 l 1,6,-1
+ 0 120 l 1,7,-1
+ 120 120 l 1,8,-1
+ 240 120 l 1,9,-1
+ 360 120 l 1,0,-1
+480 120 m 1,10,-1
+ 480 240 l 1,11,-1
+ 600 240 l 1,12,-1
+ 600 120 l 1,13,-1
+ 480 120 l 1,10,-1
+480 240 m 1,14,-1
+ 360 240 l 1,15,-1
+ 240 240 l 1,16,-1
+ 120 240 l 1,17,-1
+ 120 360 l 1,18,-1
+ 240 360 l 1,19,-1
+ 360 360 l 1,20,-1
+ 480 360 l 1,21,-1
+ 480 240 l 1,14,-1
+120 360 m 1,22,-1
+ 0 360 l 1,23,-1
+ 0 480 l 1,24,-1
+ 120 480 l 1,25,-1
+ 120 360 l 1,22,-1
+480 600 m 1,26,-1
+ 600 600 l 1,27,-1
+ 600 480 l 1,28,-1
+ 480 480 l 1,29,-1
+ 360 480 l 1,30,-1
+ 240 480 l 1,31,-1
+ 120 480 l 1,32,-1
+ 120 600 l 1,33,-1
+ 240 600 l 1,34,-1
+ 360 600 l 1,35,-1
+ 480 600 l 1,26,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.289
+Encoding: 289 1110 289
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 720 m 1,0,-1
+ 240 840 l 1,1,-1
+ 360 840 l 1,2,-1
+ 360 720 l 1,3,-1
+ 240 720 l 1,0,-1
+480 120 m 1,4,-1
+ 600 120 l 1,5,-1
+ 600 0 l 1,6,-1
+ 480 0 l 1,7,-1
+ 360 0 l 1,8,-1
+ 360 120 l 1,9,-1
+ 480 120 l 1,4,-1
+360 120 m 1,10,-1
+ 240 120 l 1,11,-1
+ 240 240 l 1,12,-1
+ 240 360 l 1,13,-1
+ 240 480 l 1,14,-1
+ 120 480 l 1,15,-1
+ 120 600 l 1,16,-1
+ 240 600 l 1,17,-1
+ 360 600 l 1,18,-1
+ 360 480 l 1,19,-1
+ 360 360 l 1,20,-1
+ 360 240 l 1,21,-1
+ 360 120 l 1,10,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.290
+Encoding: 290 1111 290
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 720 m 1,0,-1
+ 360 840 l 1,1,-1
+ 480 840 l 1,2,-1
+ 480 720 l 1,3,-1
+ 360 720 l 1,0,-1
+120 720 m 1,4,-1
+ 120 840 l 1,5,-1
+ 240 840 l 1,6,-1
+ 240 720 l 1,7,-1
+ 120 720 l 1,4,-1
+480 120 m 1,8,-1
+ 600 120 l 1,9,-1
+ 600 0 l 1,10,-1
+ 480 0 l 1,11,-1
+ 360 0 l 1,12,-1
+ 360 120 l 1,13,-1
+ 480 120 l 1,8,-1
+360 120 m 1,14,-1
+ 240 120 l 1,15,-1
+ 240 240 l 1,16,-1
+ 240 360 l 1,17,-1
+ 240 480 l 1,18,-1
+ 120 480 l 1,19,-1
+ 120 600 l 1,20,-1
+ 240 600 l 1,21,-1
+ 360 600 l 1,22,-1
+ 360 480 l 1,23,-1
+ 360 360 l 1,24,-1
+ 360 240 l 1,25,-1
+ 360 120 l 1,14,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.291
+Encoding: 291 1112 291
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 720 m 1,0,-1
+ 480 840 l 1,1,-1
+ 600 840 l 1,2,-1
+ 600 720 l 1,3,-1
+ 480 720 l 1,0,-1
+360 0 m 1,4,-1
+ 480 0 l 1,5,-1
+ 480 -120 l 1,6,-1
+ 360 -120 l 1,7,-1
+ 240 -120 l 1,8,-1
+ 120 -120 l 1,9,-1
+ 120 0 l 1,10,-1
+ 240 0 l 1,11,-1
+ 360 0 l 1,4,-1
+480 0 m 1,12,-1
+ 480 120 l 1,13,-1
+ 480 240 l 1,14,-1
+ 480 360 l 1,15,-1
+ 480 480 l 1,16,-1
+ 480 600 l 1,17,-1
+ 600 600 l 1,18,-1
+ 600 480 l 1,19,-1
+ 600 360 l 1,20,-1
+ 600 240 l 1,21,-1
+ 600 120 l 1,22,-1
+ 600 0 l 1,23,-1
+ 480 0 l 1,12,-1
+120 0 m 1,24,-1
+ 0 0 l 1,25,-1
+ 0 120 l 1,26,-1
+ 0 240 l 1,27,-1
+ 120 240 l 1,28,-1
+ 120 120 l 1,29,-1
+ 120 0 l 1,24,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.292
+Encoding: 292 1113 292
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+600 240 m 1,0,-1
+ 720 240 l 1,1,-1
+ 720 120 l 1,2,-1
+ 600 120 l 1,3,-1
+ 600 240 l 1,0,-1
+480 360 m 1,4,-1
+ 600 360 l 1,5,-1
+ 600 240 l 1,6,-1
+ 480 240 l 1,7,-1
+ 480 360 l 1,4,-1
+480 120 m 1,8,-1
+ 600 120 l 1,9,-1
+ 600 0 l 1,10,-1
+ 480 0 l 1,11,-1
+ 480 120 l 1,8,-1
+0 120 m 1,12,-1
+ 120 120 l 1,13,-1
+ 120 0 l 1,14,-1
+ 0 0 l 1,15,-1
+ 0 120 l 1,12,-1
+240 480 m 17,16,-1
+ 240 240 l 1,17,-1
+ 240 240 l 1,18,-1
+ 240 240 l 1,19,-1
+ 240 120 l 1,20,-1
+ 120 120 l 1,21,-1
+ 120 240 l 1,22,-1
+ 120 240 l 1,23,-1
+ 120 240 l 1,24,-1
+ 120 360 l 1,25,-1
+ 120 480 l 1,26,-1
+ 120 600 l 1,27,-1
+ 360 600 l 1,28,-1
+ 480 600 l 1,29,-1
+ 480 0 l 1,30,-1
+ 360 0 l 1,31,-1
+ 360 480 l 1,32,-1
+ 240 480 l 17,16,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.293
+Encoding: 293 1114 293
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 360 m 1,0,-1
+ 240 360 l 1,1,-1
+ 240 240 l 1,2,-1
+ 120 240 l 1,3,-1
+ 120 360 l 1,0,-1
+480 240 m 1,4,-1
+ 600 240 l 1,5,-1
+ 600 120 l 1,6,-1
+ 480 120 l 1,7,-1
+ 480 240 l 1,4,-1
+360 360 m 1,8,-1
+ 480 360 l 1,9,-1
+ 480 240 l 1,10,-1
+ 360 240 l 1,11,-1
+ 360 360 l 1,8,-1
+360 120 m 1,12,-1
+ 480 120 l 1,13,-1
+ 480 0 l 1,14,-1
+ 360 0 l 1,15,-1
+ 360 120 l 1,12,-1
+0 0 m 1025,16,-1
+120 240 m 17,17,-1
+ 120 360 l 1,18,-1
+ 120 240 l 1,19,-1
+ 120 0 l 1,20,-1
+ 0 0 l 1,21,-1
+ 0 240 l 1,22,-1
+ 0 360 l 1,23,-1
+ 0 240 l 1,24,-1
+ 0 360 l 1,25,-1
+ 0 480 l 1,26,-1
+ 0 600 l 1,27,-1
+ 120 600 l 1,28,-1
+ 120 240 l 17,17,-1
+360 600 m 17,29,-1
+ 360 0 l 1,30,-1
+ 240 0 l 1,31,-1
+ 240 600 l 1,32,-1
+ 360 600 l 17,29,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.294
+Encoding: 294 1115 294
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+480 360 m 5,0,-1
+ 600 360 l 5,1,-1
+ 600 -0 l 5,2,-1
+ 480 -0 l 5,3,-1
+ 480 360 l 5,0,-1
+360 480 m 1,4,-1
+ 480 480 l 5,5,-1
+ 480 360 l 5,6,-1
+ 360 360 l 1,7,-1
+ 360 480 l 1,4,-1
+240 360 m 1,8,-1
+ 360 360 l 1,9,-1
+ 360 240 l 1,10,-1
+ 240 240 l 1,11,-1
+ 240 360 l 1,8,-1
+240 480 m 17,12,-1
+ 240 360 l 1,13,-1
+ 240 240 l 1,14,-1
+ 240 120 l 1,15,-1
+ 240 0 l 1,16,-1
+ 120 0 l 1,17,-1
+ 120 120 l 1,18,-1
+ 120 240 l 1,19,-1
+ 120 360 l 1,20,-1
+ 120 480 l 1,21,-1
+ 120 600 l 9,22,-1
+ 0 600 l 25,23,-1
+ 0 720 l 25,24,-1
+ 120 720 l 25,25,-1
+ 120 840 l 1,26,-1
+ 240 840 l 9,27,-1
+ 240 720 l 25,28,-1
+ 480 720 l 1,29,-1
+ 480 600 l 9,30,-1
+ 240 600 l 25,31,-1
+ 240 480 l 17,12,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.295
+Encoding: 295 1116 295
+Width: 720
+VWidth: 960
+Flags: WO
+LayerCount: 2
+Fore
+SplineSet
+480 0 m 1,0,-1
+ 480 120 l 1,1,-1
+ 600 120 l 1,2,-1
+ 600 0 l 1,3,-1
+ 480 0 l 1,0,-1
+120 600 m 17,4,-1
+ 120 480 l 1,5,-1
+ 120 360 l 1,6,-1
+ 360 360 l 1,7,-1
+ 360 240 l 1,8,-1
+ 480 240 l 1,9,-1
+ 480 120 l 1,10,-1
+ 360 120 l 1,11,-1
+ 360 240 l 1,12,-1
+ 120 240 l 1,13,-1
+ 120 120 l 1,14,-1
+ 120 0 l 1,15,-1
+ 0 0 l 1,16,-1
+ 0 120 l 1,17,-1
+ 0 240 l 1,18,-1
+ 0 360 l 1,19,-1
+ 0 480 l 1,20,-1
+ 0 600 l 9,21,-1
+ 120 600 l 17,4,-1
+360 360 m 1,22,-1
+ 360 480 l 1,23,-1
+ 480 480 l 1,24,-1
+ 480 360 l 1,25,-1
+ 360 360 l 1,22,-1
+480 480 m 1,26,-1
+ 480 600 l 1,27,-1
+ 600 600 l 1,28,-1
+ 600 480 l 1,29,-1
+ 480 480 l 1,26,-1
+240 720 m 1,30,-1
+ 240 840 l 1,31,-1
+ 360 840 l 1,32,-1
+ 360 720 l 1,33,-1
+ 240 720 l 1,30,-1
+360 840 m 1,34,-1
+ 360 960 l 1,35,-1
+ 480 960 l 1,36,-1
+ 480 840 l 1,37,-1
+ 360 840 l 1,34,-1
+EndSplineSet
+EndChar
+
+StartChar: NameMe.296
+Encoding: 296 1117 296
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+240 720 m 5,0,-1
+ 240 840 l 5,1,-1
+ 360 840 l 5,2,-1
+ 360 720 l 5,3,-1
+ 240 720 l 5,0,-1
+240 840 m 5,4,-1
+ 120 840 l 5,5,-1
+ 120 960 l 5,6,-1
+ 240 960 l 5,7,-1
+ 240 840 l 5,4,-1
+240 360 m 1,8,-1
+ 360 360 l 1,9,-1
+ 360 240 l 1,10,-1
+ 240 240 l 1,11,-1
+ 240 360 l 1,8,-1
+480 0 m 17,12,-1
+ 480 360 l 9,13,-1
+ 360 360 l 25,14,-1
+ 360 480 l 25,15,-1
+ 480 480 l 25,16,-1
+ 480 600 l 17,17,-1
+ 600 600 l 1,18,-1
+ 600 480 l 1,19,-1
+ 600 360 l 1,20,-1
+ 600 240 l 1,21,-1
+ 600 120 l 1,22,-1
+ 600 0 l 9,23,-1
+ 480 0 l 17,12,-1
+0 0 m 17,24,-1
+ 0 120 l 1,25,-1
+ 0 240 l 1,26,-1
+ 0 360 l 1,27,-1
+ 0 480 l 1,28,-1
+ 0 600 l 1,29,-1
+ 120 600 l 1,30,-1
+ 120 240 l 9,31,-1
+ 240 240 l 25,32,-1
+ 240 120 l 25,33,-1
+ 120 120 l 25,34,-1
+ 120 0 l 25,35,-1
+ 0 0 l 17,24,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.297
+Encoding: 297 1118 297
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+360 720 m 5,0,-1
+ 360 840 l 5,1,-1
+ 480 840 l 5,2,-1
+ 480 720 l 5,3,-1
+ 360 720 l 5,0,-1
+480 840 m 5,4,-1
+ 480 960 l 5,5,-1
+ 600 960 l 5,6,-1
+ 600 840 l 5,7,-1
+ 480 840 l 5,4,-1
+240 720 m 5,8,-1
+ 240 840 l 5,9,-1
+ 360 840 l 5,10,-1
+ 360 720 l 5,11,-1
+ 240 720 l 5,8,-1
+240 840 m 5,12,-1
+ 120 840 l 5,13,-1
+ 120 960 l 5,14,-1
+ 240 960 l 5,15,-1
+ 240 840 l 5,12,-1
+360 0 m 1,16,-1
+ 480 0 l 1,17,-1
+ 480 -120 l 1,18,-1
+ 360 -120 l 1,19,-1
+ 240 -120 l 1,20,-1
+ 120 -120 l 1,21,-1
+ 0 -120 l 1,22,-1
+ 0 0 l 1,23,-1
+ 120 0 l 1,24,-1
+ 240 0 l 1,25,-1
+ 360 0 l 1,16,-1
+480 0 m 1,26,-1
+ 480 120 l 1,27,-1
+ 360 120 l 1,28,-1
+ 240 120 l 1,29,-1
+ 120 120 l 1,30,-1
+ 120 240 l 1,31,-1
+ 240 240 l 1,32,-1
+ 360 240 l 1,33,-1
+ 480 240 l 1,34,-1
+ 480 360 l 1,35,-1
+ 480 480 l 1,36,-1
+ 480 600 l 1,37,-1
+ 600 600 l 1,38,-1
+ 600 480 l 1,39,-1
+ 600 360 l 1,40,-1
+ 600 240 l 1,41,-1
+ 600 120 l 1,42,-1
+ 600 0 l 1,43,-1
+ 480 0 l 1,26,-1
+120 240 m 1,44,-1
+ 0 240 l 1,45,-1
+ 0 360 l 1,46,-1
+ 0 480 l 1,47,-1
+ 0 600 l 1,48,-1
+ 120 600 l 1,49,-1
+ 120 480 l 1,50,-1
+ 120 360 l 1,51,-1
+ 120 240 l 1,44,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: NameMe.298
+Encoding: 298 1119 298
+Width: 720
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+120 480 m 21,0,-1
+ 120 120 l 1,1,-1
+ 480 120 l 24,2,-1
+ 480 600 l 17,3,-1
+ 600 600 l 9,4,-1
+ 600 0 l 1,5,6
+ 600 0 600 0 480 0 c 24,7,-1
+ 360 0 l 1,8,-1
+ 360 -120 l 1,9,-1
+ 240 -120 l 25,10,-1
+ 240 0 l 1,11,-1
+ 0 0 l 17,12,-1
+ 0 120 l 1,13,-1
+ 0 240 l 1,14,-1
+ 0 360 l 1,15,-1
+ 0 480 l 1,16,-1
+ 0 600 l 1,17,-1
+ 120 600 l 9,18,-1
+ 120 480 l 21,0,-1
+EndSplineSet
+Validated: 1
 EndChar
 EndChars
 EndSplineFont
