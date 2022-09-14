@@ -4,7 +4,7 @@ FullName: Monocraft
 FamilyName: Monocraft
 Weight: Medium
 Copyright: Idrees Hassan\nhttps://github.com/IdreesInc/Monocraft
-Version: 001.200
+Version: 001.300
 ItalicAngle: 0
 UnderlinePosition: -120
 UnderlineWidth: 0
@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1280473793
-ModificationTime: 1662921210
+ModificationTime: 1663114314
 PfmFamily: 17
 TTFWeight: 500
 TTFWidth: 5

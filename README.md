@@ -17,7 +17,7 @@ The font for developers who like Minecraft a bit _too_ much.
   - Add some spice to your programming life with all new ligature characters
   - Arrows now look like arrows and comparison operators are easier to see at a glance
 
-## Screenshots
+## Glyphs
 
 ![](images/glyphs.png)
 
