@@ -35,13 +35,12 @@ Download the most recent `Monocraft.otf` file from the [Releases](https://github
 
 #### Arch
 
-Download Monocraft.otf, cp to /etc/fonts:
+Download Monocraft.otf:
 ```bash
-curl -O https://github.com/IdreesInc/Monocraft/releases/download/v1.2/Monocraft.otf
-cp Monocraft.otf /etc/fonts/
+curl -LO --create-dir --output-dir ~/.local/share/fonts https://github.com/IdreesInc/Monocraft/releases/latest/download/Monocraft.otf
 ```
 
-To ensure font is installed correctly:
+To ensure font is installed correctly (optional):
 ```bash
 fc-list : family style | grep Monocraft
 ```
