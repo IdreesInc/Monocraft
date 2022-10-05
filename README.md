@@ -17,7 +17,7 @@ The font for developers who like Minecraft a bit _too_ much.
   - Add some spice to your programming life with all new ligature characters
   - Arrows now look like arrows and comparison operators are easier to see at a glance
 
-## Screenshots
+## Glyphs
 
 ![](images/glyphs.png)
 
@@ -29,7 +29,16 @@ Download the most recent `Monocraft.otf` file from the [Releases](https://github
 
 ### Mac
 
+#### Manually
+
 Download the most recent `Monocraft.otf` file from the [Releases](https://github.com/IdreesInc/Minecraft-Mono/releases) page. Double click on the downloaded font file and select **Install Font** in the window that appears. More help available [here](https://support.apple.com/en-us/HT201749).
+
+#### Using Homebrew
+
+```shell
+brew tap homebrew/cask-fonts
+brew install --cask font-monocraft
+```
 
 ### Linux
 
