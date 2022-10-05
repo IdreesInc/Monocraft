@@ -40,6 +40,10 @@ brew tap homebrew/cask-fonts
 brew install --cask font-monocraft
 ```
 
+### Linux
+
+Download the most recent `Monocraft.otf` file from the [Releases](https://github.com/IdreesInc/Minecraft-Mono/releases) page. Move the file to ~/.local/share/fonts (create the folder if it doesn't already exist). In a terminal, run `fc-cache -fv`. Alternatively, log out and log in again. 
+
 ## How to use
 
 After following the installation instructions up above, simply select the "Monocraft" font (note the space) in any application that supports custom fonts. You might need to restart the application or your computer for the font to appear.
