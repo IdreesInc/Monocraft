@@ -4,7 +4,7 @@ FullName: Monocraft
 FamilyName: Monocraft
 Weight: Medium
 Copyright: Idrees Hassan\nhttps://github.com/IdreesInc/Monocraft
-Version: 001.400
+Version: 001.500
 ItalicAngle: 0
 UnderlinePosition: -120
 UnderlineWidth: 0
@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1280473793
-ModificationTime: 1665026857
+ModificationTime: 1671749400
 PfmFamily: 17
 TTFWeight: 500
 TTFWidth: 5
@@ -746,7 +746,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 50 25 12
+WinInfo: 65250 25 12
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -830,7 +830,7 @@ Grid
  0 720 l 1
  0 840 l 1
 EndSplineSet
-BeginChars: 65546 303
+BeginChars: 65547 304
 
 StartChar: .notdef
 Encoding: 65536 -1 0
@@ -15995,7 +15995,7 @@ StartChar: uhungarumlaut
 Encoding: 369 369 302
 Width: 720
 VWidth: 960
-Flags: WO
+Flags: W
 LayerCount: 2
 Fore
 SplineSet
@@ -16050,6 +16050,81 @@ SplineSet
  120 240 l 1,43,-1
  120 120 l 1,34,-1
 EndSplineSet
+EndChar
+
+StartChar: spaceship
+Encoding: 65546 -1 303
+Width: 2160
+VWidth: 960
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 480 m 1025,0,-1
+0 480 m 1,1,-1
+ 120 480 l 1,2,-1
+ 120 360 l 1,3,-1
+ 0 360 l 1,4,-1
+ 0 480 l 1,1,-1
+0 360 m 1025,5,-1
+360 240 m 1,6,-1
+ 360 120 l 1,7,-1
+ 240 120 l 1,8,-1
+ 240 240 l 1,9,-1
+ 360 240 l 1,6,-1
+360 120 m 1,10,-1
+ 480 120 l 1,11,-1
+ 480 0 l 1,12,-1
+ 360 0 l 1,13,-1
+ 360 120 l 1,10,-1
+480 840 m 1,14,-1
+ 480 720 l 1,15,-1
+ 360 720 l 1,16,-1
+ 360 840 l 1,17,-1
+ 480 840 l 1,14,-1
+360 720 m 1,18,-1
+ 360 600 l 1,19,-1
+ 240 600 l 1,20,-1
+ 240 720 l 1,21,-1
+ 360 720 l 1,18,-1
+1680 840 m 1,22,-1
+ 1680 720 l 1,23,-1
+ 1560 720 l 1,24,-1
+ 1560 840 l 1,25,-1
+ 1680 840 l 1,22,-1
+1680 720 m 1,26,-1
+ 1800 720 l 1,27,-1
+ 1800 600 l 1,28,-1
+ 1680 600 l 1,29,-1
+ 1680 720 l 1,26,-1
+120 600 m 1,30,-1
+ 1920 600 l 1,31,-1
+ 1920 480 l 1,32,-1
+ 120 480 l 1,33,-1
+ 120 600 l 1,30,-1
+1920 480 m 1,34,-1
+ 2040 480 l 1,35,-1
+ 2040 360 l 1,36,-1
+ 1920 360 l 1,37,-1
+ 1920 480 l 1,34,-1
+1920 360 m 1,38,-1
+ 1920 240 l 1,39,-1
+ 120 240 l 1,40,-1
+ 120 360 l 1,41,-1
+ 1920 360 l 1,38,-1
+1800 240 m 1,42,-1
+ 1800 120 l 1,43,-1
+ 1680 120 l 1,44,-1
+ 1680 240 l 1,45,-1
+ 1800 240 l 1,42,-1
+1680 120 m 1,46,-1
+ 1680 0 l 1,47,-1
+ 1560 0 l 1,48,-1
+ 1560 120 l 1,49,-1
+ 1680 120 l 1,46,-1
+EndSplineSet
+LCarets2: 2 0 0
+Ligature2: "liga-subtable" less equal greater
 EndChar
 EndChars
 EndSplineFont
