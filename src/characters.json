@@ -1,5 +1,19 @@
 [
 	{
+		"character": " ",
+		"name": "space",
+		"codepoint": 32,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
 		"character": "!",
 		"name": "exclamation mark",
 		"codepoint": 33,
@@ -1317,7 +1331,7 @@
 	},
 	{
 		"character": "~",
-		"name": "tilde",
+		"name": "ascii tilde",
 		"codepoint": 126,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1328,5 +1342,500 @@
 			[0, 0, 0, 0, 0],
 			[0, 0, 0, 0, 0]
 		]
+	},
+	{
+		"character": " ",
+		"name": "no-break space",
+		"codepoint": 160,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "¡",
+		"name": "inverted exclamation mark",
+		"codepoint": 161,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 1
+	},
+	{
+		"character": "¢",
+		"name": "cent sign",
+		"codepoint": 162,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 1
+	},
+	{
+		"character": "£",
+		"name": "pound sign",
+		"codepoint": 163,
+		"pixels": [
+			[0, 0, 1, 1, 0],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[0, 1, 0, 0, 0],
+			[0, 1, 0, 0, 0],
+			[1, 1, 1, 1, 1]
+		]
+	},
+	{
+		"character": "¤",
+		"name": "currency sign",
+		"codepoint": 164,
+		"pixels": [
+			[0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0],
+			[1, 0, 1, 1, 0, 1],
+			[0, 1, 0, 0, 1, 0],
+			[0, 1, 0, 0, 1, 0],
+			[0, 1, 0, 0, 1, 0],
+			[1, 0, 1, 1, 0, 1]
+		]
+	},
+	{
+		"character": "¥",
+		"name": "yen sign",
+		"codepoint": 165,
+		"pixels": [
+			[1, 0, 0, 0, 1],
+			[0, 1, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[1, 1, 1, 1, 1],
+			[0, 0, 1, 0, 0],
+			[1, 1, 1, 1, 1],
+			[0, 0, 1, 0, 0]
+		]
+	},
+	{
+		"character": "¦",
+		"name": "broken bar",
+		"codepoint": 166,
+		"pixels": [
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0]
+		]
+	},
+	{
+		"character": "§",
+		"name": "section sign",
+		"codepoint": 167,
+		"pixels": [
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0],
+			[0, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "¨",
+		"name": "diaeresis",
+		"codepoint": 168,
+		"pixels": [
+			[1, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "©",
+		"name": "copyright sign",
+		"codepoint": 169,
+		"pixels": [
+			[0, 1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 0, 1],
+			[1, 0, 1, 1, 0, 1],
+			[1, 0, 1, 0, 0, 1],
+			[1, 0, 1, 1, 0, 1],
+			[1, 0, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "ª",
+		"name": "feminine ordinal indicator",
+		"codepoint": 170,
+		"pixels": [
+			[0, 1, 1, 0, 0],
+			[0, 0, 0, 1, 0],
+			[1, 1, 1, 1, 0],
+			[0, 1, 1, 1, 0],
+			[0, 0, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "«",
+		"name": "left pointing double angle quotation mark",
+		"codepoint": 171,
+		"pixels": [
+			[0, 0, 0, 0, 0, 0],
+			[0, 0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0, 1],
+			[0, 0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "¬",
+		"name": "not sign",
+		"codepoint": 172,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 1, 1, 1, 1],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "registered sign",
+		"name": "®",
+		"codepoint": 174,
+		"pixels": [
+			[0, 1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 0, 1],
+			[1, 0, 1, 1, 0, 1],
+			[1, 0, 1, 1, 0, 1],
+			[1, 0, 1, 0, 1, 1],
+			[1, 0, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "macron",
+		"name": "¯",
+		"codepoint": 175,
+		"pixels": [
+			[1, 1, 1, 1, 1],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "°",
+		"name": "degree sign",
+		"codepoint": 176,
+		"pixels": [
+			[0, 1, 1, 0, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "±",
+		"name": "plus minus sign",
+		"codepoint": 177,
+		"pixels": [
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[1, 1, 1, 1, 1],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 1, 1, 1, 1]
+		]
+	},
+	{
+		"character": "²",
+		"name": "superscript two",
+		"codepoint": 178,
+		"pixels": [
+			[0, 1, 1, 0, 0],
+			[1, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "³",
+		"name": "superscript three",
+		"codepoint": 179,
+		"pixels": [
+			[0, 1, 1, 0, 0],
+			[1, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[1, 0, 0, 1, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "´",
+		"name": "acute accent",
+		"codepoint": 180,
+		"pixels": [
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "µ",
+		"name": "micro sign",
+		"codepoint": 181,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 0]
+		],
+		"descent": 1
+	},
+	{
+		"character": "¶",
+		"name": "pilcrow sign",
+		"codepoint": 182,
+		"pixels": [
+			[0, 0, 1, 1, 1, 1],
+			[0, 1, 1, 0, 1, 0],
+			[1, 1, 1, 0, 1, 0],
+			[0, 1, 1, 0, 1, 0],
+			[0, 0, 1, 0, 1, 0],
+			[0, 0, 1, 0, 1, 0],
+			[0, 0, 1, 0, 1, 0]
+		]
+	},
+	{
+		"character": "·",
+		"name": "middle dot",
+		"codepoint": 183,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "¸",
+		"name": "cedilla",
+		"codepoint": 184,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[1, 1, 0, 0, 0]
+		],
+		"descent": 1
+	},
+	{
+		"character": "¹",
+		"name": "superscript one",
+		"codepoint": 185,
+		"pixels": [
+			[0, 1, 0, 0, 0],
+			[1, 1, 0, 0, 0],
+			[0, 1, 0, 0, 0],
+			[0, 1, 0, 0, 0],
+			[1, 1, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "º",
+		"name": "masculine ordinal indicator",
+		"codepoint": 186,
+		"pixels": [
+			[0, 1, 1, 0, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "»",
+		"name": "right pointing double angle quotation mark",
+		"codepoint": 187,
+		"pixels": [
+			[0, 0, 0, 0, 0, 0],
+			[1, 0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "¼",
+		"name": "fraction one quarter",
+		"codepoint": 188,
+		"pixels": [
+			[0, 1, 0, 0, 0, 0],
+			[1, 1, 0, 0, 1, 0],
+			[0, 1, 0, 1, 0, 0],
+			[0, 1, 0, 1, 0, 0],
+			[0, 0, 1, 0, 1, 1],
+			[0, 1, 0, 1, 0, 1],
+			[0, 1, 0, 1, 1, 1],
+			[1, 0, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "½",
+		"name": "fraction one half",
+		"codepoint": 189,
+		"pixels": [
+			[0, 1, 0, 0, 0, 0],
+			[1, 1, 0, 0, 1, 0],
+			[0, 1, 0, 1, 0, 0],
+			[0, 1, 0, 1, 0, 0],
+			[0, 0, 1, 0, 1, 1],
+			[0, 1, 0, 0, 0, 1],
+			[0, 1, 0, 0, 1, 0],
+			[1, 0, 0, 0, 1, 1]
+		]
+	},
+	{
+		"character": "¾",
+		"name": "fraction three quarters",
+		"codepoint": 190,
+		"pixels": [
+			[1, 1, 1, 0, 0, 0],
+			[0, 1, 0, 0, 1, 0],
+			[0, 0, 1, 1, 0, 0],
+			[1, 1, 0, 1, 0, 0],
+			[0, 0, 1, 0, 1, 1],
+			[0, 1, 0, 1, 0, 1],
+			[0, 1, 0, 1, 1, 1],
+			[1, 0, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "¿",
+		"name": "inverted question mark",
+		"codepoint": 191,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		],
+		"descent": 1
+	},
+	{
+		"character": "À",
+		"name": "latin capital letter a with grave",
+		"codepoint": 192,
+		"reference": 65,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Á",
+		"name": "latin capital letter a with acute",
+		"codepoint": 193,
+		"reference": 65,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Â",
+		"name": "latin capital letter a with circumflex",
+		"codepoint": 194,
+		"reference": 65,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ã",
+		"name": "latin capital letter a with tilde",
+		"codepoint": 195,
+		"reference": 65,
+		"diacritic": "tilde",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ä",
+		"name": "latin capital letter a with diaeresis",
+		"codepoint": 196,
+		"reference": 65,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Å",
+		"name": "latin capital letter a with ring above",
+		"codepoint": 197,
+		"reference": 65,
+		"diacritic": "ring",
+		"diacriticSpace": 0
 	}
 ]
