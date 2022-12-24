@@ -1837,5 +1837,680 @@
 		"reference": 65,
 		"diacritic": "ring",
 		"diacriticSpace": 0
+	},
+	{
+		"character": "Æ",
+		"name": "latin capital letter ae",
+		"codepoint": 198,
+		"pixels": [
+			[0, 1, 1, 1, 1],
+			[1, 0, 1, 0, 0],
+			[1, 1, 1, 1, 0],
+			[1, 0, 1, 0, 0],
+			[1, 0, 1, 0, 0],
+			[1, 0, 1, 0, 0],
+			[1, 0, 1, 1, 1]
+		]
+	},
+	{
+		"character": "Ç",
+		"name": "latin capital letter c with cedilla",
+		"codepoint": 199,
+		"pixels": [
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0],
+			[0, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 2
+	},
+	{
+		"character": "È",
+		"name": "latin capital letter e with grave",
+		"codepoint": 200,
+		"reference": 69,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "É",
+		"name": "latin capital letter e with acute",
+		"codepoint": 201,
+		"reference": 69,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ê",
+		"name": "latin capital letter e with circumflex",
+		"codepoint": 202,
+		"reference": 69,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ë",
+		"name": "latin capital letter e with diaeresis",
+		"codepoint": 203,
+		"reference": 69,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ì",
+		"name": "latin capital letter i with grave",
+		"codepoint": 204,
+		"reference": 73,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Í",
+		"name": "latin capital letter i with acute",
+		"codepoint": 205,
+		"reference": 73,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Î",
+		"name": "latin capital letter i with circumflex",
+		"codepoint": 206,
+		"reference": 73,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ï",
+		"name": "latin capital letter i with diaeresis",
+		"codepoint": 207,
+		"reference": 73,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ð",
+		"name": "latin capital letter eth",
+		"codepoint": 208,
+		"pixels": [
+			[0, 1, 1, 1, 1, 0],
+			[0, 1, 0, 0, 0, 1],
+			[1, 1, 1, 0, 0, 1],
+			[0, 1, 0, 0, 0, 1],
+			[0, 1, 0, 0, 0, 1],
+			[0, 1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "Ñ",
+		"name": "latin capital letter n with tilde",
+		"codepoint": 209,
+		"reference": 78,
+		"diacritic": "tilde",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ò",
+		"name": "latin capital letter o with grave",
+		"codepoint": 210,
+		"reference": 79,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ó",
+		"name": "latin capital letter o with acute",
+		"codepoint": 211,
+		"reference": 79,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ô",
+		"name": "latin capital letter o with circumflex",
+		"codepoint": 212,
+		"reference": 79,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Õ",
+		"name": "latin capital letter o with tilde",
+		"codepoint": 213,
+		"reference": 79,
+		"diacritic": "tilde",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ö",
+		"name": "latin capital letter o with diaeresis",
+		"codepoint": 214,
+		"reference": 79,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "×",
+		"name": "multiplication sign",
+		"codepoint": 215,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[0, 1, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 1, 0],
+			[1, 0, 0, 0, 1],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "Ø",
+		"name": "latin capital letter o with stroke",
+		"codepoint": 216,
+		"pixels": [
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 1, 1],
+			[1, 0, 0, 1, 1],
+			[1, 0, 1, 0, 1],
+			[1, 1, 0, 0, 1],
+			[1, 1, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "Ù",
+		"name": "latin capital letter u with grave",
+		"codepoint": 217,
+		"reference": 85,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ú",
+		"name": "latin capital letter u with acute",
+		"codepoint": 218,
+		"reference": 85,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Û",
+		"name": "latin capital letter u with circumflex",
+		"codepoint": 219,
+		"reference": 85,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ü",
+		"name": "latin capital letter u with diaeresis",
+		"codepoint": 220,
+		"reference": 85,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ý",
+		"name": "latin capital letter y with acute",
+		"codepoint": 221,
+		"reference": 89,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Þ",
+		"name": "latin capital letter thorn",
+		"codepoint": 222,
+		"pixels": [
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "ß",
+		"name": "latin small letter sharp s",
+		"codepoint": 223,
+		"pixels": [
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 1, 1, 0],
+			[1, 0, 0, 0, 0]
+		],
+		"descent": 1
+	},
+	{
+		"character": "à",
+		"name": "latin small letter a with grave",
+		"codepoint": 224,
+		"reference": 97,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "á",
+		"name": "latin small letter a with acute",
+		"codepoint": 225,
+		"reference": 97,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "â",
+		"name": "latin small letter a with circumflex",
+		"codepoint": 226,
+		"reference": 97,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ã",
+		"name": "latin small letter a with tilde",
+		"codepoint": 227,
+		"reference": 97,
+		"diacritic": "tilde",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ä",
+		"name": "latin small letter a with diaeresis",
+		"codepoint": 228,
+		"reference": 97,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "å",
+		"name": "latin small letter a with ring above",
+		"codepoint": 229,
+		"reference": 97,
+		"diacritic": "ring",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "æ",
+		"name": "latin small letter ae",
+		"codepoint": 230,
+		"pixels": [
+			[0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0],
+			[0, 1, 1, 0, 1, 0],
+			[0, 0, 0, 1, 0, 1],
+			[0, 1, 1, 1, 1, 1],
+			[1, 0, 0, 1, 0, 0],
+			[0, 1, 1, 1, 1, 1]
+		]
+	},
+	{
+		"character": "ç",
+		"name": "latin small letter c with cedilla",
+		"codepoint": 231,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0],
+			[0, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 2
+	},
+	{
+		"character": "è",
+		"name": "latin small letter e with grave",
+		"codepoint": 232,
+		"reference": 101,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "é",
+		"name": "latin small letter e with acute",
+		"codepoint": 233,
+		"reference": 101,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ê",
+		"name": "latin small letter e with circumflex",
+		"codepoint": 234,
+		"reference": 101,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ë",
+		"name": "latin small letter e with diaeresis",
+		"codepoint": 235,
+		"reference": 101,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ì",
+		"name": "latin small letter i with grave",
+		"codepoint": 236,
+		"pixels": [
+			[0, 1, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1]
+		]
+	},
+	{
+		"character": "í",
+		"name": "latin small letter i with acute",
+		"codepoint": 237,
+		"pixels": [
+			[0, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1]
+		]
+	},
+	{
+		"character": "î",
+		"name": "latin small letter i with circumflex",
+		"codepoint": 238,
+		"pixels": [
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 1, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1]
+		]
+	},
+	{
+		"character": "ï",
+		"name": "latin small letter i with diaeresis",
+		"codepoint": 239,
+		"pixels": [
+			[0, 1, 0, 1, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1]
+		]
+	},
+	{
+		"character": "ð",
+		"name": "latin small letter eth",
+		"codepoint": 240,
+		"pixels": [
+			[0, 1, 1, 0, 1],
+			[0, 0, 0, 1, 0],
+			[0, 0, 1, 0, 1],
+			[0, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "ñ",
+		"name": "latin small letter n with tilde",
+		"codepoint": 241,
+		"reference": 110,
+		"diacritic": "tilde",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ò",
+		"name": "latin small letter o with grave",
+		"codepoint": 242,
+		"reference": 111,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ó",
+		"name": "latin small letter o with acute",
+		"codepoint": 243,
+		"reference": 111,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ô",
+		"name": "latin small letter o with circumflex",
+		"codepoint": 244,
+		"reference": 111,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "õ",
+		"name": "latin small letter o with tilde",
+		"codepoint": 245,
+		"reference": 111,
+		"diacritic": "tilde",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ö",
+		"name": "latin small letter o with diaeresis",
+		"codepoint": 246,
+		"reference": 111,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "÷",
+		"name": "division sign",
+		"codepoint": 247,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 1, 1, 1, 1],
+			[0, 0, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "ø",
+		"name": "latin small letter o with stroke",
+		"codepoint": 248,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 1, 1],
+			[1, 0, 1, 0, 1],
+			[1, 1, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "ù",
+		"name": "latin small letter u with grave",
+		"codepoint": 249,
+		"reference": 117,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ú",
+		"name": "latin small letter u with acute",
+		"codepoint": 250,
+		"reference": 117,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "û",
+		"name": "latin small letter u with circumflex",
+		"codepoint": 251,
+		"reference": 117,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ü",
+		"name": "latin small letter u with diaeresis",
+		"codepoint": 252,
+		"reference": 117,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ý",
+		"name": "latin small letter y with acute",
+		"codepoint": 253,
+		"reference": 121,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ÿ ",
+		"name": "latin small letter y with diaeresis",
+		"codepoint": 255,
+		"reference": 121,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ĉ",
+		"name": "latin capital letter c with circumflex",
+		"codepoint": 264,
+		"reference": 67,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ĉ",
+		"name": "latin small letter c with circumflex",
+		"codepoint": 265,
+		"reference": 99,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ĝ",
+		"name": "latin capital letter g with circumflex",
+		"codepoint": 284,
+		"reference": 71,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ĝ",
+		"name": "latin small letter g with circumflex",
+		"codepoint": 285,
+		"reference": 103,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ĥ",
+		"name": "latin capital letter h with circumflex",
+		"codepoint": 292,
+		"reference": 72,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ĥ",
+		"name": "latin small letter h with circumflex",
+		"codepoint": 293,
+		"reference": 104,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ĵ",
+		"name": "latin capital letter j with circumflex",
+		"codepoint": 308,
+		"reference": 74,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ĵ",
+		"name": "latin small letter j with circumflex",
+		"codepoint": 309,
+		"reference": 106,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ő",
+		"name": "latin capital letter o with double acute",
+		"codepoint": 336,
+		"reference": 79,
+		"diacritic": "doubleAcute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ő",
+		"name": "latin small letter o with double acute",
+		"codepoint": 337,
+		"reference": 111,
+		"diacritic": "doubleAcute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ŝ",
+		"name": "latin capital letter s with circumflex",
+		"codepoint": 348,
+		"reference": 83,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ŝ",
+		"name": "latin small letter s with circumflex",
+		"codepoint": 349,
+		"reference": 115,
+		"diacritic": "circumflex",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ű",
+		"name": "latin capital letter u with double acute",
+		"codepoint": 368,
+		"reference": 85,
+		"diacritic": "doubleAcute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ű",
+		"name": "latin small letter u with double acute",
+		"codepoint": 369,
+		"reference": 117,
+		"diacritic": "doubleAcute",
+		"diacriticSpace": 1
 	}
 ]
