@@ -41,15 +41,16 @@ for character in characters:
 	charactersByCodepoint[character["codepoint"]] = character
 	monocraft.createChar(character["codepoint"], character["name"])
 	pen = monocraft[character["name"]].glyphPen()
+	top = 0
 	if "pixels" in character:
-		drawCharacter(character, pen)
+		top = drawCharacter(character, pen)
 	elif "reference" in character:
 		top = drawCharacter(charactersByCodepoint[character["reference"]], pen)
-		if "diacritic" in character:
-			diacritic = diacritics[character["diacritic"]]
-			if "diacriticSpace" in character:
-				top += PIXEL_SIZE * character["diacriticSpace"]
-			drawGlyph(diacritic["pixels"], pen, top)
+	if "diacritic" in character:
+		diacritic = diacritics[character["diacritic"]]
+		if "diacriticSpace" in character:
+			top += PIXEL_SIZE * character["diacriticSpace"]
+		drawGlyph(diacritic["pixels"], pen, top)
 
 	monocraft[character["name"]].width = PIXEL_SIZE * 6
 

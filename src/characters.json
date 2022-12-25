@@ -873,7 +873,7 @@
 	},
 	{
 		"character": "^",
-		"name": "caret",
+		"name": "ascii caret",
 		"codepoint": 94,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -2512,5 +2512,1102 @@
 		"reference": 117,
 		"diacritic": "doubleAcute",
 		"diacriticSpace": 1
+	},
+	{
+		"character": "Ѐ",
+		"name": "cyrillic capital letter ie with grave",
+		"codepoint": 1024,
+		"reference": 69,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ё",
+		"name": "cyrillic capital letter io",
+		"codepoint": 1025,
+		"reference": 69,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ђ",
+		"name": "cyrillic capital letter dje",
+		"codepoint": 1026,
+		"pixels": [
+			[1, 1, 1, 1, 0],
+			[0, 1, 0, 0, 0],
+			[0, 1, 0, 0, 0],
+			[0, 1, 1, 1, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 1, 0]
+		]
+	},
+	{
+		"character": "Ѓ",
+		"name": "cyrillic capital letter gje",
+		"codepoint": 1027,
+		"pixels": [
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0]
+		],
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Є",
+		"name": "cyrillic capital letter ukrainian ie",
+		"codepoint": 1028,
+		"pixels": [
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 0],
+			[1, 1, 1, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "Ѕ",
+		"name": "cyrillic capital letter dze",
+		"codepoint": 1029,
+		"reference": 83
+	},
+	{
+		"character": "І",
+		"name": "cyrillic capital letter byelorussian-ukrainian i",
+		"codepoint": 1030,
+		"reference": 73
+	},
+	{
+		"character": "Ї",
+		"name": "cyrillic capital letter yi",
+		"codepoint": 1031,
+		"reference": 73,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ј",
+		"name": "cyrillic capital letter je",
+		"codepoint": 1032,
+		"reference": 74
+	},
+	{
+		"character": "Љ",
+		"name": "cyrillic capital letter lje",
+		"codepoint": 1033,
+		"pixels": [
+			[0, 1, 1, 1, 0, 0],
+			[0, 1, 0, 1, 0, 0],
+			[0, 1, 0, 1, 1, 0],
+			[0, 1, 0, 1, 0, 1],
+			[0, 1, 0, 1, 0, 1],
+			[0, 1, 0, 1, 0, 1],
+			[1, 0, 0, 1, 1, 0]
+		]
+	},
+	{
+		"character": "Њ",
+		"name": "cyrillic capital letter nje",
+		"codepoint": 1034,
+		"pixels": [
+			[1, 0, 1, 0, 0],
+			[1, 0, 1, 0, 0],
+			[1, 1, 1, 1, 0],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 1, 0]
+		]
+	},
+	{
+		"character": "Ћ",
+		"name": "cyrillic capital letter tshe",
+		"codepoint": 1035,
+		"pixels": [
+			[0, 1, 0, 0, 0],
+			[1, 1, 1, 1, 1],
+			[0, 1, 0, 0, 0],
+			[0, 1, 0, 1, 0],
+			[0, 1, 1, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1]
+		]
+	},
+	{
+		"character": "Ќ",
+		"name": "cyrillic capital letter kje",
+		"codepoint": 1036,
+		"reference": 75,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ѝ",
+		"name": "cyrillic capital letter i with grave",
+		"codepoint": 1037,
+		"pixels": [
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 1, 1],
+			[1, 0, 1, 0, 1],
+			[1, 1, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1]
+		],
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Ў",
+		"name": "cyrillic capital letter short u",
+		"codepoint": 1038,
+		"pixels": [
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0]
+		],
+		"diacritic": "breve",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "Џ",
+		"name": "cyrillic capital letter dzhe",
+		"codepoint": 1039,
+		"pixels": [
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 1],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 1
+	},
+	{
+		"character": "А",
+		"name": "cyrillic capital letter a",
+		"codepoint": 1040,
+		"reference": 65
+	},
+	{
+		"character": "Б",
+		"name": "cyrillic capital letter be",
+		"codepoint": 1041,
+		"pixels": [
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "В",
+		"name": "cyrillic capital letter ve",
+		"codepoint": 1042,
+		"reference": 66
+	},
+	{
+		"character": "Г",
+		"name": "cyrillic capital letter ghe",
+		"codepoint": 1043,
+		"pixels": [
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "Д",
+		"name": "cyrillic capital letter de",
+		"codepoint": 1044,
+		"pixels": [
+			[0, 0, 1, 1, 1],
+			[0, 0, 1, 0, 1],
+			[0, 0, 1, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1]
+		],
+		"descent": 1
+	},
+	{
+		"character": "Е",
+		"name": "cyrillic capital letter ie",
+		"codepoint": 1045,
+		"reference": 69
+	},
+	{
+		"character": "Ж",
+		"name": "cyrillic capital letter zhe",
+		"codepoint": 1046,
+		"pixels": [
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[0, 1, 1, 1, 0],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1]
+		]
+	},
+	{
+		"character": "З",
+		"name": "cyrillic capital letter ze",
+		"codepoint": 1047,
+		"pixels": [
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[0, 0, 1, 1, 0],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "И",
+		"name": "cyrillic capital letter i",
+		"codepoint": 1048,
+		"pixels": [
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 1, 1],
+			[1, 0, 1, 0, 1],
+			[1, 1, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "Й",
+		"name": "cyrillic capital letter short i",
+		"codepoint": 1049,
+		"reference": 1048,
+		"diacritic": "breve",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "К",
+		"name": "cyrillic capital letter ka",
+		"codepoint": 1050,
+		"reference": 75
+	},
+	{
+		"character": "Л",
+		"name": "cyrillic capital letter el",
+		"codepoint": 1051,
+		"pixels": [
+			[0, 1, 1, 1, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[1, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "М",
+		"name": "cyrillic capital letter em",
+		"codepoint": 1052,
+		"reference": 77
+	},
+	{
+		"character": "Н",
+		"name": "cyrillic capital letter en",
+		"codepoint": 1053,
+		"reference": 72
+	},
+	{
+		"character": "О",
+		"name": "cyrillic capital letter o",
+		"codepoint": 1054,
+		"reference": 79
+	},
+	{
+		"character": "П",
+		"name": "cyrillic capital letter pe",
+		"codepoint": 1055,
+		"pixels": [
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "Р",
+		"name": "cyrillic capital letter er",
+		"codepoint": 1056,
+		"reference": 80
+	},
+	{
+		"character": "С",
+		"name": "cyrillic capital letter es",
+		"codepoint": 1057,
+		"reference": 67
+	},
+	{
+		"character": "Т",
+		"name": "cyrillic capital letter te",
+		"codepoint": 1058,
+		"reference": 84
+	},
+	{
+		"character": "У",
+		"name": "cyrillic capital letter u",
+		"codepoint": 1059,
+		"pixels": [
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "Ф",
+		"name": "cyrillic capital letter ef",
+		"codepoint": 1060,
+		"pixels": [
+			[0, 0, 1, 0, 0],
+			[0, 1, 1, 1, 0],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[0, 1, 1, 1, 0],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 1
+	},
+	{
+		"character": "Х",
+		"name": "cyrillic capital letter ha",
+		"codepoint": 1061,
+		"reference": 88
+	},
+	{
+		"character": "Ц",
+		"name": "cyrillic capital letter tse",
+		"codepoint": 1062,
+		"pixels": [
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0],
+			[1, 1, 1, 1, 1],
+			[0, 0, 0, 0, 1]
+		],
+		"descent": 1
+	},
+	{
+		"character": "Ч",
+		"name": "cyrillic capital letter che",
+		"codepoint": 1063,
+		"pixels": [
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "Ш",
+		"name": "cyrillic capital letter sha",
+		"codepoint": 1064,
+		"pixels": [
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 1, 1, 1, 1]
+		]
+	},
+	{
+		"character": "Щ",
+		"name": "cyrillic capital letter shcha",
+		"codepoint": 1065,
+		"pixels": [
+			[1, 0, 1, 0, 1, 0],
+			[1, 0, 1, 0, 1, 0],
+			[1, 0, 1, 0, 1, 0],
+			[1, 0, 1, 0, 1, 0],
+			[1, 0, 1, 0, 1, 0],
+			[1, 0, 1, 0, 1, 0],
+			[1, 1, 1, 1, 1, 1],
+			[0, 0, 0, 0, 0, 1]
+		],
+		"descent": 1
+	},
+	{
+		"character": "Ъ",
+		"name": "cyrillic capital letter hard sign",
+		"codepoint": 1066,
+		"pixels": [
+			[1, 1, 0, 0, 0],
+			[0, 1, 0, 0, 0],
+			[0, 1, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "Ы",
+		"name": "cyrillic capital letter yeru",
+		"codepoint": 1067,
+		"pixels": [
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 1, 0, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 1, 0, 0, 1]
+		]
+	},
+	{
+		"character": "Ь",
+		"name": "cyrillic capital letter soft sign",
+		"codepoint": 1068,
+		"pixels": [
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "Э",
+		"name": "cyrillic capital letter e",
+		"codepoint": 1069,
+		"pixels": [
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[0, 0, 1, 1, 1],
+			[0, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "Ю",
+		"name": "cyrillic capital letter yu",
+		"codepoint": 1070,
+		"pixels": [
+			[1, 0, 0, 1, 0],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 1, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 0, 1, 0]
+		]
+	},
+	{
+		"character": "Я",
+		"name": "cyrillic capital letter ya",
+		"codepoint": 1071,
+		"pixels": [
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "а",
+		"name": "cyrillic small letter a",
+		"codepoint": 1072,
+		"reference": 97
+	},
+	{
+		"character": "б",
+		"name": "cyrillic small letter be",
+		"codepoint": 1073,
+		"pixels": [
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "в",
+		"name": "cyrillic small letter ve",
+		"codepoint": 1074,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "г",
+		"name": "cyrillic small letter ghe",
+		"codepoint": 1075,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 1],
+			[0, 1, 0, 0, 0],
+			[0, 1, 0, 0, 0],
+			[0, 1, 0, 0, 0],
+			[0, 1, 0, 0, 0]
+		]
+	},
+	{
+		"character": "д",
+		"name": "cyrillic small letter de",
+		"codepoint": 1076,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 1, 1, 1],
+			[0, 0, 1, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1]
+		],
+		"descent": 1
+	},
+	{
+		"character": "е",
+		"name": "cyrillic small letter ie",
+		"codepoint": 1077,
+		"reference": 101
+	},
+	{
+		"character": "ж",
+		"name": "cyrillic small letter zhe",
+		"codepoint": 1078,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[0, 1, 1, 1, 0],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1]
+		]		
+	},
+	{
+		"character": "з",
+		"name": "cyrillic small letter ze",
+		"codepoint": 1079,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[0, 0, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "и",
+		"name": "cyrillic small letter i",
+		"codepoint": 1080,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 1, 1],
+			[1, 0, 1, 0, 1],
+			[1, 1, 0, 0, 1],
+			[1, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "й",
+		"name": "cyrillic small letter short i",
+		"codepoint": 1081,
+		"reference": 1080,
+		"diacritic": "breve",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "к",
+		"name": "cyrillic small letter ka",
+		"codepoint": 1082,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 1, 0],
+			[1, 1, 1, 0, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "л",
+		"name": "cyrillic small letter el",
+		"codepoint": 1083,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[1, 0, 0, 0, 1]
+		]
+	}, {
+		"character": "м",
+		"name": "cyrillic small letter em",
+		"codepoint": 1084,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[1, 1, 0, 1, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "н",
+		"name": "cyrillic small letter en",
+		"codepoint": 1085,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "о",
+		"name": "cyrillic small letter o",
+		"codepoint": 1086,
+		"reference": 111
+	},
+	{
+		"character": "п",
+		"name": "cyrillic small letter pe",
+		"codepoint": 1087,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "р",
+		"name": "cyrillic small letter er",
+		"codepoint": 1088,
+		"reference": 112
+	},
+	{
+		"character": "с",
+		"name": "cyrillic small letter es",
+		"codepoint": 1089,
+		"reference": 99
+	},
+	{
+		"character": "т",
+		"name": "cyrillic small letter te",
+		"codepoint": 1090,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 1, 1, 1, 1],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0]
+		]
+	},
+	{
+		"character": "у",
+		"name": "cyrillic small letter u",
+		"codepoint": 1091,
+		"reference": 121
+	},
+	{
+		"character": "ф",
+		"name": "cyrillic small letter ef",
+		"codepoint": 1092,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[0, 1, 1, 1, 0],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 1
+	},
+	{
+		"character": "х",
+		"name": "cyrillic small letter ha",
+		"codepoint": 1093,
+		"reference": 120
+	},
+	{
+		"character": "ц",
+		"name": "cyrillic small letter tse",
+		"codepoint": 1094,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 1, 0],
+			[1, 1, 1, 1, 1],
+			[0, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "ч",
+		"name": "cyrillic small letter che",
+		"codepoint": 1095,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "ш",
+		"name": "cyrillic small letter sha",
+		"codepoint": 1096,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 1, 1, 1, 1]
+		]
+	},
+	{
+		"character": "щ",
+		"name": "cyrillic small letter shcha",
+		"codepoint": 1097,
+		"pixels": [
+			[0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0],
+			[1, 0, 1, 0, 1, 0],
+			[1, 0, 1, 0, 1, 0],
+			[1, 0, 1, 0, 1, 0],
+			[1, 0, 1, 0, 1, 0],
+			[1, 1, 1, 1, 1, 1],
+			[0, 0, 0, 0, 0, 1]
+		],
+		"descent": 1
+	},
+	{
+		"character": "ъ",
+		"name": "cyrillic small letter hard sign",
+		"codepoint": 1098,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 1, 0, 0, 0],
+			[0, 1, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[0, 1, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "ы",
+		"name": "cyrillic small letter yeru",
+		"codepoint": 1099,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 1, 0, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 1, 0, 0, 1]
+		]
+	},
+	{
+		"character": "ь",
+		"name": "cyrillic small letter soft sign",
+		"codepoint": 1100,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "э",
+		"name": "cyrillic small letter e",
+		"codepoint": 1101,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[0, 0, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "ю",
+		"name": "cyrillic small letter yu",
+		"codepoint": 1102,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 1, 0, 1],
+			[1, 1, 1, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 0, 1, 0]
+		]
+	},
+	{
+		"character": "я",
+		"name": "cyrillic small letter ya",
+		"codepoint": 1103,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1]
+		]
+	},
+	{
+		"character": "ѐ",
+		"name": "cyrillic small letter ie with grave",
+		"codepoint": 1104,
+		"reference": 101,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ё",
+		"name": "cyrillic small letter io",
+		"codepoint": 1105,
+		"reference": 101,
+		"diacritic": "diaeresis",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ђ",
+		"name": "cyrillic small letter dje",
+		"codepoint": 1106,
+		"pixels": [
+			[0, 1, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[0, 1, 0, 0, 0],
+			[0, 1, 0, 1, 0],
+			[0, 1, 1, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 0, 0, 1, 0]
+		]
+	},
+	{
+		"character": "ѓ",
+		"name": "cyrillic small letter gje",
+		"codepoint": 1107,
+		"reference": 1075,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "є",
+		"name": "cyrillic small letter ukrainian ie",
+		"codepoint": 1108,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 0, 0],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "ѕ",
+		"name": "cyrillic small letter dzhe",
+		"codepoint": 1109,
+		"reference": 115
+	},
+	{
+		"character": "і",
+		"name": "cyrillic small letter byelorussian ukrainian i",
+		"codepoint": 1110,
+		"reference": 105
+	},
+	{
+		"character": "ї",
+		"name": "cyrillic small letter yi",
+		"codepoint": 1111,
+		"reference": 239
+	},
+	{
+		"character": "ј",
+		"name": "cyrillic small letter je",
+		"codepoint": 1112,
+		"reference": 106
+	},
+	{
+		"character": "љ",
+		"name": "cyrillic small letter lje",
+		"codepoint": 1113,
+		"pixels": [
+			[0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0, 0],
+			[0, 1, 0, 1, 0, 0],
+			[0, 1, 0, 1, 1, 0],
+			[0, 1, 0, 1, 0, 1],
+			[1, 0, 0, 1, 1, 0]
+		]
+	},
+	{
+		"character": "њ",
+		"name": "cyrillic small letter nje",
+		"codepoint": 1114,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 1, 0, 0],
+			[1, 0, 1, 0, 0],
+			[1, 1, 1, 1, 0],
+			[1, 0, 1, 0, 1],
+			[1, 0, 1, 1, 0]
+		]
+	},
+	{
+		"character": "ћ",
+		"name": "cyrillic small letter tshe",
+		"codepoint": 1115,
+		"pixels": [
+			[0, 1, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[0, 1, 0, 0, 0],
+			[0, 1, 0, 1, 0],
+			[0, 1, 1, 0, 1],
+			[0, 1, 0, 0, 1],
+			[0, 1, 0, 0, 1]
+		]
+	},
+	{
+		"character": "ќ",
+		"name": "cyrillic small letter kje",
+		"codepoint": 1116,
+		"reference": 1082,
+		"diacritic": "acute",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ѝ",
+		"name": "cyrillic small letter i with grave",
+		"codepoint": 1117,
+		"reference": 1080,
+		"diacritic": "grave",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "ў",
+		"name": "cyrillic small letter short u",
+		"codepoint": 1118,
+		"reference": 121,
+		"diacritic": "breve",
+		"diacriticSpace": 1
+	},
+	{
+		"character": "џ",
+		"name": "cyrillic small letter dze",
+		"codepoint": 1119,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 1],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 1
 	}
 ]
