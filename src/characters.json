@@ -15,7 +15,7 @@
 	},
 	{
 		"character": "!",
-		"name": "exclamation mark",
+		"name": "exclamation_mark",
 		"codepoint": 33,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -29,7 +29,7 @@
 	},
 	{
 		"character": "\"",
-		"name": "quotation mark",
+		"name": "quotation_mark",
 		"codepoint": 34,
 		"pixels": [
 			[0, 1, 0, 1, 0],
@@ -43,7 +43,7 @@
 	},
 	{
 		"character": "#",
-		"name": "number sign",
+		"name": "number_sign",
 		"codepoint": 35,
 		"pixels": [
 			[0, 1, 0, 1, 0],
@@ -57,7 +57,7 @@
 	},
 	{
 		"character": "$",
-		"name": "dollar sign",
+		"name": "dollar_sign",
 		"codepoint": 36,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -71,7 +71,7 @@
 	},
 	{
 		"character": "%",
-		"name": "percent sign",
+		"name": "percent_sign",
 		"codepoint": 37,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -99,7 +99,7 @@
 	},
 	{
 		"character": "'",
-		"name": "single quote",
+		"name": "single_quote",
 		"codepoint": 39,
 		"pixels": [
 			[0, 1, 0, 0, 0],
@@ -113,7 +113,7 @@
 	},
 	{
 		"character": "(",
-		"name": "left parenthesis",
+		"name": "left_parenthesis",
 		"codepoint": 40,
 		"pixels": [
 			[0, 0, 0, 1, 0],
@@ -127,7 +127,7 @@
 	},
 	{
 		"character": ")",
-		"name": "right parenthesis",
+		"name": "right_parenthesis",
 		"codepoint": 41,
 		"pixels": [
 			[0, 1, 0, 0, 0],
@@ -155,7 +155,7 @@
 	},
 	{
 		"character": "+",
-		"name": "plus sign",
+		"name": "plus_sign",
 		"codepoint": 43,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -831,7 +831,7 @@
 	},
 	{
 		"character": "[",
-		"name": "left square bracket",
+		"name": "left_square_bracket",
 		"codepoint": 91,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -859,7 +859,7 @@
 	},
 	{
 		"character": "]",
-		"name": "right square bracket",
+		"name": "right_square_bracket",
 		"codepoint": 93,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -873,7 +873,7 @@
 	},
 	{
 		"character": "^",
-		"name": "ascii caret",
+		"name": "ascii_caret",
 		"codepoint": 94,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -903,7 +903,7 @@
 	},
 	{
 		"character": "`",
-		"name": "grave accent",
+		"name": "grave_accent",
 		"codepoint": 96,
 		"pixels": [
 			[0, 1, 0, 0, 0],
@@ -1291,7 +1291,7 @@
 	},
 	{
 		"character": "{",
-		"name": "left curly brace",
+		"name": "left_curly_brace",
 		"codepoint": 123,
 		"pixels": [
 			[0, 0, 0, 1, 0],
@@ -1305,7 +1305,7 @@
 	},
 	{
 		"character": "|",
-		"name": "vertical bar",
+		"name": "vertical_bar",
 		"codepoint": 124,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -1319,7 +1319,7 @@
 	},
 	{
 		"character": "}",
-		"name": "right curly brace",
+		"name": "right_curly_brace",
 		"codepoint": 125,
 		"pixels": [
 			[0, 1, 0, 0, 0],
@@ -1333,7 +1333,7 @@
 	},
 	{
 		"character": "~",
-		"name": "ascii tilde",
+		"name": "ascii_tilde",
 		"codepoint": 126,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1347,7 +1347,7 @@
 	},
 	{
 		"character": " ",
-		"name": "no-break space",
+		"name": "no-break_space",
 		"codepoint": 160,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1361,7 +1361,7 @@
 	},
 	{
 		"character": "¡",
-		"name": "inverted exclamation mark",
+		"name": "inverted_exclamation_mark",
 		"codepoint": 161,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1377,7 +1377,7 @@
 	},
 	{
 		"character": "¢",
-		"name": "cent sign",
+		"name": "cent_sign",
 		"codepoint": 162,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1393,7 +1393,7 @@
 	},
 	{
 		"character": "£",
-		"name": "pound sign",
+		"name": "pound_sign",
 		"codepoint": 163,
 		"pixels": [
 			[0, 0, 1, 1, 0],
@@ -1407,7 +1407,7 @@
 	},
 	{
 		"character": "¤",
-		"name": "currency sign",
+		"name": "currency_sign",
 		"codepoint": 164,
 		"pixels": [
 			[0, 0, 0, 0, 0, 0],
@@ -1421,7 +1421,7 @@
 	},
 	{
 		"character": "¥",
-		"name": "yen sign",
+		"name": "yen_sign",
 		"codepoint": 165,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -1435,7 +1435,7 @@
 	},
 	{
 		"character": "¦",
-		"name": "broken bar",
+		"name": "broken_bar",
 		"codepoint": 166,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -1449,7 +1449,7 @@
 	},
 	{
 		"character": "§",
-		"name": "section sign",
+		"name": "section_sign",
 		"codepoint": 167,
 		"pixels": [
 			[0, 1, 1, 1, 1],
@@ -1477,7 +1477,7 @@
 	},
 	{
 		"character": "©",
-		"name": "copyright sign",
+		"name": "copyright_sign",
 		"codepoint": 169,
 		"pixels": [
 			[0, 1, 1, 1, 1, 0],
@@ -1491,7 +1491,7 @@
 	},
 	{
 		"character": "ª",
-		"name": "feminine ordinal indicator",
+		"name": "feminine_ordinal_indicator",
 		"codepoint": 170,
 		"pixels": [
 			[0, 1, 1, 0, 0],
@@ -1505,7 +1505,7 @@
 	},
 	{
 		"character": "«",
-		"name": "left pointing double angle quotation mark",
+		"name": "left_pointing_double_angle_quotation_mark",
 		"codepoint": 171,
 		"pixels": [
 			[0, 0, 0, 0, 0, 0],
@@ -1519,7 +1519,7 @@
 	},
 	{
 		"character": "¬",
-		"name": "not sign",
+		"name": "not_sign",
 		"codepoint": 172,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1532,7 +1532,7 @@
 		]
 	},
 	{
-		"character": "registered sign",
+		"character": "registered_sign",
 		"name": "®",
 		"codepoint": 174,
 		"pixels": [
@@ -1561,7 +1561,7 @@
 	},
 	{
 		"character": "°",
-		"name": "degree sign",
+		"name": "degree_sign",
 		"codepoint": 176,
 		"pixels": [
 			[0, 1, 1, 0, 0],
@@ -1575,7 +1575,7 @@
 	},
 	{
 		"character": "±",
-		"name": "plus minus sign",
+		"name": "plus_minus_sign",
 		"codepoint": 177,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -1589,7 +1589,7 @@
 	},
 	{
 		"character": "²",
-		"name": "superscript two",
+		"name": "superscript_two",
 		"codepoint": 178,
 		"pixels": [
 			[0, 1, 1, 0, 0],
@@ -1603,7 +1603,7 @@
 	},
 	{
 		"character": "³",
-		"name": "superscript three",
+		"name": "superscript_three",
 		"codepoint": 179,
 		"pixels": [
 			[0, 1, 1, 0, 0],
@@ -1617,7 +1617,7 @@
 	},
 	{
 		"character": "´",
-		"name": "acute accent",
+		"name": "acute_accent",
 		"codepoint": 180,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -1631,7 +1631,7 @@
 	},
 	{
 		"character": "µ",
-		"name": "micro sign",
+		"name": "micro_sign",
 		"codepoint": 181,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1647,7 +1647,7 @@
 	},
 	{
 		"character": "¶",
-		"name": "pilcrow sign",
+		"name": "pilcrow_sign",
 		"codepoint": 182,
 		"pixels": [
 			[0, 0, 1, 1, 1, 1],
@@ -1661,7 +1661,7 @@
 	},
 	{
 		"character": "·",
-		"name": "middle dot",
+		"name": "middle_dot",
 		"codepoint": 183,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1691,7 +1691,7 @@
 	},
 	{
 		"character": "¹",
-		"name": "superscript one",
+		"name": "superscript_one",
 		"codepoint": 185,
 		"pixels": [
 			[0, 1, 0, 0, 0],
@@ -1705,7 +1705,7 @@
 	},
 	{
 		"character": "º",
-		"name": "masculine ordinal indicator",
+		"name": "masculine_ordinal_indicator",
 		"codepoint": 186,
 		"pixels": [
 			[0, 1, 1, 0, 0],
@@ -1719,7 +1719,7 @@
 	},
 	{
 		"character": "»",
-		"name": "right pointing double angle quotation mark",
+		"name": "right_pointing_double_angle_quotation_mark",
 		"codepoint": 187,
 		"pixels": [
 			[0, 0, 0, 0, 0, 0],
@@ -1733,7 +1733,7 @@
 	},
 	{
 		"character": "¼",
-		"name": "fraction one quarter",
+		"name": "fraction_one_quarter",
 		"codepoint": 188,
 		"pixels": [
 			[0, 1, 0, 0, 0, 0],
@@ -1748,7 +1748,7 @@
 	},
 	{
 		"character": "½",
-		"name": "fraction one half",
+		"name": "fraction_one_half",
 		"codepoint": 189,
 		"pixels": [
 			[0, 1, 0, 0, 0, 0],
@@ -1763,7 +1763,7 @@
 	},
 	{
 		"character": "¾",
-		"name": "fraction three quarters",
+		"name": "fraction_three_quarters",
 		"codepoint": 190,
 		"pixels": [
 			[1, 1, 1, 0, 0, 0],
@@ -1778,7 +1778,7 @@
 	},
 	{
 		"character": "¿",
-		"name": "inverted question mark",
+		"name": "inverted_question_mark",
 		"codepoint": 191,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1794,7 +1794,7 @@
 	},
 	{
 		"character": "À",
-		"name": "latin capital letter a with grave",
+		"name": "latin_capital_letter_a_with_grave",
 		"codepoint": 192,
 		"reference": 65,
 		"diacritic": "grave",
@@ -1802,7 +1802,7 @@
 	},
 	{
 		"character": "Á",
-		"name": "latin capital letter a with acute",
+		"name": "latin_capital_letter_a_with_acute",
 		"codepoint": 193,
 		"reference": 65,
 		"diacritic": "acute",
@@ -1810,7 +1810,7 @@
 	},
 	{
 		"character": "Â",
-		"name": "latin capital letter a with circumflex",
+		"name": "latin_capital_letter_a_with_circumflex",
 		"codepoint": 194,
 		"reference": 65,
 		"diacritic": "circumflex",
@@ -1818,7 +1818,7 @@
 	},
 	{
 		"character": "Ã",
-		"name": "latin capital letter a with tilde",
+		"name": "latin_capital_letter_a_with_tilde",
 		"codepoint": 195,
 		"reference": 65,
 		"diacritic": "tilde",
@@ -1826,7 +1826,7 @@
 	},
 	{
 		"character": "Ä",
-		"name": "latin capital letter a with diaeresis",
+		"name": "latin_capital_letter_a_with_diaeresis",
 		"codepoint": 196,
 		"reference": 65,
 		"diacritic": "diaeresis",
@@ -1834,7 +1834,7 @@
 	},
 	{
 		"character": "Å",
-		"name": "latin capital letter a with ring above",
+		"name": "latin_capital_letter_a_with_ring_above",
 		"codepoint": 197,
 		"reference": 65,
 		"diacritic": "ring",
@@ -1842,7 +1842,7 @@
 	},
 	{
 		"character": "Æ",
-		"name": "latin capital letter ae",
+		"name": "latin_capital_letter_ae",
 		"codepoint": 198,
 		"pixels": [
 			[0, 1, 1, 1, 1],
@@ -1856,7 +1856,7 @@
 	},
 	{
 		"character": "Ç",
-		"name": "latin capital letter c with cedilla",
+		"name": "latin_capital_letter_c_with_cedilla",
 		"codepoint": 199,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -1873,7 +1873,7 @@
 	},
 	{
 		"character": "È",
-		"name": "latin capital letter e with grave",
+		"name": "latin_capital_letter_e_with_grave",
 		"codepoint": 200,
 		"reference": 69,
 		"diacritic": "grave",
@@ -1881,7 +1881,7 @@
 	},
 	{
 		"character": "É",
-		"name": "latin capital letter e with acute",
+		"name": "latin_capital_letter_e_with_acute",
 		"codepoint": 201,
 		"reference": 69,
 		"diacritic": "acute",
@@ -1889,7 +1889,7 @@
 	},
 	{
 		"character": "Ê",
-		"name": "latin capital letter e with circumflex",
+		"name": "latin_capital_letter_e_with_circumflex",
 		"codepoint": 202,
 		"reference": 69,
 		"diacritic": "circumflex",
@@ -1897,7 +1897,7 @@
 	},
 	{
 		"character": "Ë",
-		"name": "latin capital letter e with diaeresis",
+		"name": "latin_capital_letter_e_with_diaeresis",
 		"codepoint": 203,
 		"reference": 69,
 		"diacritic": "diaeresis",
@@ -1905,7 +1905,7 @@
 	},
 	{
 		"character": "Ì",
-		"name": "latin capital letter i with grave",
+		"name": "latin_capital_letter_i_with_grave",
 		"codepoint": 204,
 		"reference": 73,
 		"diacritic": "grave",
@@ -1913,7 +1913,7 @@
 	},
 	{
 		"character": "Í",
-		"name": "latin capital letter i with acute",
+		"name": "latin_capital_letter_i_with_acute",
 		"codepoint": 205,
 		"reference": 73,
 		"diacritic": "acute",
@@ -1921,7 +1921,7 @@
 	},
 	{
 		"character": "Î",
-		"name": "latin capital letter i with circumflex",
+		"name": "latin_capital_letter_i_with_circumflex",
 		"codepoint": 206,
 		"reference": 73,
 		"diacritic": "circumflex",
@@ -1929,7 +1929,7 @@
 	},
 	{
 		"character": "Ï",
-		"name": "latin capital letter i with diaeresis",
+		"name": "latin_capital_letter_i_with_diaeresis",
 		"codepoint": 207,
 		"reference": 73,
 		"diacritic": "diaeresis",
@@ -1937,7 +1937,7 @@
 	},
 	{
 		"character": "Ð",
-		"name": "latin capital letter eth",
+		"name": "latin_capital_letter_eth",
 		"codepoint": 208,
 		"pixels": [
 			[0, 1, 1, 1, 1, 0],
@@ -1951,7 +1951,7 @@
 	},
 	{
 		"character": "Ñ",
-		"name": "latin capital letter n with tilde",
+		"name": "latin_capital_letter_n_with_tilde",
 		"codepoint": 209,
 		"reference": 78,
 		"diacritic": "tilde",
@@ -1959,7 +1959,7 @@
 	},
 	{
 		"character": "Ò",
-		"name": "latin capital letter o with grave",
+		"name": "latin_capital_letter_o_with_grave",
 		"codepoint": 210,
 		"reference": 79,
 		"diacritic": "grave",
@@ -1967,7 +1967,7 @@
 	},
 	{
 		"character": "Ó",
-		"name": "latin capital letter o with acute",
+		"name": "latin_capital_letter_o_with_acute",
 		"codepoint": 211,
 		"reference": 79,
 		"diacritic": "acute",
@@ -1975,7 +1975,7 @@
 	},
 	{
 		"character": "Ô",
-		"name": "latin capital letter o with circumflex",
+		"name": "latin_capital_letter_o_with_circumflex",
 		"codepoint": 212,
 		"reference": 79,
 		"diacritic": "circumflex",
@@ -1983,7 +1983,7 @@
 	},
 	{
 		"character": "Õ",
-		"name": "latin capital letter o with tilde",
+		"name": "latin_capital_letter_o_with_tilde",
 		"codepoint": 213,
 		"reference": 79,
 		"diacritic": "tilde",
@@ -1991,7 +1991,7 @@
 	},
 	{
 		"character": "Ö",
-		"name": "latin capital letter o with diaeresis",
+		"name": "latin_capital_letter_o_with_diaeresis",
 		"codepoint": 214,
 		"reference": 79,
 		"diacritic": "diaeresis",
@@ -1999,7 +1999,7 @@
 	},
 	{
 		"character": "×",
-		"name": "multiplication sign",
+		"name": "multiplication_sign",
 		"codepoint": 215,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -2013,7 +2013,7 @@
 	},
 	{
 		"character": "Ø",
-		"name": "latin capital letter o with stroke",
+		"name": "latin_capital_letter_o_with_stroke",
 		"codepoint": 216,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -2027,7 +2027,7 @@
 	},
 	{
 		"character": "Ù",
-		"name": "latin capital letter u with grave",
+		"name": "latin_capital_letter_u_with_grave",
 		"codepoint": 217,
 		"reference": 85,
 		"diacritic": "grave",
@@ -2035,7 +2035,7 @@
 	},
 	{
 		"character": "Ú",
-		"name": "latin capital letter u with acute",
+		"name": "latin_capital_letter_u_with_acute",
 		"codepoint": 218,
 		"reference": 85,
 		"diacritic": "acute",
@@ -2043,7 +2043,7 @@
 	},
 	{
 		"character": "Û",
-		"name": "latin capital letter u with circumflex",
+		"name": "latin_capital_letter_u_with_circumflex",
 		"codepoint": 219,
 		"reference": 85,
 		"diacritic": "circumflex",
@@ -2051,7 +2051,7 @@
 	},
 	{
 		"character": "Ü",
-		"name": "latin capital letter u with diaeresis",
+		"name": "latin_capital_letter_u_with_diaeresis",
 		"codepoint": 220,
 		"reference": 85,
 		"diacritic": "diaeresis",
@@ -2059,7 +2059,7 @@
 	},
 	{
 		"character": "Ý",
-		"name": "latin capital letter y with acute",
+		"name": "latin_capital_letter_y_with_acute",
 		"codepoint": 221,
 		"reference": 89,
 		"diacritic": "acute",
@@ -2067,7 +2067,7 @@
 	},
 	{
 		"character": "Þ",
-		"name": "latin capital letter thorn",
+		"name": "latin_capital_letter_thorn",
 		"codepoint": 222,
 		"pixels": [
 			[1, 0, 0, 0, 0],
@@ -2081,7 +2081,7 @@
 	},
 	{
 		"character": "ß",
-		"name": "latin small letter sharp s",
+		"name": "latin_small_letter_sharp_s",
 		"codepoint": 223,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -2097,7 +2097,7 @@
 	},
 	{
 		"character": "à",
-		"name": "latin small letter a with grave",
+		"name": "latin_small_letter_a_with_grave",
 		"codepoint": 224,
 		"reference": 97,
 		"diacritic": "grave",
@@ -2105,7 +2105,7 @@
 	},
 	{
 		"character": "á",
-		"name": "latin small letter a with acute",
+		"name": "latin_small_letter_a_with_acute",
 		"codepoint": 225,
 		"reference": 97,
 		"diacritic": "acute",
@@ -2113,7 +2113,7 @@
 	},
 	{
 		"character": "â",
-		"name": "latin small letter a with circumflex",
+		"name": "latin_small_letter_a_with_circumflex",
 		"codepoint": 226,
 		"reference": 97,
 		"diacritic": "circumflex",
@@ -2121,7 +2121,7 @@
 	},
 	{
 		"character": "ã",
-		"name": "latin small letter a with tilde",
+		"name": "latin_small_letter_a_with_tilde",
 		"codepoint": 227,
 		"reference": 97,
 		"diacritic": "tilde",
@@ -2129,7 +2129,7 @@
 	},
 	{
 		"character": "ä",
-		"name": "latin small letter a with diaeresis",
+		"name": "latin_small_letter_a_with_diaeresis",
 		"codepoint": 228,
 		"reference": 97,
 		"diacritic": "diaeresis",
@@ -2137,7 +2137,7 @@
 	},
 	{
 		"character": "å",
-		"name": "latin small letter a with ring above",
+		"name": "latin_small_letter_a_with_ring_above",
 		"codepoint": 229,
 		"reference": 97,
 		"diacritic": "ring",
@@ -2145,7 +2145,7 @@
 	},
 	{
 		"character": "æ",
-		"name": "latin small letter ae",
+		"name": "latin_small_letter_ae",
 		"codepoint": 230,
 		"pixels": [
 			[0, 0, 0, 0, 0, 0],
@@ -2159,7 +2159,7 @@
 	},
 	{
 		"character": "ç",
-		"name": "latin small letter c with cedilla",
+		"name": "latin_small_letter_c_with_cedilla",
 		"codepoint": 231,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -2176,7 +2176,7 @@
 	},
 	{
 		"character": "è",
-		"name": "latin small letter e with grave",
+		"name": "latin_small_letter_e_with_grave",
 		"codepoint": 232,
 		"reference": 101,
 		"diacritic": "grave",
@@ -2184,7 +2184,7 @@
 	},
 	{
 		"character": "é",
-		"name": "latin small letter e with acute",
+		"name": "latin_small_letter_e_with_acute",
 		"codepoint": 233,
 		"reference": 101,
 		"diacritic": "acute",
@@ -2192,7 +2192,7 @@
 	},
 	{
 		"character": "ê",
-		"name": "latin small letter e with circumflex",
+		"name": "latin_small_letter_e_with_circumflex",
 		"codepoint": 234,
 		"reference": 101,
 		"diacritic": "circumflex",
@@ -2200,7 +2200,7 @@
 	},
 	{
 		"character": "ë",
-		"name": "latin small letter e with diaeresis",
+		"name": "latin_small_letter_e_with_diaeresis",
 		"codepoint": 235,
 		"reference": 101,
 		"diacritic": "diaeresis",
@@ -2208,7 +2208,7 @@
 	},
 	{
 		"character": "ì",
-		"name": "latin small letter i with grave",
+		"name": "latin_small_letter_i_with_grave",
 		"codepoint": 236,
 		"pixels": [
 			[0, 1, 0, 0, 0],
@@ -2223,7 +2223,7 @@
 	},
 	{
 		"character": "í",
-		"name": "latin small letter i with acute",
+		"name": "latin_small_letter_i_with_acute",
 		"codepoint": 237,
 		"pixels": [
 			[0, 0, 0, 1, 0],
@@ -2238,7 +2238,7 @@
 	},
 	{
 		"character": "î",
-		"name": "latin small letter i with circumflex",
+		"name": "latin_small_letter_i_with_circumflex",
 		"codepoint": 238,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -2253,7 +2253,7 @@
 	},
 	{
 		"character": "ï",
-		"name": "latin small letter i with diaeresis",
+		"name": "latin_small_letter_i_with_diaeresis",
 		"codepoint": 239,
 		"pixels": [
 			[0, 1, 0, 1, 0],
@@ -2267,7 +2267,7 @@
 	},
 	{
 		"character": "ð",
-		"name": "latin small letter eth",
+		"name": "latin_small_letter_eth",
 		"codepoint": 240,
 		"pixels": [
 			[0, 1, 1, 0, 1],
@@ -2281,7 +2281,7 @@
 	},
 	{
 		"character": "ñ",
-		"name": "latin small letter n with tilde",
+		"name": "latin_small_letter_n_with_tilde",
 		"codepoint": 241,
 		"reference": 110,
 		"diacritic": "tilde",
@@ -2289,7 +2289,7 @@
 	},
 	{
 		"character": "ò",
-		"name": "latin small letter o with grave",
+		"name": "latin_small_letter_o_with_grave",
 		"codepoint": 242,
 		"reference": 111,
 		"diacritic": "grave",
@@ -2297,7 +2297,7 @@
 	},
 	{
 		"character": "ó",
-		"name": "latin small letter o with acute",
+		"name": "latin_small_letter_o_with_acute",
 		"codepoint": 243,
 		"reference": 111,
 		"diacritic": "acute",
@@ -2305,7 +2305,7 @@
 	},
 	{
 		"character": "ô",
-		"name": "latin small letter o with circumflex",
+		"name": "latin_small_letter_o_with_circumflex",
 		"codepoint": 244,
 		"reference": 111,
 		"diacritic": "circumflex",
@@ -2313,7 +2313,7 @@
 	},
 	{
 		"character": "õ",
-		"name": "latin small letter o with tilde",
+		"name": "latin_small_letter_o_with_tilde",
 		"codepoint": 245,
 		"reference": 111,
 		"diacritic": "tilde",
@@ -2321,7 +2321,7 @@
 	},
 	{
 		"character": "ö",
-		"name": "latin small letter o with diaeresis",
+		"name": "latin_small_letter_o_with_diaeresis",
 		"codepoint": 246,
 		"reference": 111,
 		"diacritic": "diaeresis",
@@ -2329,7 +2329,7 @@
 	},
 	{
 		"character": "÷",
-		"name": "division sign",
+		"name": "division_sign",
 		"codepoint": 247,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -2343,7 +2343,7 @@
 	},
 	{
 		"character": "ø",
-		"name": "latin small letter o with stroke",
+		"name": "latin_small_letter_o_with_stroke",
 		"codepoint": 248,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -2357,7 +2357,7 @@
 	},
 	{
 		"character": "ù",
-		"name": "latin small letter u with grave",
+		"name": "latin_small_letter_u_with_grave",
 		"codepoint": 249,
 		"reference": 117,
 		"diacritic": "grave",
@@ -2365,7 +2365,7 @@
 	},
 	{
 		"character": "ú",
-		"name": "latin small letter u with acute",
+		"name": "latin_small_letter_u_with_acute",
 		"codepoint": 250,
 		"reference": 117,
 		"diacritic": "acute",
@@ -2373,7 +2373,7 @@
 	},
 	{
 		"character": "û",
-		"name": "latin small letter u with circumflex",
+		"name": "latin_small_letter_u_with_circumflex",
 		"codepoint": 251,
 		"reference": 117,
 		"diacritic": "circumflex",
@@ -2381,7 +2381,7 @@
 	},
 	{
 		"character": "ü",
-		"name": "latin small letter u with diaeresis",
+		"name": "latin_small_letter_u_with_diaeresis",
 		"codepoint": 252,
 		"reference": 117,
 		"diacritic": "diaeresis",
@@ -2389,7 +2389,7 @@
 	},
 	{
 		"character": "ý",
-		"name": "latin small letter y with acute",
+		"name": "latin_small_letter_y_with_acute",
 		"codepoint": 253,
 		"reference": 121,
 		"diacritic": "acute",
@@ -2397,7 +2397,7 @@
 	},
 	{
 		"character": "ÿ ",
-		"name": "latin small letter y with diaeresis",
+		"name": "latin_small_letter_y_with_diaeresis",
 		"codepoint": 255,
 		"reference": 121,
 		"diacritic": "diaeresis",
@@ -2405,7 +2405,7 @@
 	},
 	{
 		"character": "Ĉ",
-		"name": "latin capital letter c with circumflex",
+		"name": "latin_capital_letter_c_with_circumflex",
 		"codepoint": 264,
 		"reference": 67,
 		"diacritic": "circumflex",
@@ -2413,7 +2413,7 @@
 	},
 	{
 		"character": "ĉ",
-		"name": "latin small letter c with circumflex",
+		"name": "latin_small_letter_c_with_circumflex",
 		"codepoint": 265,
 		"reference": 99,
 		"diacritic": "circumflex",
@@ -2421,7 +2421,7 @@
 	},
 	{
 		"character": "Ĝ",
-		"name": "latin capital letter g with circumflex",
+		"name": "latin_capital_letter_g_with_circumflex",
 		"codepoint": 284,
 		"reference": 71,
 		"diacritic": "circumflex",
@@ -2429,7 +2429,7 @@
 	},
 	{
 		"character": "ĝ",
-		"name": "latin small letter g with circumflex",
+		"name": "latin_small_letter_g_with_circumflex",
 		"codepoint": 285,
 		"reference": 103,
 		"diacritic": "circumflex",
@@ -2437,7 +2437,7 @@
 	},
 	{
 		"character": "Ĥ",
-		"name": "latin capital letter h with circumflex",
+		"name": "latin_capital_letter_h_with_circumflex",
 		"codepoint": 292,
 		"reference": 72,
 		"diacritic": "circumflex",
@@ -2445,7 +2445,7 @@
 	},
 	{
 		"character": "ĥ",
-		"name": "latin small letter h with circumflex",
+		"name": "latin_small_letter_h_with_circumflex",
 		"codepoint": 293,
 		"reference": 104,
 		"diacritic": "circumflex",
@@ -2453,7 +2453,7 @@
 	},
 	{
 		"character": "Ĵ",
-		"name": "latin capital letter j with circumflex",
+		"name": "latin_capital_letter_j_with_circumflex",
 		"codepoint": 308,
 		"reference": 74,
 		"diacritic": "circumflex",
@@ -2461,7 +2461,7 @@
 	},
 	{
 		"character": "ĵ",
-		"name": "latin small letter j with circumflex",
+		"name": "latin_small_letter_j_with_circumflex",
 		"codepoint": 309,
 		"reference": 106,
 		"diacritic": "circumflex",
@@ -2469,7 +2469,7 @@
 	},
 	{
 		"character": "Ő",
-		"name": "latin capital letter o with double acute",
+		"name": "latin_capital_letter_o_with_double_acute",
 		"codepoint": 336,
 		"reference": 79,
 		"diacritic": "doubleAcute",
@@ -2477,7 +2477,7 @@
 	},
 	{
 		"character": "ő",
-		"name": "latin small letter o with double acute",
+		"name": "latin_small_letter_o_with_double_acute",
 		"codepoint": 337,
 		"reference": 111,
 		"diacritic": "doubleAcute",
@@ -2485,7 +2485,7 @@
 	},
 	{
 		"character": "Ŝ",
-		"name": "latin capital letter s with circumflex",
+		"name": "latin_capital_letter_s_with_circumflex",
 		"codepoint": 348,
 		"reference": 83,
 		"diacritic": "circumflex",
@@ -2493,7 +2493,7 @@
 	},
 	{
 		"character": "ŝ",
-		"name": "latin small letter s with circumflex",
+		"name": "latin_small_letter_s_with_circumflex",
 		"codepoint": 349,
 		"reference": 115,
 		"diacritic": "circumflex",
@@ -2501,7 +2501,7 @@
 	},
 	{
 		"character": "Ű",
-		"name": "latin capital letter u with double acute",
+		"name": "latin_capital_letter_u_with_double_acute",
 		"codepoint": 368,
 		"reference": 85,
 		"diacritic": "doubleAcute",
@@ -2509,7 +2509,7 @@
 	},
 	{
 		"character": "ű",
-		"name": "latin small letter u with double acute",
+		"name": "latin_small_letter_u_with_double_acute",
 		"codepoint": 369,
 		"reference": 117,
 		"diacritic": "doubleAcute",
@@ -2517,7 +2517,7 @@
 	},
 	{
 		"character": "Ѐ",
-		"name": "cyrillic capital letter ie with grave",
+		"name": "cyrillic_capital_letter_ie_with_grave",
 		"codepoint": 1024,
 		"reference": 69,
 		"diacritic": "grave",
@@ -2525,7 +2525,7 @@
 	},
 	{
 		"character": "Ё",
-		"name": "cyrillic capital letter io",
+		"name": "cyrillic_capital_letter_io",
 		"codepoint": 1025,
 		"reference": 69,
 		"diacritic": "diaeresis",
@@ -2533,7 +2533,7 @@
 	},
 	{
 		"character": "Ђ",
-		"name": "cyrillic capital letter dje",
+		"name": "cyrillic_capital_letter_dje",
 		"codepoint": 1026,
 		"pixels": [
 			[1, 1, 1, 1, 0],
@@ -2547,7 +2547,7 @@
 	},
 	{
 		"character": "Ѓ",
-		"name": "cyrillic capital letter gje",
+		"name": "cyrillic_capital_letter_gje",
 		"codepoint": 1027,
 		"pixels": [
 			[1, 1, 1, 1, 1],
@@ -2563,7 +2563,7 @@
 	},
 	{
 		"character": "Є",
-		"name": "cyrillic capital letter ukrainian ie",
+		"name": "cyrillic_capital_letter_ukrainian_ie",
 		"codepoint": 1028,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -2577,19 +2577,19 @@
 	},
 	{
 		"character": "Ѕ",
-		"name": "cyrillic capital letter dze",
+		"name": "cyrillic_capital_letter_dze",
 		"codepoint": 1029,
 		"reference": 83
 	},
 	{
 		"character": "І",
-		"name": "cyrillic capital letter byelorussian-ukrainian i",
+		"name": "cyrillic_capital_letter_byelorussian-ukrainian_i",
 		"codepoint": 1030,
 		"reference": 73
 	},
 	{
 		"character": "Ї",
-		"name": "cyrillic capital letter yi",
+		"name": "cyrillic_capital_letter_yi",
 		"codepoint": 1031,
 		"reference": 73,
 		"diacritic": "diaeresis",
@@ -2597,13 +2597,13 @@
 	},
 	{
 		"character": "Ј",
-		"name": "cyrillic capital letter je",
+		"name": "cyrillic_capital_letter_je",
 		"codepoint": 1032,
 		"reference": 74
 	},
 	{
 		"character": "Љ",
-		"name": "cyrillic capital letter lje",
+		"name": "cyrillic_capital_letter_lje",
 		"codepoint": 1033,
 		"pixels": [
 			[0, 1, 1, 1, 0, 0],
@@ -2617,7 +2617,7 @@
 	},
 	{
 		"character": "Њ",
-		"name": "cyrillic capital letter nje",
+		"name": "cyrillic_capital_letter_nje",
 		"codepoint": 1034,
 		"pixels": [
 			[1, 0, 1, 0, 0],
@@ -2631,7 +2631,7 @@
 	},
 	{
 		"character": "Ћ",
-		"name": "cyrillic capital letter tshe",
+		"name": "cyrillic_capital_letter_tshe",
 		"codepoint": 1035,
 		"pixels": [
 			[0, 1, 0, 0, 0],
@@ -2645,7 +2645,7 @@
 	},
 	{
 		"character": "Ќ",
-		"name": "cyrillic capital letter kje",
+		"name": "cyrillic_capital_letter_kje",
 		"codepoint": 1036,
 		"reference": 75,
 		"diacritic": "acute",
@@ -2653,7 +2653,7 @@
 	},
 	{
 		"character": "Ѝ",
-		"name": "cyrillic capital letter i with grave",
+		"name": "cyrillic_capital_letter_i_with_grave",
 		"codepoint": 1037,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -2669,7 +2669,7 @@
 	},
 	{
 		"character": "Ў",
-		"name": "cyrillic capital letter short u",
+		"name": "cyrillic_capital_letter_short_u",
 		"codepoint": 1038,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -2685,7 +2685,7 @@
 	},
 	{
 		"character": "Џ",
-		"name": "cyrillic capital letter dzhe",
+		"name": "cyrillic_capital_letter_dzhe",
 		"codepoint": 1039,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -2701,13 +2701,13 @@
 	},
 	{
 		"character": "А",
-		"name": "cyrillic capital letter a",
+		"name": "cyrillic_capital_letter_a",
 		"codepoint": 1040,
 		"reference": 65
 	},
 	{
 		"character": "Б",
-		"name": "cyrillic capital letter be",
+		"name": "cyrillic_capital_letter_be",
 		"codepoint": 1041,
 		"pixels": [
 			[1, 1, 1, 1, 1],
@@ -2721,13 +2721,13 @@
 	},
 	{
 		"character": "В",
-		"name": "cyrillic capital letter ve",
+		"name": "cyrillic_capital_letter_ve",
 		"codepoint": 1042,
 		"reference": 66
 	},
 	{
 		"character": "Г",
-		"name": "cyrillic capital letter ghe",
+		"name": "cyrillic_capital_letter_ghe",
 		"codepoint": 1043,
 		"pixels": [
 			[1, 1, 1, 1, 1],
@@ -2741,7 +2741,7 @@
 	},
 	{
 		"character": "Д",
-		"name": "cyrillic capital letter de",
+		"name": "cyrillic_capital_letter_de",
 		"codepoint": 1044,
 		"pixels": [
 			[0, 0, 1, 1, 1],
@@ -2757,13 +2757,13 @@
 	},
 	{
 		"character": "Е",
-		"name": "cyrillic capital letter ie",
+		"name": "cyrillic_capital_letter_ie",
 		"codepoint": 1045,
 		"reference": 69
 	},
 	{
 		"character": "Ж",
-		"name": "cyrillic capital letter zhe",
+		"name": "cyrillic_capital_letter_zhe",
 		"codepoint": 1046,
 		"pixels": [
 			[1, 0, 1, 0, 1],
@@ -2777,7 +2777,7 @@
 	},
 	{
 		"character": "З",
-		"name": "cyrillic capital letter ze",
+		"name": "cyrillic_capital_letter_ze",
 		"codepoint": 1047,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -2791,7 +2791,7 @@
 	},
 	{
 		"character": "И",
-		"name": "cyrillic capital letter i",
+		"name": "cyrillic_capital_letter_i",
 		"codepoint": 1048,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -2805,7 +2805,7 @@
 	},
 	{
 		"character": "Й",
-		"name": "cyrillic capital letter short i",
+		"name": "cyrillic_capital_letter_short_i",
 		"codepoint": 1049,
 		"reference": 1048,
 		"diacritic": "breve",
@@ -2813,13 +2813,13 @@
 	},
 	{
 		"character": "К",
-		"name": "cyrillic capital letter ka",
+		"name": "cyrillic_capital_letter_ka",
 		"codepoint": 1050,
 		"reference": 75
 	},
 	{
 		"character": "Л",
-		"name": "cyrillic capital letter el",
+		"name": "cyrillic_capital_letter_el",
 		"codepoint": 1051,
 		"pixels": [
 			[0, 1, 1, 1, 1],
@@ -2833,25 +2833,25 @@
 	},
 	{
 		"character": "М",
-		"name": "cyrillic capital letter em",
+		"name": "cyrillic_capital_letter_em",
 		"codepoint": 1052,
 		"reference": 77
 	},
 	{
 		"character": "Н",
-		"name": "cyrillic capital letter en",
+		"name": "cyrillic_capital_letter_en",
 		"codepoint": 1053,
 		"reference": 72
 	},
 	{
 		"character": "О",
-		"name": "cyrillic capital letter o",
+		"name": "cyrillic_capital_letter_o",
 		"codepoint": 1054,
 		"reference": 79
 	},
 	{
 		"character": "П",
-		"name": "cyrillic capital letter pe",
+		"name": "cyrillic_capital_letter_pe",
 		"codepoint": 1055,
 		"pixels": [
 			[1, 1, 1, 1, 1],
@@ -2865,25 +2865,25 @@
 	},
 	{
 		"character": "Р",
-		"name": "cyrillic capital letter er",
+		"name": "cyrillic_capital_letter_er",
 		"codepoint": 1056,
 		"reference": 80
 	},
 	{
 		"character": "С",
-		"name": "cyrillic capital letter es",
+		"name": "cyrillic_capital_letter_es",
 		"codepoint": 1057,
 		"reference": 67
 	},
 	{
 		"character": "Т",
-		"name": "cyrillic capital letter te",
+		"name": "cyrillic_capital_letter_te",
 		"codepoint": 1058,
 		"reference": 84
 	},
 	{
 		"character": "У",
-		"name": "cyrillic capital letter u",
+		"name": "cyrillic_capital_letter_u",
 		"codepoint": 1059,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -2897,7 +2897,7 @@
 	},
 	{
 		"character": "Ф",
-		"name": "cyrillic capital letter ef",
+		"name": "cyrillic_capital_letter_ef",
 		"codepoint": 1060,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -2913,13 +2913,13 @@
 	},
 	{
 		"character": "Х",
-		"name": "cyrillic capital letter ha",
+		"name": "cyrillic_capital_letter_ha",
 		"codepoint": 1061,
 		"reference": 88
 	},
 	{
 		"character": "Ц",
-		"name": "cyrillic capital letter tse",
+		"name": "cyrillic_capital_letter_tse",
 		"codepoint": 1062,
 		"pixels": [
 			[1, 0, 0, 1, 0],
@@ -2935,7 +2935,7 @@
 	},
 	{
 		"character": "Ч",
-		"name": "cyrillic capital letter che",
+		"name": "cyrillic_capital_letter_che",
 		"codepoint": 1063,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -2949,7 +2949,7 @@
 	},
 	{
 		"character": "Ш",
-		"name": "cyrillic capital letter sha",
+		"name": "cyrillic_capital_letter_sha",
 		"codepoint": 1064,
 		"pixels": [
 			[1, 0, 1, 0, 1],
@@ -2963,7 +2963,7 @@
 	},
 	{
 		"character": "Щ",
-		"name": "cyrillic capital letter shcha",
+		"name": "cyrillic_capital_letter_shcha",
 		"codepoint": 1065,
 		"pixels": [
 			[1, 0, 1, 0, 1, 0],
@@ -2979,7 +2979,7 @@
 	},
 	{
 		"character": "Ъ",
-		"name": "cyrillic capital letter hard sign",
+		"name": "cyrillic_capital_letter_hard_sign",
 		"codepoint": 1066,
 		"pixels": [
 			[1, 1, 0, 0, 0],
@@ -2993,7 +2993,7 @@
 	},
 	{
 		"character": "Ы",
-		"name": "cyrillic capital letter yeru",
+		"name": "cyrillic_capital_letter_yeru",
 		"codepoint": 1067,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -3007,7 +3007,7 @@
 	},
 	{
 		"character": "Ь",
-		"name": "cyrillic capital letter soft sign",
+		"name": "cyrillic_capital_letter_soft_sign",
 		"codepoint": 1068,
 		"pixels": [
 			[1, 0, 0, 0, 0],
@@ -3021,7 +3021,7 @@
 	},
 	{
 		"character": "Э",
-		"name": "cyrillic capital letter e",
+		"name": "cyrillic_capital_letter_e",
 		"codepoint": 1069,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -3035,7 +3035,7 @@
 	},
 	{
 		"character": "Ю",
-		"name": "cyrillic capital letter yu",
+		"name": "cyrillic_capital_letter_yu",
 		"codepoint": 1070,
 		"pixels": [
 			[1, 0, 0, 1, 0],
@@ -3049,7 +3049,7 @@
 	},
 	{
 		"character": "Я",
-		"name": "cyrillic capital letter ya",
+		"name": "cyrillic_capital_letter_ya",
 		"codepoint": 1071,
 		"pixels": [
 			[0, 1, 1, 1, 1],
@@ -3063,13 +3063,13 @@
 	},
 	{
 		"character": "а",
-		"name": "cyrillic small letter a",
+		"name": "cyrillic_small_letter_a",
 		"codepoint": 1072,
 		"reference": 97
 	},
 	{
 		"character": "б",
-		"name": "cyrillic small letter be",
+		"name": "cyrillic_small_letter_be",
 		"codepoint": 1073,
 		"pixels": [
 			[0, 1, 1, 1, 1],
@@ -3083,7 +3083,7 @@
 	},
 	{
 		"character": "в",
-		"name": "cyrillic small letter ve",
+		"name": "cyrillic_small_letter_ve",
 		"codepoint": 1074,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3097,7 +3097,7 @@
 	},
 	{
 		"character": "г",
-		"name": "cyrillic small letter ghe",
+		"name": "cyrillic_small_letter_ghe",
 		"codepoint": 1075,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3111,7 +3111,7 @@
 	},
 	{
 		"character": "д",
-		"name": "cyrillic small letter de",
+		"name": "cyrillic_small_letter_de",
 		"codepoint": 1076,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3127,13 +3127,13 @@
 	},
 	{
 		"character": "е",
-		"name": "cyrillic small letter ie",
+		"name": "cyrillic_small_letter_ie",
 		"codepoint": 1077,
 		"reference": 101
 	},
 	{
 		"character": "ж",
-		"name": "cyrillic small letter zhe",
+		"name": "cyrillic_small_letter_zhe",
 		"codepoint": 1078,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3147,7 +3147,7 @@
 	},
 	{
 		"character": "з",
-		"name": "cyrillic small letter ze",
+		"name": "cyrillic_small_letter_ze",
 		"codepoint": 1079,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3161,7 +3161,7 @@
 	},
 	{
 		"character": "и",
-		"name": "cyrillic small letter i",
+		"name": "cyrillic_small_letter_i",
 		"codepoint": 1080,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3175,7 +3175,7 @@
 	},
 	{
 		"character": "й",
-		"name": "cyrillic small letter short i",
+		"name": "cyrillic_small_letter_short_i",
 		"codepoint": 1081,
 		"reference": 1080,
 		"diacritic": "breve",
@@ -3183,7 +3183,7 @@
 	},
 	{
 		"character": "к",
-		"name": "cyrillic small letter ka",
+		"name": "cyrillic_small_letter_ka",
 		"codepoint": 1082,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3197,7 +3197,7 @@
 	},
 	{
 		"character": "л",
-		"name": "cyrillic small letter el",
+		"name": "cyrillic_small_letter_el",
 		"codepoint": 1083,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3210,7 +3210,7 @@
 		]
 	}, {
 		"character": "м",
-		"name": "cyrillic small letter em",
+		"name": "cyrillic_small_letter_em",
 		"codepoint": 1084,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3224,7 +3224,7 @@
 	},
 	{
 		"character": "н",
-		"name": "cyrillic small letter en",
+		"name": "cyrillic_small_letter_en",
 		"codepoint": 1085,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3238,13 +3238,13 @@
 	},
 	{
 		"character": "о",
-		"name": "cyrillic small letter o",
+		"name": "cyrillic_small_letter_o",
 		"codepoint": 1086,
 		"reference": 111
 	},
 	{
 		"character": "п",
-		"name": "cyrillic small letter pe",
+		"name": "cyrillic_small_letter_pe",
 		"codepoint": 1087,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3258,19 +3258,19 @@
 	},
 	{
 		"character": "р",
-		"name": "cyrillic small letter er",
+		"name": "cyrillic_small_letter_er",
 		"codepoint": 1088,
 		"reference": 112
 	},
 	{
 		"character": "с",
-		"name": "cyrillic small letter es",
+		"name": "cyrillic_small_letter_es",
 		"codepoint": 1089,
 		"reference": 99
 	},
 	{
 		"character": "т",
-		"name": "cyrillic small letter te",
+		"name": "cyrillic_small_letter_te",
 		"codepoint": 1090,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3284,13 +3284,13 @@
 	},
 	{
 		"character": "у",
-		"name": "cyrillic small letter u",
+		"name": "cyrillic_small_letter_u",
 		"codepoint": 1091,
 		"reference": 121
 	},
 	{
 		"character": "ф",
-		"name": "cyrillic small letter ef",
+		"name": "cyrillic_small_letter_ef",
 		"codepoint": 1092,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3306,13 +3306,13 @@
 	},
 	{
 		"character": "х",
-		"name": "cyrillic small letter ha",
+		"name": "cyrillic_small_letter_ha",
 		"codepoint": 1093,
 		"reference": 120
 	},
 	{
 		"character": "ц",
-		"name": "cyrillic small letter tse",
+		"name": "cyrillic_small_letter_tse",
 		"codepoint": 1094,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3327,7 +3327,7 @@
 	},
 	{
 		"character": "ч",
-		"name": "cyrillic small letter che",
+		"name": "cyrillic_small_letter_che",
 		"codepoint": 1095,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3341,7 +3341,7 @@
 	},
 	{
 		"character": "ш",
-		"name": "cyrillic small letter sha",
+		"name": "cyrillic_small_letter_sha",
 		"codepoint": 1096,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3355,7 +3355,7 @@
 	},
 	{
 		"character": "щ",
-		"name": "cyrillic small letter shcha",
+		"name": "cyrillic_small_letter_shcha",
 		"codepoint": 1097,
 		"pixels": [
 			[0, 0, 0, 0, 0, 0],
@@ -3371,7 +3371,7 @@
 	},
 	{
 		"character": "ъ",
-		"name": "cyrillic small letter hard sign",
+		"name": "cyrillic_small_letter_hard_sign",
 		"codepoint": 1098,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3385,7 +3385,7 @@
 	},
 	{
 		"character": "ы",
-		"name": "cyrillic small letter yeru",
+		"name": "cyrillic_small_letter_yeru",
 		"codepoint": 1099,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3399,7 +3399,7 @@
 	},
 	{
 		"character": "ь",
-		"name": "cyrillic small letter soft sign",
+		"name": "cyrillic_small_letter_soft_sign",
 		"codepoint": 1100,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3413,7 +3413,7 @@
 	},
 	{
 		"character": "э",
-		"name": "cyrillic small letter e",
+		"name": "cyrillic_small_letter_e",
 		"codepoint": 1101,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3427,7 +3427,7 @@
 	},
 	{
 		"character": "ю",
-		"name": "cyrillic small letter yu",
+		"name": "cyrillic_small_letter_yu",
 		"codepoint": 1102,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3441,7 +3441,7 @@
 	},
 	{
 		"character": "я",
-		"name": "cyrillic small letter ya",
+		"name": "cyrillic_small_letter_ya",
 		"codepoint": 1103,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3455,7 +3455,7 @@
 	},
 	{
 		"character": "ѐ",
-		"name": "cyrillic small letter ie with grave",
+		"name": "cyrillic_small_letter_ie_with_grave",
 		"codepoint": 1104,
 		"reference": 101,
 		"diacritic": "grave",
@@ -3463,7 +3463,7 @@
 	},
 	{
 		"character": "ё",
-		"name": "cyrillic small letter io",
+		"name": "cyrillic_small_letter_io",
 		"codepoint": 1105,
 		"reference": 101,
 		"diacritic": "diaeresis",
@@ -3471,7 +3471,7 @@
 	},
 	{
 		"character": "ђ",
-		"name": "cyrillic small letter dje",
+		"name": "cyrillic_small_letter_dje",
 		"codepoint": 1106,
 		"pixels": [
 			[0, 1, 0, 0, 0],
@@ -3486,7 +3486,7 @@
 	},
 	{
 		"character": "ѓ",
-		"name": "cyrillic small letter gje",
+		"name": "cyrillic_small_letter_gje",
 		"codepoint": 1107,
 		"reference": 1075,
 		"diacritic": "acute",
@@ -3494,7 +3494,7 @@
 	},
 	{
 		"character": "є",
-		"name": "cyrillic small letter ukrainian ie",
+		"name": "cyrillic_small_letter_ukrainian_ie",
 		"codepoint": 1108,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3508,31 +3508,31 @@
 	},
 	{
 		"character": "ѕ",
-		"name": "cyrillic small letter dzhe",
+		"name": "cyrillic_small_letter_dzhe",
 		"codepoint": 1109,
 		"reference": 115
 	},
 	{
 		"character": "і",
-		"name": "cyrillic small letter byelorussian ukrainian i",
+		"name": "cyrillic_small_letter_byelorussian_ukrainian_i",
 		"codepoint": 1110,
 		"reference": 105
 	},
 	{
 		"character": "ї",
-		"name": "cyrillic small letter yi",
+		"name": "cyrillic_small_letter_yi",
 		"codepoint": 1111,
 		"reference": 239
 	},
 	{
 		"character": "ј",
-		"name": "cyrillic small letter je",
+		"name": "cyrillic_small_letter_je",
 		"codepoint": 1112,
 		"reference": 106
 	},
 	{
 		"character": "љ",
-		"name": "cyrillic small letter lje",
+		"name": "cyrillic_small_letter_lje",
 		"codepoint": 1113,
 		"pixels": [
 			[0, 0, 0, 0, 0, 0],
@@ -3546,7 +3546,7 @@
 	},
 	{
 		"character": "њ",
-		"name": "cyrillic small letter nje",
+		"name": "cyrillic_small_letter_nje",
 		"codepoint": 1114,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3560,7 +3560,7 @@
 	},
 	{
 		"character": "ћ",
-		"name": "cyrillic small letter tshe",
+		"name": "cyrillic_small_letter_tshe",
 		"codepoint": 1115,
 		"pixels": [
 			[0, 1, 0, 0, 0],
@@ -3574,7 +3574,7 @@
 	},
 	{
 		"character": "ќ",
-		"name": "cyrillic small letter kje",
+		"name": "cyrillic_small_letter_kje",
 		"codepoint": 1116,
 		"reference": 1082,
 		"diacritic": "acute",
@@ -3582,7 +3582,7 @@
 	},
 	{
 		"character": "ѝ",
-		"name": "cyrillic small letter i with grave",
+		"name": "cyrillic_small_letter_i_with_grave",
 		"codepoint": 1117,
 		"reference": 1080,
 		"diacritic": "grave",
@@ -3590,7 +3590,7 @@
 	},
 	{
 		"character": "ў",
-		"name": "cyrillic small letter short u",
+		"name": "cyrillic_small_letter_short_u",
 		"codepoint": 1118,
 		"reference": 121,
 		"diacritic": "breve",
@@ -3598,7 +3598,7 @@
 	},
 	{
 		"character": "џ",
-		"name": "cyrillic small letter dze",
+		"name": "cyrillic_small_letter_dze",
 		"codepoint": 1119,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3614,7 +3614,7 @@
 	},
 	{
 		"character": "€",
-		"name": "euro sign",
+		"name": "euro_sign",
 		"codepoint": 8364,
 		"pixels": [
 			[0, 0, 1, 1, 0],
@@ -3628,7 +3628,7 @@
 	},
 	{
 		"character": "☺",
-		"name":"smiling face",
+		"name":"smiling_face",
 		"codepoint": 9786,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -3642,7 +3642,7 @@
 	},
 	{
 		"character": "☻",
-		"name":"smiling face with background",
+		"name":"smiling_face_with_background",
 		"codepoint": 9787,
 		"pixels": [
 			[0, 1, 1, 1, 1, 0],
@@ -3656,7 +3656,7 @@
 	},
 	{
 		"character": "♥",
-		"name":"black heart suit",
+		"name":"black_heart_suit",
 		"codepoint": 9829,
 		"pixels": [
 			[0, 0, 0, 0, 0],
