@@ -18,7 +18,7 @@ monocraft.upos = -PIXEL_SIZE # Underline position
 monocraft.addLookup("ligatures", "gsub_ligature", (), (("liga",(("dflt",("dflt")),)),))
 monocraft.addLookupSubtable("ligatures", "ligatures-subtable")
 
-characters = json.load(open("./characters.json"))
+characters = json.load(open("./full_characters.json"))
 diacritics = json.load(open("./diacritics.json"))
 ligatures = json.load(open("./ligatures.json"))
 charactersByCodepoint = {}
@@ -39,6 +39,7 @@ def drawGlyph(pixels, pen, startingX, startingY):
 	return top
 
 def drawCharacter(character, pen):
+	if "reference" in character: return drawCharacter(charactersByCodepoint[character["reference"]],pen)
 	leftMargin = PIXEL_SIZE * character["leftMargin"] if "leftMargin" in character else 0
 	floor = -PIXEL_SIZE * character["descent"] if "descent" in character else 0
 	return drawGlyph(character["pixels"], pen, leftMargin, floor)
