@@ -5,6 +5,10 @@ PIXEL_SIZE = 120
 
 monocraft = fontforge.font()
 monocraft.fontname = "Monocraft"
+monocraft.familyname = "Monocraft"
+monocraft.fullname = "Monocraft"
+monocraft.encoding = "UnicodeFull"
+monocraft.version = "2.0"
 monocraft.weight = "Medium"
 monocraft.ascent = PIXEL_SIZE * 8
 monocraft.descent = PIXEL_SIZE
@@ -65,4 +69,4 @@ for ligature in ligatures:
 
 print(f"Generated {len(ligatures)} ligatures")
 
-monocraft.generate("generated.ttf")
+monocraft.generate("../Monocraft.ttf")
