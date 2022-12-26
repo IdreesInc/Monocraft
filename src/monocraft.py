@@ -35,6 +35,7 @@ def drawGlyph(pixels, pen, startingY):
 
 def drawCharacter(character, pen):
 	if "reference" in character: return drawCharacter(charactersByCodepoint[character["reference"]],pen)
+
 	floor = -PIXEL_SIZE * character["descent"] if "descent" in character else 0
 	return drawGlyph(character["pixels"], pen, floor)
 
