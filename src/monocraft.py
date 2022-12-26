@@ -13,7 +13,7 @@ monocraft.descent = PIXEL_SIZE
 monocraft.em = PIXEL_SIZE * 9
 monocraft.upos = -PIXEL_SIZE # Underline position
 
-characters = json.load(open("./characters.json"))
+characters = json.load(open("./full_characters.json"))
 diacritics = json.load(open("./diacritics.json"))
 charactersByCodepoint = {}
 print(len(characters))
@@ -34,6 +34,7 @@ def drawGlyph(pixels, pen, startingY):
 	return top
 
 def drawCharacter(character, pen):
+	if "reference" in character: return drawCharacter(charactersByCodepoint[character["reference"]],pen)
 	floor = -PIXEL_SIZE * character["descent"] if "descent" in character else 0
 	return drawGlyph(character["pixels"], pen, floor)
 
