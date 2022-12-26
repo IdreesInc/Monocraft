@@ -7,6 +7,7 @@ monocraft = fontforge.font()
 monocraft.fontname = "Monocraft"
 monocraft.familyname = "Monocraft"
 monocraft.fullname = "Monocraft"
+monocraft.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
 monocraft.encoding = "UnicodeFull"
 monocraft.version = "2.0"
 monocraft.weight = "Medium"
