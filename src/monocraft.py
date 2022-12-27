@@ -76,4 +76,30 @@ def drawGlyph(pixels, pen, startingX, startingY):
 			top = (rowIndex + 1) * PIXEL_SIZE + startingY
 	return top
 
+def generateExamples():
+	characterOutput = 26*"-" + " Monocraft " + 26*"-"
+	index = 0
+	for character in characters:
+		if character["codepoint"] == 32:
+			continue
+		if index % 32 == 0:
+			characterOutput += "\n"
+		characterOutput += chr(character["codepoint"]) + " "
+		index += 1
+
+	print(characterOutput)
+
+	ligatureOutput = "--- Ligatures ---"
+	for ligature in ligatures:
+		start = ''.join(map(lambda codepoint: ' ' + chr(codepoint), ligature['sequence']))
+		start += (7 - len(ligature['sequence'])) * " "
+		output = 5 * " " + ''.join(map(lambda codepoint: chr(codepoint), ligature['sequence']))
+		ligatureOutput += "\n" + start + "->" + output
+
+	f = open("../examples/glyphs.txt", "w")
+	f.write(characterOutput + 2*"\n" + ligatureOutput)
+	f.close()
+
+
 generateFont()
+generateExamples()
