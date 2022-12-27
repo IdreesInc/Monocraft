@@ -467,7 +467,7 @@
 	},
 	{
 		"character": "A",
-		"name": "A",
+		"name": "latin_capital_letter_a",
 		"codepoint": 65,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -481,7 +481,7 @@
 	},
 	{
 		"character": "B",
-		"name": "B",
+		"name": "latin_capital_letter_b",
 		"codepoint": 66,
 		"pixels": [
 			[1, 1, 1, 1, 0],
@@ -495,7 +495,7 @@
 	},
 	{
 		"character": "C",
-		"name": "C",
+		"name": "latin_capital_letter_c",
 		"codepoint": 67,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -509,7 +509,7 @@
 	},
 	{
 		"character": "D",
-		"name": "D",
+		"name": "latin_capital_letter_d",
 		"codepoint": 68,
 		"pixels": [
 			[1, 1, 1, 1, 0],
@@ -523,7 +523,7 @@
 	},
 	{
 		"character": "E",
-		"name": "E",
+		"name": "latin_capital_letter_e",
 		"codepoint": 69,
 		"pixels": [
 			[1, 1, 1, 1, 1],
@@ -537,7 +537,7 @@
 	},
 	{
 		"character": "F",
-		"name": "F",
+		"name": "latin_capital_letter_f",
 		"codepoint": 70,
 		"pixels": [
 			[1, 1, 1, 1, 1],
@@ -551,7 +551,7 @@
 	},
 	{
 		"character": "G",
-		"name": "G",
+		"name": "latin_capital_letter_g",
 		"codepoint": 71,
 		"pixels": [
 			[0, 1, 1, 1, 1],
@@ -565,7 +565,7 @@
 	},
 	{
 		"character": "H",
-		"name": "H",
+		"name": "latin_capital_letter_h",
 		"codepoint": 72,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -579,7 +579,7 @@
 	},
 	{
 		"character": "I",
-		"name": "I",
+		"name": "latin_capital_letter_i",
 		"codepoint": 73,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -593,7 +593,7 @@
 	},
 	{
 		"character": "J",
-		"name": "J",
+		"name": "latin_capital_letter_j",
 		"codepoint": 74,
 		"pixels": [
 			[0, 0, 0, 0, 1],
@@ -607,7 +607,7 @@
 	},
 	{
 		"character": "K",
-		"name": "K",
+		"name": "latin_capital_letter_k",
 		"codepoint": 75,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -621,7 +621,7 @@
 	},
 	{
 		"character": "L",
-		"name": "L",
+		"name": "latin_capital_letter_l",
 		"codepoint": 76,
 		"pixels": [
 			[1, 0, 0, 0, 0],
@@ -635,7 +635,7 @@
 	},
 	{
 		"character": "M",
-		"name": "M",
+		"name": "latin_capital_letter_m",
 		"codepoint": 77,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -649,7 +649,7 @@
 	},
 	{
 		"character": "N",
-		"name": "N",
+		"name": "latin_capital_letter_n",
 		"codepoint": 78,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -663,7 +663,7 @@
 	},
 	{
 		"character": "O",
-		"name": "O",
+		"name": "latin_capital_letter_o",
 		"codepoint": 79,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -677,7 +677,7 @@
 	},
 	{
 		"character": "P",
-		"name": "P",
+		"name": "latin_capital_letter_p",
 		"codepoint": 80,
 		"pixels": [
 			[1, 1, 1, 1, 0],
@@ -691,7 +691,7 @@
 	},
 	{
 		"character": "Q",
-		"name": "Q",
+		"name": "latin_capital_letter_q",
 		"codepoint": 81,
 		"pixels": [
 			[0, 1, 1, 1, 0],
@@ -705,7 +705,7 @@
 	},
 	{
 		"character": "R",
-		"name": "R",
+		"name": "latin_capital_letter_r",
 		"codepoint": 82,
 		"pixels": [
 			[1, 1, 1, 1, 0],
@@ -719,7 +719,7 @@
 	},
 	{
 		"character": "S",
-		"name": "S",
+		"name": "latin_capital_letter_s",
 		"codepoint": 83,
 		"pixels": [
 			[0, 1, 1, 1, 1],
@@ -733,7 +733,7 @@
 	},
 	{
 		"character": "T",
-		"name": "T",
+		"name": "latin_capital_letter_t",
 		"codepoint": 84,
 		"pixels": [
 			[1, 1, 1, 1, 1],
@@ -747,7 +747,7 @@
 	},
 	{
 		"character": "U",
-		"name": "U",
+		"name": "latin_capital_letter_u",
 		"codepoint": 85,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -761,7 +761,7 @@
 	},
 	{
 		"character": "V",
-		"name": "V",
+		"name": "latin_capital_letter_v",
 		"codepoint": 86,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -775,7 +775,7 @@
 	},
 	{
 		"character": "W",
-		"name": "W",
+		"name": "latin_capital_letter_w",
 		"codepoint": 87,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -789,7 +789,7 @@
 	},
 	{
 		"character": "X",
-		"name": "X",
+		"name": "latin_capital_letter_x",
 		"codepoint": 88,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -803,7 +803,7 @@
 	},
 	{
 		"character": "Y",
-		"name": "Y",
+		"name": "latin_capital_letter_y",
 		"codepoint": 89,
 		"pixels": [
 			[1, 0, 0, 0, 1],
@@ -817,7 +817,7 @@
 	},
 	{
 		"character": "Z",
-		"name": "Z",
+		"name": "latin_capital_letter_z",
 		"codepoint": 90,
 		"pixels": [
 			[1, 1, 1, 1, 1],
@@ -917,7 +917,7 @@
 	},
 	{
 		"character": "a",
-		"name": "a",
+		"name": "latin_small_letter_a",
 		"codepoint": 97,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -931,7 +931,7 @@
 	},
 	{
 		"character": "b",
-		"name": "b",
+		"name": "latin_small_letter_b",
 		"codepoint": 98,
 		"pixels": [
 			[1, 0, 0, 0, 0],
@@ -945,7 +945,7 @@
 	},
 	{
 		"character": "c",
-		"name": "c",
+		"name": "latin_small_letter_c",
 		"codepoint": 99,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -959,7 +959,7 @@
 	},
 	{
 		"character": "d",
-		"name": "d",
+		"name": "latin_small_letter_d",
 		"codepoint": 100,
 		"pixels": [
 			[0, 0, 0, 0, 1],
@@ -973,7 +973,7 @@
 	},
 	{
 		"character": "e",
-		"name": "e",
+		"name": "latin_small_letter_e",
 		"codepoint": 101,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -987,7 +987,7 @@
 	},
 	{
 		"character": "f",
-		"name": "f",
+		"name": "latin_small_letter_f",
 		"codepoint": 102,
 		"pixels": [
 			[0, 0, 0, 1, 1],
@@ -1001,7 +1001,7 @@
 	},
 	{
 		"character": "g",
-		"name": "g",
+		"name": "latin_small_letter_g",
 		"codepoint": 103,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1017,7 +1017,7 @@
 	},
 	{
 		"character": "h",
-		"name": "h",
+		"name": "latin_small_letter_h",
 		"codepoint": 104,
 		"pixels": [
 			[1, 0, 0, 0, 0],
@@ -1031,7 +1031,7 @@
 	},
 	{
 		"character": "i",
-		"name": "i",
+		"name": "latin_small_letter_i",
 		"codepoint": 105,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -1045,7 +1045,7 @@
 	},
 	{
 		"character": "j",
-		"name": "j",
+		"name": "latin_small_letter_j",
 		"codepoint": 106,
 		"pixels": [
 			[0, 0, 0, 0, 1],
@@ -1061,7 +1061,7 @@
 	},
 	{
 		"character": "k",
-		"name": "k",
+		"name": "latin_small_letter_k",
 		"codepoint": 107,
 		"pixels": [
 			[1, 0, 0, 0, 0],
@@ -1075,7 +1075,7 @@
 	},
 	{
 		"character": "l",
-		"name": "l",
+		"name": "latin_small_letter_l",
 		"codepoint": 108,
 		"pixels": [
 			[0, 1, 1, 0, 0],
@@ -1089,7 +1089,7 @@
 	},
 	{
 		"character": "m",
-		"name": "m",
+		"name": "latin_small_letter_m",
 		"codepoint": 109,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1103,7 +1103,7 @@
 	},
 	{
 		"character": "n",
-		"name": "n",
+		"name": "latin_small_letter_n",
 		"codepoint": 110,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1117,7 +1117,7 @@
 	},
 	{
 		"character": "o",
-		"name": "o",
+		"name": "latin_small_letter_o",
 		"codepoint": 111,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1131,7 +1131,7 @@
 	},
 	{
 		"character": "p",
-		"name": "p",
+		"name": "latin_small_letter_p",
 		"codepoint": 112,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1147,7 +1147,7 @@
 	},
 	{
 		"character": "q",
-		"name": "q",
+		"name": "latin_small_letter_q",
 		"codepoint": 113,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1163,7 +1163,7 @@
 	},
 	{
 		"character": "r",
-		"name": "r",
+		"name": "latin_small_letter_r",
 		"codepoint": 114,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1177,7 +1177,7 @@
 	},
 	{
 		"character": "s",
-		"name": "s",
+		"name": "latin_small_letter_s",
 		"codepoint": 115,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1191,7 +1191,7 @@
 	},
 	{
 		"character": "t",
-		"name": "t",
+		"name": "latin_small_letter_t",
 		"codepoint": 116,
 		"pixels": [
 			[0, 0, 1, 0, 0],
@@ -1205,7 +1205,7 @@
 	},
 	{
 		"character": "u",
-		"name": "u",
+		"name": "latin_small_letter_u",
 		"codepoint": 117,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1219,7 +1219,7 @@
 	},
 	{
 		"character": "v",
-		"name": "v",
+		"name": "latin_small_letter_v",
 		"codepoint": 118,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1233,7 +1233,7 @@
 	},
 	{
 		"character": "w",
-		"name": "w",
+		"name": "latin_small_letter_w",
 		"codepoint": 119,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1247,7 +1247,7 @@
 	},
 	{
 		"character": "x",
-		"name": "x",
+		"name": "latin_small_letter_x",
 		"codepoint": 120,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1261,7 +1261,7 @@
 	},
 	{
 		"character": "y",
-		"name": "y",
+		"name": "latin_small_letter_y",
 		"codepoint": 121,
 		"pixels": [
 			[0, 0, 0, 0, 0],
@@ -1277,7 +1277,7 @@
 	},
 	{
 		"character": "z",
-		"name": "z",
+		"name": "latin_small_letter_z",
 		"codepoint": 122,
 		"pixels": [
 			[0, 0, 0, 0, 0],
