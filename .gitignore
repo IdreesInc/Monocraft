@@ -1,3 +1,5 @@
 
 .DS_Store
 src/__pycache__
+dist/
+src/build-font.sh

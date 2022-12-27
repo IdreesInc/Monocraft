@@ -1,3 +1,18 @@
+# Monocraft, a monospaced font for developers who like Minecraft a bit too much.
+# Copyright (C) 2022 Idrees Hassan
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
 import fontforge
 import json
 from generate_diacritics import generateDiacritics
@@ -19,7 +34,7 @@ def generateFont():
 	monocraft.fullname = "Monocraft"
 	monocraft.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
 	monocraft.encoding = "UnicodeFull"
-	monocraft.version = "2.0"
+	monocraft.version = "2.1"
 	monocraft.weight = "Medium"
 	monocraft.ascent = PIXEL_SIZE * 8
 	monocraft.descent = PIXEL_SIZE
@@ -54,7 +69,8 @@ def generateFont():
 		lig.addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
 
 	print(f"Generated {len(ligatures)} ligatures")
-	monocraft.generate("../Monocraft.ttf")
+	monocraft.generate("../dist/Monocraft.ttf")
+	monocraft.generate("../dist/Monocraft.otf")
 
 def drawCharacter(character, pen):
 	if "reference" in character: return drawCharacter(charactersByCodepoint[character["reference"]],pen)
