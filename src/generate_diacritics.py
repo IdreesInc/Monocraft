@@ -27,7 +27,7 @@ def generateDiacritics(characters, diacritics):
             continue
         # Get the diacritic name
         splitOnWith = line.split("WITH")
-        diacritic = splitOnWith[1].split(';')[0].strip().lower()
+        diacritic = splitOnWith[1].split(';')[0].strip().lower().replace(" ", "_")
         name = splitOnWith[0].split(';')[1].strip().lower().replace(" ", "_")
         newName = name + "_with_" + diacritic
         if not diacritic in diacriticsByCodepoint or not name in charactersByName or newName in charactersByName:
