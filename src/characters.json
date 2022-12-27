@@ -1793,46 +1793,6 @@
 		"descent": 1
 	},
 	{
-		"character": "À",
-		"name": "latin_capital_letter_a_with_grave",
-		"codepoint": 192,
-		"reference": 65,
-		"diacritic": "grave",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Á",
-		"name": "latin_capital_letter_a_with_acute",
-		"codepoint": 193,
-		"reference": 65,
-		"diacritic": "acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Â",
-		"name": "latin_capital_letter_a_with_circumflex",
-		"codepoint": 194,
-		"reference": 65,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ã",
-		"name": "latin_capital_letter_a_with_tilde",
-		"codepoint": 195,
-		"reference": 65,
-		"diacritic": "tilde",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ä",
-		"name": "latin_capital_letter_a_with_diaeresis",
-		"codepoint": 196,
-		"reference": 65,
-		"diacritic": "diaeresis",
-		"diacriticSpace": 1
-	},
-	{
 		"character": "Å",
 		"name": "latin_capital_letter_a_with_ring_above",
 		"codepoint": 197,
@@ -1872,70 +1832,6 @@
 		"descent": 2
 	},
 	{
-		"character": "È",
-		"name": "latin_capital_letter_e_with_grave",
-		"codepoint": 200,
-		"reference": 69,
-		"diacritic": "grave",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "É",
-		"name": "latin_capital_letter_e_with_acute",
-		"codepoint": 201,
-		"reference": 69,
-		"diacritic": "acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ê",
-		"name": "latin_capital_letter_e_with_circumflex",
-		"codepoint": 202,
-		"reference": 69,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ë",
-		"name": "latin_capital_letter_e_with_diaeresis",
-		"codepoint": 203,
-		"reference": 69,
-		"diacritic": "diaeresis",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ì",
-		"name": "latin_capital_letter_i_with_grave",
-		"codepoint": 204,
-		"reference": 73,
-		"diacritic": "grave",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Í",
-		"name": "latin_capital_letter_i_with_acute",
-		"codepoint": 205,
-		"reference": 73,
-		"diacritic": "acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Î",
-		"name": "latin_capital_letter_i_with_circumflex",
-		"codepoint": 206,
-		"reference": 73,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ï",
-		"name": "latin_capital_letter_i_with_diaeresis",
-		"codepoint": 207,
-		"reference": 73,
-		"diacritic": "diaeresis",
-		"diacriticSpace": 1
-	},
-	{
 		"character": "Ð",
 		"name": "latin_capital_letter_eth",
 		"codepoint": 208,
@@ -1948,54 +1844,6 @@
 			[0, 1, 0, 0, 0, 1],
 			[0, 1, 1, 1, 1, 0]
 		]
-	},
-	{
-		"character": "Ñ",
-		"name": "latin_capital_letter_n_with_tilde",
-		"codepoint": 209,
-		"reference": 78,
-		"diacritic": "tilde",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ò",
-		"name": "latin_capital_letter_o_with_grave",
-		"codepoint": 210,
-		"reference": 79,
-		"diacritic": "grave",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ó",
-		"name": "latin_capital_letter_o_with_acute",
-		"codepoint": 211,
-		"reference": 79,
-		"diacritic": "acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ô",
-		"name": "latin_capital_letter_o_with_circumflex",
-		"codepoint": 212,
-		"reference": 79,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Õ",
-		"name": "latin_capital_letter_o_with_tilde",
-		"codepoint": 213,
-		"reference": 79,
-		"diacritic": "tilde",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ö",
-		"name": "latin_capital_letter_o_with_diaeresis",
-		"codepoint": 214,
-		"reference": 79,
-		"diacritic": "diaeresis",
-		"diacriticSpace": 1
 	},
 	{
 		"character": "×",
@@ -2024,46 +1872,6 @@
 			[1, 1, 0, 0, 1],
 			[0, 1, 1, 1, 0]
 		]
-	},
-	{
-		"character": "Ù",
-		"name": "latin_capital_letter_u_with_grave",
-		"codepoint": 217,
-		"reference": 85,
-		"diacritic": "grave",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ú",
-		"name": "latin_capital_letter_u_with_acute",
-		"codepoint": 218,
-		"reference": 85,
-		"diacritic": "acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Û",
-		"name": "latin_capital_letter_u_with_circumflex",
-		"codepoint": 219,
-		"reference": 85,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ü",
-		"name": "latin_capital_letter_u_with_diaeresis",
-		"codepoint": 220,
-		"reference": 85,
-		"diacritic": "diaeresis",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ý",
-		"name": "latin_capital_letter_y_with_acute",
-		"codepoint": 221,
-		"reference": 89,
-		"diacritic": "acute",
-		"diacriticSpace": 1
 	},
 	{
 		"character": "Þ",
@@ -2096,54 +1904,6 @@
 		"descent": 1
 	},
 	{
-		"character": "à",
-		"name": "latin_small_letter_a_with_grave",
-		"codepoint": 224,
-		"reference": 97,
-		"diacritic": "grave",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "á",
-		"name": "latin_small_letter_a_with_acute",
-		"codepoint": 225,
-		"reference": 97,
-		"diacritic": "acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "â",
-		"name": "latin_small_letter_a_with_circumflex",
-		"codepoint": 226,
-		"reference": 97,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ã",
-		"name": "latin_small_letter_a_with_tilde",
-		"codepoint": 227,
-		"reference": 97,
-		"diacritic": "tilde",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ä",
-		"name": "latin_small_letter_a_with_diaeresis",
-		"codepoint": 228,
-		"reference": 97,
-		"diacritic": "diaeresis",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "å",
-		"name": "latin_small_letter_a_with_ring_above",
-		"codepoint": 229,
-		"reference": 97,
-		"diacritic": "ring_above",
-		"diacriticSpace": 1
-	},
-	{
 		"character": "æ",
 		"name": "latin_small_letter_ae",
 		"codepoint": 230,
@@ -2173,38 +1933,6 @@
 			[0, 0, 1, 0, 0]
 		],
 		"descent": 2
-	},
-	{
-		"character": "è",
-		"name": "latin_small_letter_e_with_grave",
-		"codepoint": 232,
-		"reference": 101,
-		"diacritic": "grave",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "é",
-		"name": "latin_small_letter_e_with_acute",
-		"codepoint": 233,
-		"reference": 101,
-		"diacritic": "acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ê",
-		"name": "latin_small_letter_e_with_circumflex",
-		"codepoint": 234,
-		"reference": 101,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ë",
-		"name": "latin_small_letter_e_with_diaeresis",
-		"codepoint": 235,
-		"reference": 101,
-		"diacritic": "diaeresis",
-		"diacriticSpace": 1
 	},
 	{
 		"character": "ì",
@@ -2280,54 +2008,6 @@
 		]
 	},
 	{
-		"character": "ñ",
-		"name": "latin_small_letter_n_with_tilde",
-		"codepoint": 241,
-		"reference": 110,
-		"diacritic": "tilde",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ò",
-		"name": "latin_small_letter_o_with_grave",
-		"codepoint": 242,
-		"reference": 111,
-		"diacritic": "grave",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ó",
-		"name": "latin_small_letter_o_with_acute",
-		"codepoint": 243,
-		"reference": 111,
-		"diacritic": "acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ô",
-		"name": "latin_small_letter_o_with_circumflex",
-		"codepoint": 244,
-		"reference": 111,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "õ",
-		"name": "latin_small_letter_o_with_tilde",
-		"codepoint": 245,
-		"reference": 111,
-		"diacritic": "tilde",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ö",
-		"name": "latin_small_letter_o_with_diaeresis",
-		"codepoint": 246,
-		"reference": 111,
-		"diacritic": "diaeresis",
-		"diacriticSpace": 1
-	},
-	{
 		"character": "÷",
 		"name": "division_sign",
 		"codepoint": 247,
@@ -2356,172 +2036,12 @@
 		]
 	},
 	{
-		"character": "ù",
-		"name": "latin_small_letter_u_with_grave",
-		"codepoint": 249,
-		"reference": 117,
-		"diacritic": "grave",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ú",
-		"name": "latin_small_letter_u_with_acute",
-		"codepoint": 250,
-		"reference": 117,
-		"diacritic": "acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "û",
-		"name": "latin_small_letter_u_with_circumflex",
-		"codepoint": 251,
-		"reference": 117,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ü",
-		"name": "latin_small_letter_u_with_diaeresis",
-		"codepoint": 252,
-		"reference": 117,
-		"diacritic": "diaeresis",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ý",
-		"name": "latin_small_letter_y_with_acute",
-		"codepoint": 253,
-		"reference": 121,
-		"diacritic": "acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ÿ ",
-		"name": "latin_small_letter_y_with_diaeresis",
-		"codepoint": 255,
-		"reference": 121,
-		"diacritic": "diaeresis",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ĉ",
-		"name": "latin_capital_letter_c_with_circumflex",
-		"codepoint": 264,
-		"reference": 67,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ĉ",
-		"name": "latin_small_letter_c_with_circumflex",
-		"codepoint": 265,
-		"reference": 99,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ĝ",
-		"name": "latin_capital_letter_g_with_circumflex",
-		"codepoint": 284,
-		"reference": 71,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ĝ",
-		"name": "latin_small_letter_g_with_circumflex",
-		"codepoint": 285,
-		"reference": 103,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ĥ",
-		"name": "latin_capital_letter_h_with_circumflex",
-		"codepoint": 292,
-		"reference": 72,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ĥ",
-		"name": "latin_small_letter_h_with_circumflex",
-		"codepoint": 293,
-		"reference": 104,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ĵ",
-		"name": "latin_capital_letter_j_with_circumflex",
-		"codepoint": 308,
-		"reference": 74,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ĵ",
-		"name": "latin_small_letter_j_with_circumflex",
-		"codepoint": 309,
-		"reference": 106,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ő",
-		"name": "latin_capital_letter_o_with_double_acute",
-		"codepoint": 336,
-		"reference": 79,
-		"diacritic": "double_acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ő",
-		"name": "latin_small_letter_o_with_double_acute",
-		"codepoint": 337,
-		"reference": 111,
-		"diacritic": "double_acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "Ŝ",
-		"name": "latin_capital_letter_s_with_circumflex",
-		"codepoint": 348,
-		"reference": 83,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ŝ",
-		"name": "latin_small_letter_s_with_circumflex",
-		"codepoint": 349,
-		"reference": 115,
-		"diacritic": "circumflex",
-		"diacriticSpace": 1
-	},
-	{
 		"character": "Ů",
 		"name": "latin_capital_letter_u_with_ring_above",
 		"codepoint": 366,
 		"reference": 85,
 		"diacritic": "ring_above",
 		"diacriticSpace": 0
-	},
-	{
-		"character": "Ű",
-		"name": "latin_capital_letter_u_with_double_acute",
-		"codepoint": 368,
-		"reference": 85,
-		"diacritic": "double_acute",
-		"diacriticSpace": 1
-	},
-	{
-		"character": "ű",
-		"name": "latin_small_letter_u_with_double_acute",
-		"codepoint": 369,
-		"reference": 117,
-		"diacritic": "double_acute",
-		"diacriticSpace": 1
 	},
 	{
 		"character": "Ѐ",
