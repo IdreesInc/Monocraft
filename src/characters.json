@@ -2036,12 +2036,105 @@
 		]
 	},
 	{
+		"character": "ĩ",
+		"name": "latin_small_letter_i_with_tilde",
+		"codepoint": 297,
+		"pixels": [
+			[0, 0, 1, 0, 1],
+			[0, 1, 0, 1, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1]
+		]
+	},
+	{
+		"character": "ī",
+		"name": "latin_small_letter_i_with_macron",
+		"codepoint": 299,
+		"pixels": [
+			[0, 1, 1, 1, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1]
+		]
+	},
+	{
+		"character": "ĭ",
+		"name": "latin_small_letter_i_with_breve",
+		"codepoint": 301,
+		"pixels": [
+			[0, 1, 0, 0, 1],
+			[0, 0, 1, 1, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1]
+		]
+	},
+	{
+		"character": "ĵ",
+		"name": "latin_small_letter_j_with_circumflex",
+		"codepoint": 309,
+		"pixels": [
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 1, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		],
+		"descent": 1
+	},
+	{
 		"character": "Ů",
 		"name": "latin_capital_letter_u_with_ring_above",
 		"codepoint": 366,
 		"reference": 85,
 		"diacritic": "ring_above",
 		"diacriticSpace": 0
+	},
+	{
+		"character": "ǐ",
+		"name": "latin_small_letter_i_with_caron",
+		"codepoint": 464,
+		"pixels": [
+			[0, 1, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1]
+		]
+	},
+	{
+		"character": "ĵ",
+		"name": "latin_small_letter_j_with_caron",
+		"codepoint": 496,
+		"pixels": [
+			[0, 1, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		],
+		"descent": 1
 	},
 	{
 		"character": "Ѐ",
