@@ -42,11 +42,11 @@ brew install --cask font-monocraft
 
 #### Manually
 
-Download the most recent `Monocraft.otf` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Double click on the downloaded font file and select **Install Font** in the window that appears. More help available [here](https://support.apple.com/en-us/HT201749).
+Download the most recent `Monocraft.ttf` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Double click on the downloaded font file and select **Install Font** in the window that appears. More help available [here](https://support.apple.com/en-us/HT201749).
 
 ### Linux
 
-Download the most recent `Monocraft.otf` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Move the file to ~/.local/share/fonts (create the folder if it doesn't already exist). In a terminal, run `fc-cache -fv`. Alternatively, log out and log in again. 
+Download the most recent `Monocraft.ttf` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Move the file to ~/.local/share/fonts (create the folder if it doesn't already exist). In a terminal, run `fc-cache -fv`. Alternatively, log out and log in again. 
 
 ## How to use
 
@@ -64,7 +64,7 @@ If there is another character combination that you feel could be a ligature, fee
 
 ### How are these characters generated?
 
-Using [FontForge's](https://fontforge.org/en-US/) excellent Python extension, we create the glyphs from configuration files representing each character's pixels. Diacritics are created separately and are combined with the original characters to create over 500 unique glyphs. To learn more, check out the source code in the [src](https://github.com/IdreesInc/Monocraft/tree/main/src) folder.
+Using [FontForge's](https://fontforge.org/en-US/) excellent Python extension, the glyphs are created from configuration files representing each character's pixels. Diacritics are created separately and are combined with the original characters to create over 500 unique glyphs. To learn more, check out the source code in the [src](https://github.com/IdreesInc/Monocraft/tree/main/src) folder.
 
 ### Do you have a version with the original Minecraft font (not monospaced)?
 
