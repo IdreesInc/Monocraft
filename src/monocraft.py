@@ -28,7 +28,7 @@ ligatures = json.load(open("./ligatures.json"))
 characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
 
-def generateFont():
+def generateFont(outputDir, generateLigatures):
 	monocraft = fontforge.font()
 	monocraft.fontname = "Monocraft"
 	monocraft.familyname = "Monocraft"
@@ -61,16 +61,14 @@ def generateFont():
 		monocraft[character["name"]].width = PIXEL_SIZE * 6
 
 	print(f"Generated {len(characters)} characters")
-
-	for ligature in ligatures:
-		lig = monocraft.createChar(-1, ligature["name"])
-		pen = monocraft[ligature["name"]].glyphPen()
-		drawCharacter(ligature, pen)
-		monocraft[ligature["name"]].width = PIXEL_SIZE * len(ligature["sequence"]) * 6
-		lig.addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
-
-	print(f"Generated {len(ligatures)} ligatures")
-	outputDir = "../dist/"
+	if generateLigatures:
+		for ligature in ligatures:
+			lig = monocraft.createChar(-1, ligature["name"])
+			pen = monocraft[ligature["name"]].glyphPen()
+			drawCharacter(ligature, pen)
+			monocraft[ligature["name"]].width = PIXEL_SIZE * len(ligature["sequence"]) * 6
+			lig.addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
+		print(f"Generated {len(ligatures)} ligatures")
 	if not os.path.exists(outputDir): os.makedirs(outputDir)
 	monocraft.generate(outputDir + "Monocraft.ttf")
 	monocraft.generate(outputDir + "Monocraft.otf")
@@ -96,5 +94,6 @@ def drawGlyph(pixels, pen, startingX, startingY):
 			top = (rowIndex + 1) * PIXEL_SIZE + startingY
 	return top
 
-generateFont()
+generateFont("../dist/Full/",True)
+generateFont("../dist/LigatureFree/",False)
 generateExamples(characters, ligatures, charactersByCodepoint)
