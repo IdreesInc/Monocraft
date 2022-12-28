@@ -13,6 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+import os
 import fontforge
 import json
 from generate_diacritics import generateDiacritics
@@ -69,8 +70,10 @@ def generateFont():
 		lig.addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
 
 	print(f"Generated {len(ligatures)} ligatures")
-	monocraft.generate("../dist/Monocraft.ttf")
-	monocraft.generate("../dist/Monocraft.otf")
+	outputDir = "../dist/"
+	if not os.path.exists(outputDir): os.makedirs(outputDir)
+	monocraft.generate(outputDir + "Monocraft.ttf")
+	monocraft.generate(outputDir + "Monocraft.otf")
 
 def drawCharacter(character, pen):
 	if "reference" in character: return drawCharacter(charactersByCodepoint[character["reference"]],pen)
