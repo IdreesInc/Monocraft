@@ -91,9 +91,14 @@ def drawGlyph(pixels, pen, startingX, startingY):
 		for columnIndex in range(len(row)):
 			if row[columnIndex] == 0:
 				continue
+			#can probably just add offset without checks
+			additionalOffset = 0
+			if rowIndex < (len(pixels) - 1):
+				if pixels[-(rowIndex + 2)][columnIndex] == 1:
+					additionalOffset = 1
 			pen.moveTo((columnIndex * PIXEL_SIZE + startingX, rowIndex * PIXEL_SIZE + startingY)) # Bottom left
-			pen.lineTo((columnIndex * PIXEL_SIZE + startingX, (rowIndex + 1) * PIXEL_SIZE + startingY))
-			pen.lineTo(((columnIndex + 1) * PIXEL_SIZE + startingX, (rowIndex + 1) * PIXEL_SIZE + startingY))
+			pen.lineTo((columnIndex * PIXEL_SIZE + startingX, (rowIndex + 1) * PIXEL_SIZE + startingY + additionalOffset))
+			pen.lineTo(((columnIndex + 1) * PIXEL_SIZE + startingX, (rowIndex + 1) * PIXEL_SIZE + startingY + additionalOffset))
 			pen.lineTo(((columnIndex + 1) * PIXEL_SIZE + startingX, rowIndex * PIXEL_SIZE + startingY))
 			pen.closePath()
 			top = (rowIndex + 1) * PIXEL_SIZE + startingY
