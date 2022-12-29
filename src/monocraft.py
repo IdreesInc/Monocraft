@@ -35,7 +35,7 @@ def generateFont():
 	monocraft.fullname = "Monocraft"
 	monocraft.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
 	monocraft.encoding = "UnicodeFull"
-	monocraft.version = "2.1"
+	monocraft.version = "2.2"
 	monocraft.weight = "Medium"
 	monocraft.ascent = PIXEL_SIZE * 8
 	monocraft.descent = PIXEL_SIZE
