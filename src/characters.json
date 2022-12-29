@@ -2133,6 +2133,40 @@
 		]
 	},
 	{
+		"character": "Ş",
+		"name": "latin_capital_letter_s_with_cedilla",
+		"codepoint": 350,
+		"pixels": [
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0],
+			[0, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 2
+	},
+	{
+		"character": "ş",
+		"name": "latin_small_letter_s_with_cedilla",
+		"codepoint": 351,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[0, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0],
+			[0, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 2
+	},
+	{
 		"character": "ǐ",
 		"name": "latin_small_letter_i_with_caron",
 		"codepoint": 464,
