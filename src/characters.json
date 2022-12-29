@@ -2295,6 +2295,74 @@
 		"descent": 1
 	},
 	{
+		"character": "Ș",
+		"name": "latin_capital_letter_s_with_comma_below",
+		"codepoint": 536,
+		"pixels": [
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0]
+		],
+		"descent": 2
+	},
+	{
+		"character": "ș",
+		"name": "latin_small_letter_s_with_comma_below",
+		"codepoint": 537,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[0, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0]
+		],
+		"descent": 2
+	},
+	{
+		"character": "Ț",
+		"name": "latin_capital_letter_t_with_comma_below",
+		"codepoint": 538,
+		"pixels": [
+			[1, 1, 1, 1, 1],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0]
+		],
+		"descent": 2
+	},
+	{
+		"character": "ț",
+		"name": "latin_small_letter_t_with_comma_below",
+		"codepoint": 539,
+		"pixels": [
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 1, 1, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0]
+		],
+		"descent": 2
+	},
+	{
 		"character": "Ѐ",
 		"name": "cyrillic_capital_letter_ie_with_grave",
 		"codepoint": 1024,
