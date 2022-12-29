@@ -59,8 +59,13 @@ def generateFont():
 				top += PIXEL_SIZE * character["diacriticSpace"]
 			drawGlyph(diacritic["pixels"], pen, 0, top)
 		monocraft[character["name"]].width = PIXEL_SIZE * 6
-
 	print(f"Generated {len(characters)} characters")
+
+	outputDir = "../dist/"
+	if not os.path.exists(outputDir):
+		os.makedirs(outputDir)
+
+	monocraft.generate(outputDir + "Monocraft-no-ligatures.ttf")
 
 	for ligature in ligatures:
 		lig = monocraft.createChar(-1, ligature["name"])
@@ -68,10 +73,8 @@ def generateFont():
 		drawCharacter(ligature, pen)
 		monocraft[ligature["name"]].width = PIXEL_SIZE * len(ligature["sequence"]) * 6
 		lig.addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
-
 	print(f"Generated {len(ligatures)} ligatures")
-	outputDir = "../dist/"
-	if not os.path.exists(outputDir): os.makedirs(outputDir)
+
 	monocraft.generate(outputDir + "Monocraft.ttf")
 	monocraft.generate(outputDir + "Monocraft.otf")
 
