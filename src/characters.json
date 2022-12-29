@@ -2070,6 +2070,20 @@
 		"descent": 2
 	},
 	{
+		"character": "ď",
+		"name": "latin_small_letter_d_with_caron",
+		"codepoint": 271,
+		"pixels": [
+			[0, 0, 0, 1, 0, 1],
+			[0, 0, 0, 1, 0, 1],
+			[0, 1, 1, 1, 0, 0],
+			[1, 0, 0, 1, 0, 0],
+			[1, 0, 0, 1, 0, 0],
+			[1, 0, 0, 1, 0, 0],
+			[0, 1, 1, 1, 0, 0]
+		]
+	},
+	{
 		"character": "Ę",
 		"name": "latin_capital_letter_e_with_ogonek",
 		"codepoint": 280,
@@ -2389,6 +2403,21 @@
 			[0, 0, 1, 0, 0]
 		],
 		"descent": 2
+	},
+	{
+		"character": "ť",
+		"name": "latin_small_letter_t_with_caron",
+		"codepoint": 357,
+		"pixels": [
+			[0, 0, 0, 0, 1],
+			[0, 0, 1, 0, 1],
+			[0, 0, 1, 0, 0],
+			[0, 1, 1, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1]
+		]
 	},
 	{
 		"character": "Ů",
