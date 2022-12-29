@@ -28,7 +28,7 @@ ligatures = json.load(open("./ligatures.json"))
 characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
 
-def generateFont(outputDir, generateLigatures):
+def generateFont():
 	monocraft = fontforge.font()
 	monocraft.fontname = "Monocraft"
 	monocraft.familyname = "Monocraft"
@@ -59,17 +59,22 @@ def generateFont(outputDir, generateLigatures):
 				top += PIXEL_SIZE * character["diacriticSpace"]
 			drawGlyph(diacritic["pixels"], pen, 0, top)
 		monocraft[character["name"]].width = PIXEL_SIZE * 6
-
 	print(f"Generated {len(characters)} characters")
-	if generateLigatures:
-		for ligature in ligatures:
-			lig = monocraft.createChar(-1, ligature["name"])
-			pen = monocraft[ligature["name"]].glyphPen()
-			drawCharacter(ligature, pen)
-			monocraft[ligature["name"]].width = PIXEL_SIZE * len(ligature["sequence"]) * 6
-			lig.addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
-		print(f"Generated {len(ligatures)} ligatures")
-	if not os.path.exists(outputDir): os.makedirs(outputDir)
+
+	outputDir = "../dist/"
+	if not os.path.exists(outputDir):
+		os.makedirs(outputDir)
+
+	monocraft.generate(outputDir + "Monocraft-no-ligatures.ttf")
+
+	for ligature in ligatures:
+		lig = monocraft.createChar(-1, ligature["name"])
+		pen = monocraft[ligature["name"]].glyphPen()
+		drawCharacter(ligature, pen)
+		monocraft[ligature["name"]].width = PIXEL_SIZE * len(ligature["sequence"]) * 6
+		lig.addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
+	print(f"Generated {len(ligatures)} ligatures")
+
 	monocraft.generate(outputDir + "Monocraft.ttf")
 	monocraft.generate(outputDir + "Monocraft.otf")
 
@@ -94,6 +99,5 @@ def drawGlyph(pixels, pen, startingX, startingY):
 			top = (rowIndex + 1) * PIXEL_SIZE + startingY
 	return top
 
-generateFont("../dist/Full/",True)
-generateFont("../dist/LigatureFree/",False)
+generateFont()
 generateExamples(characters, ligatures, charactersByCodepoint)
