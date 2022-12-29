@@ -2104,6 +2104,40 @@
 		"descent": 2
 	},
 	{
+		"character": "Ģ",
+		"name": "latin_capital_letter_g_with_cedilla",
+		"codepoint": 290,
+		"pixels": [
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 1, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0]
+		],
+		"descent": 2
+	},
+	{
+		"character": "ģ",
+		"name": "latin_small_letter_g_with_cedilla",
+		"codepoint": 291,
+		"pixels": [
+			[0, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1],
+			[0, 0, 0, 0, 1],
+			[1, 1, 1, 1, 0]
+		],
+		"descent": 1
+	},
+	{
 		"character": "ĩ",
 		"name": "latin_small_letter_i_with_tilde",
 		"codepoint": 297,
@@ -2165,6 +2199,74 @@
 		"descent": 1
 	},
 	{
+		"character": "Ķ",
+		"name": "latin_capital_letter_k_with_cedilla",
+		"codepoint": 310,
+		"pixels": [
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 1, 0],
+			[1, 1, 1, 0, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0]
+		],
+		"descent": 2
+	},
+	{
+		"character": "ķ",
+		"name": "latin_small_letter_k_with_cedilla",
+		"codepoint": 311,
+		"pixels": [
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 1, 0],
+			[1, 0, 1, 0, 0],
+			[1, 1, 0, 0, 0],
+			[1, 0, 1, 0, 0],
+			[1, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0]
+		],
+		"descent": 2
+	},
+	{
+		"character": "Ļ",
+		"name": "latin_capital_letter_l_with_cedilla",
+		"codepoint": 315,
+		"pixels": [
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 1, 1, 1, 1],
+			[0, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 2
+	},
+	{
+		"character": "ļ",
+		"name": "latin_small_letter_l_with_cedilla",
+		"codepoint": 316,
+		"pixels": [
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1],
+			[0, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 2
+	},
+	{
 		"character": "Ł",
 		"name": "latin_capital_letter_l_with_stroke",
 		"codepoint": 321,
@@ -2191,6 +2293,40 @@
 			[0, 0, 1, 0, 0],
 			[0, 0, 0, 1, 1]
 		]
+	},
+	{
+		"character": "Ņ",
+		"name": "latin_capital_letter_n_with_cedilla",
+		"codepoint": 325,
+		"pixels": [
+			[1, 0, 0, 0, 1],
+			[1, 1, 0, 0, 1],
+			[1, 0, 1, 0, 1],
+			[1, 0, 0, 1, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0]
+		],
+		"descent": 2
+	},
+	{
+		"character": "ņ",
+		"name": "latin_small_letter_n_with_cedilla",
+		"codepoint": 326,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 0]
+		],
+		"descent": 2
 	},
 	{
 		"character": "Œ",
