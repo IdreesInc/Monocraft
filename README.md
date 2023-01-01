@@ -31,6 +31,21 @@ The monospaced font for developers who like Minecraft a bit _too_ much.
 
 Download the most recent `Monocraft.ttf` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Right click on the downloaded font and select **Install**. You might need administrative access to install fonts, depending on your machine.
 
+#### Using [Scoop](https://scoop.sh/)
+
+```shell
+# First, add the 'nerd-fonts' bucket
+scoop bucket add nerd-fonts
+# To install the normal version, run
+scoop install Monocraft
+# To install the 'otf' variant, run
+scoop install Monocraft-otf
+# To install the 'no ligatures' variant, run
+scoop install Monocraft-no-ligatures
+# To install the Nerd Fonts Patched version, run
+scoop install Monocraft-Nerd-Font
+```
+
 ### Mac
 
 #### Using Homebrew
