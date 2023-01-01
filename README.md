@@ -42,7 +42,7 @@ scoop install Monocraft
 scoop install Monocraft-otf
 # To install the 'no ligatures' variant, run
 scoop install Monocraft-no-ligatures
-# To install the Nerd Fonts Patched
+# To install the Nerd Fonts Patched version, run
 scoop install Monocraft-Nerd-Font
 ```
 
