@@ -35,8 +35,8 @@ def generateFont():
 	monocraft.fullname = "Monocraft"
 	monocraft.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
 	monocraft.encoding = "UnicodeFull"
-	monocraft.version = "2.2"
-	monocraft.weight = "Medium"
+	monocraft.version = "2.3"
+	monocraft.weight = "Regular"
 	monocraft.ascent = PIXEL_SIZE * 8
 	monocraft.descent = PIXEL_SIZE
 	monocraft.em = PIXEL_SIZE * 9
@@ -49,15 +49,17 @@ def generateFont():
 		monocraft.createChar(character["codepoint"], character["name"])
 		pen = monocraft[character["name"]].glyphPen()
 		top = 0
+		drawn = character
 		if "pixels" in character:
 			top = drawCharacter(character, pen)
 		elif "reference" in character:
-			top = drawCharacter(charactersByCodepoint[character["reference"]], pen)
+			drawn = charactersByCodepoint[character["reference"]]
+			top = drawCharacter(drawn, pen)
 		if "diacritic" in character:
 			diacritic = diacritics[character["diacritic"]]
 			if "diacriticSpace" in character:
 				top += PIXEL_SIZE * character["diacriticSpace"]
-			drawGlyph(diacritic["pixels"], pen, 0, top)
+			drawGlyph(diacritic["pixels"], pen, getLeftMargin(drawn), top)
 		monocraft[character["name"]].width = PIXEL_SIZE * 6
 	print(f"Generated {len(characters)} characters")
 
@@ -78,9 +80,12 @@ def generateFont():
 	monocraft.generate(outputDir + "Monocraft.ttf")
 	monocraft.generate(outputDir + "Monocraft.otf")
 
+def getLeftMargin(character):
+	return PIXEL_SIZE * character["leftMargin"] if "leftMargin" in character else 0
+
 def drawCharacter(character, pen):
 	if "reference" in character: return drawCharacter(charactersByCodepoint[character["reference"]],pen)
-	leftMargin = PIXEL_SIZE * character["leftMargin"] if "leftMargin" in character else 0
+	leftMargin = getLeftMargin(character)
 	floor = -PIXEL_SIZE * character["descent"] if "descent" in character else 0
 	return drawGlyph(character["pixels"], pen, leftMargin, floor)
 
