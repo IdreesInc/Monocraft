@@ -1,3 +1,8 @@
+__all__ = [
+    'PixelImage',
+    'generatePolygons',
+]
+
 from enum import IntFlag
 
 
@@ -88,8 +93,9 @@ class PixelImage:
         return self._w * self._h
 
     def __str__(self):
-        return '\n'.join(' '.join(str(self[x, y]) for x in range(self._w))
-                         for y in range(self._h))
+        return '\n'.join(' '.join(
+            str(self[x, y]) for x in range(self.x, self.x_end))
+                         for y in range(self.y, self.y_end))
 
     def __repr__(self):
         return f'PixelImage(\n  x={self._x},\n' \
@@ -99,8 +105,8 @@ class PixelImage:
             f'  data=bytes([\n    ' + \
             ',\n    '.join(
                 ', '.join(
-                    f'{self[x, y]:#04x}' for x in range(self._w)
-                ) for y in range(self._h)
+                    f'{self[x, y]:#04x}' for x in range(self.x, self.x_end)
+                ) for y in range(self.y, self.y_end)
             ) + \
             '\n  ])\n)'
 
@@ -124,6 +130,47 @@ class PixelImage:
             self._w != other._w or \
             self._h != other._h or \
             self.__data != other.__data
+
+    def __or__(self, other):
+        if not isinstance(other, PixelImage):
+            return NotImplemented
+
+        if self.width == 0 or self.height == 0:
+            return other
+        elif other.width == 0 or other.height == 0:
+            return self
+        else:
+            x = min(self._x, other.x)
+            y = min(self._y, other.y)
+            x2 = max(self.x_end, other.x_end)
+            y2 = max(self.y_end, other.y_end)
+
+        ret = self.__class__(
+            x=x,
+            y=y,
+            width=x2 - x,
+            height=y2 - y,
+        )
+
+        dj = self._y - y
+        i_min = self._x - x
+        i_max = i_min + self._w
+        for j in range(self._h):
+            j_min = j * self._w
+            _j_min = (j + dj) * ret._w
+            row = self.__data[j_min:j_min + self._w]
+            ret.__data[i_min + _j_min:i_max + _j_min] = row
+
+        dj = other._y - y
+        i_min = other.x - x
+        i_max = i_min + other.width
+        for j in range(other.height):
+            j_min = j * other.width
+            _j_min = (j + dj) * ret._w
+            for i, i_ in enumerate(range(i_min + _j_min, i_max + _j_min)):
+                ret.__data[i_] |= other.__data[j_min + i]
+
+        return ret
 
 
 def generatePolygons(image):
