@@ -126,9 +126,9 @@ class PixelImage:
             self.__data != other.__data
 
 
-def generate_polygons(image):
+def generatePolygons(image):
     for segment, start_pos in segmentize(image):
-        yield polygonize_segment(segment, start_pos)
+        yield polygonizeSegment(segment, start_pos)
 
 
 def segmentize(image):
@@ -260,7 +260,7 @@ class CellFlag(IntFlag):
         return ret
 
 
-def polygonize_segment(image, start_pos):
+def polygonizeSegment(image, start_pos):
     x, y = start_pos
 
     # Make sure position is top left
@@ -547,7 +547,7 @@ def check_poly(poly):
 
 
 # Testing
-def run_test():
+def runTest():
     import json
     characters = json.load(open("./characters.json"))
     diacritics = json.load(open("./diacritics.json"))
@@ -556,23 +556,23 @@ def run_test():
     for v in characters:
         if 'pixels' not in v:
             continue
-        test_char(v['character'], v['pixels'])
+        testChar(v['character'], v['pixels'])
 
     for k, v in diacritics.items():
         if 'pixels' not in v:
             continue
-        test_char(k, v['pixels'])
+        testChar(k, v['pixels'])
 
     for v in ligatures:
         if 'pixels' not in v:
             continue
-        test_char(v['ligature'], v['pixels'])
+        testChar(v['ligature'], v['pixels'])
 
 
 filter = {'∀'}
 
 
-def test_char(name, pixels):
+def testChar(name, pixels):
     if False and name not in filter:
         return
 
@@ -584,10 +584,10 @@ def test_char(name, pixels):
 
     print(f'Character: {name}\n{image}\n\n')
 
-    for poly in generate_polygons(image):
+    for poly in generatePolygons(image):
         print('Polygon:\n  ' + '\n  '.join(f'{x}, {y}'
                                            for x, y in poly) + '\n\n')
 
 
 if __name__ == '__main__':
-    run_test()
+    runTest()
