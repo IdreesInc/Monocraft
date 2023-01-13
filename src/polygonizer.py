@@ -4,6 +4,7 @@ __all__ = [
 ]
 
 from enum import IntFlag
+import itertools
 
 
 class PixelImage:
@@ -479,7 +480,7 @@ def polygonizeSegment(image, start_pos):
     outer_poly += line[:i + 1]
 
     assert outer_poly[0][1] == outer_poly[1][1]
-    assert check_poly(outer_poly)
+    assert check_poly(outer_poly[:-1])
 
     # Calculate bounding box
     x_min, y_min, x_max, y_max = x, y, x, y
@@ -545,29 +546,34 @@ def polygonizeSegment(image, start_pos):
             # Insert into polygon
             if outer_poly[p] == inner_poly[0]:
                 # Deduplicate first point
-                outer_poly = [
-                    *outer_poly[:p],
-                    *inner_poly,
-                    *outer_poly[p:],
-                ]
+                outer_poly = list(*removeColinearPoints(
+                    itertools.chain(
+                        outer_poly[:p],
+                        inner_poly,
+                        outer_poly[p:],
+                    )))
             elif outer_poly[p + 1] == inner_poly[0]:
                 # Deduplicate second point
-                outer_poly = [
-                    *outer_poly[:p + 1],
-                    *inner_poly,
-                    *outer_poly[p + 1:],
-                ]
+                outer_poly = list(
+                    removeColinearPoints(
+                        itertools.chain(
+                            outer_poly[:p + 1],
+                            inner_poly,
+                            outer_poly[p + 1:],
+                        )))
             else:
                 # insert inner point
-                pp = (inner_poly[0][0], outer_poly[p][1])
-                outer_poly = [
-                    *outer_poly[:p + 1],
-                    pp,
-                    *inner_poly,
-                    inner_poly[0],
-                    pp,
-                    *outer_poly[p + 1:],
-                ]
+                pp = [(inner_poly[0][0], outer_poly[p][1])]
+                outer_poly = list(
+                    removeColinearPoints(
+                        itertools.chain(
+                            outer_poly[:p + 1],
+                            pp,
+                            inner_poly,
+                            [inner_poly[0]],
+                            pp,
+                            outer_poly[p + 1:],
+                        )))
 
     # Remove last point
     assert outer_poly[-1] == outer_poly[0]
@@ -579,16 +585,49 @@ def polygonizeSegment(image, start_pos):
     return outer_poly
 
 
+def removeColinearPoints(poly):
+    np = 0
+
+    for p in poly:
+        if np == 0:
+            x1, y1 = p
+            np += 1
+            continue
+
+        if np == 1:
+            x2, y2 = p
+            np += 1
+            continue
+
+        x3, y3 = p
+
+        # Check if the two line is colinear
+        if x1 == x2 == x3 or y1 == y2 == y3:
+            # Skip middle point
+            x2, y2 = x3, y3
+        else:
+            yield (x1, y1)
+            x1, y1, x2, y2 = x2, y2, x3, y3
+
+    if np >= 1:
+        yield (x1, y1)
+    if np >= 2:
+        yield (x2, y2)
+
+
 def check_poly(poly):
     for i in range(-1, len(poly) - 1):
         x, y = poly[i]
         x_, y_ = poly[i + 1]
         if x != x_ and y != y_:
+            print(f'{poly} Error at {i}')
             return False
     for i in range(-2, len(poly) - 2):
         x, y = poly[i]
-        x_, y_ = poly[i + 2]
-        if x == x_ and y == y_:
+        x_, y_ = poly[i + 1]
+        x__, y__ = poly[i + 2]
+        if x == x_ == x__ or y == y_ == y__:
+            print(f'{poly} Error at {i}')
             return False
     return True
 
