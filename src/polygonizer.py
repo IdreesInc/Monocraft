@@ -318,7 +318,7 @@ def polygonizeSegment(image, start_pos):
 
     dir = CellFlag.RIGHT
 
-    def do_move():
+    def doMove():
         nonlocal x, y, dir
 
         # Set wall
@@ -471,16 +471,16 @@ def polygonizeSegment(image, start_pos):
 
     # Generate outer polygon
     outer_poly = [(x, y)]
-    line = do_move()
+    line = doMove()
     i = find(line, outer_poly[0])
     while i is None:
         outer_poly += line
-        line = do_move()
+        line = doMove()
         i = find(line, outer_poly[0])
     outer_poly += line[:i + 1]
 
     assert outer_poly[0][1] == outer_poly[1][1]
-    assert check_poly(outer_poly[:-1])
+    assert checkPoly(outer_poly[:-1])
 
     # Calculate bounding box
     x_min, y_min, x_max, y_max = x, y, x, y
@@ -507,15 +507,15 @@ def polygonizeSegment(image, start_pos):
                 continue
 
             inner_poly = []
-            line = do_move()
+            line = doMove()
             i = None
             while i is None:
                 inner_poly += line
-                line = do_move()
+                line = doMove()
                 i = find(line, inner_poly[0])
             inner_poly += line[:i]
 
-            assert check_poly(inner_poly)
+            assert checkPoly(inner_poly)
 
             # Rotate to top-leftmost point
             # (Polygon does not change, just canonicalized)
@@ -579,7 +579,7 @@ def polygonizeSegment(image, start_pos):
     assert outer_poly[-1] == outer_poly[0]
     outer_poly.pop()
 
-    assert check_poly(outer_poly)
+    assert checkPoly(outer_poly)
 
     # Return polygon
     return outer_poly
@@ -615,7 +615,7 @@ def removeColinearPoints(poly):
         yield (x2, y2)
 
 
-def check_poly(poly):
+def checkPoly(poly):
     for i in range(-1, len(poly) - 1):
         x, y = poly[i]
         x_, y_ = poly[i + 1]
