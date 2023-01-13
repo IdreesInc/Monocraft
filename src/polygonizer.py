@@ -176,7 +176,7 @@ class PixelImage:
 
 def generatePolygons(image):
     for segment, start_pos in segmentize(image):
-        yield polygonizeSegment(segment, start_pos)
+        yield from polygonizeSegment(segment, start_pos)
 
 
 def segmentize(image):
@@ -470,17 +470,19 @@ def polygonizeSegment(image, start_pos):
             return None
 
     # Generate outer polygon
-    outer_poly = [(x, y)]
+    outer_poly = []
     line = doMove()
-    i = find(line, outer_poly[0])
+    i = find(line, start_pos)
     while i is None:
         outer_poly += line
         line = doMove()
-        i = find(line, outer_poly[0])
+        i = find(line, start_pos)
     outer_poly += line[:i + 1]
 
-    assert outer_poly[0][1] == outer_poly[1][1]
-    assert checkPoly(outer_poly[:-1])
+    assert checkPoly(outer_poly)
+
+    # Emit outer polygon
+    yield outer_poly
 
     # Calculate bounding box
     x_min, y_min, x_max, y_max = x, y, x, y
@@ -517,102 +519,8 @@ def polygonizeSegment(image, start_pos):
 
             assert checkPoly(inner_poly)
 
-            # Rotate to top-leftmost point
-            # (Polygon does not change, just canonicalized)
-            p = 0
-            x, y = inner_poly[0]
-            for i in range(1, len(inner_poly)):
-                x_, y_ = inner_poly[i]
-                if x_ < x or (x_ == x and y_ < y):
-                    p, x, y = i, x_, y_
-            inner_poly = inner_poly[p:] + inner_poly[:p]
-
-            # Join with outer polygon
-
-            # Find the joiner line
-            xi, yi = inner_poly[0]
-            p = 0
-            yp = outer_poly[0][1]
-            for i in range(1, len(outer_poly) - 1):
-                x, y = outer_poly[i]
-                x_, y_ = outer_poly[i + 1]
-
-                if y > yi or y_ > yi or y != y_ or yp > y:
-                    continue
-
-                p = i
-                yp = y
-
-            # Insert into polygon
-            if outer_poly[p] == inner_poly[0]:
-                # Deduplicate first point
-                outer_poly = list(*removeColinearPoints(
-                    itertools.chain(
-                        outer_poly[:p],
-                        inner_poly,
-                        outer_poly[p:],
-                    )))
-            elif outer_poly[p + 1] == inner_poly[0]:
-                # Deduplicate second point
-                outer_poly = list(
-                    removeColinearPoints(
-                        itertools.chain(
-                            outer_poly[:p + 1],
-                            inner_poly,
-                            outer_poly[p + 1:],
-                        )))
-            else:
-                # insert inner point
-                pp = [(inner_poly[0][0], outer_poly[p][1])]
-                outer_poly = list(
-                    removeColinearPoints(
-                        itertools.chain(
-                            outer_poly[:p + 1],
-                            pp,
-                            inner_poly,
-                            [inner_poly[0]],
-                            pp,
-                            outer_poly[p + 1:],
-                        )))
-
-    # Remove last point
-    assert outer_poly[-1] == outer_poly[0]
-    outer_poly.pop()
-
-    assert checkPoly(outer_poly)
-
-    # Return polygon
-    return outer_poly
-
-
-def removeColinearPoints(poly):
-    np = 0
-
-    for p in poly:
-        if np == 0:
-            x1, y1 = p
-            np += 1
-            continue
-
-        if np == 1:
-            x2, y2 = p
-            np += 1
-            continue
-
-        x3, y3 = p
-
-        # Check if the two line is colinear
-        if x1 == x2 == x3 or y1 == y2 == y3:
-            # Skip middle point
-            x2, y2 = x3, y3
-        else:
-            yield (x1, y1)
-            x1, y1, x2, y2 = x2, y2, x3, y3
-
-    if np >= 1:
-        yield (x1, y1)
-    if np >= 2:
-        yield (x2, y2)
+            # Emit inner polygon
+            yield inner_poly
 
 
 def checkPoly(poly):
