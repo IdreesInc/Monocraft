@@ -9,7 +9,7 @@ import itertools
 
 class PixelImage:
     ''' Class for managing a pixel image.
-    
+
     Each pixel is a 8-bit integer.
     It also store the position and size of the image, allowing easier operation.
     '''
@@ -68,7 +68,7 @@ class PixelImage:
 
     def __getitem__(self, key):
         ''' Gets a pixel at (x, y).
-        
+
         Defaults to 0 if out of bounds.
         '''
         x, y = key
@@ -508,6 +508,9 @@ def polygonizeSegment(image, start_pos):
             else:
                 continue
 
+            # Store iterator value
+            p = x, y
+
             inner_poly = []
             line = doMove()
             i = None
@@ -521,6 +524,9 @@ def polygonizeSegment(image, start_pos):
 
             # Emit inner polygon
             yield inner_poly
+
+            # Restore iterator value
+            x, y = p
 
 
 def checkPoly(poly):
@@ -563,11 +569,11 @@ def runTest():
         testChar(v['ligature'], v['pixels'])
 
 
-filter = {'∀'}
+filter = {}
 
 
 def testChar(name, pixels):
-    if False and name not in filter:
+    if filter and name not in filter:
         return
 
     image = PixelImage(
