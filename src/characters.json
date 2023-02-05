@@ -3959,7 +3959,7 @@
 		],
 		"group": "general_punctuation",
 		"character": "„",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8230,
@@ -4006,7 +4006,7 @@
 		],
 		"group": "general_punctuation",
 		"character": "‚",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8224,
@@ -4323,7 +4323,7 @@
 		],
 		"group": "general_punctuation",
 		"character": "⁏",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8273,
@@ -4415,7 +4415,7 @@
 		],
 		"group": "latin_1_supplement",
 		"character": "þ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 174,
@@ -4567,7 +4567,7 @@
 		],
 		"group": "currency_symbols",
 		"character": "₡",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8354,
@@ -4674,7 +4674,7 @@
 		],
 		"group": "currency_symbols",
 		"character": "₫",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8365,
@@ -4721,7 +4721,7 @@
 		],
 		"group": "currency_symbols",
 		"character": "₰",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8369,
@@ -5008,7 +5008,7 @@
 		],
 		"group": "mathematical_operators",
 		"character": "∄",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8713,
@@ -5475,7 +5475,7 @@
 		],
 		"group": "mathematical_operators",
 		"character": "∫",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8750,
@@ -5492,7 +5492,7 @@
 		],
 		"group": "mathematical_operators",
 		"character": "∮",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8733,
@@ -5569,7 +5569,7 @@
 		],
 		"group": "cyrillic",
 		"character": "ү",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1256,
@@ -5721,7 +5721,7 @@
 		],
 		"group": "cyrillic",
 		"character": "Қ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1179,
@@ -5738,7 +5738,7 @@
 		],
 		"group": "cyrillic",
 		"character": "қ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1170,
@@ -5800,7 +5800,7 @@
 		],
 		"group": "cyrillic",
 		"character": "ұ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1240,
@@ -5847,7 +5847,7 @@
 		],
 		"group": "cyrillic",
 		"character": "Җ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1175,
@@ -5864,7 +5864,7 @@
 		],
 		"group": "cyrillic",
 		"character": "җ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1186,
@@ -5881,7 +5881,7 @@
 		],
 		"group": "cyrillic",
 		"character": "Ң",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1187,
@@ -5898,7 +5898,7 @@
 		],
 		"group": "cyrillic",
 		"character": "ң",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1210,
@@ -6305,7 +6305,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": "β",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 947,
@@ -6322,7 +6322,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": "γ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 948,
@@ -6369,7 +6369,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": "ζ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 951,
@@ -6386,7 +6386,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": "η",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 952,
@@ -6463,7 +6463,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": "μ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 957,
@@ -6495,7 +6495,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": "ξ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 959,
@@ -6542,7 +6542,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": "ρ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 962,
@@ -6559,7 +6559,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": "ς",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 963,
@@ -6621,7 +6621,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": "φ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 967,
@@ -6638,7 +6638,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": "χ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 968,
@@ -6655,7 +6655,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": "ψ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 969,
@@ -6687,7 +6687,7 @@
 		],
 		"group": "greek_and_coptic",
 		"character": ";",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 903,
@@ -6914,7 +6914,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "Ʒ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 503,
@@ -6931,7 +6931,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "Ƿ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 447,
@@ -6948,7 +6948,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ƿ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 540,
@@ -6965,7 +6965,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "Ȝ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 541,
@@ -6982,7 +6982,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ȝ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 548,
@@ -6999,7 +6999,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "Ȥ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 549,
@@ -7016,7 +7016,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ȥ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 457,
@@ -7033,7 +7033,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ǉ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 448,
@@ -7140,7 +7140,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "Ƒ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 425,
@@ -7262,7 +7262,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "Ƞ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 414,
@@ -7279,7 +7279,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ƞ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 415,
@@ -7341,7 +7341,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ƪ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 440,
@@ -7358,7 +7358,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "Ƹ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 441,
@@ -7375,7 +7375,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ƹ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 443,
@@ -7452,7 +7452,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ȡ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 564,
@@ -7469,7 +7469,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ȴ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 565,
@@ -7486,7 +7486,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ȵ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 566,
@@ -7683,7 +7683,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ɉ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 586,
@@ -7700,7 +7700,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "Ɋ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 587,
@@ -7717,7 +7717,7 @@
 		],
 		"group": "latin_extended_b",
 		"character": "ɋ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 588,
@@ -7884,7 +7884,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɟ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 613,
@@ -7901,7 +7901,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɥ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 638,
@@ -7933,7 +7933,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʞ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 623,
@@ -7980,7 +7980,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʇ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 652,
@@ -8042,7 +8042,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʒ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 665,
@@ -8164,7 +8164,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɱ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 627,
@@ -8181,7 +8181,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɳ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 626,
@@ -8198,7 +8198,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɲ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 648,
@@ -8215,7 +8215,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʈ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 598,
@@ -8232,7 +8232,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɖ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 609,
@@ -8249,7 +8249,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɡ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 673,
@@ -8281,7 +8281,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɕ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 657,
@@ -8298,7 +8298,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʑ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 632,
@@ -8315,7 +8315,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɸ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 669,
@@ -8332,7 +8332,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʝ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 674,
@@ -8364,7 +8364,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɻ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 641,
@@ -8426,7 +8426,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɰ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 620,
@@ -8458,7 +8458,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɮ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 664,
@@ -8520,7 +8520,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʄ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 608,
@@ -8537,7 +8537,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɠ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 667,
@@ -8569,7 +8569,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɧ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 619,
@@ -8796,7 +8796,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʠ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 663,
@@ -8813,7 +8813,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʗ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 662,
@@ -8845,7 +8845,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɭ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 631,
@@ -8877,7 +8877,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɿ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 645,
@@ -8894,7 +8894,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʅ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 646,
@@ -8911,7 +8911,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʆ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 659,
@@ -8928,7 +8928,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ʓ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 666,
@@ -8960,7 +8960,7 @@
 		],
 		"group": "ipa_extensions",
 		"character": "ɼ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 699,
@@ -8992,7 +8992,7 @@
 		],
 		"group": "spacing_modifier_letters",
 		"character": "ˌ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 729,
@@ -9054,7 +9054,7 @@
 		],
 		"group": "latin_extended_a",
 		"character": "ĳ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 7838,
@@ -9191,7 +9191,7 @@
 		],
 		"group": "",
 		"character": "☀",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1280,
@@ -9373,7 +9373,7 @@
 		],
 		"group": "",
 		"character": "ɏ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 7935,
@@ -9390,7 +9390,7 @@
 		],
 		"group": "",
 		"character": "ỿ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8528,
@@ -9617,7 +9617,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₀",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8321,
@@ -9634,7 +9634,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₁",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8322,
@@ -9651,7 +9651,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₂",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8323,
@@ -9668,7 +9668,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₃",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8324,
@@ -9685,7 +9685,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₄",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8325,
@@ -9702,7 +9702,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₅",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8326,
@@ -9719,7 +9719,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₆",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8327,
@@ -9736,7 +9736,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₇",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8328,
@@ -9753,7 +9753,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₈",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8329,
@@ -9770,7 +9770,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₉",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8330,
@@ -9832,7 +9832,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₍",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8334,
@@ -9849,7 +9849,7 @@
 		],
 		"group": "superscripts_and_subscripts",
 		"character": "₎",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 8482,
@@ -10061,7 +10061,7 @@
 		],
 		"group": "miscellaneous_symbols",
 		"character": "☽",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 9792,
@@ -10108,7 +10108,7 @@
 		],
 		"group": "miscellaneous_symbols",
 		"character": "⚥",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 9824,
@@ -10380,7 +10380,7 @@
 		],
 		"group": "miscellaneous_symbols",
 		"character": "⛏",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 9875,
@@ -10397,7 +10397,7 @@
 		],
 		"group": "miscellaneous_symbols",
 		"character": "⚓",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 9960,
@@ -10414,7 +10414,7 @@
 		],
 		"group": "miscellaneous_symbols",
 		"character": "⛨",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 9786,
@@ -10476,7 +10476,7 @@
 		],
 		"group": "miscellaneous_symbols",
 		"character": "☂",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 9748,
@@ -10493,7 +10493,7 @@
 		],
 		"group": "miscellaneous_symbols",
 		"character": "☔",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 9732,
@@ -10525,7 +10525,7 @@
 		],
 		"group": "miscellaneous_symbols",
 		"character": "⛄",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 9731,
@@ -10542,7 +10542,7 @@
 		],
 		"group": "miscellaneous_symbols",
 		"character": "☃",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 9872,
@@ -10559,7 +10559,7 @@
 		],
 		"group": "miscellaneous_symbols",
 		"character": "⚐",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 9828,
@@ -10636,7 +10636,7 @@
 		],
 		"group": "miscellaneous_symbols",
 		"character": "⛈",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 9776,
@@ -11028,7 +11028,7 @@
 		],
 		"group": "hebrew",
 		"character": "ן",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1505,
@@ -11060,7 +11060,7 @@
 		],
 		"group": "hebrew",
 		"character": "ע",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1508,
@@ -11092,7 +11092,7 @@
 		],
 		"group": "hebrew",
 		"character": "ף",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1510,
@@ -11124,7 +11124,7 @@
 		],
 		"group": "hebrew",
 		"character": "ץ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1511,
@@ -11141,7 +11141,7 @@
 		],
 		"group": "hebrew",
 		"character": "ק",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1512,
@@ -11203,7 +11203,7 @@
 		],
 		"group": "hebrew",
 		"character": "ך",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1523,
@@ -11460,7 +11460,7 @@
 		],
 		"group": "dingbats",
 		"character": "✂",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11088,
@@ -11537,7 +11537,7 @@
 		],
 		"group": "supplemental_punctuation",
 		"character": "⸘",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11822,
@@ -11599,7 +11599,7 @@
 		],
 		"group": "supplemental_punctuation",
 		"character": "⹁",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11851,
@@ -11841,7 +11841,7 @@
 		],
 		"group": "latin_extended_d",
 		"character": "ꞁ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 42842,
@@ -11888,7 +11888,7 @@
 		],
 		"group": "latin_extended_d",
 		"character": "Ꜩ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 42793,
@@ -11905,7 +11905,7 @@
 		],
 		"group": "latin_extended_d",
 		"character": "ꜩ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 42809,
@@ -11997,7 +11997,7 @@
 		],
 		"group": "latin_extended_d",
 		"character": "ꜧ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 42790,
@@ -12014,7 +12014,7 @@
 		],
 		"group": "latin_extended_d",
 		"character": "Ꜧ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 42920,
@@ -12091,7 +12091,7 @@
 		],
 		"group": "phonetic_extensions",
 		"character": "ᴉ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 7428,
@@ -12873,7 +12873,7 @@
 		],
 		"group": "armenian",
 		"character": "բ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1379,
@@ -12890,7 +12890,7 @@
 		],
 		"group": "armenian",
 		"character": "գ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1380,
@@ -12907,7 +12907,7 @@
 		],
 		"group": "armenian",
 		"character": "դ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1381,
@@ -12939,7 +12939,7 @@
 		],
 		"group": "armenian",
 		"character": "զ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1383,
@@ -12956,7 +12956,7 @@
 		],
 		"group": "armenian",
 		"character": "է",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1384,
@@ -12973,7 +12973,7 @@
 		],
 		"group": "armenian",
 		"character": "ը",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1385,
@@ -12990,7 +12990,7 @@
 		],
 		"group": "armenian",
 		"character": "թ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1386,
@@ -13022,7 +13022,7 @@
 		],
 		"group": "armenian",
 		"character": "ի",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1388,
@@ -13039,7 +13039,7 @@
 		],
 		"group": "armenian",
 		"character": "լ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1389,
@@ -13056,7 +13056,7 @@
 		],
 		"group": "armenian",
 		"character": "խ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1390,
@@ -13088,7 +13088,7 @@
 		],
 		"group": "armenian",
 		"character": "կ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1392,
@@ -13135,7 +13135,7 @@
 		],
 		"group": "armenian",
 		"character": "ղ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1395,
@@ -13182,7 +13182,7 @@
 		],
 		"group": "armenian",
 		"character": "յ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1398,
@@ -13214,7 +13214,7 @@
 		],
 		"group": "armenian",
 		"character": "շ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1400,
@@ -13246,7 +13246,7 @@
 		],
 		"group": "armenian",
 		"character": "չ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1402,
@@ -13263,7 +13263,7 @@
 		],
 		"group": "armenian",
 		"character": "պ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1403,
@@ -13280,7 +13280,7 @@
 		],
 		"group": "armenian",
 		"character": "ջ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1404,
@@ -13327,7 +13327,7 @@
 		],
 		"group": "armenian",
 		"character": "վ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1407,
@@ -13359,7 +13359,7 @@
 		],
 		"group": "armenian",
 		"character": "ր",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1409,
@@ -13376,7 +13376,7 @@
 		],
 		"group": "armenian",
 		"character": "ց",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1410,
@@ -13408,7 +13408,7 @@
 		],
 		"group": "armenian",
 		"character": "փ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1412,
@@ -13425,7 +13425,7 @@
 		],
 		"group": "armenian",
 		"character": "ք",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1413,
@@ -13457,7 +13457,7 @@
 		],
 		"group": "armenian",
 		"character": "ֆ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1415,
@@ -13609,7 +13609,7 @@
 		],
 		"group": "armenian",
 		"character": "ֈ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 1333,
@@ -14451,7 +14451,7 @@
 		],
 		"group": "specials",
 		"character": "�",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 5794,
@@ -15758,7 +15758,7 @@
 		],
 		"group": "phonetic_extensions_supplement",
 		"character": "ᶑ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4257,
@@ -16150,7 +16150,7 @@
 		],
 		"group": "georgian",
 		"character": "Ⴚ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4283,
@@ -16227,7 +16227,7 @@
 		],
 		"group": "georgian",
 		"character": "Ⴟ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4288,
@@ -16394,7 +16394,7 @@
 		],
 		"group": "georgian",
 		"character": "გ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4307,
@@ -16411,7 +16411,7 @@
 		],
 		"group": "georgian",
 		"character": "დ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4308,
@@ -16428,7 +16428,7 @@
 		],
 		"group": "georgian",
 		"character": "ე",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4309,
@@ -16445,7 +16445,7 @@
 		],
 		"group": "georgian",
 		"character": "ვ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4310,
@@ -16507,7 +16507,7 @@
 		],
 		"group": "georgian",
 		"character": "კ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4314,
@@ -16524,7 +16524,7 @@
 		],
 		"group": "georgian",
 		"character": "ლ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4315,
@@ -16586,7 +16586,7 @@
 		],
 		"group": "georgian",
 		"character": "პ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4319,
@@ -16603,7 +16603,7 @@
 		],
 		"group": "georgian",
 		"character": "ჟ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4320,
@@ -16650,7 +16650,7 @@
 		],
 		"group": "georgian",
 		"character": "ტ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4323,
@@ -16667,7 +16667,7 @@
 		],
 		"group": "georgian",
 		"character": "უ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4324,
@@ -16684,7 +16684,7 @@
 		],
 		"group": "georgian",
 		"character": "ფ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4325,
@@ -16701,7 +16701,7 @@
 		],
 		"group": "georgian",
 		"character": "ქ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4326,
@@ -16718,7 +16718,7 @@
 		],
 		"group": "georgian",
 		"character": "ღ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4327,
@@ -16735,7 +16735,7 @@
 		],
 		"group": "georgian",
 		"character": "ყ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4328,
@@ -16782,7 +16782,7 @@
 		],
 		"group": "georgian",
 		"character": "ც",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4331,
@@ -16814,7 +16814,7 @@
 		],
 		"group": "georgian",
 		"character": "წ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4333,
@@ -16831,7 +16831,7 @@
 		],
 		"group": "georgian",
 		"character": "ჭ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4334,
@@ -16863,7 +16863,7 @@
 		],
 		"group": "georgian",
 		"character": "ჯ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4336,
@@ -16910,7 +16910,7 @@
 		],
 		"group": "georgian",
 		"character": "ჲ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4339,
@@ -16927,7 +16927,7 @@
 		],
 		"group": "georgian",
 		"character": "ჳ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4340,
@@ -16944,7 +16944,7 @@
 		],
 		"group": "georgian",
 		"character": "ჴ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4341,
@@ -16961,7 +16961,7 @@
 		],
 		"group": "georgian",
 		"character": "ჵ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4342,
@@ -16978,7 +16978,7 @@
 		],
 		"group": "georgian",
 		"character": "ჶ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4343,
@@ -16995,7 +16995,7 @@
 		],
 		"group": "georgian",
 		"character": "ჷ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4344,
@@ -17012,7 +17012,7 @@
 		],
 		"group": "georgian",
 		"character": "ჸ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4345,
@@ -17029,7 +17029,7 @@
 		],
 		"group": "georgian",
 		"character": "ჹ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4346,
@@ -17046,7 +17046,7 @@
 		],
 		"group": "georgian",
 		"character": "ჺ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4347,
@@ -17093,7 +17093,7 @@
 		],
 		"group": "georgian",
 		"character": "ჽ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 4350,
@@ -17110,7 +17110,7 @@
 		],
 		"group": "georgian",
 		"character": "ჾ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11521,
@@ -17127,7 +17127,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴁ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11522,
@@ -17144,7 +17144,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴂ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11523,
@@ -17176,7 +17176,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴄ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11525,
@@ -17193,7 +17193,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴅ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11526,
@@ -17225,7 +17225,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴡ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11527,
@@ -17272,7 +17272,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴉ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11530,
@@ -17379,7 +17379,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴏ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11536,
@@ -17426,7 +17426,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴒ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11555,
@@ -17443,7 +17443,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴣ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11539,
@@ -17460,7 +17460,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴓ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11540,
@@ -17477,7 +17477,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴔ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11541,
@@ -17494,7 +17494,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴕ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11542,
@@ -17526,7 +17526,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴗ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11544,
@@ -17543,7 +17543,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴘ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11545,
@@ -17560,7 +17560,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴙ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11546,
@@ -17577,7 +17577,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴚ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11547,
@@ -17609,7 +17609,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴜ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11549,
@@ -17626,7 +17626,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴝ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11550,
@@ -17643,7 +17643,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴞ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11556,
@@ -17660,7 +17660,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴤ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11551,
@@ -17677,7 +17677,7 @@
 		],
 		"group": "georgian_supplement",
 		"character": "ⴟ",
-		"descent": -1
+		"descent": 1
 	},
 	{
 		"codepoint": 11552,
