@@ -1,5 +1,5 @@
 # Monocraft, a monospaced font for developers who like Minecraft a bit too much.
-# Copyright (C) 2022 Idrees Hassan
+# Copyright (C) 2022-2023 Idrees Hassan
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -36,7 +36,7 @@ def generateFont():
 	monocraft.fullname = "Monocraft"
 	monocraft.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
 	monocraft.encoding = "UnicodeFull"
-	monocraft.version = "2.3"
+	monocraft.version = "2.4"
 	monocraft.weight = "Regular"
 	monocraft.ascent = PIXEL_SIZE * 8
 	monocraft.descent = PIXEL_SIZE
