@@ -42,7 +42,7 @@ def generateFont():
 	monocraft.descent = PIXEL_SIZE
 	monocraft.em = PIXEL_SIZE * 9
 	monocraft.upos = -PIXEL_SIZE # Underline position
-	monocraft.addLookup("ligatures", "gsub_ligature", (), (("liga",(("dflt",("dflt")),)),))
+	monocraft.addLookup("ligatures", "gsub_ligature", (), (("liga",(("dflt",("dflt")),("latn",("dflt")))),))
 	monocraft.addLookupSubtable("ligatures", "ligatures-subtable")
 
 	for character in characters:
