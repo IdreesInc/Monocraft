@@ -16,6 +16,7 @@
 import os
 import fontforge
 import json
+import math
 from generate_diacritics import generateDiacritics
 from generate_examples import generateExamples
 from polygonizer import PixelImage, generatePolygons
@@ -75,13 +76,20 @@ def generateFont():
 
 def generateImage(character):
 	image = PixelImage()
+	dx, dy = 0, 0
 	if "pixels" in character:
 		arr = character["pixels"]
-		x = int(character["leftMargin"]) if "leftMargin" in character else 0
-		y = int(-character["descent"]) if "descent" in character else 0
+		leftMargin = character["leftMargin"] if "leftMargin" in character else 0
+		x = math.floor(leftMargin)
+		dx += leftMargin - x
+		descent = -character["descent"] if "descent" in character else 0
+		y = math.floor(descent)
+		dy += descent - y
 		image = image | imageFromArray(arr, x, y)
 	if "reference" in character:
-		image = image | generateImage(charactersByCodepoint[character["reference"]])
+		# XXX: What to do with dx and dy?
+		other, (dx, dy) = generateImage(charactersByCodepoint[character["reference"]])
+		image = image | other
 	if "diacritic" in character:
 		diacritic = diacritics[character["diacritic"]]
 		arr = diacritic["pixels"]
@@ -90,7 +98,7 @@ def generateImage(character):
 		if "diacriticSpace" in character:
 			y += int(character["diacriticSpace"])
 		image = image | imageFromArray(arr, x, y)
-	return image
+	return (image, (dx, dy))
 
 def findHighestY(image):
 	for y in range(image.y_end - 1, image.y, -1):
@@ -108,12 +116,13 @@ def imageFromArray(arr, x=0, y=0):
 		data=bytes(x for a in reversed(arr) for x in a),
 	)
 
-def drawImage(image, pen):
+def drawImage(data, pen):
+	image, (dx, dy) = data
 	for polygon in generatePolygons(image):
 		start = True
 		for x, y in polygon:
-			x *= PIXEL_SIZE
-			y *= PIXEL_SIZE
+			x = (x + dx) * PIXEL_SIZE
+			y = (y + dy) * PIXEL_SIZE
 			if start:
 				pen.moveTo(x, y)
 				start = False
