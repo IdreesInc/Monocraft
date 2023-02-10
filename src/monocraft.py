@@ -53,7 +53,8 @@ def generateFont():
 		top = 0
 		drawn = character
 
-		drawImage(generateImage(character), pen)
+		image, kw = generateImage(character)
+		drawImage(image, pen, **kw)
 		monocraft[character["name"]].width = PIXEL_SIZE * 6
 	print(f"Generated {len(characters)} characters")
 
@@ -66,7 +67,8 @@ def generateFont():
 	for ligature in ligatures:
 		lig = monocraft.createChar(-1, ligature["name"])
 		pen = monocraft[ligature["name"]].glyphPen()
-		drawImage(generateImage(ligature), pen)
+		image, kw = generateImage(ligature)
+		drawImage(image, pen, **kw)
 		monocraft[ligature["name"]].width = PIXEL_SIZE * len(ligature["sequence"]) * 6
 		lig.addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
 	print(f"Generated {len(ligatures)} ligatures")
@@ -76,20 +78,20 @@ def generateFont():
 
 def generateImage(character):
 	image = PixelImage()
-	dx, dy = 0, 0
+	kw = {}
 	if "pixels" in character:
 		arr = character["pixels"]
 		leftMargin = character["leftMargin"] if "leftMargin" in character else 0
 		x = math.floor(leftMargin)
-		dx += leftMargin - x
+		kw['dx'] = leftMargin - x
 		descent = -character["descent"] if "descent" in character else 0
 		y = math.floor(descent)
-		dy += descent - y
+		kw['dy'] = descent - y
 		image = image | imageFromArray(arr, x, y)
 	if "reference" in character:
-		# XXX: What to do with dx and dy?
-		other, (dx, dy) = generateImage(charactersByCodepoint[character["reference"]])
-		image = image | other
+		other = generateImage(charactersByCodepoint[character["reference"]])
+		kw.update(other[1])
+		image = image | other[0]
 	if "diacritic" in character:
 		diacritic = diacritics[character["diacritic"]]
 		arr = diacritic["pixels"]
@@ -98,7 +100,7 @@ def generateImage(character):
 		if "diacriticSpace" in character:
 			y += int(character["diacriticSpace"])
 		image = image | imageFromArray(arr, x, y)
-	return (image, (dx, dy))
+	return (image, kw)
 
 def findHighestY(image):
 	for y in range(image.y_end - 1, image.y, -1):
@@ -116,8 +118,7 @@ def imageFromArray(arr, x=0, y=0):
 		data=bytes(x for a in reversed(arr) for x in a),
 	)
 
-def drawImage(data, pen):
-	image, (dx, dy) = data
+def drawImage(image, pen, *, dx=0, dy=0):
 	for polygon in generatePolygons(image):
 		start = True
 		for x, y in polygon:
