@@ -16,6 +16,7 @@
 import os
 import fontforge
 import json
+import math
 from generate_diacritics import generateDiacritics
 from generate_examples import generateExamples
 from polygonizer import PixelImage, generatePolygons
@@ -52,7 +53,8 @@ def generateFont():
 		top = 0
 		drawn = character
 
-		drawImage(generateImage(character), pen)
+		image, kw = generateImage(character)
+		drawImage(image, pen, **kw)
 		monocraft[character["name"]].width = PIXEL_SIZE * 6
 	print(f"Generated {len(characters)} characters")
 
@@ -65,7 +67,8 @@ def generateFont():
 	for ligature in ligatures:
 		lig = monocraft.createChar(-1, ligature["name"])
 		pen = monocraft[ligature["name"]].glyphPen()
-		drawImage(generateImage(ligature), pen)
+		image, kw = generateImage(ligature)
+		drawImage(image, pen, **kw)
 		monocraft[ligature["name"]].width = PIXEL_SIZE * len(ligature["sequence"]) * 6
 		lig.addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
 	print(f"Generated {len(ligatures)} ligatures")
@@ -75,13 +78,20 @@ def generateFont():
 
 def generateImage(character):
 	image = PixelImage()
+	kw = {}
 	if "pixels" in character:
 		arr = character["pixels"]
-		x = int(character["leftMargin"]) if "leftMargin" in character else 0
-		y = int(-character["descent"]) if "descent" in character else 0
+		leftMargin = character["leftMargin"] if "leftMargin" in character else 0
+		x = math.floor(leftMargin)
+		kw['dx'] = leftMargin - x
+		descent = -character["descent"] if "descent" in character else 0
+		y = math.floor(descent)
+		kw['dy'] = descent - y
 		image = image | imageFromArray(arr, x, y)
 	if "reference" in character:
-		image = image | generateImage(charactersByCodepoint[character["reference"]])
+		other = generateImage(charactersByCodepoint[character["reference"]])
+		kw.update(other[1])
+		image = image | other[0]
 	if "diacritic" in character:
 		diacritic = diacritics[character["diacritic"]]
 		arr = diacritic["pixels"]
@@ -90,7 +100,7 @@ def generateImage(character):
 		if "diacriticSpace" in character:
 			y += int(character["diacriticSpace"])
 		image = image | imageFromArray(arr, x, y)
-	return image
+	return (image, kw)
 
 def findHighestY(image):
 	for y in range(image.y_end - 1, image.y, -1):
@@ -108,12 +118,12 @@ def imageFromArray(arr, x=0, y=0):
 		data=bytes(x for a in reversed(arr) for x in a),
 	)
 
-def drawImage(image, pen):
+def drawImage(image, pen, *, dx=0, dy=0):
 	for polygon in generatePolygons(image):
 		start = True
 		for x, y in polygon:
-			x *= PIXEL_SIZE
-			y *= PIXEL_SIZE
+			x = (x + dx) * PIXEL_SIZE
+			y = (y + dy) * PIXEL_SIZE
 			if start:
 				pen.moveTo(x, y)
 				start = False
