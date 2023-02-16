@@ -553,8 +553,8 @@ def polygonizeSegment(image, start_pos):
                         range(len(inner_poly) - 1, -1, -1),
                     )),
             ))
-            for p in inner_poly:
-                points[p].add(j)
+            for i in inner_poly:
+                points[i].add(j)
 
             # Restore iterator value
             x, y = p
