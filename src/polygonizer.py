@@ -16,6 +16,7 @@ __all__ = [
     'generatePolygons',
 ]
 
+from collections import defaultdict
 from enum import IntFlag
 import itertools
 
@@ -494,8 +495,16 @@ def polygonizeSegment(image, start_pos):
 
     assert checkPoly(outer_poly)
 
-    # Emit outer polygon
-    yield outer_poly
+    points_ = dict(
+        zip(
+            reversed(outer_poly),
+            range(len(outer_poly) - 1, -1, -1),
+        ))
+    points = defaultdict(set)
+    for p in outer_poly:
+        points[p].add(0)
+
+    poly = [(outer_poly, points_)]
 
     # Calculate bounding box
     x_min, y_min, x_max, y_max = x, y, x, y
@@ -535,11 +544,56 @@ def polygonizeSegment(image, start_pos):
 
             assert checkPoly(inner_poly)
 
-            # Emit inner polygon
-            yield inner_poly
+            j = len(poly)
+            poly.append((
+                inner_poly,
+                dict(
+                    zip(
+                        reversed(inner_poly),
+                        range(len(inner_poly) - 1, -1, -1),
+                    )),
+            ))
+            for i in inner_poly:
+                points[i].add(j)
 
             # Restore iterator value
             x, y = p
+
+    # Try to join polygons
+    for i in range(len(poly) - 1, -1, -1):
+        inner_poly, points_ = poly[i]
+
+        for v in points.values():
+            if len(v) > 1 and i in v:
+                j = min(v)
+                break
+        else:
+            continue
+
+        outer_poly, points__ = poly[j]
+
+        for i_, p in enumerate(inner_poly):
+            j_ = points__.get(p)
+            if j_ is not None:
+                break
+        else:
+            raise RuntimeError(
+                f'Should not happened {inner_poly} {outer_poly}')
+
+        outer_poly[j_:j_] = [*inner_poly[i_:], *inner_poly[:i_]]
+        points__.update(
+            zip(
+                reversed(outer_poly),
+                range(len(outer_poly) - 1, -1, -1),
+            ))
+
+        del poly[i]
+        for v in points.values():
+            v.discard(i)
+
+    # Emit polygons
+    for i, _ in poly:
+        yield i
 
 
 def checkPoly(poly):
