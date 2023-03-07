@@ -41,15 +41,7 @@ def generate_progress_bars(filename):
     - "sequence": a list of integers representing the Unicode code points of the characters in the progress bar
     - "pixels": a list of integers representing the pixels of the progress bar
     """
-    try:
-        with open(filename) as f:
-            data = json.load(f)
-    except FileNotFoundError:
-        print(f"Error: file {filename} not found.")
-        return []
-    except json.JSONDecodeError:
-        print(f"Error: file {filename} is not a valid JSON file.")
-        return []
+    data = json.load(open(filename))
     out = []
     for d in data:
         name = f'{d["head_name"]} {d["body_name"]} '
@@ -57,7 +49,6 @@ def generate_progress_bars(filename):
         head_pixels = d["head_pixels"]
         body = copy.deepcopy(body_pixels)
         for i in range( d["min_length"],d["max_length"] + 1):
-            print(f"Adding ligature {name} {i}")
             o = {}
             #generate ligature data
             o["name"] = name + str(i); 
