@@ -82,4 +82,3 @@ def generate_progress_bars(filename):
             o["pixels"] = pixels
             out.append(o)
     return out
-
