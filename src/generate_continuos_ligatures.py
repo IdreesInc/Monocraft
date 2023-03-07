@@ -15,9 +15,9 @@ import json
 import copy
 
 
-def generate_progress_bars(filename):
+def generate_continous_ligatures(filename):
     """
-    Generates progress bars data from a JSON file.
+    Generates continuos ligature data from a JSON file.
 
     The JSON file should have the following structure:
     [

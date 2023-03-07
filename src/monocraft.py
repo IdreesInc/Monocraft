@@ -20,13 +20,13 @@ import math
 from generate_diacritics import generateDiacritics
 from generate_examples import generateExamples
 from polygonizer import PixelImage, generatePolygons
-from generate_progress_bars import generate_progress_bars
+from generate_continuos_ligatures import generate_continous_ligatures 
 
 PIXEL_SIZE = 120
 
 characters = json.load(open("./characters.json"))
 diacritics = json.load(open("./diacritics.json"))
-ligatures = json.load(open("./ligatures.json")) + generate_progress_bars("./progress_bars.json")
+ligatures = json.load(open("./ligatures.json")) + generate_continous_ligatures("./continuos_ligatures.json")
 
 characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
