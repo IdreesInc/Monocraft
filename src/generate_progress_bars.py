@@ -12,6 +12,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 import json
+import copy
 
 
 def generate_progress_bars(filename):
@@ -54,7 +55,9 @@ def generate_progress_bars(filename):
         name = f'{d["head_name"]} {d["body_name"]} '
         body_pixels = d["body_pixels"]
         head_pixels = d["head_pixels"]
+        body = copy.deepcopy(body_pixels)
         for i in range( d["min_length"],d["max_length"] + 1):
+            print(f"Adding ligature {name} {i}")
             o = {}
             #generate ligature data
             o["name"] = name + str(i); 
@@ -64,21 +67,19 @@ def generate_progress_bars(filename):
                 o["ligature"] = d["head"] + d["body"] * i
             o["sequence"] = [ord(c) for c in o["ligature"]]
             #generate pixels
-            body = body_pixels
-
-            for j in range(i):
-                for k in range(len(body)):
-                    body[k] += body_pixels[k]
-            pixels = [];
+            #expand the body by 1
+            for k in range(len(body)):
+                body[k] += body_pixels[k]
+            pixels = []
             if d["direction"] == "right":
-                pixels = body
+                pixels = copy.deepcopy(body)
                 for j in range(len(pixels)):
                     pixels[j] += head_pixels[j]
             else:
-                pixels = head_pixels
+                pixels = copy.deepcopy(head_pixels)
                 for j in range(len(pixels)):
                     pixels[j] += body[j]
-            o["pixels"] = pixels;
+            o["pixels"] = pixels
             out.append(o)
-    return out;
+    return out
 
