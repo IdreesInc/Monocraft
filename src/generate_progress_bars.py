@@ -14,24 +14,46 @@
 import json
 
 
-def generate_progress_bars(file):
-    #json structure:
-    #Charecter definition + direction, specifies what the progress bar is made of
-        #head string
-        #body string
-        #head_name string
-        #body_name
-        #direction : "left"/right
-    #Length definition 
-        #min_length int: Minimum number of body chars needed for it to be considered a progress bar
-        #max_length int: We can't add infinite number of ligatures, so we cap it with this
-    #Pixel definition, pretty self explanatory
-        #head_pixels
-        #body_pixels
-    data = json.load(open(file))
+def generate_progress_bars(filename):
+    """
+    Generates progress bars data from a JSON file.
+
+    The JSON file should have the following structure:
+    [
+        {
+            "head_name": "string",
+            "body_name": "string",
+            "head": "string",
+            "body": "string",
+            "direction": "left" or "right",
+            "min_length": int,
+            "max_length": int,
+            "head_pixels": [[int, int, ...], ...],
+            "body_pixels": [[int, int, ...], ...]
+        },
+        ...
+    ]
+
+    Returns a list of progress bars, where each progress bar is a dictionary with the following keys:
+    - "name": a string representing the name of the progress bar
+    - "ligature": a string representing the progress bar
+    - "sequence": a list of integers representing the Unicode code points of the characters in the progress bar
+    - "pixels": a list of integers representing the pixels of the progress bar
+    """
+    try:
+        with open(filename) as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        print(f"Error: file {filename} not found.")
+        return []
+    except json.JSONDecodeError:
+        print(f"Error: file {filename} is not a valid JSON file.")
+        return []
     out = []
     for d in data:
-        name = d["head_name"] + " " + d["body_name"] + " "
+        name = f'{d["head_name"]} {d["body_name"]} '
+        body_pixels = d["body_pixels"]
+        head_pixels = d["head_pixels"]
         for i in range( d["min_length"],d["max_length"] + 1):
             o = {}
             #generate ligature data
@@ -42,20 +64,21 @@ def generate_progress_bars(file):
                 o["ligature"] = d["head"] + d["body"] * i
             o["sequence"] = [ord(c) for c in o["ligature"]]
             #generate pixels
-            body = d["body_pixels"]
+            body = body_pixels
+
             for j in range(i):
-                #print(len(body))
                 for k in range(len(body)):
-                    #print(f'len(body) = {len(body)} len(d[\"body\"]) = {len(d["body"])} k = {k}')
-                    body[k] += d["body_pixels"][k]
+                    body[k] += body_pixels[k]
+            pixels = [];
             if d["direction"] == "right":
-                o["pixels"] = body
-                for j in range(len(o["pixels"])):
-                    o["pixels"][j] += d["head_pixels"][j]
+                pixels = body
+                for j in range(len(pixels)):
+                    pixels[j] += head_pixels[j]
             else:
-                o["pixels"] = d["head_pixels"]
-                for j in range(len(o["pixels"])):
-                    o["pixels"][j] += body[j]
+                pixels = head_pixels
+                for j in range(len(pixels)):
+                    pixels[j] += body[j]
+            o["pixels"] = pixels;
             out.append(o)
     return out;
 
