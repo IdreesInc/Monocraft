@@ -3644,6 +3644,56 @@
 		"descent": 1
 	},
 	{
+		"character": "Ү",
+		"name": "cyrillic_capital_letter_straight_u",
+		"codepoint": 1198,
+		"reference": 89
+	},
+	{
+		"character": "ү",
+		"name": "cyrillic_small_letter_straight_u",
+		"codepoint": 1199,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0]
+		],
+		"descent": 1
+	},
+	{
+		"character": "O",
+		"name": "cyrillic_capital_letter_barred_o",
+		"codepoint": 1256,
+		"pixels": [
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "o",
+		"name": "cyrillic_small_letter_barred_o",
+		"codepoint": 1257,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 1, 0],
+			[1, 0, 0, 0, 1],
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 1],
+			[0, 1, 1, 1, 0]
+		]
+	},
+	{
 		"character": "€",
 		"name": "euro_sign",
 		"codepoint": 8364,
@@ -3655,6 +3705,20 @@
 			[1, 1, 1, 0, 0],
 			[0, 1, 0, 0, 1],
 			[0, 0, 1, 1, 0]
+		]
+	},
+	{
+		"character": "₮",
+		"name": "tugrik_sign",
+		"codepoint": 8366,
+		"pixels": [
+			[1, 1, 1, 1, 1],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 1, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 1, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0]
 		]
 	},
 	{
