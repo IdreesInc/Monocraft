@@ -44,7 +44,11 @@ brew install --cask font-monocraft
 
 Download the most recent `Monocraft.ttf` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Double click on the downloaded font file and select **Install Font** in the window that appears. More help available [here](https://support.apple.com/en-us/HT201749).
 
-### Linux
+### Gentoo Linux
+
+[repomansez](https://github.com/repomansez) has written a [Gentoo ebuild](https://github.com/repomansez/cute-overlay/blob/master/media-fonts/monocraft/monocraft-2.5.ebuild) for this font. Follow the instructions on his repository if you wish to install it this way.
+
+### Generic Linux
 
 Download the most recent `Monocraft.ttf` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Move the file to ~/.local/share/fonts (create the folder if it doesn't already exist). In a terminal, run `fc-cache -fv`. Alternatively, log out and log in again. 
 
