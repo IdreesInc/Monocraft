@@ -113,12 +113,12 @@
   },
 
   {
-    "head": "--",
+    "head": "-",
     "body": "-",
-    "head_name": "double minus",
+    "head_name": "minus",
     "body_name": "minus",
     "direction": "left",
-    "min_length": 1,
+    "min_length": 2,
     "max_length": 30,
 
         "head_pixels": [

@@ -47,7 +47,7 @@ def generate_continous_ligatures(filename):
         name = f'{d["head_name"]} {d["body_name"]} '
         body_pixels = d["body_pixels"]
         head_pixels = d["head_pixels"]
-        body = copy.deepcopy(body_pixels)
+        body = [[] for _ in  range(len(body_pixels))] # copy.deepcopy(body_pixels)
         for i in range( d["min_length"],d["max_length"] + 1):
             o = {}
             #generate ligature data
