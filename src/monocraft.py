@@ -26,7 +26,7 @@ PIXEL_SIZE = 120
 
 characters = json.load(open("./characters.json"))
 diacritics = json.load(open("./diacritics.json"))
-ligatures = json.load(open("./ligatures.json")) + generate_continous_ligatures("./continuos_ligatures.json")
+ligatures = json.load(open("./ligatures.json")) + generate_continous_ligatures("./continuous_ligatures.json")
 
 characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
