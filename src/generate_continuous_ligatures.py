@@ -15,9 +15,9 @@ import json
 import copy
 
 
-def generate_continous_ligatures(filename):
+def generate_continuous_ligatures(filename):
     """
-    Generates continuos ligature data from a JSON file.
+    Generates continuous ligature data from a JSON file.
 
     The JSON file should have the following structure:
     [
