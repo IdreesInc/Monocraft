@@ -15,7 +15,7 @@ The monospaced font for developers who like Minecraft a bit _too_ much.
 - Minecraft!
   - The characters in this font were based around the [typeface](https://github.com/IdreesInc/Minecraft-Font) used in the Minecraft UI, with each glyph updated for better readability and spacing
 - Monospaced!
-  - Each of the 500+ glyphs included in this font have been carefully redesigned to work in a monospaced font
+  - Each of the 1500+ glyphs included in this font have been carefully redesigned to work in a monospaced font
   - Thin characters like "i" and "l" have been reworked with tasteful tails and serifs to look better in a monospaced environment
 - Programming ligatures!
   - Add some spice to your programming life with all new ligature characters
@@ -59,6 +59,8 @@ After following the installation instructions up above, simply select the "Monoc
 So far, the following ligatures have been added to the font:
 
 <img src="images/ligatures.png" width="300">
+
+And with the contributions of @Ciubix8513, Monocraft now includes continuous ligatures that enable you to type arrows and lines that _just keep going_.
 
 If there is another character combination that you feel could be a ligature, feel free to create an issue!
 
