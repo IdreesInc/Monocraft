@@ -48,7 +48,7 @@ def generateExamples(characters, ligatures, charactersByCodepoint):
 			index = 0
 			characterOutput += "\n"
 		if i in charactersByCodepoint:
-			if index % 32 == 0:
+			if index % 48 == 0:
 				characterOutput += "\n"
 			characterOutput += chr(i) + " "
 			index += 1
