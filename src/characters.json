@@ -4387,21 +4387,6 @@
 		"character": "‑"
 	},
 	{
-		"codepoint": 173,
-		"name": "soft_hyphen",
-		"pixels": [
-			[0, 0, 0, 0, 0],
-			[0, 0, 0, 0, 0],
-			[0, 0, 0, 0, 0],
-			[0, 0, 0, 0, 0],
-			[0, 1, 1, 1, 0],
-			[0, 0, 0, 0, 0],
-			[0, 0, 0, 0, 0]
-		],
-		"group": "latin_1_supplement",
-		"character": "­"
-	},
-	{
 		"codepoint": 254,
 		"name": "latin_small_letter_thorn",
 		"pixels": [
