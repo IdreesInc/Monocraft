@@ -20,12 +20,13 @@ import math
 from generate_diacritics import generateDiacritics
 from generate_examples import generateExamples
 from polygonizer import PixelImage, generatePolygons
+from generate_continuous_ligatures import generate_continuous_ligatures 
 
 PIXEL_SIZE = 120
 
 characters = json.load(open("./characters.json"))
 diacritics = json.load(open("./diacritics.json"))
-ligatures = json.load(open("./ligatures.json"))
+ligatures = json.load(open("./ligatures.json")) + generate_continuous_ligatures("./continuous_ligatures.json")
 
 characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
@@ -63,7 +64,6 @@ def generateFont():
 		os.makedirs(outputDir)
 
 	monocraft.generate(outputDir + "Monocraft-no-ligatures.ttf")
-
 	for ligature in ligatures:
 		lig = monocraft.createChar(-1, ligature["name"])
 		pen = monocraft[ligature["name"]].glyphPen()
