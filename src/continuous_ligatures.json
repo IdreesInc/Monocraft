@@ -2,7 +2,7 @@
   {
     "head": "=>",
     "body": "=",
-    "head_name": "Right fat arrow",
+    "head_name": "right thick arrow",
     "body_name": "equals sign",
     "direction": "right",
     "min_length": 1,
@@ -30,7 +30,7 @@
   {
     "head": "<=",
     "body": "=",
-    "head_name": "left fat arrow",
+    "head_name": "left thick arrow",
     "body_name": "equals sign",
     "direction": "left",
     "min_length": 1,
@@ -58,7 +58,7 @@
   {
     "head": "->",
     "body": "-",
-    "head_name": "Right arrow",
+    "head_name": "right arrow",
     "body_name": "minus",
     "direction": "right",
     "min_length": 1,

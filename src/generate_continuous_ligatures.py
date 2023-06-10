@@ -41,28 +41,28 @@ def generate_continuous_ligatures(filename):
     - "sequence": a list of integers representing the Unicode code points of the characters in the progress bar
     - "pixels": a list of integers representing the pixels of the progress bar
     """
-    data = json.load(open(filename))
+    continuous_ligatures = json.load(open(filename))
     out = []
-    for d in data:
-        name = f'{d["head_name"]} {d["body_name"]} '
-        body_pixels = d["body_pixels"]
-        head_pixels = d["head_pixels"]
-        body = [[] for _ in  range(len(body_pixels))] # copy.deepcopy(body_pixels)
-        for i in range( d["min_length"],d["max_length"] + 1):
-            o = {}
-            #generate ligature data
-            o["name"] = name + str(i); 
-            if d["direction"] == "right":
-                o["ligature"] = d["body"] * i +d["head"]
+    for ligature in continuous_ligatures:
+        name = f'{ligature["head_name"]} {ligature["body_name"]} '
+        body_pixels = ligature["body_pixels"]
+        head_pixels = ligature["head_pixels"]
+        body = [[] for _ in  range(len(body_pixels))]
+        for i in range( ligature["min_length"],ligature["max_length"] + 1):
+            glyph = {}
+            # Generate ligature data
+            glyph["name"] = name + str(i); 
+            if ligature["direction"] == "right":
+                glyph["ligature"] = ligature["body"] * i + ligature["head"]
             else:
-                o["ligature"] = d["head"] + d["body"] * i
-            o["sequence"] = [ord(c) for c in o["ligature"]]
-            #generate pixels
-            #expand the body by 1
+                glyph["ligature"] = ligature["head"] + ligature["body"] * i
+            glyph["sequence"] = [ord(c) for c in glyph["ligature"]]
+            # Generate pixels
+            # Expand the body by 1
             for k in range(len(body)):
                 body[k] += body_pixels[k]
             pixels = []
-            if d["direction"] == "right":
+            if ligature["direction"] == "right":
                 pixels = copy.deepcopy(body)
                 for j in range(len(pixels)):
                     pixels[j] += head_pixels[j]
@@ -70,6 +70,6 @@ def generate_continuous_ligatures(filename):
                 pixels = copy.deepcopy(head_pixels)
                 for j in range(len(pixels)):
                     pixels[j] += body[j]
-            o["pixels"] = pixels
-            out.append(o)
+            glyph["pixels"] = pixels
+            out.append(glyph)
     return out
