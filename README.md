@@ -60,7 +60,7 @@ So far, the following ligatures have been added to the font:
 
 <img src="images/ligatures.png" width="300">
 
-And with the contributions of @Ciubix8513, Monocraft now includes continuous ligatures that enable you to type arrows and lines that _just keep going_.
+And with the contributions of [@Ciubix8513](https://github.com/Ciubix8513), Monocraft now includes continuous ligatures that enable you to type arrows and lines that _just keep going_.
 
 If there is another character combination that you feel could be a ligature, feel free to create an issue!
 
