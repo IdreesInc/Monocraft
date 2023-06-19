@@ -20,7 +20,7 @@ import math
 from generate_diacritics import generateDiacritics
 from generate_examples import generateExamples
 from polygonizer import PixelImage, generatePolygons
-from generate_continuous_ligatures import generate_continuous_ligatures 
+from generate_continuous_ligatures import generate_continuous_ligatures
 
 PIXEL_SIZE = 120
 
@@ -75,7 +75,6 @@ def generateFont():
 	fontList[1].generate(outputDir + "Monocraft-bold-no-ligatures.ttf")
 	fontList[2].generate(outputDir + "Monocraft-italic-no-ligatures.ttf")
 	for ligature in ligatures:
-		print(ligature["name"])
 		image, kw = generateImage(ligature)
 		createChar(fontList, -1, ligature["name"], image, width=PIXEL_SIZE * len(ligature["sequence"]) * 6, **kw)
 		for font in fontList:
@@ -87,7 +86,7 @@ def generateFont():
 	fontList[1].generate(outputDir + "Monocraft-bold.ttf")
 	fontList[1].generate(outputDir + "Monocraft-bold.otf")
 	fontList[2].generate(outputDir + "Monocraft-italic.ttf")
-	fontList[2].generate(outputDir + "Monocraft-italic.otf")
+	#fontList[2].generate(outputDir + "Monocraft-italic.otf")
 
 def generateImage(character):
 	image = PixelImage()
@@ -144,7 +143,7 @@ def drawPolygon(poly, pen):
 				pen.lineTo(x, y)
 		pen.closePath()
 
-BOLD_WEIGHT = 48
+BOLD_DIST = 0.2
 ITALIC_MAT = (1, 0, math.tan(math.radians(15)), 1, 0, 0)
 
 def createChar(fontList, code, name, image=None, *, width=None, dx=0, dy=0):
@@ -157,9 +156,36 @@ def createChar(fontList, code, name, image=None, *, width=None, dx=0, dy=0):
 			char.width = width if width is not None else PIXEL_SIZE * 6
 			continue
 
-		drawPolygon(poly, char.glyphPen())
 		if font.macstyle & 1 != 0:
-			char.changeWeight(BOLD_WEIGHT, "CJK", 0, 1, "auto", True)
+			def f(p):
+				l = len(p)
+				for i, (x, y) in enumerate(p):
+					x_, y_ = x + dx, y + dy
+					px, py = p[i - 1]
+					if px < x:
+						y_ -= BOLD_DIST
+					elif px > x:
+						y_ += BOLD_DIST
+					elif py < y:
+						x_ += BOLD_DIST
+					else:
+						x_ -= BOLD_DIST
+					px, py = p[(i + 1) % l]
+					if px < x:
+						y_ += BOLD_DIST
+					elif px > x:
+						y_ -= BOLD_DIST
+					elif py < y:
+						x_ -= BOLD_DIST
+					else:
+						x_ += BOLD_DIST
+					yield (x_, y_)
+			drawPolygon(
+				[f(p) for p in generatePolygons(image, join_polygons=True)],
+				char.glyphPen(),
+			)
+		else:
+			drawPolygon(poly, char.glyphPen())
 		if font.macstyle & 2 != 0:
 			char.transform(ITALIC_MAT, ("round", ))
 		char.width = width if width is not None else PIXEL_SIZE * 6
