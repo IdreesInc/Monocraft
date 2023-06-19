@@ -181,7 +181,7 @@ def createChar(fontList, code, name, image=None, *, width=None, dx=0, dy=0):
 						x_ += BOLD_DIST
 					yield (x_, y_)
 			drawPolygon(
-				[f(p) for p in generatePolygons(image, join_polygons=True)],
+				[f(p) for p in generatePolygons(image, join_polygons=False)],
 				char.glyphPen(),
 			)
 		else:
