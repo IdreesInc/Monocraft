@@ -33,49 +33,61 @@ characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
 
 def generateFont():
-	monocraft = fontforge.font()
-	monocraft.fontname = "Monocraft"
-	monocraft.familyname = "Monocraft"
-	monocraft.fullname = "Monocraft"
-	monocraft.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
-	monocraft.encoding = "UnicodeFull"
-	monocraft.version = "3.0"
-	monocraft.weight = "Regular"
-	monocraft.ascent = PIXEL_SIZE * 8
-	monocraft.descent = PIXEL_SIZE
-	monocraft.em = PIXEL_SIZE * 9
-	monocraft.upos = -PIXEL_SIZE # Underline position
-	monocraft.addLookup("ligatures", "gsub_ligature", (), (("liga",(("dflt",("dflt")),("latn",("dflt")))),))
-	monocraft.addLookupSubtable("ligatures", "ligatures-subtable")
+	fontList = [fontforge.font() for _ in range(3)]
+	for font in fontList:
+		font.fontname = "Monocraft"
+		font.familyname = "Monocraft"
+		font.fullname = "Monocraft"
+		font.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
+		font.encoding = "UnicodeFull"
+		font.version = "3.0"
+		font.weight = "Regular"
+		font.ascent = PIXEL_SIZE * 8
+		font.descent = PIXEL_SIZE
+		font.em = PIXEL_SIZE * 9
+		font.upos = -PIXEL_SIZE # Underline position
+		font.addLookup("ligatures", "gsub_ligature", (), (("liga",(("dflt",("dflt")),("latn",("dflt")))),))
+		font.addLookupSubtable("ligatures", "ligatures-subtable")
+
+	font = fontList[0]
+	font.os2_stylemap = font.macstyle = 0
+	font = fontList[1]
+	font.fontname = "Monocraft-Bold"
+	font.fullname = "Monocraft Bold"
+	font.os2_stylemap = font.macstyle = 1
+	font = fontList[2]
+	font.fontname = "Monocraft-Italic"
+	font.fullname = "Monocraft Italic"
+	font.os2_stylemap = font.macstyle = 2
+	font.italicangle = -15
 
 	for character in characters:
 		charactersByCodepoint[character["codepoint"]] = character
-		monocraft.createChar(character["codepoint"], character["name"])
-		pen = monocraft[character["name"]].glyphPen()
-		top = 0
-		drawn = character
-
 		image, kw = generateImage(character)
-		drawImage(image, pen, **kw)
-		monocraft[character["name"]].width = PIXEL_SIZE * 6
+		createChar(fontList, character["codepoint"], character["name"], image, **kw)
 	print(f"Generated {len(characters)} characters")
 
 	outputDir = "../dist/"
 	if not os.path.exists(outputDir):
 		os.makedirs(outputDir)
 
-	monocraft.generate(outputDir + "Monocraft-no-ligatures.ttf")
+	fontList[0].generate(outputDir + "Monocraft-no-ligatures.ttf")
+	fontList[1].generate(outputDir + "Monocraft-bold-no-ligatures.ttf")
+	fontList[2].generate(outputDir + "Monocraft-italic-no-ligatures.ttf")
 	for ligature in ligatures:
-		lig = monocraft.createChar(-1, ligature["name"])
-		pen = monocraft[ligature["name"]].glyphPen()
+		print(ligature["name"])
 		image, kw = generateImage(ligature)
-		drawImage(image, pen, **kw)
-		monocraft[ligature["name"]].width = PIXEL_SIZE * len(ligature["sequence"]) * 6
-		lig.addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
+		createChar(fontList, -1, ligature["name"], image, width=PIXEL_SIZE * len(ligature["sequence"]) * 6, **kw)
+		for font in fontList:
+			font[ligature["name"]].addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
 	print(f"Generated {len(ligatures)} ligatures")
 
-	monocraft.generate(outputDir + "Monocraft.ttf")
-	monocraft.generate(outputDir + "Monocraft.otf")
+	fontList[0].generate(outputDir + "Monocraft.ttf")
+	fontList[0].generate(outputDir + "Monocraft.otf")
+	fontList[1].generate(outputDir + "Monocraft-bold.ttf")
+	fontList[1].generate(outputDir + "Monocraft-bold.otf")
+	fontList[2].generate(outputDir + "Monocraft-italic.ttf")
+	fontList[2].generate(outputDir + "Monocraft-italic.otf")
 
 def generateImage(character):
 	image = PixelImage()
@@ -119,18 +131,38 @@ def imageFromArray(arr, x=0, y=0):
 		data=bytes(x for a in reversed(arr) for x in a),
 	)
 
-def drawImage(image, pen, *, dx=0, dy=0):
-	for polygon in generatePolygons(image):
+def drawPolygon(poly, pen):
+	for polygon in poly:
 		start = True
 		for x, y in polygon:
-			x = (x + dx) * PIXEL_SIZE
-			y = (y + dy) * PIXEL_SIZE
+			x = int(math.floor(x * PIXEL_SIZE))
+			y = int(math.floor(y * PIXEL_SIZE))
 			if start:
 				pen.moveTo(x, y)
 				start = False
 			else:
 				pen.lineTo(x, y)
 		pen.closePath()
+
+BOLD_WEIGHT = 48
+ITALIC_MAT = (1, 0, math.tan(math.radians(15)), 1, 0, 0)
+
+def createChar(fontList, code, name, image=None, *, width=None, dx=0, dy=0):
+	if image is not None:
+		poly = [[(x + dx, y + dy) for x, y in p]
+				for p in generatePolygons(image)]
+	for font in fontList:
+		char = font.createChar(code, name)
+		if image is None:
+			char.width = width if width is not None else PIXEL_SIZE * 6
+			continue
+
+		drawPolygon(poly, char.glyphPen())
+		if font.macstyle & 1 != 0:
+			char.changeWeight(BOLD_WEIGHT, "CJK", 0, 1, "auto", True)
+		if font.macstyle & 2 != 0:
+			char.transform(ITALIC_MAT, ("round", ))
+		char.width = width if width is not None else PIXEL_SIZE * 6
 
 generateFont()
 generateExamples(characters, ligatures, charactersByCodepoint)
