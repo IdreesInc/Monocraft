@@ -33,7 +33,7 @@ characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
 
 def generateFont():
-	fontList = [fontforge.font() for _ in range(3)]
+	fontList = [fontforge.font() for _ in range(4)]
 	for font in fontList:
 		font.fontname = "Monocraft"
 		font.familyname = "Monocraft"
@@ -54,11 +54,18 @@ def generateFont():
 	font = fontList[1]
 	font.fontname = "Monocraft-Bold"
 	font.fullname = "Monocraft Bold"
+	font.weight = "Bold"
 	font.os2_stylemap = font.macstyle = 1
 	font = fontList[2]
 	font.fontname = "Monocraft-Italic"
 	font.fullname = "Monocraft Italic"
 	font.os2_stylemap = font.macstyle = 2
+	font.italicangle = -15
+	font = fontList[2]
+	font.fontname = "Monocraft-BoldItalic"
+	font.fullname = "Monocraft Bold Italic"
+	font.weight = "Bold"
+	font.os2_stylemap = font.macstyle = 3
 	font.italicangle = -15
 
 	for character in characters:
@@ -72,8 +79,13 @@ def generateFont():
 		os.makedirs(outputDir)
 
 	fontList[0].generate(outputDir + "Monocraft-no-ligatures.ttf")
-	fontList[1].generate(outputDir + "Monocraft-bold-no-ligatures.ttf")
-	fontList[2].generate(outputDir + "Monocraft-italic-no-ligatures.ttf")
+	fontList[0].generateTtc(
+		outputDir + "Monocraft-no-ligatures.ttc",
+		fontList[1:],
+		ttcflags=("merge",),
+		layer=1,
+	)
+
 	for ligature in ligatures:
 		image, kw = generateImage(ligature)
 		createChar(fontList, -1, ligature["name"], image, width=PIXEL_SIZE * len(ligature["sequence"]) * 6, **kw)
@@ -83,10 +95,12 @@ def generateFont():
 
 	fontList[0].generate(outputDir + "Monocraft.ttf")
 	fontList[0].generate(outputDir + "Monocraft.otf")
-	fontList[1].generate(outputDir + "Monocraft-bold.ttf")
-	fontList[1].generate(outputDir + "Monocraft-bold.otf")
-	fontList[2].generate(outputDir + "Monocraft-italic.ttf")
-	#fontList[2].generate(outputDir + "Monocraft-italic.otf")
+	fontList[0].generateTtc(
+		outputDir + "Monocraft.ttc",
+		fontList[1:],
+		ttcflags=("merge",),
+		layer=1,
+	)
 
 def generateImage(character):
 	image = PixelImage()
@@ -156,32 +170,33 @@ def createChar(fontList, code, name, image=None, *, width=None, dx=0, dy=0):
 			char.width = width if width is not None else PIXEL_SIZE * 6
 			continue
 
+		def boldify(p):
+			l = len(p)
+			for i, (x, y) in enumerate(p):
+				x_, y_ = x + dx, y + dy
+				px, py = p[i - 1]
+				if px < x:
+					y_ -= BOLD_DIST
+				elif px > x:
+					y_ += BOLD_DIST
+				elif py < y:
+					x_ += BOLD_DIST
+				else:
+					x_ -= BOLD_DIST
+				px, py = p[(i + 1) % l]
+				if px < x:
+					y_ += BOLD_DIST
+				elif px > x:
+					y_ -= BOLD_DIST
+				elif py < y:
+					x_ -= BOLD_DIST
+				else:
+					x_ += BOLD_DIST
+				yield (x_, y_)
+
 		if font.macstyle & 1 != 0:
-			def f(p):
-				l = len(p)
-				for i, (x, y) in enumerate(p):
-					x_, y_ = x + dx, y + dy
-					px, py = p[i - 1]
-					if px < x:
-						y_ -= BOLD_DIST
-					elif px > x:
-						y_ += BOLD_DIST
-					elif py < y:
-						x_ += BOLD_DIST
-					else:
-						x_ -= BOLD_DIST
-					px, py = p[(i + 1) % l]
-					if px < x:
-						y_ += BOLD_DIST
-					elif px > x:
-						y_ -= BOLD_DIST
-					elif py < y:
-						x_ -= BOLD_DIST
-					else:
-						x_ += BOLD_DIST
-					yield (x_, y_)
 			drawPolygon(
-				[f(p) for p in generatePolygons(image, join_polygons=False)],
+				(boldify(p) for p in generatePolygons(image, join_polygons=False)),
 				char.glyphPen(),
 			)
 		else:
