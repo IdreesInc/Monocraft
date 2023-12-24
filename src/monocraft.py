@@ -17,6 +17,7 @@ import os
 import fontforge
 import json
 import math
+import argparse
 from generate_diacritics import generateDiacritics
 from generate_examples import generateExamples
 from polygonizer import PixelImage, generatePolygons
@@ -32,9 +33,78 @@ ligatures += generate_continuous_ligatures("./continuous_ligatures.json")
 characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
 
-def generateFont():
-	fontList = [fontforge.font() for _ in range(4)]
+def parseArgs():
+	parser = argparse.ArgumentParser()
+	parser.add_argument(
+		"--output-ttc",
+		action="store_true",
+		dest="output_ttc",
+	)
+	parser.add_argument(
+		"-a",
+		"--all",
+		action="store_true",
+		dest="all",
+	)
+	parser.add_argument(
+		"-O",
+		"--black",
+		action="store_true",
+		dest="black",
+	)
+	parser.add_argument(
+		"-B",
+		"--bold",
+		action="store_true",
+		dest="bold",
+	)
+	parser.add_argument(
+		"-b",
+		"--semibold",
+		action="store_true",
+		dest="semibold",
+	)
+	parser.add_argument(
+		"-l",
+		"--light",
+		action="store_true",
+		dest="light",
+	)
+	parser.add_argument(
+		"-L",
+		"--extralight",
+		action="store_true",
+		dest="extralight",
+	)
+	parser.add_argument(
+		"-i",
+		"--italic",
+		action="store_true",
+		dest="italic",
+	)
+	ret = parser.parse_args()
+	if ret.all:
+		ret.black = ret.bold = ret.semibold = ret.light = ret.extralight = ret.italic = True
+	return ret
+
+def generateFont(*, black=False, bold=False, semibold=False, light=False, extralight=False, italic=False, output_ttc=False, **kw):
+	fontList = [
+		fontforge.font(),
+		fontforge.font() if italic else None,
+		fontforge.font() if black else None,
+		fontforge.font() if black and italic else None,
+		fontforge.font() if bold else None,
+		fontforge.font() if bold and italic else None,
+		fontforge.font() if semibold else None,
+		fontforge.font() if semibold and italic else None,
+		fontforge.font() if light else None,
+		fontforge.font() if light and italic else None,
+		fontforge.font() if extralight else None,
+		fontforge.font() if extralight and italic else None,
+	]
 	for font in fontList:
+		if font is None:
+			continue
 		font.fontname = "Monocraft"
 		font.familyname = "Monocraft"
 		font.fullname = "Monocraft"
@@ -45,28 +115,97 @@ def generateFont():
 		font.ascent = PIXEL_SIZE * 8
 		font.descent = PIXEL_SIZE
 		font.em = PIXEL_SIZE * 9
-		font.upos = -PIXEL_SIZE # Underline position
-		font.addLookup("ligatures", "gsub_ligature", (), (("liga",(("dflt",("dflt")),("latn",("dflt")))),))
+		font.upos = -PIXEL_SIZE  # Underline position
+		font.addLookup("ligatures", "gsub_ligature", (),
+					   (("liga", (("dflt", ("dflt")), ("latn", ("dflt")))), ))
 		font.addLookupSubtable("ligatures", "ligatures-subtable")
 
 	font = fontList[0]
-	font.os2_stylemap = font.macstyle = 0
+	if font is not None:
+		font.macstyle = 0
+		font.os2_stylemap = 0x40
 	font = fontList[1]
-	font.fontname = "Monocraft-Bold"
-	font.fullname = "Monocraft Bold"
-	font.weight = "Bold"
-	font.os2_stylemap = font.macstyle = 1
+	if font is not None:
+		font.fontname = "Monocraft-Italic"
+		font.fullname = "Monocraft Italic"
+		font.macstyle = 2
+		font.os2_stylemap = 1
+		font.italicangle = -15
 	font = fontList[2]
-	font.fontname = "Monocraft-Italic"
-	font.fullname = "Monocraft Italic"
-	font.os2_stylemap = font.macstyle = 2
-	font.italicangle = -15
-	font = fontList[2]
-	font.fontname = "Monocraft-BoldItalic"
-	font.fullname = "Monocraft Bold Italic"
-	font.weight = "Bold"
-	font.os2_stylemap = font.macstyle = 3
-	font.italicangle = -15
+	if font is not None:
+		font.fontname = "Monocraft-Black"
+		font.fullname = "Monocraft Black"
+		font.weight = "Black"
+		font.macstyle = 1
+		font.os2_stylemap = 0x20
+	font = fontList[3]
+	if font is not None:
+		font.fontname = "Monocraft-BlackItalic"
+		font.fullname = "Monocraft Black Italic"
+		font.weight = "Black"
+		font.macstyle = 3
+		font.os2_stylemap = 0x21
+		font.italicangle = -15
+	font = fontList[4]
+	if font is not None:
+		font.fontname = "Monocraft-Bold"
+		font.fullname = "Monocraft Bold"
+		font.weight = "Bold"
+		font.macstyle = 1
+		font.os2_stylemap = 0x20
+	font = fontList[5]
+	if font is not None:
+		font.fontname = "Monocraft-BoldItalic"
+		font.fullname = "Monocraft Bold Italic"
+		font.weight = "Bold"
+		font.macstyle = 3
+		font.os2_stylemap = 0x21
+		font.italicangle = -15
+	font = fontList[6]
+	if font is not None:
+		font.fontname = "Monocraft-SemiBold"
+		font.fullname = "Monocraft SemiBold"
+		font.weight = "Demi"
+		font.macstyle = 1
+		font.os2_stylemap = 0x20
+	font = fontList[7]
+	if font is not None:
+		font.fontname = "Monocraft-SemiBoldItalic"
+		font.fullname = "Monocraft SemiBold Italic"
+		font.weight = "Demi"
+		font.macstyle = 3
+		font.os2_stylemap = 0x21
+		font.italicangle = -15
+	font = fontList[8]
+	if font is not None:
+		font.fontname = "Monocraft-Light"
+		font.fullname = "Monocraft Light"
+		font.weight = "Light"
+		font.macstyle = 0
+		font.os2_stylemap = 0
+	font = fontList[9]
+	if font is not None:
+		font.fontname = "Monocraft-LightItalic"
+		font.fullname = "Monocraft Light Italic"
+		font.weight = "Light"
+		font.macstyle = 2
+		font.os2_stylemap = 1
+		font.italicangle = -15
+	font = fontList[10]
+	if font is not None:
+		font.fontname = "Monocraft-ExtraLight"
+		font.fullname = "Monocraft ExtraLight"
+		font.weight = "Extra-Light"
+		font.macstyle = 0
+		font.os2_stylemap = 0
+	font = fontList[11]
+	if font is not None:
+		font.fontname = "Monocraft-ExtraLightItalic"
+		font.fullname = "Monocraft ExtraLight Italic"
+		font.weight = "Extra-Light"
+		font.macstyle = 2
+		font.os2_stylemap = 1
+		font.italicangle = -15
 
 	for character in characters:
 		charactersByCodepoint[character["codepoint"]] = character
@@ -78,29 +217,35 @@ def generateFont():
 	if not os.path.exists(outputDir):
 		os.makedirs(outputDir)
 
-	fontList[0].generate(outputDir + "Monocraft-no-ligatures.ttf")
-	fontList[0].generateTtc(
-		outputDir + "Monocraft-no-ligatures.ttc",
-		fontList[1:],
-		ttcflags=("merge",),
-		layer=1,
-	)
+	if output_ttc:
+		fontList[0].generateTtc(
+			outputDir + "Monocraft-no-ligatures.ttc",
+			[i for i in fontList[1:] if i is not None],
+			ttcflags=("merge", ),
+			layer=1,
+		)
 
 	for ligature in ligatures:
 		image, kw = generateImage(ligature)
 		createChar(fontList, -1, ligature["name"], image, width=PIXEL_SIZE * len(ligature["sequence"]) * 6, **kw)
 		for font in fontList:
+			if font is None:
+				continue
 			font[ligature["name"]].addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
 	print(f"Generated {len(ligatures)} ligatures")
 
-	fontList[0].generate(outputDir + "Monocraft.ttf")
-	fontList[0].generate(outputDir + "Monocraft.otf")
-	fontList[0].generateTtc(
-		outputDir + "Monocraft.ttc",
-		fontList[1:],
-		ttcflags=("merge",),
-		layer=1,
-	)
+	for font in fontList:
+		if font is None:
+			continue
+		font.generate(f"{outputDir}{font.fontname}.otf")
+
+	if output_ttc:
+		fontList[0].generateTtc(
+			outputDir + "Monocraft.ttc",
+			[i for i in fontList[1:] if i is not None],
+			ttcflags=("merge", ),
+			layer=1,
+		)
 
 def generateImage(character):
 	image = PixelImage()
@@ -157,53 +302,90 @@ def drawPolygon(poly, pen):
 				pen.lineTo(x, y)
 		pen.closePath()
 
-BOLD_DIST = 0.1
-ITALIC_MAT = (1, 0, math.tan(math.radians(15)), 1, 0, 0)
+BOLD_THIN_DISTS = {
+	"Black": 0.4,
+	"Bold": 0.2,
+	"Demi": 0.1,
+	"Light": -0.1,
+	"Extra-Light": -0.3,
+}
+ITALIC_RATIO = math.tan(math.radians(15))
 
-def createChar(fontList, code, name, image=None, *, width=None, dx=0, dy=0):
+def boldify(p, boldness):
+	l = len(p)
+	for i in range(l):
+		x, y = p[i]
+		dx, dy = 0, 0
+		px, py = p[i - 1]
+		if px < x:
+			dy += boldness
+		elif px > x:
+			dy -= boldness
+		elif py < y:
+			dx -= boldness
+		else:
+			dx += boldness
+		px, py = p[(i + 1) % l]
+		if px < x:
+			dy -= boldness
+		elif px > x:
+			dy += boldness
+		elif py < y:
+			dx += boldness
+		else:
+			dx -= boldness
+		yield (dx + x, dy + y)
+
+def createChar(
+	fontList,
+	code,
+	name,
+	image=None,
+	*,
+	width=None,
+	dx=0,
+	dy=0,
+	glyphclass=None,
+):
 	if image is not None:
 		poly = [[(x + dx, y + dy) for x, y in p]
 				for p in generatePolygons(image)]
+
+	poly_b = None
+	poly_t = None
+
 	for font in fontList:
+		if font is None:
+			continue
 		char = font.createChar(code, name)
+		#char.manualHints = True
+		if glyphclass is not None:
+			char.glyphclass = glyphclass
 		if image is None:
 			char.width = width if width is not None else PIXEL_SIZE * 6
 			continue
 
-		def boldify(p):
-			l = len(p)
-			for i, (x, y) in enumerate(p):
-				x_, y_ = x + dx, y + dy
-				px, py = p[i - 1]
-				if px < x:
-					y_ -= BOLD_DIST
-				elif px > x:
-					y_ += BOLD_DIST
-				elif py < y:
-					x_ += BOLD_DIST
-				else:
-					x_ -= BOLD_DIST
-				px, py = p[(i + 1) % l]
-				if px < x:
-					y_ += BOLD_DIST
-				elif px > x:
-					y_ -= BOLD_DIST
-				elif py < y:
-					x_ -= BOLD_DIST
-				else:
-					x_ += BOLD_DIST
-				yield (x_, y_)
+		p = poly
+		try:
+			dist = BOLD_THIN_DISTS[font.weight]
+		except KeyError:
+			dist = 0
 
-		if font.macstyle & 1 != 0:
-			drawPolygon(
-				(boldify(p) for p in generatePolygons(image, join_polygons=False)),
-				char.glyphPen(),
-			)
-		else:
-			drawPolygon(poly, char.glyphPen())
-		if font.macstyle & 2 != 0:
-			char.transform(ITALIC_MAT, ("round", ))
+		if dist > 0:
+			if poly_b is None:
+				poly_b = [[(x + dx, y + dy) for x, y in p] for p in generatePolygons(image, join_polygons=False)]
+			p = (boldify(p, dist) for p in poly_b)
+		elif dist < 0:
+			if poly_t is None:
+				poly_t = [[(x + dx, y + dy) for x, y in p] for p in generatePolygons(image, join_polygons=False, exclude_corners=True)]
+			p = (boldify(p, dist) for p in poly_t)
+
+		if font.macstyle & 2:
+			p = (((x + y * ITALIC_RATIO, y) for x, y in p) for p in p)
+
+		drawPolygon(p, char.glyphPen())
 		char.width = width if width is not None else PIXEL_SIZE * 6
 
-generateFont()
+args = parseArgs()
+generateFont(**vars(args))
 generateExamples(characters, ligatures, charactersByCodepoint)

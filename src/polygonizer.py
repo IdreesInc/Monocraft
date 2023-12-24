@@ -187,6 +187,32 @@ class PixelImage:
 
         return ret
 
+    def crop(self, min_x, max_x, min_y, max_y):
+        if max_x < min_x or max_y < min_y:
+            raise ValueError('Invalid bounds')
+
+        min_x = max(min_x, self._x)
+        max_x = min(max_x, self.x_end)
+        min_y = max(min_y, self._y)
+        max_y = min(max_y, self.y_end)
+        if max_x <= min_x or max_y <= min_y:
+            return PixelImage()
+
+        data = bytearray((max_x - min_x) * (max_y - min_y))
+        ix = 0
+        for j in range(min_y, max_y):
+            for i in range(min_x, max_x):
+                data[ix] = self[i, j]
+                ix += 1
+
+        return PixelImage(
+            x=min_x,
+            y=min_y,
+            width=max_x - min_x,
+            height=max_y - min_y,
+            data=data,
+        )
+
 
 def generatePolygons(image, **kw):
     for segment, start_pos in segmentize(image):
@@ -322,25 +348,20 @@ class CellFlag(IntFlag):
         return ret
 
 
-def polygonizeSegment(image, start_pos, join_polygons=True):
-    x, y = start_pos
+class Turtle:
+    __slots__ = ['img', 'x', 'y', 'dir']
 
-    # Make sure position is top left
-    assert image[x, y]
-    assert not (image[x - 1, y] or image[x - 1, y - 1] or image[x, y - 1]
-                or image[x + 1, y - 1])
+    def __init__(self, img, x, y, dir):
+        self.img, self.x, self.y, self.dir = img, x, y, dir
 
-    dir = CellFlag.RIGHT
-
-    def doMove():
-        nonlocal x, y, dir
-
+    def _move(self):
         # Set wall
-        d_ccw, d_cw, d_rev = dir.ccw(), dir.cw(), dir.reverse()
-        image[x, y] |= d_ccw
+        d_ccw, d_cw, d_rev = self.dir.ccw(), self.dir.cw(), self.dir.reverse()
+        p = self.x, self.y
+        self.img[p] |= d_ccw
 
-        x_, y_ = d_ccw.move((x, y))
-        assert not image[x_, y_] & CellFlag.ACTIVE
+        p_ = d_ccw.move(p)
+        assert not self.img[p_] & CellFlag.ACTIVE
 
         # Build boundary wall from this point
         # For all diagrams, it is assumed movement direction is right
@@ -348,253 +369,398 @@ def polygonizeSegment(image, start_pos, join_polygons=True):
         # ? . #
         # ? X ?
         # ? ? ?
-        x_, y_ = (dir | d_ccw).move((x, y))
-        if image[x_, y_] & CellFlag.ACTIVE:
+        p_ = (self.dir | d_ccw).move(p)
+        if self.img[p_] & CellFlag.ACTIVE:
             # Top-right corner
-            ret = [(dir | d_ccw).corner((x, y))]
+            ret = [(self.dir | d_ccw).corner(p)]
 
             # ? . ^
             # ? X ?
             # ? ? ?
-            x, y = x_, y_
-            dir = d_ccw
+            (self.x, self.y), self.dir = p_, d_ccw
             return ret
 
         # ? . .
         # ? X #
         # ? ? ?
-        x_, y_ = dir.move((x, y))
-        if image[x_, y_] & CellFlag.ACTIVE:
+        p_ = self.dir.move(p)
+        if self.img[p_] & CellFlag.ACTIVE:
             # ? . .
             # ? X >
             # ? ? ?
-            x, y = x_, y_
+            self.x, self.y = p_
             return []  # No corner
 
         # ? . .
         # ? X .
         # ? ? #
-        x_, y_ = (dir | d_cw).move((x, y))
-        if image[x_, y_] & CellFlag.ACTIVE:
+        p_ = (self.dir | d_cw).move(p)
+        if self.img[p_] & CellFlag.ACTIVE:
             # Two corners: top-right and bottom-right
             ret = [
-                (dir | d_ccw).corner((x, y)),
-                (dir | d_cw).corner((x, y)),
+                (self.dir | d_ccw).corner(p),
+                (self.dir | d_cw).corner(p),
             ]
 
             # ? . .
             # ? X .
             # ? ? >
-            image[x, y] |= dir
-            x, y = x_, y_
+            self.img[p] |= self.dir
+            self.x, self.y = p_
             return ret
 
         # ? . .
         # ? X .
         # ? # .
-        x_, y_ = d_cw.move((x, y))
-        if image[x_, y_] & CellFlag.ACTIVE:
+        p_ = d_cw.move(p)
+        if self.img[p_] & CellFlag.ACTIVE:
             # Top-right corner
-            ret = [(dir | d_ccw).corner((x, y))]
+            ret = [(self.dir | d_ccw).corner(p)]
 
             # ? . .
             # ? X .
             # ? v .
-            image[x, y] |= dir
-            x, y = x_, y_
-            dir = d_cw
+            self.img[p] |= self.dir
+            (self.x, self.y), self.dir = p_, d_cw
             return ret
 
         # ? . .
         # ? X .
         # # . .
-        x_, y_ = (d_rev | d_cw).move((x, y))
-        if image[x_, y_] & CellFlag.ACTIVE:
+        p_ = (d_rev | d_cw).move(p)
+        if self.img[p_] & CellFlag.ACTIVE:
             # Three corners: top-right, bottom-right, and bottom-left
             ret = [
-                (dir | d_ccw).corner((x, y)),
-                (dir | d_cw).corner((x, y)),
-                (d_cw | d_rev).corner((x, y)),
+                (self.dir | d_ccw).corner(p),
+                (self.dir | d_cw).corner(p),
+                (d_cw | d_rev).corner(p),
             ]
 
             # ? . .
             # ? X .
             # v . .
-            image[x, y] |= dir | d_cw
-            x, y = x_, y_
-            dir = d_cw
+            self.img[p] |= self.dir | d_cw
+            (self.x, self.y), self.dir = p_, d_cw
             return ret
 
         # ? . .
         # # X .
         # . . .
-        x_, y_ = d_rev.move((x, y))
-        if image[x_, y_] & CellFlag.ACTIVE:
+        p_ = d_rev.move(p)
+        if self.img[p_] & CellFlag.ACTIVE:
             # Two corners: top-right and bottom-right
             ret = [
-                (dir | d_ccw).corner((x, y)),
-                (dir | d_cw).corner((x, y)),
+                (self.dir | d_ccw).corner(p),
+                (self.dir | d_cw).corner(p),
             ]
 
             # ? . .
             # < X .
             # . . .
-            image[x, y] |= dir | d_cw
-            x, y = x_, y_
-            dir = d_rev
+            self.img[p] |= self.dir | d_cw
+            (self.x, self.y), self.dir = p_, d_rev
             return ret
 
         # # . .
         # . X .
         # . . .
-        x_, y_ = (d_rev | d_ccw).move((x, y))
-        if image[x_, y_] & CellFlag.ACTIVE:
+        p_ = (d_rev | d_ccw).move(p)
+        if self.img[p_] & CellFlag.ACTIVE:
             # Four corners: top-right, bottom-right, bottom-left, and top-left
             ret = [
-                (dir | d_ccw).corner((x, y)),
-                (dir | d_cw).corner((x, y)),
-                (d_cw | d_rev).corner((x, y)),
-                (d_ccw | d_rev).corner((x, y)),
+                (self.dir | d_ccw).corner(p),
+                (self.dir | d_cw).corner(p),
+                (d_cw | d_rev).corner(p),
+                (d_ccw | d_rev).corner(p),
             ]
 
             # < . .
             # . X .
             # . . .
-            image[x, y] |= dir | d_cw | d_rev
-            x, y = x_, y_
-            dir = d_rev
+            self.img[p] |= self.dir | d_cw | d_rev
+            (self.x, self.y), self.dir = p_, d_rev
             return ret
 
         # . . .
         # . X .
         # . . .
-        image[x, y] |= dir | d_cw | d_rev
+        self.img[p] |= self.dir | d_cw | d_rev
         # Four corners: top-right, bottom-right, bottom-left, and top-left
         return [
-            (dir | d_ccw).corner((x, y)),
-            (dir | d_cw).corner((x, y)),
-            (d_cw | d_rev).corner((x, y)),
-            (d_ccw | d_rev).corner((x, y)),
+            (self.dir | d_ccw).corner(p),
+            (self.dir | d_cw).corner(p),
+            (d_cw | d_rev).corner(p),
+            (d_ccw | d_rev).corner(p),
         ]
 
-    def find(l, x):
-        try:
-            return l.index(x)
-        except ValueError:
-            return None
+    def _move_4way(self):
+        # Set wall
+        d_ccw, d_cw, d_rev = self.dir.ccw(), self.dir.cw(), self.dir.reverse()
+        p = self.x, self.y
+        self.img[p] |= d_ccw
 
-    # Generate outer polygon
-    outer_poly = []
-    line = doMove()
-    i = find(line, start_pos)
-    while i is None:
-        outer_poly += line
-        line = doMove()
-        i = find(line, start_pos)
-    outer_poly += line[:i + 1]
+        p_ = d_ccw.move(p)
+        assert not self.img[p_] & CellFlag.ACTIVE
 
-    assert checkPoly(outer_poly)
+        # Build boundary wall from this point
+        # For all diagrams, it is assumed movement direction is right
 
-    points_ = dict(
-        zip(
-            reversed(outer_poly),
-            range(len(outer_poly) - 1, -1, -1),
-        ))
-    points = defaultdict(set)
-    for p in outer_poly:
-        points[p].add(0)
+        # ? . ?
+        # ? X #
+        # ? ? ?
+        p_ = self.dir.move(p)
+        if self.img[p_] & CellFlag.ACTIVE:
 
-    poly = [(outer_poly, points_)]
+            # ? . #
+            # ? X #
+            # ? ? ?
+            p__ = d_ccw.move(p_)
+            if self.img[p__] & CellFlag.ACTIVE:
+                # Top-right corner
+                ret = [(self.dir | d_ccw).corner(p)]
 
-    # Calculate bounding box
-    x_min, y_min, x_max, y_max = x, y, x, y
-    for x, y in outer_poly:
-        if x_min > x:
-            x_min = x
-        if x_max < x:
-            x_max = x
-        if y_min > y:
-            y_min = y
-        if y_max < y:
-            y_max = y
+                # ? . ^
+                # ? X #
+                # ? ? ?
+                (self.x, self.y), self.dir = p__, d_ccw
+                return ret
 
-    # Generate inner polygon
-    for y in range(y_min, y_max):
-        for x in range(x_min, x_max):
+            # ? . .
+            # ? X #
+            # ? ? ?
+            else:
+                # ? . .
+                # ? X >
+                # ? ? ?
+                self.x, self.y = p_
+                return []  # No corner
+
+        # ? . ?
+        # ? X .
+        # ? # ?
+        p_ = d_cw.move(p)
+        if self.img[p_] & CellFlag.ACTIVE:
+            self.img[p] |= self.dir
+
+            # ? . ?
+            # ? X .
+            # ? # #
+            p__ = self.dir.move(p_)
+            if self.img[p__] & CellFlag.ACTIVE:
+                # Two corners: top-right and bottom-right
+                ret = [
+                    (self.dir | d_ccw).corner(p),
+                    (self.dir | d_cw).corner(p),
+                ]
+
+                # ? . ?
+                # ? X .
+                # ? # >
+                self.x, self.y = p__
+                return ret
+
+            # ? . ?
+            # ? X .
+            # ? # .
+            else:
+                # Top-right corner
+                ret = [(self.dir | d_ccw).corner(p)]
+
+                # ? . ?
+                # ? X .
+                # ? v .
+                (self.x, self.y), self.dir = p_, d_cw
+                return ret
+
+        # ? . ?
+        # # X .
+        # ? . ?
+        p_ = d_rev.move(p)
+        if self.img[p_] & CellFlag.ACTIVE:
+            self.img[p] |= self.dir | d_cw
+
+            # ? . ?
+            # # X .
+            # # . ?
+            p__ = d_cw.move(p_)
+            if self.img[p__] & CellFlag.ACTIVE:
+                # Three corners: top-right, bottom-right, and bottom-left
+                ret = [
+                    (self.dir | d_ccw).corner(p),
+                    (self.dir | d_cw).corner(p),
+                    (d_cw | d_rev).corner(p),
+                ]
+
+                # ? . ?
+                # # X .
+                # v . .
+                (self.x, self.y), self.dir = p__, d_cw
+                return ret
+
+            # ? . ?
+            # # X .
+            # . . ?
+            else:
+                # Two corners: top-right and bottom-right
+                ret = [
+                    (self.dir | d_ccw).corner(p),
+                    (self.dir | d_cw).corner(p),
+                ]
+
+                # ? . ?
+                # < X .
+                # . . ?
+                (self.x, self.y), self.dir = p_, d_rev
+                return ret
+
+        # ? . ?
+        # . X .
+        # ? . ?
+        self.img[p] |= self.dir | d_cw | d_rev
+        # Four corners: top-right, bottom-right, bottom-left, and top-left
+        return [
+            (self.dir | d_ccw).corner(p),
+            (self.dir | d_cw).corner(p),
+            (d_cw | d_rev).corner(p),
+            (d_ccw | d_rev).corner(p),
+        ]
+
+    def trace(self, stop_pos, exclude_corners=False):
+        poly = []
+        while True:
+            j = len(poly)
+            poly += self._move_4way() if exclude_corners else self._move()
+            try:
+                i = poly.index(stop_pos, j)
+            except ValueError:
+                continue
+
+            return poly[:i + 1]
+
+
+def polygonize(image, exclude_corners=False):
+    image = PixelImage(image)
+
+    ret = []
+    turtle = Turtle(image, 0, 0, CellFlag.LEFT)
+    for y in range(image.y, image.y_end):
+        for x in range(image.x, image.x_end):
             v = image[x, y]
             if not v & CellFlag.ACTIVE:
                 continue
 
-            if not (image[x, y + 1] & CellFlag.ACTIVE or v & CellFlag.DOWN):
-                dir = CellFlag.LEFT
+            if not (v & CellFlag.UP or image[x, y - 1] & CellFlag.ACTIVE):
+                turtle.dir, stop_pos = CellFlag.RIGHT, (x, y)
+            elif not (v & CellFlag.RIGHT or image[x + 1, y] & CellFlag.ACTIVE):
+                turtle.dir, stop_pos = CellFlag.DOWN, (x + 1, y)
             else:
                 continue
+            turtle.x, turtle.y = x, y
 
-            # Store iterator value
-            p = x, y
+            ret.append(turtle.trace(stop_pos, exclude_corners)[::-1])
+            assert checkPoly(ret[-1])
 
-            inner_poly = []
-            line = doMove()
-            i = None
-            while i is None:
-                inner_poly += line
-                line = doMove()
-                i = find(line, inner_poly[0])
-            inner_poly += line[:i]
+    return ret
 
-            assert checkPoly(inner_poly)
 
-            j = len(poly)
-            poly.append((
-                inner_poly,
-                dict(
-                    zip(
-                        reversed(inner_poly),
-                        range(len(inner_poly) - 1, -1, -1),
-                    )),
-            ))
-            for i in inner_poly:
-                points[i].add(j)
+def joinPolygons(polygons):
+    def first_equals(i, j, *, key=lambda x: x):
+        i, j = enumerate(map(key, i)), enumerate(map(key, j))
+        try:
+            (ai, av), (bi, bv) = next(i), next(j)
+            while av!= bv:
+                if av < bv:
+                    ai, av = next(i)
+                else:
+                    bi, bv = next(j)
+            return ai, bi
+        except StopIteration:
+            pass
 
-            # Restore iterator value
-            x, y = p
+    def merge(i, j):
+        r = []
+        i, j = iter(i), iter(j)
+        a, b = next(i, None), next(j, None)
+        while a is not None and b is not None:
+            if a[1] == b[1]:
+                r.append((min(a[0], b[0]), a[1]))
+                a, b = next(i, None), next(j, None)
+            elif a[1] < b[1]:
+                r.append(a)
+                a = next(i, None)
+            else:
+                r.append(b)
+                b = next(j, None)
 
-    # Try to join polygons
+        if a is not None:
+            r.extend(i)
+        elif b is not None:
+            r.extend(j)
+
+        return r
+
+    kf = lambda v: v[1]
+
+    def f(p):
+        l = []
+        x = None
+        for i, v in sorted(enumerate(p), key=kf):
+            if x != v:
+                x = v
+                l.append((i, v))
+        return p, l
+
+    def checkPoints(p, l):
+        if not checkPoly(p):
+            return False
+        for i in range(len(l)):
+            j, v = l[i]
+            if j >= len(p) or p[j] != v:
+                print(f'{p}\n{l} Error at {i} ({j}, {v}) (got {None if j >= len(p) else p[j]})')
+                return False
+            if i < 1:
+                continue
+            _, t = l[i - 1]
+            if t == v:
+                print(f'{p}\n{l} Error at {i} ({j}, {v})')
+                return False
+        return True
+
+    points = [f(i) for i in polygons]
+    for i in range(len(points) - 1, 0, -1):
+        p, l = points[i]
+        for j in range(i):
+            p_, l_ = points[j]
+            t = first_equals(l, l_, key=kf)
+            if t is None:
+                continue
+
+            a, b = t
+            a, _ = l[a]
+            b, _ = l_[b]
+            p = [*p[:a], *p_[b:], *p_[:b], *p[a:]]
+
+            t = len(p_)
+            s = t - b + a
+            r = a - b
+            l = merge(
+                ((i + t if i >= a else i, v) for i, v in l),
+                ((i + r if i >= b else i + s, v) for i, v in l_),
+            )
+
+            assert checkPoints(p, l)
+            points[j] = p, l
+            del points[i]
+            break
+
+    return [p[0] for p in points]
+
+
+def generatePolygons(image, *, join_polygons=True, exclude_corners=False, **kw):
+    ret = polygonize(image, exclude_corners)
     if join_polygons:
-        for i in range(len(poly) - 1, -1, -1):
-            inner_poly, points_ = poly[i]
-
-            for v in points.values():
-                if len(v) > 1 and i in v:
-                    j = min(v)
-                    break
-            else:
-                continue
-
-            outer_poly, points__ = poly[j]
-
-            for i_, p in enumerate(inner_poly):
-                j_ = points__.get(p)
-                if j_ is not None:
-                    break
-            else:
-                raise RuntimeError(
-                    f'Should not happened {inner_poly} {outer_poly}')
-
-            outer_poly[j_:j_] = [*inner_poly[i_:], *inner_poly[:i_]]
-            points__.update(
-                zip(
-                    reversed(outer_poly),
-                    range(len(outer_poly) - 1, -1, -1),
-                ))
-
-            del poly[i]
-            for v in points.values():
-                v.discard(i)
-
-    # Emit polygons
-    for i, _ in poly:
-        yield i
+        ret = joinPolygons(ret)
+    return ret
 
 
 def checkPoly(poly):
@@ -652,7 +818,7 @@ def testChar(name, pixels):
 
     print(f'Character: {name}\n{image}\n\n')
 
-    for poly in generatePolygons(image):
+    for poly in generatePolygons(image, join_polygons=False, exclude_corners=True):
         print('Polygon:\n  ' + '\n  '.join(f'{x}, {y}'
                                            for x, y in poly) + '\n\n')
 
