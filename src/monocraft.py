@@ -303,7 +303,7 @@ def drawPolygon(poly, pen):
 		pen.closePath()
 
 BOLD_THIN_DISTS = {
-	"Black": 0.4,
+	"Black": 0.3,
 	"Bold": 0.2,
 	"Demi": 0.1,
 	"Light": -0.1,
