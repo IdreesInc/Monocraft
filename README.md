@@ -8,7 +8,7 @@
 
 The monospaced font for developers who like Minecraft a bit _too_ much.
 
-If you'd like to see a vectorized version of this font, try [Miracode](https://github.com/IdreesInc/Miracode)
+If you'd like to see a vectorized version of this font, try [Miracode](https://github.com/IdreesInc/Miracode)!
 
 *Notice: This project is not affiliated with Minecraft or Mojang in any way and is exclusively a fan project. This font emulates the typeface of the font used in the Minecraft UI, but it does not include any assets or font files from the original game.*
 
