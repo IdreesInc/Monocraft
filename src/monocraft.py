@@ -266,6 +266,9 @@ def generateImage(character):
 		image = image | other[0]
 	if "diacritic" in character:
 		image = addDiacritic(image, diacritics[character["diacritic"]], character["diacriticSpace"])
+	elif "diacritics" in character:
+		for diacritic in character["diacritics"]:
+			image = addDiacritic(image, diacritics[diacritic], character["diacriticSpace"])
 	return (image, kw)
 
 def addDiacritic(image, diacritic, spacing):
