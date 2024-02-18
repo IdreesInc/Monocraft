@@ -286,6 +286,10 @@ def addDiacritic(image, diacritic, spacing):
 	x, y = findBoundsInDirection(image, direction)
 	x += direction[0]
 	y += direction[1]
+	if "offsetX" in diacritic:
+	    x += diacritic["offsetX"]
+	if "offsetY" in diacritic:
+	    y += diacritic["offsetY"]
 	if spacing is not None:
 		x += int(spacing) * direction[0]
 		y += int(spacing) * direction[1]
