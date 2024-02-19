@@ -113,9 +113,9 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		font.version = "4.0"
 		font.weight = "Regular"
 		font.ascent = PIXEL_SIZE * 12
-		font.descent = PIXEL_SIZE
+		font.descent = PIXEL_SIZE * 2
 		font.em = PIXEL_SIZE * 13
-		font.upos = -PIXEL_SIZE  # Underline position
+		font.upos = -PIXEL_SIZE * 2 # Underline position
 		font.addLookup("ligatures", "gsub_ligature", (),
 					   (("liga", (("dflt", ("dflt")), ("latn", ("dflt")))), ))
 		font.addLookupSubtable("ligatures", "ligatures-subtable")
@@ -206,7 +206,6 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		font.macstyle = 2
 		font.os2_stylemap = 1
 		font.italicangle = -15
-
 	for character in characters:
 		charactersByCodepoint[character["codepoint"]] = character
 		image, kw = generateImage(character)
