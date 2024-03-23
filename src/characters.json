@@ -18332,9 +18332,18 @@
 		"codepoint": 7881,
 		"name": "latin_small_letter_i_with_hook_above",
 		"character": "ỉ",
-		"reference": 105,
-		"diacritic": "hook_above",
-		"diacriticSpace": 1
+		"pixels": [
+			[0, 1, 1, 0, 0],
+			[0, 0, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1]
+		],
+		"leftMargin": -0.5
 	},
 	{
 		"codepoint": 7882,
