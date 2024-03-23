@@ -63,5 +63,133 @@
         "pixels": [
             [0, 0, 1, 0, 0]
         ]
+    },
+    "breve_and_acute": {
+        "pixels": [
+            [0, 0, 0, 0, 1, 0],
+            [0, 0, 0, 1, 0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 1, 0, 0, 1, 0],
+            [0, 0, 1, 1, 0, 0]
+        ]
+    },
+    "breve_and_grave": {
+        "pixels": [
+            [0, 0, 1, 0, 0, 0],
+            [0, 0, 0, 1, 0, 0],
+            [0, 1, 0, 0, 1, 0],
+            [0, 0, 1, 1, 0, 0]
+        ]
+    },
+    "breve_and_hook_above": {
+        "pixels": [
+            [0, 0, 1, 1, 0],
+            [0, 0, 0, 0, 1],
+            [0, 0, 0, 1, 0],
+            [0, 1, 0, 0, 1],
+            [0, 0, 1, 1, 0]
+        ]
+    },
+    "breve_and_tilde": {
+        "pixels": [
+            [0, 0, 0, 1, 0, 1],
+            [0, 0, 1, 0, 1, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 1, 0, 0, 1, 0],
+            [0, 0, 1, 1, 0, 0]
+        ],
+        "offsetY": -1
+    },
+    "circumflex_and_acute": {
+        "pixels": [
+            [0, 0, 0, 0, 0, 1],
+            [0, 0, 0, 0, 1, 0],
+            [0, 0, 1, 0, 0, 0],
+            [0, 1, 0, 1, 0, 0]
+        ],
+        "offsetX": -1
+    },
+    "circumflex_and_grave": {
+        "pixels": [
+            [1, 0, 0, 0, 0, 0],
+            [0, 1, 0, 0, 0, 0],
+            [0, 0, 0, 1, 0, 0],
+            [0, 0, 1, 0, 1, 0]
+        ]
+    },
+    "circumflex_and_hook_above": {
+        "pixels": [
+            [0, 0, 1, 1, 0],
+            [0, 0, 0, 0, 1],
+            [0, 0, 0, 1, 0],
+            [0, 0, 1, 0, 0],
+            [0, 1, 0, 1, 0]
+        ],
+        "offsetX": -1
+    },
+    "circumflex_and_tilde": {
+        "pixels": [
+            [0, 0, 1, 0, 1],
+            [0, 1, 0, 1, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 1, 0, 0],
+            [0, 1, 0, 1, 0]
+        ],
+        "offsetY": -1
+    },
+    "dot_below": {
+        "placement": "below",
+        "pixels": [
+            [0, 0, 1, 0, 0]
+        ]
+    },
+    "hook_above": {
+        "pixels": [
+            [0, 1, 1, 0, 0],
+            [0, 0, 0, 1, 0],
+            [0, 0, 1, 0, 0]
+        ]
+    },
+    "circumflex_and_dot_below": {
+        "pixels": [
+            []
+        ],
+        "comment": "hack for generate_diacritics.py to include in glyph generation"
+    },
+    "breve_and_dot_below": {
+        "pixels": [
+            []
+        ],
+        "comment": "hack for generate_diacritics.py to include in glyph generation"
+    },
+    "horn_and_acute": {
+        "pixels": [
+            []
+        ],
+        "comment": "hack for generate_diacritics.py to include in glyph generation"
+    },
+    "horn_and_dot_below": {
+        "pixels": [
+            []
+        ],
+        "comment": "hack for generate_diacritics.py to include in glyph generation"
+    },
+    "horn_and_grave": {
+        "pixels": [
+            []
+        ],
+        "comment": "hack for generate_diacritics.py to include in glyph generation"
+    },
+    "horn_and_hook_above": {
+        "pixels": [
+            []
+        ],
+        "comment": "hack for generate_diacritics.py to include in glyph generation"
+    },
+    "horn_and_tilde": {
+        "pixels": [
+            []
+        ],
+        "comment": "hack for generate_diacritics.py to include in glyph generation"
     }
 }
