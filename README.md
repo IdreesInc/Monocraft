@@ -48,6 +48,12 @@ Download the most recent `Monocraft.ttf` file from the [Releases](https://github
 
 Download the most recent `Monocraft.ttf` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Move the file to ~/.local/share/fonts (create the folder if it doesn't already exist). In a terminal, run `fc-cache -fv`. Alternatively, log out and log in again. 
 
+#### ALT Sisyphus
+
+```shell
+apt-get install fonts-ttf-monocraft
+```
+
 ## How to use
 
 After following the installation instructions up above, simply select the "Monocraft" font (note the space) in any application that supports custom fonts. You might need to restart the application or your computer for the font to appear.
