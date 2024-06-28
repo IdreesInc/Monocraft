@@ -4,7 +4,11 @@
 ![](https://img.shields.io/github/license/IdreesInc/Monocraft)
 [![](https://img.shields.io/github/v/release/IdreesInc/Monocraft)](https://GitHub.com/IdreesInc/Monocraft/releases/)
 
+## [`Download it here!`](https://github.com/IdreesInc/Monocraft/releases)
+<br/>
+
 ![](images/preview.png)
+
 
 The monospaced font for developers who like Minecraft a bit _too_ much.
 
