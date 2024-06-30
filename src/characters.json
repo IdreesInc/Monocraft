@@ -2208,6 +2208,22 @@
 		"leftMargin": -0.5
 	},
 	{
+		"character": "ı",
+		"name": "latin_small_letter_dotless_i",
+		"codepoint": 305,
+		"pixels": [
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0],
+			[0, 1, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 0, 0, 1, 1]
+		],
+		"leftMargin": -0.5
+	},
+	{
 		"character": "ĵ",
 		"name": "latin_small_letter_j_with_circumflex",
 		"codepoint": 309,
