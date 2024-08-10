@@ -74,4 +74,4 @@ I've got you covered, check out my rendition of the Minecraft typeface [here](ht
 
 ### What if I want to use a font that's actually good?
 
-Understandable, check out [Fira Code](https://github.com/tonsky/FiraCode) for a font with amazing attention to detail, or [Scientifica](https://github.com/nerdypepper/scientifica) for a bitmap font similar to this.
+Understandable, check out [Fira Code](https://github.com/tonsky/FiraCode) for a font with amazing attention to detail, or [Scientifica](https://github.com/nerdypepper/scientifica) for a bitmap font similar to this. Feel free to also check out my font [Miracode](https://github.com/IdreesInc/Miracode) for a font based on Monocraft that's a little more usable!
