@@ -29,7 +29,7 @@ The monospaced font for developers who like Minecraft a bit _too_ much.
 
 ### Windows
 
-Download the most recent `Monocraft.ttf` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Right click on the downloaded font and select **Install**. You might need administrative access to install fonts, depending on your machine.
+Download the most recent `Monocraft.ttc` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Right click on the downloaded font and select **Install**. You might need administrative access to install fonts, depending on your machine.
 
 ### Mac
 
@@ -42,11 +42,11 @@ brew install --cask font-monocraft
 
 #### Manually
 
-Download the most recent `Monocraft.ttf` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Double click on the downloaded font file and select **Install Font** in the window that appears. More help available [here](https://support.apple.com/en-us/HT201749).
+Download the most recent `Monocraft.ttc` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Double click on the downloaded font file and select **Install Font** in the window that appears. More help available [here](https://support.apple.com/en-us/HT201749).
 
 ### Linux
 
-Download the most recent `Monocraft.ttf` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Move the file to ~/.local/share/fonts (create the folder if it doesn't already exist). In a terminal, run `fc-cache -fv`. Alternatively, log out and log in again. 
+Download the most recent `Monocraft.ttc` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Move the file to ~/.local/share/fonts (create the folder if it doesn't already exist). In a terminal, run `fc-cache -fv`. Alternatively, log out and log in again. 
 
 ## How to use
 
