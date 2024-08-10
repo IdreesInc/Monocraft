@@ -1,5 +1,5 @@
 # Monocraft, a monospaced font for developers who like Minecraft a bit too much.
-# Copyright (C) 2022-2023 Idrees Hassan
+# Copyright (C) 2022-2024 Idrees Hassan
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -110,7 +110,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		font.fullname = "Monocraft"
 		font.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
 		font.encoding = "UnicodeFull"
-		font.version = "3.0"
+		font.version = "4.0"
 		font.weight = "Regular"
 		font.ascent = PIXEL_SIZE * 8
 		font.descent = PIXEL_SIZE
@@ -140,7 +140,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		font.os2_stylemap = 0x20
 	font = fontList[3]
 	if font is not None:
-		font.fontname = "Monocraft-BlackItalic"
+		font.fontname = "Monocraft-Black-Italic"
 		font.fullname = "Monocraft Black Italic"
 		font.weight = "Black"
 		font.macstyle = 3
@@ -155,7 +155,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		font.os2_stylemap = 0x20
 	font = fontList[5]
 	if font is not None:
-		font.fontname = "Monocraft-BoldItalic"
+		font.fontname = "Monocraft-Bold-Italic"
 		font.fullname = "Monocraft Bold Italic"
 		font.weight = "Bold"
 		font.macstyle = 3
@@ -170,7 +170,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		font.os2_stylemap = 0x20
 	font = fontList[7]
 	if font is not None:
-		font.fontname = "Monocraft-SemiBoldItalic"
+		font.fontname = "Monocraft-SemiBold-Italic"
 		font.fullname = "Monocraft SemiBold Italic"
 		font.weight = "Demi"
 		font.macstyle = 3
@@ -185,7 +185,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		font.os2_stylemap = 0
 	font = fontList[9]
 	if font is not None:
-		font.fontname = "Monocraft-LightItalic"
+		font.fontname = "Monocraft-Light-Italic"
 		font.fullname = "Monocraft Light Italic"
 		font.weight = "Light"
 		font.macstyle = 2
@@ -200,7 +200,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		font.os2_stylemap = 0
 	font = fontList[11]
 	if font is not None:
-		font.fontname = "Monocraft-ExtraLightItalic"
+		font.fontname = "Monocraft-ExtraLight-Italic"
 		font.fullname = "Monocraft ExtraLight Italic"
 		font.weight = "Extra-Light"
 		font.macstyle = 2
@@ -238,6 +238,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		if font is None:
 			continue
 		font.generate(f"{outputDir}{font.fontname}.otf")
+		font.generate(f"{outputDir}{font.fontname}.ttf")
 
 	if output_ttc:
 		fontList[0].generateTtc(
