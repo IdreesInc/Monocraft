@@ -287,7 +287,7 @@ def imageFromArray(arr, x=0, y=0):
 		y=y,
 		width=len(arr[0]),
 		height=len(arr),
-		data=bytes(x for a in reversed(arr) for x in a),
+		data=bytes(v for a in reversed(arr) for v in a),
 	)
 
 def drawPolygon(poly, pen):
