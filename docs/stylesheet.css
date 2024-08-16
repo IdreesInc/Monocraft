@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500&display=swap');
+
+html {
+	font-family: 'Epilogue', sans-serif;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	color: black;
+}
+
+#foil {
+	position: absolute;
+	z-index: -1;
+	width: 60%;
+	height: 15%;
+	left: 15%;
+	top: 30%;
+	transform: rotate(-20deg);
+	background-image: url('foil.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+#intro-page {
+	height: 100vh;
+	width: 65%;
+	margin-left: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#title {
+	font-size: 100px; 
+}
+
+#subtitle {
+	font-size: 35px;
+	margin-top: 25px;
+}
+
+#links {
+	font-family: Epilogue;
+	font-size: 30px;
+	margin-top: 30px;
+	text-decoration-line: underline;
+}
+
+.link {
+	margin-bottom: 20px;
+}
+
+.link a {
+	color: black;
+	text-decoration: none;
+}
+
+#github a {
+	color: black;
+}
+
+#github {
+	margin-top: 10px;
+}
+
+#annotation {
+	font-size: 20px;
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	margin-left: 20px;
+}
+
+#me {
+	font-size: 16px;
+	position: absolute;
+	bottom: 12px;
+	right: 40px;
+	margin-left: 20px;
+}
+
+#me a {
+	color: black;
+}
+
+@media screen and (orientation:portrait) and (max-width: 85vh) {
+	#foil {
+		width: 90%;
+		height: 11%;
+		left: 5%;
+		top: 27%;
+		transform: rotate(-20deg);
+	}
+
+	#intro-page {
+		width: 80%;
+		margin-top: -10%;
+		margin-left: 10%;
+	}
+
+	#title {
+		font-size: 16vw; 
+	}
+	
+	#subtitle {
+		font-size: 6.4vw;
+		margin-top: 50px;
+	}
+	
+	#links {
+		font-size: 6vw;
+		margin-top: 110px;
+	}
+
+	.link {
+		margin-bottom: 50px;
+	}
+
+	#annotation {
+		font-size: 3vw;
+		position: absolute;
+		bottom: 6vw;
+		right: 25px;
+	}
+	
+	#me {
+		font-size: 3vw;
+		position: absolute;
+		bottom: 1.5vw;
+		right: 25px;
+	}
+}

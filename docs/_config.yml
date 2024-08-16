@@ -1,0 +1,3 @@
+remote_theme: IdreesInc/Jekyll-Project-Theme
+plugins:
+  - jekyll-remote-theme
