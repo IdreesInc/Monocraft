@@ -18,6 +18,6 @@ layout: "project"
 %}
 
 {% include link.html
-	url="https://github.com/IdreesInc/Monocraft"
-	text="github repo"
+	url="https://socials.idreesinc.com"
+	text="follow for updates"
 %}
