@@ -42,7 +42,6 @@ Download the most recent `Monocraft.ttc` file from the [Releases](https://github
 #### Using Homebrew
 
 ```shell
-brew tap homebrew/cask-fonts
 brew install --cask font-monocraft
 ```
 
