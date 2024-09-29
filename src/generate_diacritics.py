@@ -27,14 +27,17 @@ def generateDiacritics(characters, diacritics):
     lines = open("./unicode.txt").readlines()
     for line in lines:
         # Find all lines with a WITH in them
-        if not "WITH" in line:
+        if "WITH" not in line:
             continue
         # Get the diacritic name
         splitOnWith = line.split("WITH")
-        diacritic = splitOnWith[1].split(';')[0].strip().lower().replace(" ", "_")
+        diacritic = splitOnWith[1].split(
+            ';')[0].strip().lower().replace(" ", "_")
         name = splitOnWith[0].split(';')[1].strip().lower().replace(" ", "_")
         newName = name + "_with_" + diacritic
-        if not diacritic in diacriticsByCodepoint or not name in charactersByName or newName in charactersByName:
+        if diacritic not in diacriticsByCodepoint or \
+                name not in charactersByName or \
+                newName in charactersByName:
             continue
         codepoint = int(line.split(";")[0].strip(), 16)
         # Store in a dictionary for serialization

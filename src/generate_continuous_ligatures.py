@@ -35,10 +35,12 @@ def generate_continuous_ligatures(filename):
         ...
     ]
 
-    Returns a list of progress bars, where each progress bar is a dictionary with the following keys:
+    Returns a list of progress bars, where each progress bar is a
+    dictionary with the following keys:
     - "name": a string representing the name of the progress bar
     - "ligature": a string representing the progress bar
-    - "sequence": a list of integers representing the Unicode code points of the characters in the progress bar
+    - "sequence": a list of integers representing the Unicode code points of
+    the characters in the progress bar
     - "pixels": a list of integers representing the pixels of the progress bar
     """
     continuous_ligatures = json.load(open(filename))
@@ -47,11 +49,11 @@ def generate_continuous_ligatures(filename):
         name = f'{ligature["head_name"]} {ligature["body_name"]} '
         body_pixels = ligature["body_pixels"]
         head_pixels = ligature["head_pixels"]
-        body = [[] for _ in  range(len(body_pixels))]
-        for i in range( ligature["min_length"],ligature["max_length"] + 1):
+        body = [[] for _ in range(len(body_pixels))]
+        for i in range(ligature["min_length"], ligature["max_length"] + 1):
             glyph = {}
             # Generate ligature data
-            glyph["name"] = name + str(i); 
+            glyph["name"] = name + str(i)
             if ligature["direction"] == "right":
                 glyph["ligature"] = ligature["body"] * i + ligature["head"]
             else:
