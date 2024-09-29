@@ -31,9 +31,9 @@ class PixelImage:
 
     def __init__(self, src=None, *, x=0, y=0, width=0, height=0, data=None):
         if src is not None:
-            self._x, self._y,
-            self._w, self._h,
-            self.__data = src._x, src._y, src._w, src._h, bytearray(src.__data)
+            self._x, self._y = src._x, src._y
+            self._w, self._h = src._w, src._h
+            self.__data = bytearray(src.__data)
             return
         if width < 0:
             raise ValueError('Width < 0')
