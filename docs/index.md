@@ -1,4 +1,5 @@
 ---
+window_title: "Get Monocraft - The Minecraft Font for Devs"
 title: "Monocraft"
 subtitle: "the programming font for the minecraft obsessed"
 annotation: "*plus, it has ligatures!"
