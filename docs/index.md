@@ -19,6 +19,6 @@ layout: "project"
 %}
 
 {% include link.html
-	url="https://socials.idreesinc.com"
+	url="https://bsky.app/profile/idreesinc.com"
 	text="follow for updates"
 %}
