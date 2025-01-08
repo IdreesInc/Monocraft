@@ -16,24 +16,24 @@ __all__ = [
     'generatePolygons',
 ]
 
-from collections import defaultdict
 from enum import IntFlag
-import itertools
 
 
 class PixelImage:
     ''' Class for managing a pixel image.
 
     Each pixel is a 8-bit integer.
-    It also store the position and size of the image, allowing easier operation.
+    It also store the position and size of the image,
+    allowing easier operation.
     '''
 
     __slots__ = ['__data', '_x', '_y', '_w', '_h']
 
     def __init__(self, src=None, *, x=0, y=0, width=0, height=0, data=None):
         if src is not None:
-            self._x, self._y, self._w, self._h, self.__data = src._x, src._y, src._w, src._h, bytearray(
-                src.__data)
+            self._x, self._y = src._x, src._y
+            self._w, self._h = src._w, src._h
+            self.__data = bytearray(src.__data)
             return
         if width < 0:
             raise ValueError('Width < 0')
@@ -110,7 +110,7 @@ class PixelImage:
     def __str__(self):
         return '\n'.join(' '.join(
             str(self[x, y]) for x in range(self.x, self.x_end))
-                         for y in range(self.y, self.y_end))
+            for y in range(self.y, self.y_end))
 
     def __repr__(self):
         return f'PixelImage(\n  x={self._x},\n' \
@@ -122,7 +122,7 @@ class PixelImage:
                 ', '.join(
                     f'{self[x, y]:#04x}' for x in range(self.x, self.x_end)
                 ) for y in range(self.y, self.y_end)
-            ) + \
+        ) + \
             '\n  ])\n)'
 
     def __hash__(self):
@@ -212,11 +212,6 @@ class PixelImage:
             height=max_y - min_y,
             data=data,
         )
-
-
-def generatePolygons(image, **kw):
-    for segment, start_pos in segmentize(image):
-        yield from polygonizeSegment(segment, start_pos, **kw)
 
 
 def segmentize(image):
@@ -668,7 +663,7 @@ def joinPolygons(polygons):
         i, j = enumerate(map(key, i)), enumerate(map(key, j))
         try:
             (ai, av), (bi, bv) = next(i), next(j)
-            while av!= bv:
+            while av != bv:
                 if av < bv:
                     ai, av = next(i)
                 else:
@@ -699,7 +694,7 @@ def joinPolygons(polygons):
 
         return r
 
-    kf = lambda v: v[1]
+    def kf(v): return v[1]
 
     def f(p):
         l = []
@@ -716,7 +711,9 @@ def joinPolygons(polygons):
         for i in range(len(l)):
             j, v = l[i]
             if j >= len(p) or p[j] != v:
-                print(f'{p}\n{l} Error at {i} ({j}, {v}) (got {None if j >= len(p) else p[j]})')
+                print(
+                    f'{p}\n{l} Error at {i} ({j}, {v}) (got {
+                        None if j >= len(p) else p[j]})')
                 return False
             if i < 1:
                 continue
@@ -756,7 +753,8 @@ def joinPolygons(polygons):
     return [p[0] for p in points]
 
 
-def generatePolygons(image, *, join_polygons=True, exclude_corners=False, **kw):
+def generatePolygons(image, *,
+                     join_polygons=True, exclude_corners=False, **kw):
     ret = polygonize(image, exclude_corners)
     if join_polygons:
         ret = joinPolygons(ret)
@@ -818,7 +816,8 @@ def testChar(name, pixels):
 
     print(f'Character: {name}\n{image}\n\n')
 
-    for poly in generatePolygons(image, join_polygons=False, exclude_corners=True):
+    for poly in generatePolygons(image,
+                                 join_polygons=False, exclude_corners=True):
         print('Polygon:\n  ' + '\n  '.join(f'{x}, {y}'
                                            for x, y in poly) + '\n\n')
 
