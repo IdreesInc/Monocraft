@@ -3661,6 +3661,36 @@
 		"descent": 1
 	},
 	{
+		"character": "Ґ",
+		"name": "cyrillic_capital_letter_ghe_with_upturn",
+		"codepoint": 1168,
+		"pixels": [
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0]
+		]
+	},
+	{
+		"character": "ґ",
+		"name": "cyrillic_small_letter_ghe_with_upturn",
+		"codepoint": 1169,
+		"pixels": [
+			[0, 0, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[1, 1, 1, 1, 1],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0],
+			[1, 0, 0, 0, 0]
+		]
+	},
+	{
 		"character": "€",
 		"name": "euro_sign",
 		"codepoint": 8364,
