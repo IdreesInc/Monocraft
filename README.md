@@ -3,6 +3,9 @@
 [![Github all releases](https://img.shields.io/github/downloads/IdreesInc/Monocraft/total.svg)](https://GitHub.com/IdreesInc/Monocraft/releases/)
 ![](https://img.shields.io/github/license/IdreesInc/Monocraft)
 [![](https://img.shields.io/github/v/release/IdreesInc/Monocraft)](https://GitHub.com/IdreesInc/Monocraft/releases/)
+<a href="https://discord.gg/6yxE9prcNc" target="_blank">
+	<img alt="Discord" src="https://img.shields.io/discord/1398471368403583120?logo=discord&logoColor=fff&label=discord&color=5865F2">
+</a>
 
 ## [`Download it here!`](https://github.com/IdreesInc/Monocraft/releases)
 <br/>
