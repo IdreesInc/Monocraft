@@ -110,7 +110,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		font.fullname = "Monocraft"
 		font.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
 		font.encoding = "UnicodeFull"
-		font.version = "4.0"
+		font.version = "4.1"
 		font.weight = "Regular"
 		font.ascent = PIXEL_SIZE * 8
 		font.descent = PIXEL_SIZE
