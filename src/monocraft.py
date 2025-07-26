@@ -359,7 +359,9 @@ def createChar(
 ):
 	if image is not None:
 		poly = [[(x + dx, y + dy) for x, y in p]
-				for p in generatePolygons(image)]
+			for p in generatePolygons(image)]
+	else:
+		raise ValueError(f"No image provided for character {name} (codepoint {code})")
 
 	poly_b = None
 	poly_t = None
