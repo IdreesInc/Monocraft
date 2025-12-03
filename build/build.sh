@@ -1,4 +1,6 @@
 #!/bin/bash
+
+echo "Beginning to craft Monocraft..."
 cd ../src
 
 rm -rf ../dist
@@ -32,9 +34,9 @@ if [ $# -ne 0 ] && [ $1 = "nerd" ]
 then
 	echo "Building Nerd Fonts"
 	cd ../build
-	# python3.12 ./nerd-fonts/font-patcher ../dist/Monocraft.ttf --complete --careful --outputdir ../dist/
-	python3.12 ./nerd-fonts/font-patcher ../dist/Monocraft.ttc --complete --careful --outputdir ../dist/
+	fontforge --script FontPatcher/font-patcher --complete --careful --mono --makegroups -1 '../dist/Monocraft.ttc'
+	mv 'Monocraft.ttc' '../dist/Monocraft-nerd-fonts-patched.ttc'
 	cd ../dist
-	# mv "Monocraft Nerd Font Complete.ttf" "Monocraft-nerd-fonts-patched.ttf"
-	mv "Monocraft Nerd Font.ttc" "Monocraft-nerd-fonts-patched.ttc"
 fi
+
+echo "Crafting complete!"
