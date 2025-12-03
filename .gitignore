@@ -1,7 +1,7 @@
 
 .DS_Store
 src/__pycache__
-build/
+build/*
 !build/build.sh
 docs/_site/
 docs/.jekyll-cache/
