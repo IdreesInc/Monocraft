@@ -132,7 +132,7 @@ def generateFont(
 		font.fullname = "Monocraft"
 		font.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
 		font.encoding = "UnicodeFull"
-		font.version = "4.1"
+		font.version = "5.0"
 		font.weight = "Regular"
 		# See https://monotype.github.io/panose/pan2.htm
 		# (2: Latin Text, 11: Normal Sans, ..., 9: Monospaced)
@@ -318,29 +318,29 @@ def drawPolygons(polygons, pen):
 		pen.closePath()
 
 
-def modifyStroke(p, strokeMod):
+def modifyStroke(p, stroke_mod):
 	length = len(p)
 	for i in range(length):
 		x, y = p[i]
 		dx, dy = 0, 0
 		px, py = p[i - 1]
 		if px < x:
-			dy += strokeMod
+			dy += stroke_mod
 		elif px > x:
-			dy -= strokeMod
+			dy -= stroke_mod
 		elif py < y:
-			dx -= strokeMod
+			dx -= stroke_mod
 		else:
-			dx += strokeMod
+			dx += stroke_mod
 		px, py = p[(i + 1) % length]
 		if px < x:
-			dy -= strokeMod
+			dy -= stroke_mod
 		elif px > x:
-			dy += strokeMod
+			dy += stroke_mod
 		elif py < y:
-			dx += strokeMod
+			dx += stroke_mod
 		else:
-			dx -= strokeMod
+			dx -= stroke_mod
 		yield (dx + x, dy + y)
 
 
