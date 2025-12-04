@@ -132,7 +132,7 @@ def generateFont(
 		font.fullname = "Monocraft"
 		font.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
 		font.encoding = "UnicodeFull"
-		font.version = "5.0"
+		font.version = "4.2"
 		font.weight = "Regular"
 		# See https://monotype.github.io/panose/pan2.htm
 		# (2: Latin Text, 11: Normal Sans, ..., 9: Monospaced)
