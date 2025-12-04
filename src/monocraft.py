@@ -340,60 +340,56 @@ def createGlyph(
 	fontList,
 	code,
 	name,
-	image,
+	image: PixelImage,
 	*,
 	width=None,
 	dx=0,
 	dy=0,
 	glyphclass=None,
 ):
-	# Generate the base polygons
-	base_polygons = [[(x + dx, y + dy) for x, y in p] for p in generatePolygons(image)]
+	poly = [[(x + dx, y + dy) for x, y in p] for p in generatePolygons(image)]
 
-	# Cache for bold and thin polygon variants
-	bold_polygons_cache = None
-	thin_polygons_cache = None
+	poly_b = None
+	poly_t = None
 
 	for font in fontList:
 		if font is None:
 			continue
 
-		# Create character and set basic properties
 		char = font.createChar(code, name)
+		# char.manualHints = True
 		if glyphclass is not None:
 			char.glyphclass = glyphclass
+		if image is None:
+			char.width = width if width is not None else PIXEL_SIZE * 6
+			continue
 
-		char_width = width if width is not None else PIXEL_SIZE * 6
-		char.width = char_width
+		p = poly
+		try:
+			dist = BOLD_THIN_DISTS[font.weight]
+		except KeyError:
+			dist = 0
 
-		# Apply weight transformations
-		polygons = base_polygons
-		boldness = BOLD_THIN_DISTS.get(font.weight, 0)
-
-		if boldness > 0:
-			# Make bolder
-			if bold_polygons_cache is None:
-				bold_polygons_cache = [
+		if dist > 0:
+			if poly_b is None:
+				poly_b = [
 					[(x + dx, y + dy) for x, y in p]
 					for p in generatePolygons(image, join_polygons=False)
 				]
-			polygons = (boldify(p, boldness) for p in bold_polygons_cache)
-
-		elif boldness < 0:
-			# Make thinner
-			if thin_polygons_cache is None:
-				thin_polygons_cache = [
+			p = (boldify(p, dist) for p in poly_b)
+		elif dist < 0:
+			if poly_t is None:
+				poly_t = [
 					[(x + dx, y + dy) for x, y in p]
 					for p in generatePolygons(image, join_polygons=False, exclude_corners=True)
 				]
-			polygons = (boldify(p, boldness) for p in thin_polygons_cache)
+			p = (boldify(p, dist) for p in poly_t)
 
-		# Apply italic transformation if needed
 		if font.macstyle & 2:
-			polygons = (((x + y * ITALIC_RATIO, y) for x, y in p) for p in polygons)
+			p = (((x + y * ITALIC_RATIO, y) for x, y in p) for p in p)
 
-		# Draw the final polygon
-		drawPolygon(polygons, char.glyphPen())
+		drawPolygon(p, char.glyphPen())
+		char.width = width if width is not None else PIXEL_SIZE * 6
 
 
 args = parseArgs()
