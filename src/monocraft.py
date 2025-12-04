@@ -25,7 +25,7 @@ from polygonizer import PixelImage, generatePolygons
 from generate_continuous_ligatures import generate_continuous_ligatures
 
 PIXEL_SIZE = 120
-BOLD_THIN_DISTS = {
+WEIGHT_STROKE_OFFSETS = {
 	"Black": 0.3,
 	"Bold": 0.2,
 	"Demi": 0.1,
@@ -310,29 +310,29 @@ def drawPolygons(polygons, pen):
 		pen.closePath()
 
 
-def boldify(p, boldness):
+def modifyStroke(p, strokeMod):
 	length = len(p)
 	for i in range(length):
 		x, y = p[i]
 		dx, dy = 0, 0
 		px, py = p[i - 1]
 		if px < x:
-			dy += boldness
+			dy += strokeMod
 		elif px > x:
-			dy -= boldness
+			dy -= strokeMod
 		elif py < y:
-			dx -= boldness
+			dx -= strokeMod
 		else:
-			dx += boldness
+			dx += strokeMod
 		px, py = p[(i + 1) % length]
 		if px < x:
-			dy -= boldness
+			dy -= strokeMod
 		elif px > x:
-			dy += boldness
+			dy += strokeMod
 		elif py < y:
-			dx += boldness
+			dx += strokeMod
 		else:
-			dx -= boldness
+			dx -= strokeMod
 		yield (dx + x, dy + y)
 
 
@@ -365,24 +365,24 @@ def createGlyph(
 
 		polygons = base_polygons
 		try:
-			dist = BOLD_THIN_DISTS[font.weight]
+			offset = WEIGHT_STROKE_OFFSETS[font.weight]
 		except KeyError:
-			dist = 0
+			offset = 0
 
-		if dist > 0:
+		if offset > 0:
 			if bold_polygons is None:
 				bold_polygons = [
 					[(x + dx, y + dy) for x, y in p]
 					for p in generatePolygons(image, join_polygons=False)
 				]
-			polygons = (boldify(p, dist) for p in bold_polygons)
-		elif dist < 0:
+			polygons = (modifyStroke(p, offset) for p in bold_polygons)
+		elif offset < 0:
 			if thin_polygons is None:
 				thin_polygons = [
 					[(x + dx, y + dy) for x, y in p]
 					for p in generatePolygons(image, join_polygons=False, exclude_corners=True)
 				]
-			polygons = (boldify(p, dist) for p in thin_polygons)
+			polygons = (modifyStroke(p, offset) for p in thin_polygons)
 
 		if font.macstyle & 2:
 			polygons = (((x + y * ITALIC_RATIO, y) for x, y in p) for p in polygons)
