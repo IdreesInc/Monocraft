@@ -296,8 +296,8 @@ def imageFromArray(arr, x=0, y=0) -> PixelImage:
 	)
 
 
-def drawPolygon(poly, pen):
-	for polygon in poly:
+def drawPolygons(polygons, pen):
+	for polygon in polygons:
 		start = True
 		for x, y in polygon:
 			x = int(math.floor(x * PIXEL_SIZE))
@@ -347,10 +347,9 @@ def createGlyph(
 	dy=0,
 	glyphclass=None,
 ):
-	poly = [[(x + dx, y + dy) for x, y in p] for p in generatePolygons(image)]
-
-	poly_b = None
-	poly_t = None
+	base_polygons = [[(x + dx, y + dy) for x, y in p] for p in generatePolygons(image)]
+	bold_polygons = None
+	thin_polygons = None
 
 	for font in fontList:
 		if font is None:
@@ -364,31 +363,31 @@ def createGlyph(
 			char.width = width if width is not None else PIXEL_SIZE * 6
 			continue
 
-		p = poly
+		polygons = base_polygons
 		try:
 			dist = BOLD_THIN_DISTS[font.weight]
 		except KeyError:
 			dist = 0
 
 		if dist > 0:
-			if poly_b is None:
-				poly_b = [
+			if bold_polygons is None:
+				bold_polygons = [
 					[(x + dx, y + dy) for x, y in p]
 					for p in generatePolygons(image, join_polygons=False)
 				]
-			p = (boldify(p, dist) for p in poly_b)
+			polygons = (boldify(p, dist) for p in bold_polygons)
 		elif dist < 0:
-			if poly_t is None:
-				poly_t = [
+			if thin_polygons is None:
+				thin_polygons = [
 					[(x + dx, y + dy) for x, y in p]
 					for p in generatePolygons(image, join_polygons=False, exclude_corners=True)
 				]
-			p = (boldify(p, dist) for p in poly_t)
+			polygons = (boldify(p, dist) for p in thin_polygons)
 
 		if font.macstyle & 2:
-			p = (((x + y * ITALIC_RATIO, y) for x, y in p) for p in p)
+			polygons = (((x + y * ITALIC_RATIO, y) for x, y in p) for p in polygons)
 
-		drawPolygon(p, char.glyphPen())
+		drawPolygons(polygons, char.glyphPen())
 		char.width = width if width is not None else PIXEL_SIZE * 6
 
 
