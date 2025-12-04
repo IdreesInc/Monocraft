@@ -25,6 +25,14 @@ from polygonizer import PixelImage, generatePolygons
 from generate_continuous_ligatures import generate_continuous_ligatures
 
 PIXEL_SIZE = 120
+BOLD_THIN_DISTS = {
+	"Black": 0.3,
+	"Bold": 0.2,
+	"Demi": 0.1,
+	"Light": -0.1,
+	"Extra-Light": -0.3,
+}
+ITALIC_RATIO = math.tan(math.radians(15))
 
 characters = json.load(open("./characters.json"))
 diacritics = json.load(open("./diacritics.json"))
@@ -160,8 +168,8 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 
 	for character in characters:
 		charactersByCodepoint[character["codepoint"]] = character
-		image, kw = generateImage(character)
-		createChar(fontList, character["codepoint"], character["name"], image, **kw)
+		image, kw = generatePixels(character)
+		createGlyph(fontList, character["codepoint"], character["name"], image, **kw)
 
 	print(f"Generated {len(characters)} characters")
 
@@ -178,9 +186,9 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		)
 
 	for ligature in ligatures:
-		image, kw = generateImage(ligature)
+		image, kw = generatePixels(ligature)
 		name = ligature["name"].translate(str.maketrans(" ", "_"))
-		createChar(fontList, -1, name, image, **kw)
+		createGlyph(fontList, -1, name, image, **kw)
 		for font in fontList:
 			if font is None:
 				continue
@@ -207,7 +215,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 			layer=1,
 		)
 
-def generateImage(character):
+def generatePixels(character):
 	image = PixelImage()
 	kw = {}
 	if "pixels" in character:
@@ -221,7 +229,7 @@ def generateImage(character):
 		image = image | imageFromArray(arr, x, y)
 
 	if "reference" in character:
-		other = generateImage(charactersByCodepoint[character["reference"]])
+		other = generatePixels(charactersByCodepoint[character["reference"]])
 		kw.update(other[1])
 		image = image | other[0]
 		
@@ -264,15 +272,6 @@ def drawPolygon(poly, pen):
 				pen.lineTo(x, y)
 		pen.closePath()
 
-BOLD_THIN_DISTS = {
-	"Black": 0.3,
-	"Bold": 0.2,
-	"Demi": 0.1,
-	"Light": -0.1,
-	"Extra-Light": -0.3,
-}
-ITALIC_RATIO = math.tan(math.radians(15))
-
 def boldify(p, boldness):
 	l = len(p)
 	for i in range(l):
@@ -298,57 +297,64 @@ def boldify(p, boldness):
 			dx -= boldness
 		yield (dx + x, dy + y)
 
-def createChar(
+def createGlyph(
 	fontList,
 	code,
 	name,
-	image=None,
+	image,
 	*,
 	width=None,
 	dx=0,
 	dy=0,
 	glyphclass=None,
-):
-	if image is not None:
-		poly = [[(x + dx, y + dy) for x, y in p]
-			for p in generatePolygons(image)]
-	else:
-		raise ValueError(f"No image provided for character {name} (codepoint {code})")
-
-	poly_b = None
-	poly_t = None
-
+):	
+	# Generate the base polygons
+	base_polygons = [[(x + dx, y + dy) for x, y in p] for p in generatePolygons(image)]
+	
+	# Cache for bold and thin polygon variants
+	bold_polygons_cache = None
+	thin_polygons_cache = None
+	
 	for font in fontList:
 		if font is None:
 			continue
+		
+		# Create character and set basic properties
 		char = font.createChar(code, name)
-		#char.manualHints = True
 		if glyphclass is not None:
 			char.glyphclass = glyphclass
-		if image is None:
-			char.width = width if width is not None else PIXEL_SIZE * 6
-			continue
-
-		p = poly
-		try:
-			dist = BOLD_THIN_DISTS[font.weight]
-		except KeyError:
-			dist = 0
-
-		if dist > 0:
-			if poly_b is None:
-				poly_b = [[(x + dx, y + dy) for x, y in p] for p in generatePolygons(image, join_polygons=False)]
-			p = (boldify(p, dist) for p in poly_b)
-		elif dist < 0:
-			if poly_t is None:
-				poly_t = [[(x + dx, y + dy) for x, y in p] for p in generatePolygons(image, join_polygons=False, exclude_corners=True)]
-			p = (boldify(p, dist) for p in poly_t)
-
+		
+		char_width = width if width is not None else PIXEL_SIZE * 6
+		char.width = char_width
+		
+		# Apply weight transformations
+		polygons = base_polygons
+		boldness = BOLD_THIN_DISTS.get(font.weight, 0)
+		
+		if boldness > 0:
+			# Make bolder
+			if bold_polygons_cache is None:
+				bold_polygons_cache = [
+					[(x + dx, y + dy) for x, y in p] 
+					for p in generatePolygons(image, join_polygons=False)
+				]
+			polygons = (boldify(p, boldness) for p in bold_polygons_cache)
+		
+		elif boldness < 0:
+			# Make thinner
+			if thin_polygons_cache is None:
+				thin_polygons_cache = [
+					[(x + dx, y + dy) for x, y in p] 
+					for p in generatePolygons(image, join_polygons=False, exclude_corners=True)
+				]
+			polygons = (boldify(p, boldness) for p in thin_polygons_cache)
+		
+		# Apply italic transformation if needed
 		if font.macstyle & 2:
-			p = (((x + y * ITALIC_RATIO, y) for x, y in p) for p in p)
-
-		drawPolygon(p, char.glyphPen())
-		char.width = width if width is not None else PIXEL_SIZE * 6
+			polygons = (((x + y * ITALIC_RATIO, y) for x, y in p) for p in polygons)
+		
+		# Draw the final polygon
+		drawPolygon(polygons, char.glyphPen())
 
 args = parseArgs()
 generateFont(**vars(args))
