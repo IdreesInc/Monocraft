@@ -43,7 +43,7 @@ characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
 
 
-def parseArgs():
+def parseArgs() -> argparse.Namespace:
 	parser = argparse.ArgumentParser()
 	parser.add_argument(
 		"--output-ttc",
@@ -249,7 +249,7 @@ def generateFont(
 		)
 
 
-def generatePixels(character):
+def generatePixels(character) -> tuple[PixelImage, dict]:
 	image = PixelImage()
 	kw = {}
 	if "pixels" in character:
@@ -278,7 +278,7 @@ def generatePixels(character):
 	return (image, kw)
 
 
-def findHighestY(image):
+def findHighestY(image: PixelImage) -> int:
 	for y in range(image.y_end - 1, image.y, -1):
 		for x in range(image.x, image.x_end):
 			if image[x, y]:
@@ -286,7 +286,7 @@ def findHighestY(image):
 	return image.y
 
 
-def imageFromArray(arr, x=0, y=0):
+def imageFromArray(arr, x=0, y=0) -> PixelImage:
 	return PixelImage(
 		x=x,
 		y=y,
@@ -311,8 +311,8 @@ def drawPolygon(poly, pen):
 
 
 def boldify(p, boldness):
-	l = len(p)
-	for i in range(l):
+	length = len(p)
+	for i in range(length):
 		x, y = p[i]
 		dx, dy = 0, 0
 		px, py = p[i - 1]
@@ -324,7 +324,7 @@ def boldify(p, boldness):
 			dx -= boldness
 		else:
 			dx += boldness
-		px, py = p[(i + 1) % l]
+		px, py = p[(i + 1) % length]
 		if px < x:
 			dy -= boldness
 		elif px > x:
