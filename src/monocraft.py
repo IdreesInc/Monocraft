@@ -18,6 +18,7 @@ import fontforge
 import json
 import math
 import argparse
+from typing import NamedTuple
 from generate_diacritics import generateDiacritics
 from generate_examples import generateExamples
 from polygonizer import PixelImage, generatePolygons
@@ -102,6 +103,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		fontforge.font() if extralight else None,
 		fontforge.font() if extralight and italic else None,
 	]
+
 	for font in fontList:
 		if font is None:
 			continue
@@ -123,97 +125,44 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 					   (("liga", (("dflt", ("dflt")), ("latn", ("dflt")))), ))
 		font.addLookupSubtable("ligatures", "ligatures-subtable")
 
-	font = fontList[0]
-	if font is not None:
-		font.macstyle = 0
-		font.os2_stylemap = 0x40
-	font = fontList[1]
-	if font is not None:
-		font.fontname = "Monocraft-Italic"
-		font.fullname = "Monocraft Italic"
-		font.macstyle = 2
-		font.os2_stylemap = 1
-		font.italicangle = -15
-	font = fontList[2]
-	if font is not None:
-		font.fontname = "Monocraft-Black"
-		font.fullname = "Monocraft Black"
-		font.weight = "Black"
-		font.macstyle = 1
-		font.os2_stylemap = 0x20
-	font = fontList[3]
-	if font is not None:
-		font.fontname = "Monocraft-Black-Italic"
-		font.fullname = "Monocraft Black Italic"
-		font.weight = "Black"
-		font.macstyle = 3
-		font.os2_stylemap = 0x21
-		font.italicangle = -15
-	font = fontList[4]
-	if font is not None:
-		font.fontname = "Monocraft-Bold"
-		font.fullname = "Monocraft Bold"
-		font.weight = "Bold"
-		font.macstyle = 1
-		font.os2_stylemap = 0x20
-	font = fontList[5]
-	if font is not None:
-		font.fontname = "Monocraft-Bold-Italic"
-		font.fullname = "Monocraft Bold Italic"
-		font.weight = "Bold"
-		font.macstyle = 3
-		font.os2_stylemap = 0x21
-		font.italicangle = -15
-	font = fontList[6]
-	if font is not None:
-		font.fontname = "Monocraft-SemiBold"
-		font.fullname = "Monocraft SemiBold"
-		font.weight = "Demi"
-		font.macstyle = 1
-		font.os2_stylemap = 0x20
-	font = fontList[7]
-	if font is not None:
-		font.fontname = "Monocraft-SemiBold-Italic"
-		font.fullname = "Monocraft SemiBold Italic"
-		font.weight = "Demi"
-		font.macstyle = 3
-		font.os2_stylemap = 0x21
-		font.italicangle = -15
-	font = fontList[8]
-	if font is not None:
-		font.fontname = "Monocraft-Light"
-		font.fullname = "Monocraft Light"
-		font.weight = "Light"
-		font.macstyle = 0
-		font.os2_stylemap = 0
-	font = fontList[9]
-	if font is not None:
-		font.fontname = "Monocraft-Light-Italic"
-		font.fullname = "Monocraft Light Italic"
-		font.weight = "Light"
-		font.macstyle = 2
-		font.os2_stylemap = 1
-		font.italicangle = -15
-	font = fontList[10]
-	if font is not None:
-		font.fontname = "Monocraft-ExtraLight"
-		font.fullname = "Monocraft ExtraLight"
-		font.weight = "Extra-Light"
-		font.macstyle = 0
-		font.os2_stylemap = 0
-	font = fontList[11]
-	if font is not None:
-		font.fontname = "Monocraft-ExtraLight-Italic"
-		font.fullname = "Monocraft ExtraLight Italic"
-		font.weight = "Extra-Light"
-		font.macstyle = 2
-		font.os2_stylemap = 1
-		font.italicangle = -15
+	class FontWeight(NamedTuple):
+		suffix: str
+		weight: str
+		macstyle: int
+		os2_stylemap: int
+		italic_angle: int
+
+	font_weights: list[FontWeight] = [
+		FontWeight("", "Regular", 0, 0x40, 0),
+		FontWeight("Italic", "Regular", 2, 1, -15),
+		FontWeight("Black", "Black", 1, 0x20, 0),
+		FontWeight("Black-Italic", "Black", 3, 0x21, -15),
+		FontWeight("Bold", "Bold", 1, 0x20, 0),
+		FontWeight("Bold-Italic", "Bold", 3, 0x21, -15),
+		FontWeight("SemiBold", "Demi", 1, 0x20, 0),
+		FontWeight("SemiBold-Italic", "Demi", 3, 0x21, -15),
+		FontWeight("Light", "Light", 0, 0, 0),
+		FontWeight("Light-Italic", "Light", 2, 1, -15),
+		FontWeight("ExtraLight", "Extra-Light", 0, 0, 0),
+		FontWeight("ExtraLight-Italic", "Extra-Light", 2, 1, -15),
+	]
+	
+	for index, config in enumerate(font_weights):
+		font = fontList[index]
+		if font is not None:
+			font.fontname = f"Monocraft{'-' + config.suffix if config.suffix else ''}"
+			font.fullname = f"Monocraft{' ' + config.suffix.replace('-', ' ') if config.suffix else ''}"
+			font.weight = config.weight
+			font.macstyle = config.macstyle
+			font.os2_stylemap = config.os2_stylemap
+			if config.italic_angle != 0:
+				font.italicangle = config.italic_angle
 
 	for character in characters:
 		charactersByCodepoint[character["codepoint"]] = character
 		image, kw = generateImage(character)
 		createChar(fontList, character["codepoint"], character["name"], image, **kw)
+
 	print(f"Generated {len(characters)} characters")
 
 	outputDir = "../dist/"
@@ -241,6 +190,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 				"ligatures-exp-subtable",
 				(name, *(charactersByCodepoint[32]["name"] for _ in range(len(ligature["sequence"])-1))),
 			);
+	
 	print(f"Generated {len(ligatures)} ligatures")
 
 	for font in fontList:
@@ -269,10 +219,12 @@ def generateImage(character):
 		y = math.floor(descent)
 		kw['dy'] = descent - y
 		image = image | imageFromArray(arr, x, y)
+
 	if "reference" in character:
 		other = generateImage(charactersByCodepoint[character["reference"]])
 		kw.update(other[1])
 		image = image | other[0]
+		
 	if "diacritic" in character:
 		diacritic = diacritics[character["diacritic"]]
 		arr = diacritic["pixels"]
