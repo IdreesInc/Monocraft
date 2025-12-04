@@ -42,6 +42,7 @@ ligatures += generate_continuous_ligatures("./continuous_ligatures.json")
 characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
 
+
 def parseArgs():
 	parser = argparse.ArgumentParser()
 	parser.add_argument(
@@ -96,7 +97,18 @@ def parseArgs():
 		ret.black = ret.bold = ret.semibold = ret.light = ret.extralight = ret.italic = True
 	return ret
 
-def generateFont(*, black=False, bold=False, semibold=False, light=False, extralight=False, italic=False, output_ttc=False, **kw):
+
+def generateFont(
+	*,
+	black=False,
+	bold=False,
+	semibold=False,
+	light=False,
+	extralight=False,
+	italic=False,
+	output_ttc=False,
+	**kw,
+):
 	fontList = [
 		fontforge.font(),
 		fontforge.font() if italic else None,
@@ -126,11 +138,16 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		font.descent = PIXEL_SIZE
 		font.em = PIXEL_SIZE * 9
 		font.upos = -PIXEL_SIZE  # Underline position
-		font.addLookup("ligatures-exp", "gsub_multiple", (),
-					   (("ccmp", (("dflt", ("dflt")), ("latn", ("dflt")))), ))
+		font.addLookup(
+			"ligatures-exp",
+			"gsub_multiple",
+			(),
+			(("ccmp", (("dflt", ("dflt")), ("latn", ("dflt")))),),
+		)
 		font.addLookupSubtable("ligatures-exp", "ligatures-exp-subtable")
-		font.addLookup("ligatures", "gsub_ligature", (),
-					   (("liga", (("dflt", ("dflt")), ("latn", ("dflt")))), ))
+		font.addLookup(
+			"ligatures", "gsub_ligature", (), (("liga", (("dflt", ("dflt")), ("latn", ("dflt")))),)
+		)
 		font.addLookupSubtable("ligatures", "ligatures-subtable")
 
 	class FontWeight(NamedTuple):
@@ -154,12 +171,14 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		FontWeight("ExtraLight", "Extra-Light", 0, 0, 0),
 		FontWeight("ExtraLight-Italic", "Extra-Light", 2, 1, -15),
 	]
-	
+
 	for index, config in enumerate(font_weights):
 		font = fontList[index]
 		if font is not None:
 			font.fontname = f"Monocraft{'-' + config.suffix if config.suffix else ''}"
-			font.fullname = f"Monocraft{' ' + config.suffix.replace('-', ' ') if config.suffix else ''}"
+			font.fullname = (
+				f"Monocraft{' ' + config.suffix.replace('-', ' ') if config.suffix else ''}"
+			)
 			font.weight = config.weight
 			font.macstyle = config.macstyle
 			font.os2_stylemap = config.os2_stylemap
@@ -181,7 +200,7 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		fontList[0].generateTtc(
 			outputDir + "Monocraft-no-ligatures.ttc",
 			[i for i in fontList[1:] if i is not None],
-			ttcflags=("merge", ),
+			ttcflags=("merge",),
 			layer=1,
 		)
 
@@ -193,12 +212,26 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 			if font is None:
 				continue
 			lig = font[name]
-			lig.addPosSub("ligatures-subtable", tuple(map(lambda codepoint: charactersByCodepoint[codepoint]["name"], ligature["sequence"])))
+			lig.addPosSub(
+				"ligatures-subtable",
+				tuple(
+					map(
+						lambda codepoint: charactersByCodepoint[codepoint]["name"],
+						ligature["sequence"],
+					)
+				),
+			)
 			lig.addPosSub(
 				"ligatures-exp-subtable",
-				(name, *(charactersByCodepoint[32]["name"] for _ in range(len(ligature["sequence"])-1))),
-			);
-	
+				(
+					name,
+					*(
+						charactersByCodepoint[32]["name"]
+						for _ in range(len(ligature["sequence"]) - 1)
+					),
+				),
+			)
+
 	print(f"Generated {len(ligatures)} ligatures")
 
 	for font in fontList:
@@ -211,9 +244,10 @@ def generateFont(*, black=False, bold=False, semibold=False, light=False, extral
 		fontList[0].generateTtc(
 			outputDir + "Monocraft.ttc",
 			[i for i in fontList[1:] if i is not None],
-			ttcflags=("merge", ),
+			ttcflags=("merge",),
 			layer=1,
 		)
+
 
 def generatePixels(character):
 	image = PixelImage()
@@ -222,17 +256,17 @@ def generatePixels(character):
 		arr = character["pixels"]
 		leftMargin = character["leftMargin"] if "leftMargin" in character else 0
 		x = math.floor(leftMargin)
-		kw['dx'] = leftMargin - x
+		kw["dx"] = leftMargin - x
 		descent = -character["descent"] if "descent" in character else 0
 		y = math.floor(descent)
-		kw['dy'] = descent - y
+		kw["dy"] = descent - y
 		image = image | imageFromArray(arr, x, y)
 
 	if "reference" in character:
 		other = generatePixels(charactersByCodepoint[character["reference"]])
 		kw.update(other[1])
 		image = image | other[0]
-		
+
 	if "diacritic" in character:
 		diacritic = diacritics[character["diacritic"]]
 		arr = diacritic["pixels"]
@@ -243,12 +277,14 @@ def generatePixels(character):
 		image = image | imageFromArray(arr, x, y)
 	return (image, kw)
 
+
 def findHighestY(image):
 	for y in range(image.y_end - 1, image.y, -1):
 		for x in range(image.x, image.x_end):
 			if image[x, y]:
 				return y
 	return image.y
+
 
 def imageFromArray(arr, x=0, y=0):
 	return PixelImage(
@@ -258,6 +294,7 @@ def imageFromArray(arr, x=0, y=0):
 		height=len(arr),
 		data=bytes(v for a in reversed(arr) for v in a),
 	)
+
 
 def drawPolygon(poly, pen):
 	for polygon in poly:
@@ -271,6 +308,7 @@ def drawPolygon(poly, pen):
 			else:
 				pen.lineTo(x, y)
 		pen.closePath()
+
 
 def boldify(p, boldness):
 	l = len(p)
@@ -297,6 +335,7 @@ def boldify(p, boldness):
 			dx -= boldness
 		yield (dx + x, dy + y)
 
+
 def createGlyph(
 	fontList,
 	code,
@@ -307,54 +346,55 @@ def createGlyph(
 	dx=0,
 	dy=0,
 	glyphclass=None,
-):	
+):
 	# Generate the base polygons
 	base_polygons = [[(x + dx, y + dy) for x, y in p] for p in generatePolygons(image)]
-	
+
 	# Cache for bold and thin polygon variants
 	bold_polygons_cache = None
 	thin_polygons_cache = None
-	
+
 	for font in fontList:
 		if font is None:
 			continue
-		
+
 		# Create character and set basic properties
 		char = font.createChar(code, name)
 		if glyphclass is not None:
 			char.glyphclass = glyphclass
-		
+
 		char_width = width if width is not None else PIXEL_SIZE * 6
 		char.width = char_width
-		
+
 		# Apply weight transformations
 		polygons = base_polygons
 		boldness = BOLD_THIN_DISTS.get(font.weight, 0)
-		
+
 		if boldness > 0:
 			# Make bolder
 			if bold_polygons_cache is None:
 				bold_polygons_cache = [
-					[(x + dx, y + dy) for x, y in p] 
+					[(x + dx, y + dy) for x, y in p]
 					for p in generatePolygons(image, join_polygons=False)
 				]
 			polygons = (boldify(p, boldness) for p in bold_polygons_cache)
-		
+
 		elif boldness < 0:
 			# Make thinner
 			if thin_polygons_cache is None:
 				thin_polygons_cache = [
-					[(x + dx, y + dy) for x, y in p] 
+					[(x + dx, y + dy) for x, y in p]
 					for p in generatePolygons(image, join_polygons=False, exclude_corners=True)
 				]
 			polygons = (boldify(p, boldness) for p in thin_polygons_cache)
-		
+
 		# Apply italic transformation if needed
 		if font.macstyle & 2:
 			polygons = (((x + y * ITALIC_RATIO, y) for x, y in p) for p in polygons)
-		
+
 		# Draw the final polygon
 		drawPolygon(polygons, char.glyphPen())
+
 
 args = parseArgs()
 generateFont(**vars(args))

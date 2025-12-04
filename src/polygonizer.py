@@ -16,10 +16,7 @@ __all__ = [
     'generatePolygons',
 ]
 
-from collections import defaultdict
 from enum import IntFlag
-import itertools
-
 
 class PixelImage:
     ''' Class for managing a pixel image.
@@ -148,7 +145,7 @@ class PixelImage:
 
     def __or__(self, other):
         if not isinstance(other, PixelImage):
-            return NotImplemented
+            raise TypeError("Operand must be an instance of PixelImage")
 
         if self.width == 0 or self.height == 0:
             return other
@@ -214,9 +211,9 @@ class PixelImage:
         )
 
 
-def generatePolygons(image, **kw):
-    for segment, start_pos in segmentize(image):
-        yield from polygonizeSegment(segment, start_pos, **kw)
+# def generatePolygons(image, **kw):
+#     for segment, start_pos in segmentize(image):
+#         yield from polygonizeSegment(segment, start_pos, **kw)
 
 
 def segmentize(image):
