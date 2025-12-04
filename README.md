@@ -30,6 +30,9 @@ If you'd like to see a vectorized version of this font, try [Miracode](https://g
 - Programming ligatures!
   - Add some spice to your programming life with all new ligature characters
   - Arrows now look like arrows and comparison operators are easier to see at a glance
+- Enchantment language support!
+  - Type in the "standard galactic alphabet" used by Minecraft for enchantment table text
+  - Perfect for enchanting your code with Bane of Arthropods!
 
 ## Glyphs
 
@@ -55,7 +58,20 @@ Download the most recent `Monocraft.ttc` file from the [Releases](https://github
 
 ### Linux
 
-Download the most recent `Monocraft.ttc` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Move the file to ~/.local/share/fonts (create the folder if it doesn't already exist). In a terminal, run `fc-cache -fv`. Alternatively, log out and log in again. 
+Download the most recent `Monocraft.ttc` file from the [Releases](https://github.com/IdreesInc/Monocraft/releases) page. Move the file to ~/.local/share/fonts (create the folder if it doesn't already exist). In a terminal, run `fc-cache -fv`. Alternatively, log out and log in again.
+
+### On Your Website
+
+To use Monocraft on your website, add the following code to your CSS:
+
+```css
+@font-face {
+    font-family: 'Monocraft';
+    src: url('https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft@tree/main/dist/Monocraft-ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+```
 
 ## How to use
 
@@ -72,6 +88,20 @@ So far, the following ligatures have been added to the font:
 And with the contributions of [@Ciubix8513](https://github.com/Ciubix8513), Monocraft now includes continuous ligatures that enable you to type arrows and lines that _just keep going_.
 
 If there is another character combination that you feel could be a ligature, feel free to create an issue!
+
+### How do I write in the enchantment table language?
+
+Monocraft supports the "standard galactic alphabet" used by Minecraft to represent enchantment table text in a special codepoint range! To type like a sorcerer, follow these steps:
+
+1. Install Monocraft following the instructions above
+2. Go to this site: https://cryptii.com/pipes/alphabetical-substitution
+3. Replace the "ciphertext alphabet" with this (don't worry that it looks like boxes): ``
+4. Type whatever you want in the leftmost text box, and it will be converted to galactic text in the right box (but it will still look like boxes for now)
+5. Copy the output text to your editor with Monocraft and watch the magic!
+
+Here's some Lorem Ipsum text so you can see it in action!
+
+![](images/standard-galactic-alphabet.png)
 
 ### How are these characters generated?
 
