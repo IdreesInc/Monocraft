@@ -134,6 +134,9 @@ def generateFont(
 		font.encoding = "UnicodeFull"
 		font.version = "4.1"
 		font.weight = "Regular"
+		# See https://monotype.github.io/panose/pan2.htm
+		# (2: Latin Text, 11: Normal Sans, ..., 9: Monospaced)
+		font.os2_panose = (2, 11, 0, 9, 0, 0, 0, 0, 0, 0)
 		font.ascent = PIXEL_SIZE * 8
 		font.descent = PIXEL_SIZE
 		font.em = PIXEL_SIZE * 9
@@ -155,21 +158,22 @@ def generateFont(
 		weight: str
 		macstyle: int
 		os2_stylemap: int
+		panose_weight: int
 		italic_angle: int
 
 	font_weights: list[FontWeight] = [
-		FontWeight("", "Regular", 0, 0x40, 0),
-		FontWeight("Italic", "Regular", 2, 1, -15),
-		FontWeight("Black", "Black", 1, 0x20, 0),
-		FontWeight("Black-Italic", "Black", 3, 0x21, -15),
-		FontWeight("Bold", "Bold", 1, 0x20, 0),
-		FontWeight("Bold-Italic", "Bold", 3, 0x21, -15),
-		FontWeight("SemiBold", "Demi", 1, 0x20, 0),
-		FontWeight("SemiBold-Italic", "Demi", 3, 0x21, -15),
-		FontWeight("Light", "Light", 0, 0, 0),
-		FontWeight("Light-Italic", "Light", 2, 1, -15),
-		FontWeight("ExtraLight", "Extra-Light", 0, 0, 0),
-		FontWeight("ExtraLight-Italic", "Extra-Light", 2, 1, -15),
+		FontWeight("", "Regular", 0, 0x40, 6, 0),
+		FontWeight("Italic", "Regular", 2, 1, 6, -15),
+		FontWeight("Black", "Black", 1, 0x20, 10, 0),
+		FontWeight("Black-Italic", "Black", 3, 0x21, 10, -15),
+		FontWeight("Bold", "Bold", 1, 0x20, 8, 0),
+		FontWeight("Bold-Italic", "Bold", 3, 0x21, 8, -15),
+		FontWeight("SemiBold", "Demi", 1, 0x20, 7, 0),
+		FontWeight("SemiBold-Italic", "Demi", 3, 0x21, 7, -15),
+		FontWeight("Light", "Light", 0, 0, 3, 0),
+		FontWeight("Light-Italic", "Light", 2, 1, 3, -15),
+		FontWeight("ExtraLight", "Extra-Light", 0, 0, 2, 0),
+		FontWeight("ExtraLight-Italic", "Extra-Light", 2, 1, 2, -15),
 	]
 
 	for index, config in enumerate(font_weights):
@@ -182,6 +186,10 @@ def generateFont(
 			font.weight = config.weight
 			font.macstyle = config.macstyle
 			font.os2_stylemap = config.os2_stylemap
+			# Update PANOSE weight value
+			panose = list(font.os2_panose)
+			panose[2] = int(config.panose_weight)
+			font.os2_panose = tuple(panose)
 			if config.italic_angle != 0:
 				font.italicangle = config.italic_angle
 
