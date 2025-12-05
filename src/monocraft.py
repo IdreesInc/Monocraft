@@ -245,10 +245,13 @@ def generateFont(
 	for font in fontList:
 		if font is None:
 			continue
+		print(f"Generating {font.fontname}...")
+		font.autoHint()
 		font.generate(f"{outputDir}{font.fontname}.otf")
 		font.generate(f"{outputDir}{font.fontname}.ttf")
 
 	if output_ttc:
+		print("Generating ttc bundle...")
 		fontList[0].generateTtc(
 			outputDir + "Monocraft.ttc",
 			[i for i in fontList[1:] if i is not None],

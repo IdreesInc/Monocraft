@@ -19,6 +19,8 @@ mv Monocraft.otf Monocraft-otf/Monocraft.otf
 
 mkdir -p Monocraft-ttf/weights
 for file in Monocraft-*.ttf; do
+	ttfautohint --fallback-stem-width=60  --stem-width-mode="nnn" --no-info "$file" "hinted-$file"
+	mv "hinted-$file" "$file"
 	mv "$file" "Monocraft-ttf/weights/$file"
 done
 
@@ -29,6 +31,9 @@ done
 
 zip -r Monocraft-ttf.zip Monocraft-ttf
 zip -r Monocraft-otf.zip Monocraft-otf
+
+ttfautohint --fallback-stem-width=60  --stem-width-mode="nnn" --no-info "Monocraft.ttc" "hinted-Monocraft.ttc"
+mv "hinted-Monocraft.ttc" "Monocraft.ttc"
 
 if [ $# -ne 0 ] && [ $1 = "nerd" ]
 then
