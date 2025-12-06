@@ -67,7 +67,7 @@ To use Monocraft on your website, add the following code to your CSS:
 ```css
 @font-face {
     font-family: 'Monocraft';
-    src: url('https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft@tree/main/dist/Monocraft-ttf') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft@main/dist/Monocraft-ttf/Monocraft.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
