@@ -134,9 +134,6 @@ def generateFont(
 		font.encoding = "UnicodeFull"
 		font.version = "4.2"
 		font.weight = "Regular"
-		# See https://monotype.github.io/panose/pan2.htm
-		# (2: Latin Text, 11: Normal Sans, ..., 9: Monospaced)
-		font.os2_panose = (2, 11, 0, 9, 0, 0, 0, 0, 0, 0)
 		font.ascent = PIXEL_SIZE * 8
 		font.descent = PIXEL_SIZE
 		font.em = PIXEL_SIZE * 9
@@ -154,7 +151,7 @@ def generateFont(
 		font.addLookupSubtable("ligatures", "ligatures-subtable")
 
 	class FontWeight(NamedTuple):
-		suffix: str
+		suffix: str | None
 		weight: str
 		macstyle: int
 		os2_stylemap: int
@@ -162,7 +159,7 @@ def generateFont(
 		italic_angle: int
 
 	font_weights: list[FontWeight] = [
-		FontWeight("", "Regular", 0, 0x40, 6, 0),
+		FontWeight(None, "Regular", 0, 0x40, 6, 0),
 		FontWeight("Italic", "Regular", 2, 1, 6, -15),
 		FontWeight("Black", "Black", 1, 0x20, 10, 0),
 		FontWeight("Black-Italic", "Black", 3, 0x21, 10, -15),
@@ -179,16 +176,19 @@ def generateFont(
 	for index, config in enumerate(font_weights):
 		font = fontList[index]
 		if font is not None:
-			font.fontname = f"Monocraft{'-' + config.suffix if config.suffix else ''}"
-			font.fullname = (
-				f"Monocraft{' ' + config.suffix.replace('-', ' ') if config.suffix else ''}"
-			)
+			if config.suffix:
+				font.fontname = f"Monocraft-{config.suffix}"
+				font.fullname = (
+					f"Monocraft{' ' + config.suffix.replace('-', ' ')}"
+				)
 			font.weight = config.weight
 			font.macstyle = config.macstyle
 			font.os2_stylemap = config.os2_stylemap
-			# Update PANOSE weight value
 			panose = list(font.os2_panose)
+			# Update PANOSE weight value
 			panose[2] = int(config.panose_weight)
+			# Update PANOSE proportion to Monospaced
+			panose[3] = 9
 			font.os2_panose = tuple(panose)
 			if config.italic_angle != 0:
 				font.italicangle = config.italic_angle
